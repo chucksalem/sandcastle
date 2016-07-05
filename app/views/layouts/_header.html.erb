@@ -1,0 +1,36 @@
+<section class="site-header <%= content_for :header_class %>">
+  <nav class="navbar navbar-inverse navbar-static-top test" role="navigation">
+    <div class="container layout-container">
+      <div class="brand-container">
+        <a class="brand" href="/">
+        <h1 class="hacienda-logo"><i>Hacienda del Mar</i></h1>
+        </a>
+      </div>
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav main-navigation">
+        <li><a href="/" class="homepage hacienda-hover-color padding-top-by-7">Home</a></li>
+        <li><a href="/accommodations" class="reserve-highlight hacienda-hover-color padding-top-by-7">Reserve</a></li>
+        <li><a href="/about" class="about-highlight hacienda-hover-color padding-top-by-7">About</a></li>
+        <li><a href="/resources" class="resources-highlight hacienda-hover-color padding-top-by-7">Resources</a></li>
+        <li><a href="/contact" class="contact-highlight hacienda-hover-color padding-top-by-7">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="hero <%= content_for :hero_class %>">
+        <div class="layout-container layout-centered padded-top padded-bottom">
+            <h1 class="<%= content_for :bottom_border %> heading-large margin-top-by-5"><%= yield(:hero_title) %></h1>
+            <% if content_for?(:lede) %><p class="lede"><%= yield :lede %></p><% end %>
+        </div>
+    </div>
+</section>

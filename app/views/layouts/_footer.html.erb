@@ -1,0 +1,63 @@
+<footer class="site-footer scallop-top">
+        <div class="layout-container">
+            <article class="weather-widget scallop-top">
+                <div class="weather-widget-contain">
+                    <div class="weather-widget-wrap">
+                        <div class="temp">
+                            <h2>Right Now <i class="icon icon-<%= @weather[:currently][:icon] %> white"></i></h2>
+                            <h3 class="current-temp"><%= @weather[:currently][:temperature].round %><sup class="">ºF</sup></h3>
+                            <div class="low-high">
+                                <span class="high"><%= @weather[:daily][:data][0][:temperatureMax].round %><sup class="font-1vh">ºF</sup> <svg width="8" height="7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 7"><path fill="#d0cfca" d="M6.9,6.9C6.6,6.9,6.2,6.7,6,6.4L4,2.9L1.8,6.4C1.6,6.9,0.9,7,0.5,6.7C0,6.4-0.1,5.8,0.2,5.4l3.1-4.9C3.4,0.2,3.7,0,4.1,0c0.4,0,0.7,0.2,0.8,0.5l2.8,4.9C8,5.9,7.9,6.5,7.4,6.8C7.2,6.8,7.1,6.9,6.9,6.9z"/></svg></span>
+                                <span class="low"><%= @weather[:daily][:data][0][:temperatureMin].round %><sup class="font-1vh">ºF</sup> <svg width="8" height="7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 7"><path fill="#d0cfca" d="M1,0c0.3,0,0.7,0.2,0.9,0.5l2,3.5L6,0.5C6.3,0,7-0.1,7.4,0.2C7.9,0.4,8,1.1,7.7,1.5L4.7,6.4C4.5,6.7,4.2,6.9,3.8,6.9C3.5,6.9,3.2,6.7,3,6.4L0.1,1.5C-0.1,1,0,0.4,0.5,0.1C0.7,0,0.8,0,1,0z"/></svg></span>
+                            </div>
+                            <p class="current-conditions"><%= @weather[:currently][:summary] %></p>
+                        <div class="contact width-120">
+                            <p>Phone: <a class="hacienda-hover-color" href="tel:(602) 635-2186">(602) 635-2186</a></p>
+                            <p class="width-auto email-info-width">Email: <a class="hacienda-hover-color" href="mailto:info@Haciendabnb.com">info@Haciendabnb.com</a></p>
+                        </div>
+                    </div>
+                </div></div>
+            </article>
+            <div class="one-whole sm-one-half links">
+                <div class="gw">
+                    <ul class="g md-one-third">
+                        <li><a class="hacienda-hover-color" href="/">Home</a></li>
+                        <li><a class="hacienda-hover-color" href="/accommodations">Reserve</a></li>
+                        <li><a class="hacienda-hover-color" href="/about">About</a></li>
+                        <li><a class="hacienda-hover-color" href="/resources">Resources</a></li>
+                    </ul>
+                    <ul class="g md-one-third">
+                        <li><a class="hacienda-hover-color" href="/faq">FAQ</a></li>
+                        <li><a class="hacienda-hover-color" href="/contact">Contact</a></li>
+                        <li><a class="hacienda-hover-color" href="/maps">Maps</a></li>
+                        <li><a class="hacienda-hover-color" href="/facilities">Facilities</a></li>
+                    </ul>
+                </div>
+                <a class="logo" href="#">
+                    <h1 class="hacienda-logo"><i>Hacienda del Mar</i></h1>
+                </a>
+                <p class="copyright">© 2016 Hacienda del Mar L.L.C.</p>
+            </div>
+            <div class="one-whole links social-links">
+                <div class="gw">
+                    <ul class="g md-one-third">
+                        <li class="social-link-item">
+                            <a class="social-link" title="Contact us on Twitter" href="#" >
+                                <svg class="svg-social-icon hacienda-hover-color"><use xlink:href="#twitter" /></svg>
+                            </a>
+                        </li>
+                        <li class="social-link-item">
+                            <a class="social-link" title="Like us on Facebook" href="https://www.facebook.com/Hacienda-del-Mar-Bed-Breakfast-150613631714229/?ref=bookmarks" target="_blank">
+                                <svg class="svg-social-icon"><use xlink:href="#facebook" /></svg>
+                            </a>
+                        </li>
+                        <li class="social-link-item">
+                            <a class="social-link" title="Follow us on Instagram" href="#">
+                                <svg class="svg-social-icon"><use xlink:href="#instagram" /></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>

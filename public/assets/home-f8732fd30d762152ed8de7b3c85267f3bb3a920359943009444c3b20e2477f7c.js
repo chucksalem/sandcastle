@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".search-btn").on("click",function(){var a=$("#select-drop").val(),d=$("#guests").val(),e=$("#start_date").val(),t=$("#end_date").val();window.location=null!=a?"/accommodations/"+a+"?start_date="+e+"&end_date="+t+"&guests="+d:"/accommodations"}),$(".slider5").bxSlider({slideWidth:400,minSlides:3,maxSlides:3,slideMargin:10})});
