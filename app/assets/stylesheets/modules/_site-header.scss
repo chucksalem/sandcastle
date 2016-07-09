@@ -244,9 +244,10 @@
   }
 
   .navbar-toggle{
-    border-color: #d0aa69;
-    background: #d0aa69;
+    border-color: transparent;
+    background: transparent;
     margin-top: 21px;
+
   }
 
 
@@ -285,5 +286,16 @@
 
   .padding-top-by-7{
     padding-top: 7px !important;
+  }
+
+//  new css for sandcastle design
+
+  .heading-large.margin-top-by-5{
+    box-shadow: rgb(153, 153, 153) 0px 0px 0px 0px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 6vmin;
+    font-family: sans-serif;
+    border-color: rgb(255, 255, 255);
   }
 }

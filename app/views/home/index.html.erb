@@ -145,66 +145,78 @@
   </div>
 </section>
 
+<!--testimonial section-->
 
-<section class="top-padding-by-5 bottom-padding-by-5">
-  <div class="layout-container margin-0 ">
-    <div class="one-whole">
-      <h1 class="after-heading-underline font-family-open-sans">What Our Guests Says</h1>
-    </div>
-    <div class="one-whole">
-      <div class="content md-one-half float-left font-family-open-sans">
-        <div class="md-two-twelfths float-left testimonial-image">
-          <%= image_tag "testimonial-comment.png", :class => "" %>
-        </div>
-        <div class="content md-ten-twelfths float-left">
-          <p class="align-left margin-top-0 color-light-grey">Rental was clean and well furnished.  We were just where we wanted to be...right on the beach.</p>
-          <div class="one-whole float-left"><span class="bolded-left-text margin-bottom-20">Janice Lucero</span></div>
-        </div>
-      </div>
-      <div class="content md-one-half float-left font-family-open-sans">
-        <div class="md-two-twelfths float-left testimonial-image">
-          <%= image_tag "testimonial-comment.png", :class => "" %>
-        </div>
-        <div class="content md-ten-twelfths float-left">
-          <p class="align-left margin-top-0 color-light-grey">Buena estancia, la casa estaba muy limpia y sin ningún problema de servicio, esta diseñada para grupos individuales, tiene múltiples cocinas y areas.
-          </p>
-          <div class="one-whole float-left"><span class="bolded-left-text margin-bottom-20">Raul Villalva</span></div>
+<section class="top-padding-by-5 bottom-padding-by-5 testimonial-bg-image">
+  <div class="md-one-whole sm-one-whole lg-one-whole left-padding-by-5 testimonial-slider">
+      <div class="">
+        <%= image_tag "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRjpb75rLQlTt-ekKp5RJoCYpL6l1JDuSkEOWeo2ZFtSw7RQ71M", :class => "center-image-align" %>
+        <div>
+          <p class="text-align-center margin-top-0 testimonial-comment">Rental was clean and well furnished.  We were just where we wanted to be...right on the beach.</p>
+          <p class="text-align-center testimonial-user-name">Janice Lucero</p>
+          <div class="testimonial-user-rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p class="text-align-center testimonial-comment">COURTYARD 1</p>
         </div>
       </div>
-    </div>
-    <div class="one-whole padding-top-15">
-      <div class="content float-left font-family-open-sans">
-        <div class="width-14 float-left testimonial-image ">
-          <%= image_tag "testimonial-comment.png", :class => "" %>
-        </div>
-        <div class="content md-ten-twelfths float-left">
-          <p class="align-left margin-top-0 color-light-grey">I was very pleased with our stay at Hacienda Del Mar. It's very close to the beach. Less then a two minute walk. The AC units are very cold. Turn them on and is 15 mins the rooms are cool. The property is very private so you can relax outside and take in the sea breeze. I read other reviews and I'm glad I choose to experience it for myself. I would definitely stay here again in the future.
-          </p>
-          <div class="one-whole float-left"><span class="bolded-left-text margin-bottom-20">Leo Madrid</span></div>
+      <div class="">
+        <%= image_tag "data:image/jpeg;base64,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", :class => "center-image-align" %>
+        <div>
+          <p class="text-align-center margin-top-0 testimonial-comment">I was very pleased with our stay at Hacienda Del Mar. It's very close to the beach. Less then a two minute walk. The AC units are very cold. Turn them on and is 15 mins the rooms are cool. The property is very private so you can relax outside and take in the sea breeze. I read other reviews and I'm glad I choose to experience it for myself. I would definitely stay here again in the future.</p>
+          <p class="text-align-center testimonial-user-name">Leo Madrid</p>
+          <div class="testimonial-user-rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p class="text-align-center testimonial-comment">COURTYARD 1</p>
         </div>
       </div>
-    </div>
+      <div class="">
+        <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw537qI3QtwAIHyLYZfaBfEanESj7DG8KNWE9i9C95xvn3vOPyKw", :class => "center-image-align" %>
+        <div>
+          <p class="text-align-center margin-top-0 testimonial-comment">Buena estancia, la casa estaba muy limpia y sin ningún problema de servicio, esta diseñada para grupos individuales, tiene múltiples cocinas y areas.</p>
+          <p class="text-align-center testimonial-user-name">Raul Villalva</p>
+          <div class="testimonial-user-rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p class="text-align-center testimonial-comment">COURTYARD 1</p>
+        </div>
+      </div>
   </div>
 </section>
+
 <section class="memories-img top-padding-by-5 bottom-padding-by-5">
   <div class="layout-container margin-0">
     <div class="one-whole">
-    <div class="content md-one-half float-left font-family-open-sans">
-      <h1 class="after-heading-underline font-family-open-sans">Memories From Hacienda del Mar</h1><p class="g-memories-desc font-family-open-sans">Nice quiet location (even during Spring break). Great porch to sit out, also a nice, small indoor common area w/c  TV, couches, bathroom and even cereal and milk for guests. Not a coffee drinker but noticed that was available too. Also nice outside area with picnic tables. It's very close to the beach. Less then a two minute walk. The AC units are very cold. Turn them on and is 15 mins the rooms are cool. The property is very private so you can relax outside and take in the sea breeze.</p></div>
-    <div class="content md-one-half float-left left-padding-by-5">
-      <div class="content one-half float-left">
-        <%= image_tag "hacienda-colg-1.jpg", :class => "tilt-image-by-7 img-border-5px" %>
+      <div class="content md-one-half float-left font-family-open-sans">
+        <h1 class="after-heading-underline font-family-open-sans">Memories From Hacienda del Mar</h1><p class="g-memories-desc font-family-open-sans">Nice quiet location (even during Spring break). Great porch to sit out, also a nice, small indoor common area w/c  TV, couches, bathroom and even cereal and milk for guests. Not a coffee drinker but noticed that was available too. Also nice outside area with picnic tables. It's very close to the beach. Less then a two minute walk. The AC units are very cold. Turn them on and is 15 mins the rooms are cool. The property is very private so you can relax outside and take in the sea breeze.</p></div>
+      <div class="content md-one-half float-left left-padding-by-5">
+        <div class="content one-half float-left">
+          <%= image_tag "hacienda-colg-1.jpg", :class => "tilt-image-by-7 img-border-5px" %>
+        </div>
+        <div class="content one-half float-left">
+          <%= image_tag "hacienda-colg-2.jpg", :class => "tilt-image-by-minus-10 img-border-5px" %>
+        </div>
+        <div class="content one-half float-left">
+          <%= image_tag "hacienda-colg-3.JPG", :class => "tilt-image-by-minus-16 img-border-5px" %>
+        </div>
+        <div class="content one-half float-left">
+          <%= image_tag "hacienda-colg-4.JPG", :class => "tilt-image-by-13 img-border-5px" %>
+        </div>
       </div>
-      <div class="content one-half float-left">
-        <%= image_tag "hacienda-colg-2.jpg", :class => "tilt-image-by-minus-10 img-border-5px" %>
-      </div>
-      <div class="content one-half float-left">
-        <%= image_tag "hacienda-colg-3.JPG", :class => "tilt-image-by-minus-16 img-border-5px" %>
-      </div>
-      <div class="content one-half float-left">
-        <%= image_tag "hacienda-colg-4.JPG", :class => "tilt-image-by-13 img-border-5px" %>
-      </div>
-    </div>
     </div>
   </div>
 </section>
+

@@ -30,6 +30,12 @@ $(document).ready(function(){
         });
     }
 
+    $('.testimonial-slider').bxSlider({
+        slideWidth: 1000,
+        minSlides: 1,
+        maxSlides: 1,
+        slideMargin: 0
+    });
     $('.navbar-inverse').css('margin-top','21px');
     $('.heading-large.margin-top-by-5').css('padding-top','10%');
 });
