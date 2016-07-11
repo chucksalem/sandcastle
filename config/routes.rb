@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   post "/contact/thank-you".dasherize, to: "pages#contact_thank_you", as: "post_contact_thank_you_page"
   post "/owners/thank-you".dasherize, to: "pages#owners_thank_you", as: "post_owners_thank_you_page"
+  get '/offer', to: "home#offer"
 
   namespace :api do
     resources :units, only: [:index, :show] do
