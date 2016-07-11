@@ -19,14 +19,13 @@ $(document).ready(function(){
             slideWidth: 600,
             minSlides: 1,
             maxSlides: 1,
-            slideMargin: 10
+            slideMargin: 0
         });
     }else{
         $('.slider5').bxSlider({
-            slideWidth: 400,
-            minSlides: 3,
-            maxSlides: 3,
-            slideMargin: 10
+            minSlides: 1,
+            maxSlides: 1,
+            slideMargin: 0
         });
     }
 
