@@ -1,0 +1,67 @@
+.property-search{
+    background-color: transparent;
+    margin: -135px auto 100px auto;
+    max-width: 880px;
+    padding: 20px;
+    position: relative;
+    box-shadow: none;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.testimonial-bg-image{
+    background: url("sunrise-rocky-point-also.jpg") bottom center no-repeat;
+    background-size: cover;
+    padding: 0px;
+    color: white;
+    content: '';
+    opacity: .8;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    width: 100%;
+}
+
+.testimonial-bg-image .bx-viewport{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    margin: 0px;
+    border: none;
+    box-shadow: none;
+}
+
+.testimonial-bg-image .bx-wrapper{
+    margin: 0 auto;
+}
+
+.center-image-align{
+    margin: 5% auto;
+    height: 100px;
+    border-radius: 50px;
+    width: 100px;
+}
+
+.testimonial-user-rating{
+    color:#ffcc33;
+    font-size:20px;
+    text-align: center;
+}
+
+.testimonial-comment{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 19%;
+    margin-left: 19%;
+}
+
+.testimonial-user-name{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.testimonial-bg-image .bx-prev{
+
+}
