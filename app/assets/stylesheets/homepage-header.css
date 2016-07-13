@@ -165,8 +165,77 @@
     padding: 0px;
     color: white;
     content: '';
-    background-attachment: fixed;
     background-position: center;
     position: relative;
     width: 100%;
+    height: 190px;
+}
+
+.footer-main-div{
+    float: left;
+    padding: 1% 8%;
+    width: 100%;
+}
+
+.menu-list-div{
+    float: left;
+    padding: 3.5% 0%;
+    width: 77%;
+    font-size: 16px;
+    font-family: "Montserrat";
+}
+
+.list-div{
+    float: left;
+    padding: 0% 10%;
+    width: 80%;
+}
+
+.footer-menu-icon-div{
+    float: right;
+    font-size: 20px;
+    width: 20%;
+}
+
+.padding-right-5{
+ padding-right: 5%;
+}
+
+.footer-menu-list{
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    padding: 0 28%;
+    font-family: "Montserrat";
+}
+
+.text-divider{
+    height: 38px;
+    float: left;
+    padding-right: 2%;
+    border-left: 1px solid #ffffff;
+}
+
+.list-div-text{
+    padding: 2%;
+    padding-right: 5%;
+}
+
+.footer-menu-icon-div .fa{
+    padding: 7%;
+    padding-right: 13%;
+}
+
+.footer-bg .homepage-main-bar{
+    padding: 0px;
+}
+
+.get-some-deal{
+    background: url("featr-bg.png") bottom center no-repeat;
+    background-size: cover;
+    padding: 0px;
+    height:350px;
+    /*background-attachment: fixed;*/
+    /*background-position: center;*/
+    content: '';
 }
