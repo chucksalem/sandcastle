@@ -26,8 +26,8 @@ $(document).ready(function(){
             maxSlides: 1,
             controls: true,
             pager: false,
-            nextText: '<i class="fa fa-long-arrow-right"></i>',
-            prevText: '<i class="fa fa-long-arrow-left"></i>'
+            nextText: '<img src="assets/right-arrow.png" height="12" width="24"/>',
+            prevText: '<img src="assets/left_blue_arrow.png" height="12" width="24"/>'
             //mode: 'fade'
         });
     }

@@ -447,9 +447,11 @@
 }
 
 .room-details-main-div{
-    padding: 0% 8%;
+    padding-right: 5%;
+    padding-left: 15%;
     text-align: left;
     background: #f7f7f7;
+    height: 317px;
 }
 
 .offer-rate{
@@ -542,5 +544,19 @@ section.main-content{
     margin: 0 10px 0px 10px;
 }
 .featured-rooms-slider-section .bx-viewport{
-    height: 390px !important;
+    height: 420px !important;
+}
+
+.featured-rooms-slider-section .md-one-whole.sm-one-whole .last-child-div{
+    opacity: 0.5;
+}
+
+.featured-rooms-slider-section .md-one-whole.sm-one-whole .last-child-div img{
+    height: 420px;
+}
+
+.room-icon-div-img{
+    position: absolute;
+    bottom: 0;
+    width: 41.7%;
 }
