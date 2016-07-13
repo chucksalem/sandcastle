@@ -239,3 +239,69 @@
     /*background-position: center;*/
     content: '';
 }
+
+/*Featured Attractions */
+
+.venues {
+    margin-left: 10px;
+    width: 240px !important;
+}
+
+.infocus-images {
+    height: 250px;
+    width: 240px;
+}
+
+.outfocus-images {
+    height: 283px;
+    width: 240px;
+    opacity: 0.6;
+}
+
+.image-caption {
+    top: -35px;
+    color: white;
+    text-align: center;
+    font-size: 21px;
+    position: relative;
+    font-weight: 500;
+}
+
+.feedback {
+    float: left;
+    width: 240px;
+    height: 33px;
+    background: #f7f7f7;
+    margin-top: -31px;
+}
+
+.likes, .comments {
+    float: left;
+    width: 50%;
+    height: 33px;
+    text-align: center;
+}
+
+.comments {
+    border-left: none;
+}
+
+.fa-heart {
+    color: deepskyblue;
+    font-size: 14px;
+    margin-right: 10px;
+    padding-top: 9px;
+}
+
+.fa-comment {
+    color: yellow;
+    font-size: 14px;
+    margin-right: 10px;
+    padding-top: 9px;
+}
+
+.number {
+    font-weight: bold;
+    font-size: 15px;
+}
+

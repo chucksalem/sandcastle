@@ -35,6 +35,19 @@ $(document).ready(function(){
         maxSlides: 1,
         slideMargin: 0
     });
+
+
+    $('.featured-attraction-slider').bxSlider({
+        slideWidth: 1000,
+        minSlides: 3,
+        maxSlides: 5,
+        slideMargin: 0,
+        controls: true,
+        pager: false,
+        nextText: '<img src="assets/forword-icon.png" height="25" width="25"/>',
+        prevText: '<img src="assets/backword-icon.png" height="25" width="25"/>'
+    });
+    
     $('.navbar-inverse').css('margin-top','21px');
     $('.heading-large.margin-top-by-5').css('padding-top','10%');
 });
