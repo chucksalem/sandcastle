@@ -30,7 +30,7 @@
           </button>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse center-heading" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav main-navigation">
             <li><a href="/" class="homepage hacienda-hover-color padding-top-by-7">HOME</a></li>
             <li><a href="/accommodations" class="reserve-highlight hacienda-hover-color padding-top-by-7">FIND A RENTAL</a></li>
@@ -41,7 +41,7 @@
       </div>
     </nav>
     <div class="hero <%= content_for :hero_class %>">
-      <div class="layout-container layout-centered padded-top padded-bottom">
+      <div class="layout-centered padded-top">
         <h1 class="<%= content_for :bottom_border %> heading-large margin-top-by-5"><%= yield(:hero_title) %></h1>
         <% if content_for?(:lede) %><p class="lede"><%= yield :lede %></p><% end %>
       </div>

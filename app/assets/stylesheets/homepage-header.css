@@ -116,7 +116,7 @@
 
 .main-search-div{
     float: left;
-    width: 60%;
+    width: 83%;
     font-family: "Montserrat";
     font-size: 1.4em;
     font-weight: 300;
@@ -125,13 +125,14 @@
     border-top-left-radius: 8px;
     height: 57px;
     border-bottom-left-radius: 8px;
-    padding: 2.5%;
+    /*padding: 2.5%;*/
 }
 
 .main-search-div fieldset{
     float: left;
     height: auto;
     font-size: 12px;
+    padding: 15px 0px;
 }
 
 .width-25{
@@ -305,3 +306,24 @@
     font-size: 15px;
 }
 
+/*home page css*/
+.center-heading{
+    margin-left: 38% !important;
+    margin-right: 20% !important;
+}
+
+/* Find Gateway header */
+.site-header .heading-large.margin-top-by-5{
+    font-size: 70px;
+}
+
+.main-search-div .text-divider{
+    height: 30px;
+    float: right;
+    padding-right: 2%;
+    border-left: 2px solid #bababa;
+}
+
+.main-search-div fieldset span:first-child{
+    line-height: 32px;
+}

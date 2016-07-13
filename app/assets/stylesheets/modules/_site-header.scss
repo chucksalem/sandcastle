@@ -18,6 +18,7 @@
 
         &:before {
             background: url('homePageImage.jpg') bottom center no-repeat;
+            z-index: -1;
             background-size: cover;
             content: "";
             height: 100%;
@@ -234,8 +235,8 @@
   }
 
   .main-navigation{
-    width: 49%;
-    float: right !important;
+    //width: 49%;
+    //float: right;
     padding-top: 30px;
   }
 
