@@ -18,24 +18,30 @@ $(document).ready(function(){
         $('.slider5').bxSlider({
             slideWidth: 600,
             minSlides: 1,
-            maxSlides: 1,
-            slideMargin: 0
+            maxSlides: 1
         });
     }else{
         $('.slider5').bxSlider({
             minSlides: 1,
             maxSlides: 1,
-            slideMargin: 0
+            controls: true,
+            pager: false,
+            nextText: '<i class="fa fa-long-arrow-right"></i>',
+            prevText: '<i class="fa fa-long-arrow-left"></i>'
+            //mode: 'fade'
         });
     }
 
     $('.testimonial-slider').bxSlider({
-        slideWidth: 1000,
+        slideWidth: 1100,
         minSlides: 1,
         maxSlides: 1,
-        slideMargin: 0
+        slideMargin: 0,
+        controls: true,
+        pager: false,
+        nextText: '<img src="assets/forword-icon.png" height="21" width="40"/>',
+        prevText: '<img src="assets/backword-icon.png" height="21" width="40"/>'
     });
-
 
     $('.featured-attraction-slider').bxSlider({
         slideWidth: 1000,
@@ -47,8 +53,6 @@ $(document).ready(function(){
         nextText: '<img src="assets/forword-icon.png" height="25" width="25"/>',
         prevText: '<img src="assets/backword-icon.png" height="25" width="25"/>'
     });
-    
     $('.navbar-inverse').css('margin-top','21px');
-    // $('.heading-large.margin-top-by-5').css('padding-top','10%');
 });
 

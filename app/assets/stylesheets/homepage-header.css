@@ -35,30 +35,29 @@
 }
 
 .center-image-align{
-    margin: 5% auto;
+    margin: 0 auto;
     height: 100px;
     border-radius: 50px;
     width: 100px;
 }
 
 .testimonial-user-rating{
-    color:#ffcc33;
+    color:#fbd839;
     font-size:20px;
     text-align: center;
 }
 
 .testimonial-comment{
-    font-family: sans-serif;
+    font-family: "Montserrat";
     font-size: 16px;
-    font-weight: 600;
-    margin-right: 19%;
-    margin-left: 19%;
+    font-weight: 400;
+    padding: 0 10%;
 }
 
 .testimonial-user-name{
-    font-family: sans-serif;
+    font-family: "Montserrat";
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .testimonial-bg-image .bx-prev{
@@ -66,16 +65,26 @@
 }
 
 .call-now-bg{
-    background-color:#ffcc33;
-    padding-left: 20%;
-    text-align:left;
+    background-color: #fbd839;
+    padding: 2.5% 20%;
+    text-align: left;
+    height: 103px;
 }
 
 .hot-offer{
     font-size: 15px;
     color: #38bcfa;
     padding-top:20px;
+    font-family: "Montserrat";
+    font-weight: 400;
 }
+
+.room-name-text{
+    font-family: "Montserrat";
+    font-size: 25px;
+    font-weight: 600;
+}
+
 .offer-btn {
     color: white;
     background-color: #38bcfa;
@@ -111,7 +120,7 @@
     float: right;
     font-size: 12px;
     color: white;
-    font-family: Montserrat Regular;
+    font-family: "Montserrat";
 }
 
 .main-search-div{
@@ -232,10 +241,10 @@
 }
 
 .get-some-deal{
-    background: url("featr-bg.png") bottom center no-repeat;
+    background: url("get-some-deals-image.png") bottom center no-repeat;
     background-size: cover;
     padding: 0px;
-    height:350px;
+    height:250px;
     /*background-attachment: fixed;*/
     /*background-position: center;*/
     content: '';
@@ -326,4 +335,151 @@
 
 .main-search-div fieldset span:first-child{
     line-height: 32px;
+}
+
+.email-address-text-box{
+    height: 53px;
+    border-radius: 10px;
+    border: none;
+    color: #bababa;
+    width: 46%;
+    float: left;
+    margin-right: 5%;
+    font-weight: 200;
+    padding: 20px;
+    font-family: Montserrat;
+    font-size: 16px;
+}
+
+.subscribe-email-div{
+    float: left;
+    width: 100%;
+    padding: 7% 0% 7% 47%;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #adadad;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #adadad;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #adadad;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #adadad;
+}
+
+.section-divider{
+    width: 100%;
+    height: 70px;
+    background: white;
+}
+
+.section-divider img{
+    display: table-cell;
+    margin: 0px auto;
+    padding: 35px 0px;
+}
+
+.main-heading-div{
+    background: white;
+    height: 100px;
+}
+
+.main-heading-div img{
+    display: table-cell;
+    margin: 0 auto;
+}
+
+.featured-rooms-slider-section .bx-wrapper{
+    margin: 0 auto;
+}
+
+.testimonial-main-div .bx-wrapper .bx-next, .testimonial-main-div .bx-wrapper .bx-prev{
+    background: none;
+}
+
+.testimonial-main-div .bx-wrapper .bx-next img, .testimonial-main-div .bx-wrapper .bx-prev img{
+    width: 21px ;
+    height: 40px ;
+}
+
+.testimonial-main-div{
+    padding: 60px 0;
+}
+
+.testimonial-main-div .center-image-align{
+    margin-bottom: 2em;
+}
+
+.call-now-text{
+    font-size: 2em;
+    color: #fff;
+    font-family: "Montserrat";
+}
+
+.phone-number-text{
+    font-size: 3em;
+    color: #fff;
+    font-family: "Montserrat";
+}
+
+.room-details{
+    font-family: "Montserrat";
+    font-size: 12px;
+    color: #a7a7a7;
+}
+
+.view-offer-btn{
+    padding-top: 15px;
+}
+
+.rating-icon-div{
+    color: #ffcc33;
+    font-size: 20px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+
+.room-details-main-div{
+    padding: 0% 8%;
+    text-align: left;
+}
+
+.offer-rate{
+    position: absolute;
+    top: 0;
+}
+
+.room-icon-div{
+    float: left;
+    position: absolute;
+    width: 41.7%;
+    font-size: 20px;
+    height: 100px;
+    display: table-cell;
+    text-align: center;
+    color: white;
+    background: rgba(255,255,255,0.5);
+    bottom: 0px;
+}
+
+.featured-rooms-slider-section .bx-wrapper .bx-controls-direction a{
+    top: 89%;
+     margin-top: 0px;
+}
+
+.featured-rooms-slider-section .bx-wrapper .bx-next, .featured-rooms-slider-section .bx-wrapper .bx-prev{
+    background: none;
+}
+
+.padding-bottom-2{
+    padding-bottom: 2%;
+}
+
+.padding-top-1{
+    padding-top: 1%;
 }
