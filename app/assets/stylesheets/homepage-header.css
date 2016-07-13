@@ -125,7 +125,7 @@
 
 .main-search-div{
     float: left;
-    width: 83%;
+    width: 80%;
     font-family: "Montserrat";
     font-size: 1.4em;
     font-weight: 300;
@@ -323,7 +323,7 @@
 
 /* Find Gateway header */
 .site-header .heading-large.margin-top-by-5{
-    font-size: 70px;
+    font-size: 60px;
 }
 
 .main-search-div .text-divider{
@@ -482,4 +482,49 @@
 
 .padding-top-1{
     padding-top: 1%;
+}
+
+.property-search{
+    margin: 0;
+    padding-bottom: 0% !important;
+}
+section.main-content .layout-container{
+    top: -132px;
+}
+section.main-content .layout-container{
+    max-width: 670px;
+}
+section.main-content footer.md-two-twelfths img{
+    height: 57px;
+
+}
+section.main-content footer.md-two-twelfths{
+    width:19.66667%;
+
+}
+.login-register-div{
+    font-size: 15px;
+}
+section.main-content{
+    height: 1px;
+}
+.main-navigation .highlight-selected{
+    background: none;
+}
+.site-header.full-background{
+    height: 60%;
+}
+.hero .padded-top{
+    padding-top: 61px;
+}
+
+.homepage-main-bar .login-register-div{
+    width: 165px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.homepage-main-bar .login-register-div .text-divider{
+    height: 38px;
+     float: none;
+    margin: 0 10px 0px 10px;
 }
