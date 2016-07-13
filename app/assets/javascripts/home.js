@@ -44,14 +44,14 @@ $(document).ready(function(){
     });
 
     $('.featured-attraction-slider').bxSlider({
-        slideWidth: 1000,
+        slideWidth: 1100,
         minSlides: 3,
-        maxSlides: 5,
+        maxSlides: 3,
         slideMargin: 0,
         controls: true,
         pager: false,
-        nextText: '<img src="assets/forword-icon.png" height="25" width="25"/>',
-        prevText: '<img src="assets/backword-icon.png" height="25" width="25"/>'
+        nextText: '<img src="assets/right-arrow.png" height="12" width="24"/>',
+        prevText: '<img src="assets/Left-arrow.png" height="12" width="24"/>'
     });
     $('.navbar-inverse').css('margin-top','21px');
 });

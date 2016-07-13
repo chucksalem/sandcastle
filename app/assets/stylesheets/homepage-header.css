@@ -254,17 +254,16 @@
 
 .venues {
     margin-left: 10px;
-    width: 240px !important;
+    width: 270px !important;
 }
 
 .infocus-images {
     height: 250px;
-    width: 240px;
 }
 
 .outfocus-images {
     height: 283px;
-    width: 240px;
+    width: 100%;
     opacity: 0.6;
 }
 
@@ -275,11 +274,12 @@
     font-size: 21px;
     position: relative;
     font-weight: 500;
+    font-family: "Montserrat";
 }
 
 .feedback {
     float: left;
-    width: 240px;
+    width: 100%;
     height: 33px;
     background: #f7f7f7;
     margin-top: -31px;
@@ -290,6 +290,7 @@
     width: 50%;
     height: 33px;
     text-align: center;
+    border: 1px solid rgb(186, 186, 186);
 }
 
 .comments {
@@ -313,6 +314,7 @@
 .number {
     font-weight: bold;
     font-size: 15px;
+    font-family: "Montserrat";
 }
 
 /*home page css*/
@@ -347,7 +349,7 @@
     margin-right: 5%;
     font-weight: 200;
     padding: 20px;
-    font-family: Montserrat;
+    font-family: "Montserrat";
     font-size: 16px;
 }
 
@@ -447,6 +449,7 @@
 .room-details-main-div{
     padding: 0% 8%;
     text-align: left;
+    background: #f7f7f7;
 }
 
 .offer-rate{
@@ -474,6 +477,16 @@
 
 .featured-rooms-slider-section .bx-wrapper .bx-next, .featured-rooms-slider-section .bx-wrapper .bx-prev{
     background: none;
+}
+
+.feature-atrraction-sliders .bx-wrapper .bx-next, .feature-atrraction-sliders .bx-wrapper .bx-prev{
+    background: none;
+}
+
+.feature-atrraction-sliders .bx-wrapper .bx-controls-direction a{
+    top: 80%;
+    margin-top: 0px;
+    margin-left: 15px;
 }
 
 .padding-bottom-2{
@@ -523,8 +536,11 @@ section.main-content{
     text-transform: uppercase;
     font-weight: normal;
 }
-.homepage-main-bar .login-register-div .text-divider{
+.homepage-main-bar .login-register-div .text-divider {
     height: 38px;
-     float: none;
+    float: none;
     margin: 0 10px 0px 10px;
+}
+.featured-rooms-slider-section .bx-viewport{
+    height: 390px !important;
 }
