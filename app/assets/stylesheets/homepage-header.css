@@ -124,14 +124,14 @@
 
 .main-search-div{
     float: left;
-    width: 80%;
+    width: 76%;
     font-family: "Montserrat";
     font-size: 1.4em;
     font-weight: 300;
     color: #bababa;
     background: white;
     border-top-left-radius: 8px;
-    height: 57px;
+    height: 70px;
     border-bottom-left-radius: 8px;
     /*padding: 2.5%;*/
 }
@@ -139,8 +139,8 @@
 .main-search-div fieldset{
     float: left;
     height: auto;
-    font-size: 12px;
-    padding: 15px 0px;
+    font-size: 15px;
+    padding: 21px 0px;
 }
 
 .width-25{
@@ -324,7 +324,7 @@
 
 /* Find Gateway header */
 .site-header .heading-large.margin-top-by-5{
-    font-size: 50px;
+    font-size: 60px;
     font-family: "Montserrat";
 }
 
@@ -456,7 +456,7 @@
 
 .offer-rate{
     position: absolute;
-    top: 0;
+    top: -1px;
 }
 
 .room-icon-div{
@@ -500,17 +500,17 @@
 }
 
 .property-search{
-    margin: 0;
+    margin: 0 122px;
     padding-bottom: 0% !important;
 }
 section.main-content .layout-container{
-    top: -180px;
+    top: -200px;
 }
 section.main-content .layout-container{
-    max-width: 670px;
+    width: 100%;
 }
 section.main-content footer.md-two-twelfths img{
-    height: 57px;
+    height: 70px;
 
 }
 section.main-content footer.md-two-twelfths{
@@ -530,7 +530,7 @@ section.main-content{
     height: 67%;
 }
 .hero .padded-top{
-    padding-top: 61px;
+    padding-top: 70px !important;
 }
 
 .homepage-main-bar .login-register-div{
@@ -566,7 +566,7 @@ section.main-content{
 }
 .site-header .main-navigation li a{
     font-family: "Montserrat" !important;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: normal;
 }
 .site-header .homepage-main-bar .icons-div .fa-lg{
@@ -597,5 +597,13 @@ section.main-content{
 }
 
 #bs-example-navbar-collapse-1 .main-navigation .padding-top-by-7{
-    padding: 7px 35px !important;
+    padding: 7px 21px !important;
+}
+@-moz-document url-prefix() {
+    .site-header.full-background .hero{
+        margin-top: 0px;
+    }
+}
+section.main-content footer.md-two-twelfths{
+    width: 24%;
 }
