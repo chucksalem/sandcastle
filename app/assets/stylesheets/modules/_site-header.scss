@@ -177,7 +177,15 @@
   @media screen and (max-width: 855px) and (min-width: 200px) {
     .hero h1 {
       padding-top: 60px;
-      font-size: 35px;
+      font-size: 6vmin !important;
+
+    }
+    .site-header .collapse.in{
+      margin-top: 10px;
+    }
+    .navbar .center-heading{
+      margin-left: 0%;
+      margin-right: 0%;
     }
 
   }
