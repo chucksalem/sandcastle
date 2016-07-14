@@ -64,9 +64,10 @@
 
 .call-now-bg{
     background-color: #fbd839;
-    padding: 2.5% 20%;
+    padding: 2.5% 15%;
     text-align: left;
     height: 103px;
+    text-transform: uppercase;
 }
 
 .hot-offer{
@@ -107,7 +108,7 @@
 
 .icons-div{
     float: left;
-    width: 10%;
+    /*width: 10%;*/
 }
 
 .margin-right-10{
@@ -317,13 +318,14 @@
 
 /*home page css*/
 .center-heading{
-    margin-left: 38% !important;
+    margin-left: 32% !important;
     margin-right: 20% !important;
 }
 
 /* Find Gateway header */
 .site-header .heading-large.margin-top-by-5{
-    font-size: 60px;
+    font-size: 50px;
+    font-family: "Montserrat";
 }
 
 .main-search-div .text-divider{
@@ -502,7 +504,7 @@
     padding-bottom: 0% !important;
 }
 section.main-content .layout-container{
-    top: -132px;
+    top: -180px;
 }
 section.main-content .layout-container{
     max-width: 670px;
@@ -525,7 +527,7 @@ section.main-content{
     background: none;
 }
 .site-header.full-background{
-    height: 60%;
+    height: 67%;
 }
 .hero .padded-top{
     padding-top: 61px;
@@ -557,4 +559,43 @@ section.main-content{
     position: absolute;
     bottom: 0;
     width: 41.7%;
+}
+
+.site-header .main-navigation{
+    width: 100%;
+}
+.site-header .main-navigation li a{
+    font-family: "Montserrat" !important;
+    font-size: 15px;
+    font-weight: normal;
+}
+.site-header .homepage-main-bar .icons-div .fa-lg{
+    margin-right: 5%;
+}
+.site-header .homepage-main-bar .icons-div{
+    width: 50%;
+}
+.site-header .brand-container {
+    margin-left: 5.5%;
+}
+.site-header .hero{
+    width: 100%;
+    float: left;
+}
+.site-header.full-background:before{
+    background-size: 100% 100%;
+}
+.hero .layout-centered{
+    float: left;
+    width: 100%;
+    clear: both;
+}
+
+.site-header .navbar-inverse {
+    width: 100%;
+    float: left;
+}
+
+#bs-example-navbar-collapse-1 .main-navigation .padding-top-by-7{
+    padding: 7px 35px !important;
 }

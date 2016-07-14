@@ -191,7 +191,10 @@
 
   @media screen and (max-width: 680px) and (min-width: 400px) {
     .main-navigation{
-      width: 30% !important;
+      width: 100% !important;
+    }
+    .icons-div{
+      width: 20%;
     }
   }
 
