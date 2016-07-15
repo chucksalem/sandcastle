@@ -627,7 +627,6 @@ input { font-family: 'FontAwesome'; } /* This is for the placeholder */
     font-family: 'FontAwesome';
     color:#bababa;
     position: relative;
-    /*left: -10px;*/
     content: "\f073";
 }
 
@@ -639,4 +638,10 @@ section.main-content .property-search form .text-divider{
     position: absolute;
     top: 0;
     right: 0;
+}
+.sm-one-third input::-webkit-input-placeholder{
+}
+#select-drop,#guests{
+    font-family: FontAwesome;
+    color: #bababa;
 }

@@ -54,5 +54,13 @@ $(document).ready(function(){
         prevText: '<img src="assets/Left-arrow.png" height="12" width="24"/>'
     });
     $('.navbar-inverse').css('margin-top','21px');
+    $('.navbar-toggle').on("click",function () {
+        if($(this).hasClass("collapsed")){
+            $('.site-header .hero.no-bg').hide();
+        }else{
+            $('.site-header .hero.no-bg').show();
+        }
+    });
+
 });
 
