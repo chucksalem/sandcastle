@@ -18,4 +18,13 @@ section {
     &.scallop-bottom {
         @include scallop-bottom(white);
     }
+
+}
+
+section.main-content{
+    @include bp-until($breakpoint__md){
+        .layout-container {
+            top: -383px !important;
+        }
+    }
 }

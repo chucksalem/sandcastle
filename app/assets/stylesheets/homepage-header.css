@@ -1,9 +1,9 @@
 .property-search{
     background-color: transparent;
-    margin: -135px auto 100px auto;
-    max-width: 880px;
+    /*margin: -135px auto 100px auto;*/
+    /*max-width: 880px;*/
     padding: 20px;
-    position: relative;
+    /*position: relative;*/
     box-shadow: none;
     border-radius: 3px 3px 3px 3px;
 }
@@ -143,11 +143,11 @@
 }
 
 .width-25{
-    width:25%;
+    width:18%;
 }
 
 .width-30{
-    width: 30%;
+    width: 20%;
 }
 
 .width-15{
@@ -499,8 +499,10 @@
 }
 
 .property-search{
-    margin: 0 122px;
+    /*margin: 0 122px;*/
     padding-bottom: 0% !important;
+    margin: 0 auto;
+    width: 74%;
 }
 section.main-content .layout-container{
     top: -200px;
@@ -513,7 +515,7 @@ section.main-content footer.md-two-twelfths img{
 
 }
 section.main-content footer.md-two-twelfths{
-    width:19.66667%;
+    /*width:19.66667%;*/
 
 }
 .login-register-div{
@@ -604,5 +606,37 @@ section.main-content{
     }
 }
 section.main-content footer.md-two-twelfths{
-    width: 24%;
+    /*width: 24%;*/
+}
+
+.search-btn{
+    background: #39bdfb;
+}
+
+.property-search fieldset .select-style,.property-search fieldset input{
+    border: none;
+}
+form .select-style select{
+    padding: 1.2em;
+}
+form .select-style:before{
+    display: none;
+}
+input { font-family: 'FontAwesome'; } /* This is for the placeholder */
+.sm-one-third input{
+    font-family: 'FontAwesome';
+    color:#bababa;
+    position: relative;
+    /*left: -10px;*/
+    content: "\f073";
+}
+
+section.main-content .property-search form .text-divider{
+    border-right: 2px solid #bababa;
+    margin: 15px 0px;
+    height: 35px;
+    border-left: 1px solid #ffffff;
+    position: absolute;
+    top: 0;
+    right: 0;
 }

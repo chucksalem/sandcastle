@@ -176,16 +176,20 @@
   // responsive media query
   @media screen and (max-width: 855px) and (min-width: 200px) {
     .hero h1 {
-      padding-top: 60px;
+      //padding-top: 60px;
       font-size: 6vmin !important;
 
+    }
+    .property-search form fieldset{
+      width: 100% !important;
     }
     .site-header .collapse.in{
       margin-top: 10px;
     }
     .navbar .center-heading{
-      margin-left: 0%;
-      margin-right: 0%;
+      margin-left: 0% !important;
+      margin-right: 0% !important;
+      margin-top: 4%;
     }
 
   }
@@ -309,5 +313,8 @@
     font-size: 6vmin;
     font-family: sans-serif;
     border-color: rgb(255, 255, 255);
+  }
+  @include bp-until($breakpoint__md){
+    height: 100% !important;
   }
 }

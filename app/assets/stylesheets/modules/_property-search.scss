@@ -17,6 +17,14 @@
     fieldset {
         @include bp-until($breakpoint__md){
             margin-bottom: 1em;
+            width: 100% !important;
+            font-size: 11.6px regular !important;
+        }
+
+    }
+    @include bp-until($breakpoint__md) {
+        .text-divider {
+            display: none;
         }
     }
     @include bp-between($breakpoint__sm, $breakpoint__md){
