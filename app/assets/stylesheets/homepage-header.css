@@ -645,3 +645,122 @@ section.main-content .property-search form .text-divider{
     font-family: FontAwesome;
     color: #bababa;
 }
+
+/****************** contact-us page css **********************/
+
+.contact-us {
+    width: 60%;
+    margin: auto;
+    margin-top: 7%;
+    background-color: lightgray;
+    padding-bottom: 0.5%;
+
+}
+
+.contact-form {
+    margin: 10%;
+}
+
+.input-appear {
+    border-style: none none solid;
+    border-color: white;
+    background-color: transparent;
+}
+
+.contact-header {
+    color: white;
+    text-align: center;
+}
+
+.grand-hotel {
+    color: white;
+    font-family: "GRAND HOTEL";
+    font-size: 7em;
+}
+
+.need-help {
+    background-color: yellow;
+    margin-top: 5%;
+    text-align: center;
+}
+
+.footer-bg {
+    margin-top: -4%;
+}
+
+.call-now,
+.email-now {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    font-family: "Montserrat Regular";
+}
+
+.call-now div:nth-child(2),
+.email-now div:nth-child(2) {
+    color: white;
+    font-size: 2em;
+}
+
+.call-now div:last-child,
+.email-now div:last-child {
+    font-size: 3em;
+}
+
+.need-help h2 {
+    font-family: "Montserrat Regular";
+}
+
+.btn--blue {
+    background-color: #1E90FF;
+    margin: auto;
+    display: inherit;
+}
+
+.bg-image {
+    z-index: -1;
+    background: url('sunrise-rocky-point-also.jpg') no-repeat center center;
+}
+
+input.input-appear::-webkit-input-placeholder {
+    color: white;
+}
+
+textarea.input-appear::-webkit-input-placeholder {
+    color: white;
+}
+
+article.field a {
+    display: inherit;
+    margin: auto;
+    width: 25%;
+}
+
+.hero {
+    display: none;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-arrow-right:before {
+    content: "\f061";
+}
+
+.fa-envelope-o:before {
+    content: "\f003";
+    font-size: 4em;
+    color: white;
+}
+
+.fa-phone:before {
+    content: "\f095";
+    font-size: 4em;
+    color: white;
+}
