@@ -44,7 +44,7 @@ $(document).ready(function(){
     });
 
     $('.featured-attraction-slider').bxSlider({
-        slideWidth: 1100,
+        // slideWidth: 1100,
         minSlides: 3,
         maxSlides: 3,
         slideMargin: 0,

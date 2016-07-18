@@ -736,9 +736,9 @@ article.field a {
     width: 25%;
 }
 
-.hero {
-    display: none;
-}
+/*.hero {*/
+    /*display: none;*/
+/*}*/
 
 .fa {
     display: inline-block;
