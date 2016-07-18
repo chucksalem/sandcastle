@@ -531,7 +531,7 @@ section.main-content{
     height: 67%;
 }
 .hero .padded-top{
-    padding-top: 70px !important;
+    padding-top: 60px !important;
 }
 
 .homepage-main-bar .login-register-div{
@@ -616,8 +616,8 @@ section.main-content footer.md-two-twelfths{
 .property-search fieldset .select-style,.property-search fieldset input{
     border: none;
 }
-form .select-style select{
-    padding: 1.2em;
+form .select-style #select-drop{
+    padding: 1.3em;
 }
 form .select-style:before{
     display: none;
@@ -645,6 +645,10 @@ section.main-content .property-search form .text-divider{
     font-family: FontAwesome;
     color: #bababa;
 }
+#guests{
+    font-size: 20.42px;
+}
+
 
 /****************** contact-us page css **********************/
 
