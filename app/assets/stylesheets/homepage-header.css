@@ -820,3 +820,9 @@ form .select-style select{
 .site-header .hacienda-logo{
     width: 100px;
 }
+.last-child-div{
+    padding-left: 10px;
+}
+.subscriber-button-main img{
+    cursor: pointer;
+}
