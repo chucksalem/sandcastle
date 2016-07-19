@@ -642,9 +642,6 @@ section.main-content .property-search form .text-divider{
     /*font-family: FontAwesome;*/
     color: #bababa;
 }
-#guests{
-    font-size: 20.42px;
-}
 
 
 /****************** contact-us page css **********************/
@@ -802,8 +799,8 @@ article.field a {
     padding-top: 1em;
 }
 #guests{
-    padding-top: .8em;
-    padding-left: 2em;
+    padding-top: 1.3em;
+    padding-left: 2.3em;
 }
 .footer-bg .footer-menu-list .list-div-text a, .menu-list-div .list-div span a{
     color: #ffffff;
