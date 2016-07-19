@@ -55,4 +55,12 @@ class PagesController < ApplicationController
     render
   end
 
+  def policy
+    render
+  end
+
+  def attractions
+    render
+  end
+
 end

@@ -574,7 +574,7 @@ section.main-content{
     font-weight: normal;
 }
 .site-header .homepage-main-bar .icons-div .fa-lg{
-    margin-right: 5%;
+    margin-right: 3%;
 }
 .site-header .homepage-main-bar .icons-div{
     width: 50%;
@@ -805,7 +805,7 @@ article.field a {
     padding-top: .8em;
     padding-left: 2em;
 }
-.footer-bg .footer-menu-list .list-div-text a{
+.footer-bg .footer-menu-list .list-div-text a, .menu-list-div .list-div span a{
     color: #ffffff;
 }
 
@@ -818,5 +818,5 @@ form .select-style select{
     text-indent: 18px;
 }
 .site-header .hacienda-logo{
-    width: 125px;
+    width: 100px;
 }
