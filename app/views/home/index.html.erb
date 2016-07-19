@@ -8,26 +8,32 @@
       <div class="property-search welcome-text-align-for-smaller">
         <form class='gw no-gutter'>
           <fieldset class="g sm-one-whole md-five-twelfths width-25">
-            <div class="select-style">
+            <div class="select-style inner-addon right-addon">
+              <i class="fa fa-bed" aria-hidden="true"></i>
               <select name="id" id="select-drop" value="" >
-                <option disabled="" selected="" class="drop-options">ROOMS &#xf236;</option>
+                <option disabled="" selected="" class="drop-options">ROOMS</option>
+                <option value="1" class="drop-options">1</option>
+                <option value="2" class="drop-options">2</option>
                 </select>
             </div>
             <span class="text-divider"></span>
           </fieldset>
-          <fieldset class="g sm-one-third md-one-seventh width-25">
-            <input id="start_date" readonly="readonly" class="no-borders datepicker arrival-date" type="text" name="start_date" placeholder="CHECK IN   &#xf073;" autocomplete="off">
+          <fieldset class="g sm-one-third md-one-seventh width-25 inner-addon right-addon">
+            <input id="start_date" readonly="readonly" class="no-borders datepicker arrival-date" type="text" name="start_date" placeholder="CHECK IN" autocomplete="off">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
             <span class="text-divider"></span>
           </fieldset>
-          <fieldset class="g sm-one-third md-one-seventh width-30">
-            <input id="end_date" readonly="readonly" class="no-borders datepicker depart-date" type="text" name="end_date" placeholder="CHECK OUT  &#xf073;" autocomplete="off">
+          <fieldset class="g sm-one-third md-one-seventh width-30 inner-addon right-addon">
+            <input id="end_date" readonly="readonly" class="no-borders datepicker depart-date" type="text" name="end_date" placeholder="CHECK OUT" autocomplete="off">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
             <span class="text-divider"></span>
           </fieldset>
           <fieldset class="g sm-one-fourth md-one-eighth text-align-right width-15">
             <label class="is-visually-hidden" for="guests">Guests</label>
-            <div class="select-style">
+            <div class="select-style inner-addon left-addon">
+              <i class="fa fa-user" aria-hidden="true"></i>
               <select name="guests" id="guests">
-                <option disabled selected>&#61447;  1</option>
+                <option disabled selected>1</option>
               </select>
             </div>
           </fieldset>

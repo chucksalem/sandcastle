@@ -46,14 +46,14 @@
 
 .testimonial-comment{
     font-family: "Montserrat";
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     padding: 0 10%;
 }
 
 .testimonial-user-name{
     font-family: "Montserrat";
-    font-size: 20px;
+    font-size: 21px;
     font-weight: 600;
 }
 
@@ -79,7 +79,7 @@
 
 .room-name-text{
     font-family: "Montserrat";
-    font-size: 25px;
+    font-size: 32px;
     font-weight: 600;
 }
 
@@ -176,7 +176,7 @@
     background-position: center;
     position: relative;
     width: 100%;
-    height: 190px;
+    height: 196px;
 }
 
 .footer-main-div{
@@ -195,8 +195,9 @@
 
 .list-div{
     float: left;
-    padding: 0% 10%;
+    padding: 0% 0%;
     width: 80%;
+    padding-left: 20%;
 }
 
 .footer-menu-icon-div{
@@ -269,7 +270,7 @@
     top: -35px;
     color: white;
     text-align: center;
-    font-size: 21px;
+    font-size: 18px;
     position: relative;
     font-weight: 500;
     font-family: "Montserrat";
@@ -289,6 +290,7 @@
     height: 33px;
     text-align: center;
     border: 1px solid rgb(186, 186, 186);
+    padding: 2px;
 }
 
 .comments {
@@ -297,21 +299,21 @@
 
 .fa-heart {
     color: deepskyblue;
-    font-size: 14px;
+    font-size: 16px !important;
     margin-right: 10px;
     padding-top: 9px;
 }
 
 .fa-comment {
     color: yellow;
-    font-size: 14px;
+    font-size: 16px !important;
     margin-right: 10px;
     padding-top: 9px;
 }
 
 .number {
-    font-weight: bold;
-    font-size: 15px;
+    font-weight: normal;
+    font-size: 16px;
     font-family: "Montserrat";
 }
 
@@ -323,7 +325,7 @@
 
 /* Find Gateway header */
 .site-header .heading-large.margin-top-by-5{
-    font-size: 60px;
+    font-size: 48px;
     font-family: "Montserrat";
 }
 
@@ -423,14 +425,15 @@
 }
 
 .phone-number-text{
-    font-size: 3em;
+    font-size: 33px;
     color: #fff;
     font-family: "Montserrat";
+    font-weight: normal;
 }
 
 .room-details{
     font-family: "Montserrat";
-    font-size: 12px;
+    font-size: 10px;
     color: #a7a7a7;
 }
 
@@ -502,7 +505,7 @@
     /*margin: 0 122px;*/
     padding-bottom: 0% !important;
     margin: 0 auto;
-    width: 74%;
+    width: 69%;
 }
 section.main-content .layout-container{
     top: -200px;
@@ -519,7 +522,7 @@ section.main-content footer.md-two-twelfths{
 
 }
 .login-register-div{
-    font-size: 15px;
+    font-size: 11px;
 }
 section.main-content{
     height: 1px;
@@ -535,7 +538,7 @@ section.main-content{
 }
 
 .homepage-main-bar .login-register-div{
-    width: 165px;
+    width: 125px;
     text-transform: uppercase;
     font-weight: normal;
 }
@@ -567,7 +570,7 @@ section.main-content{
 }
 .site-header .main-navigation li a{
     font-family: "Montserrat" !important;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: normal;
 }
 .site-header .homepage-main-bar .icons-div .fa-lg{
@@ -577,7 +580,7 @@ section.main-content{
     width: 50%;
 }
 .site-header .brand-container {
-    margin-left: 5.5%;
+    margin-left: 3.1%;
 }
 .site-header .hero{
     width: 100%;
@@ -617,17 +620,11 @@ section.main-content footer.md-two-twelfths{
     border: none;
 }
 form .select-style #select-drop{
-    padding: 1.3em;
+    padding: 1.0em;
+    padding-top: 2em;
 }
 form .select-style:before{
     display: none;
-}
-input { font-family: 'FontAwesome'; } /* This is for the placeholder */
-.sm-one-third input{
-    font-family: 'FontAwesome';
-    color:#bababa;
-    position: relative;
-    content: "\f073";
 }
 
 section.main-content .property-search form .text-divider{
@@ -642,7 +639,7 @@ section.main-content .property-search form .text-divider{
 .sm-one-third input::-webkit-input-placeholder{
 }
 #select-drop,#guests{
-    font-family: FontAwesome;
+    /*font-family: FontAwesome;*/
     color: #bababa;
 }
 #guests{
@@ -689,7 +686,7 @@ section.main-content .property-search form .text-divider{
 }
 
 .footer-bg {
-    margin-top: -4%;
+    /*margin-top: -4%;*/
 }
 
 .call-now,
@@ -767,4 +764,59 @@ article.field a {
     content: "\f095";
     font-size: 4em;
     color: white;
+}
+
+/*.fa-calendar{*/
+    /*position: absolute;*/
+    /*padding: 10px;*/
+    /*pointer-events: none;*/
+/*}*/
+
+.inner-addon {
+    position: relative;
+}
+
+/* style icon */
+.inner-addon .fa-calendar,.inner-addon .fa-bed, .inner-addon .fa-user {
+    position: absolute;
+    padding: 10px 20px 10px 10px;
+    pointer-events: none;
+    top: 24%;
+    color: #bababa;
+    font-size: 14.85px;
+}
+
+/* align icon */
+.left-addon .fa-user { left:  0px;}
+.right-addon .fa-calendar,.right-addon .fa-bed { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px;    padding-left: 20px; }
+
+#start_date,#end_date,#select-drop{
+    font-size: 11.6px;
+    font-family: "Montserrat";
+}
+#start_date,#end_date{
+    padding-top: 1em;
+}
+#guests{
+    padding-top: .8em;
+    padding-left: 2em;
+}
+.footer-bg .footer-menu-list .list-div-text a{
+    color: #ffffff;
+}
+
+.inner-addon .fa-user {
+    font-size: 20.42px;
+    padding: 6px 20px 10px 30px;
+}
+
+form .select-style select{
+    text-indent: 18px;
+}
+.site-header .hacienda-logo{
+    width: 125px;
 }

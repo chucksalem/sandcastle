@@ -61,6 +61,5 @@ $(document).ready(function(){
             $('.site-header .hero.no-bg').show();
         }
     });
-
 });
 
