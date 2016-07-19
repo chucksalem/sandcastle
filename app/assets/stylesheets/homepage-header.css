@@ -823,3 +823,9 @@ form .select-style select{
 .subscriber-button-main img{
     cursor: pointer;
 }
+.main-content-sectio-devider-feature img{
+    margin: 0 40%;
+}
+.main-content-sectio-devider img{
+    margin: 0 46%;
+}
