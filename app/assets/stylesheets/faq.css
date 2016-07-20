@@ -1,3 +1,6 @@
+.faq-page-content-section{
+    font-family: Montserrat;
+}
 .faq-search-help-main fieldset{
     width: 71%;
 }
@@ -14,13 +17,15 @@
 }
 
 .site-header.faq_page_content {
-    height: 100%;
+    height: 60%;
 }
 .site-header.faq_page_content .heading-large.margin-top-by-5{
-    font-size: 39px;
+    font-size: 31px;
+    font-family: Montserrat;
+    font-weight: bold;
 }
 .faq-search-help-main{
-    width: 46%;
+    width: 37%;
     clear: both;
     padding-top: 12px;
 }
@@ -46,10 +51,19 @@ a.accordion-toggle{
 
 }
 .panel-title {
-    background: url("up-arrow-faq.png") no-repeat right;
+    /*background: url("up-arrow-faq.png") no-repeat right;*/
+    font-size: 12px;
+    font-family:Montserrat;
+    font-weight: normal;
+    cursor: pointer;
+}
+.panel-body{
+    font-size: 11.85px;
+    font-family:Montserrat;
+    font-weight: normal;
 }
 .collapsed .panel-title {
-    background: url("down-arrow-faq.png") no-repeat right;
+    /*background: url("down-arrow-faq.png") no-repeat right;*/
 }
 
 .faq-page-content-section .section-divider {
@@ -60,7 +74,8 @@ a.accordion-toggle{
     margin-left: auto;
     margin-right: auto;
     width: 30%;
-    font-size: 23px;
+    font-size: 18px;
+    font-family: Montserrat;
     text-align: center;
 }
 .need-more-help-divider{
@@ -70,6 +85,14 @@ a.accordion-toggle{
 @media screen and (max-width: 855px) and (min-width: 200px) {
     .need-more-help-div{
         width: 100%;
+    }
+
+    .faq-page-content-section .layout-container .col-sm-8{
+        margin-bottom: 20px;
+    }
+
+    .faq-page-content-section .col-sm-8 .form-group {
+        width: 100% !important;
     }
 }
 
@@ -81,3 +104,92 @@ a.accordion-toggle{
 @media screen and (max-width: 680px) and (min-width: 400px) {
 
 }
+.footer-bg{
+    clear: both;
+}
+.want-to-chat-container{
+    background: #ffffff;
+    padding: 20px;
+}
+.faq-page-content-section .fa-envelope-o:before,.faq-page-content-section .fa-phone:before {
+    color: #000;
+    font-size: 23.33px;
+}
+.faq-page-content-section .form-group{
+    border-bottom: 1px solid #bababa;
+}
+.faq-page-content-section .form-control{
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+.review-submit{
+    background: url("submit-btn.png") no-repeat;
+    height: 49px;
+    border: none;
+}
+.faq-page-content-section .col-sm-8 .form-group{
+    width: 76%;
+}
+
+.want-to-chat-container .checkbox label{
+    font-size: 13.13px;
+}
+.want-to-chat-text{
+    font-size: 9px;
+    color: #bababa;
+}
+.want-to-chat-header{
+    font-size: 18px;
+}
+.want-to-chat-container .form-group{
+    border: none;
+}
+.faq-help-tabs{
+    margin-left: auto;
+    margin-right: auto;
+    width: 24%;
+    background: none;
+    font-size: 12px;
+    font-weight: normal;
+    position: absolute;
+    margin-top: -46px;
+    right: 0;
+    left: 0;
+    margin-bottom: 0px;
+    z-index: 1;
+}
+.faq-help-tabs a{
+    color: #fff;
+}
+
+.faq-help-tabs>li.active>a{
+    background: #edebe1;
+}
+.faq-help-tabs >li .active>a{
+    background: #edebe1;
+}
+section.scallop-top:before{
+    background: none !important;
+}
+.faq_page_content #search_help,.faq_page_content .search-btn{
+    font-size: 14px;
+    font-family: Montserrat;
+    color: #bababa;
+    border-radius: 5px 0px 0px 5px;
+}
+.faq_page_content .search-btn{
+    color: #ffffff;
+    width: 127px;
+    border-radius: 0px 5px 5px 0px;
+}
+.faq-help-tabs>li>a:hover{
+    color: #ffffff;
+}
+/*h4[aria-expanded=false],.panel-heading .panel-title{*/
+    /*background: url("down-arrow-faq.png") no-repeat right;*/
+/*}*/
+/*h4[aria-expanded=true] {*/
+    /*background: url("up-arrow-faq.png") no-repeat right;*/
+
+/*}*/
