@@ -1,0 +1,83 @@
+.faq-search-help-main fieldset{
+    width: 71%;
+}
+.site-header .hero h1.bottom-border:after{
+    display: none;
+}
+.site-header.faq_page_content:before{
+    background: url("faq_header_bg.png") no-repeat;
+    /*background-size: 100%;*/
+    /*background-position-y: -499px;*/
+    /*opacity: 0.2;*/
+    background-size: cover;
+
+}
+
+.site-header.faq_page_content {
+    height: 100%;
+}
+.site-header.faq_page_content .heading-large.margin-top-by-5{
+    font-size: 39px;
+}
+.faq-search-help-main{
+    width: 46%;
+    clear: both;
+    padding-top: 12px;
+}
+.faq-search-help-main .property-search{
+    width: 100%;
+    padding: 0;
+}
+a.accordion-toggle{
+    text-decoration: none;
+    cursor: pointer;
+}
+.panel{
+    border: none !important;
+}
+.panel-default>.panel-heading{
+    background-color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+.panel-collapse{
+    color: #bababa;
+}
+.chevron-up{
+
+}
+.panel-title {
+    background: url("up-arrow-faq.png") no-repeat right;
+}
+.collapsed .panel-title {
+    background: url("down-arrow-faq.png") no-repeat right;
+}
+
+.faq-page-content-section .section-divider {
+    background: #EDEBE1;
+}
+
+.need-more-help-div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    font-size: 23px;
+    text-align: center;
+}
+.need-more-help-divider{
+    line-height: 70px;
+}
+
+@media screen and (max-width: 855px) and (min-width: 200px) {
+    .need-more-help-div{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 681px) {
+
+}
+
+
+@media screen and (max-width: 680px) and (min-width: 400px) {
+
+}
