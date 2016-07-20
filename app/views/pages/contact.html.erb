@@ -9,37 +9,25 @@
 
 
 <div class = "contact-us">
-    <div  class="contact-header">
-        <h1 class = "grand-hotel">Contact Us</h1>
-        <h2>WE'D LOVE TO HEAR FROM YOU</h2>
-    </div>
+
 
     <form method="post" action="/contact/thank-you" class="contact-form">
         <%= tag(:input, type: "hidden", name: request_forgery_protection_token.to_s, value: form_authenticity_token) %>
 
-        <fieldset >
-            <input type="text" name="firstname" class="firstname text-box-height input-appear" placeholder = "NAME">
-        </fieldset>
+         <div  class="contact-header">
+                <h1 class = "grand-hotel">Contact Us</h1>
+                <h2>WE'D LOVE TO HEAR FROM YOU</h2>
+         </div>
 
-        <fieldset >
-            <input type="text" name="emailId" class="email text-box-height input-appear" placeholder = "EMAIL ADDRESS">
-            <p class="error invalid-email">Please enter a valid email address.</p>
-        </fieldset>
 
-        <fieldset>
-            <textarea class="special-requests input-appear" name="message" placeholder = "MESSAGE" ></textarea>
-        </fieldset>
+        <input type="text" name="firstname" class="firstname text-box-height input-appear" placeholder = "NAME">
 
-        <footer class="form__actions">
-            <article class="field">
-                <!--<input class="field__input btn submit btn--blue" type="submit" id="submit" value="SEND MESSAGE ->">
-                <span class = "fa-arrow-right"></span>-->
+        <input type="text" name="emailId" class="email text-box-height input-appear" placeholder = "EMAIL ADDRESS">
+        <p class="error invalid-email">Please enter a valid email address.</p>
 
-                <a href="#" class="btn btn-info btn-lg"> SEND MESSAGE <i class = "fa fa-arrow-right"></i>
-                </a>
+        <textarea class="special-requests input-appear" rows="4" name="message" placeholder = "MESSAGE" ></textarea>
 
-            </article>
-        </footer>
+        <button type = "submit" class="btn btn-info btn-lg btn--blue">SEND MESSAGE &nbsp<i class = "fa fa-arrow-right"></i></button>
     </form>
 </div>
 
@@ -60,7 +48,11 @@
         <div class = "email-now">
             <i class = "fa fa-envelope-o"></i>
             <div>EMAIL NOW!</div>
-            <div>INFO@SANDCASTLERENTALS.COM</div>
+            <div>
+                 <a style= 'color: #404B50' href="mailto:INFO@SANDCASTLERENTALS.COM">
+                    INFO@SANDCASTLERENTALS.COM
+                </a>
+            </div>
         </div>
     </div>
 

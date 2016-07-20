@@ -648,26 +648,35 @@ section.main-content .property-search form .text-divider{
 
 .contact-us {
     width: 60%;
-    margin: auto;
-    margin-top: 7%;
+    margin: 12% 20%;
     background-color: lightgray;
     padding-bottom: 0.5%;
+    border-radius: 0.5em;
+}
 
+.contact-us:after{
+    margin: 12% 0;
 }
 
 .contact-form {
-    margin: 10%;
+    padding: 8% 10% 10% 10%;
 }
 
 .input-appear {
     border-style: none none solid;
     border-color: white;
     background-color: transparent;
+    margin: 2%;
 }
 
 .contact-header {
     color: white;
     text-align: center;
+    margin-bottom: 8%;
+}
+
+.contact-header h2 {
+    font-family: "Montserrat";
 }
 
 .grand-hotel {
@@ -691,28 +700,37 @@ section.main-content .property-search form .text-divider{
     display: inline-block;
     width: 49%;
     text-align: center;
-    font-family: "Montserrat Regular";
+    font-family: "Montserrat";
 }
 
 .call-now div:nth-child(2),
 .email-now div:nth-child(2) {
     color: white;
     font-size: 2em;
+    margin-top: 1em;
+}
+
+.call-now a {
+    color: black !important;
 }
 
 .call-now div:last-child,
 .email-now div:last-child {
-    font-size: 3em;
+    font-size: 2.5em;
+    margin-bottom: 1em;
 }
 
 .need-help h2 {
-    font-family: "Montserrat Regular";
+    font-family: "Montserrat";
+    top: -2em;
+    position: relative;
 }
 
 .btn--blue {
     background-color: #1E90FF;
     margin: auto;
     display: inherit;
+    margin-top: 4em;
 }
 
 .bg-image {
@@ -762,12 +780,6 @@ article.field a {
     font-size: 4em;
     color: white;
 }
-
-/*.fa-calendar{*/
-    /*position: absolute;*/
-    /*padding: 10px;*/
-    /*pointer-events: none;*/
-/*}*/
 
 .inner-addon {
     position: relative;
@@ -829,6 +841,7 @@ form .select-style select{
 .main-content-sectio-devider img{
     margin: 0 46%;
 }
+
 .faq-search-help-main fieldset{
     width: 71%;
 }
@@ -885,4 +898,8 @@ a.accordion-toggle{
 
 .faq-page-content-section .section-divider {
     background: #EDEBE1;
+}
+
+.form__actions {
+    margin-top: 5em;
 }
