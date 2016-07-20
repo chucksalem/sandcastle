@@ -147,3 +147,35 @@ section.featured-rooms-slider-section {
 
   }
 }
+
+.faq_page_content:before{
+  // responsive media query
+  @media screen and (max-width: 855px) and (min-width: 200px) {
+      background-position-y: 0px;
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 681px) {
+
+  }
+
+
+  @media screen and (max-width: 680px) and (min-width: 400px) {
+
+  }
+}
+
+.faq_page_content{
+  // responsive media query
+  @media screen and (max-width: 855px) and (min-width: 200px) {
+    height: 60% !important;
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 681px) {
+
+  }
+
+
+  @media screen and (max-width: 680px) and (min-width: 400px) {
+
+  }
+}

@@ -47,4 +47,17 @@
       </div>
     </div>
   </div>
+  <% if content_for?(:search_help) %><div class="layout-container layout-centered faq-search-help-main">
+  <div class="property-search welcome-text-align-for-smaller">
+    <form class="gw no-gutter">
+
+      <fieldset class="g sm-one-third md-one-seventh">
+        <input id="search_help" class="no-borders" type="text" name="search_help" placeholder="SEARCH HELP">
+      </fieldset>
+      <footer class="g md-two-twelfths">
+        <input class="btn max-width search-btn" type="button" value="Search">
+      </footer>
+    </form>
+  </div>
+</div><% end %>
 </section>

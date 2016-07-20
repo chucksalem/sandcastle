@@ -35,6 +35,12 @@
             top: 0;
             width: 100%;
         }
+      .faq_page_content:before{
+          background-position-y: 0px;
+        }
+      .faq_page_content{
+        height: 60% !important;;
+      }
         .hero {
             background: none;
             margin-top: -25px;
