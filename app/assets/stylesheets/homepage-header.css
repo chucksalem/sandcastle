@@ -895,12 +895,12 @@ a.accordion-toggle{
 .chevron-up{
 
 }
-.panel-title {
-    background: url("up-arrow-faq.png") no-repeat right;
-}
-.collapsed .panel-title {
-    background: url("down-arrow-faq.png") no-repeat right;
-}
+/*.panel-title {*/
+    /*background: url("up-arrow-faq.png") no-repeat right;*/
+/*}*/
+/*.collapsed .panel-title {*/
+    /*background: url("down-arrow-faq.png") no-repeat right;*/
+/*}*/
 
 .faq-page-content-section .section-divider {
     background: #EDEBE1;

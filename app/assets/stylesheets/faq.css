@@ -82,28 +82,6 @@ a.accordion-toggle{
     line-height: 70px;
 }
 
-@media screen and (max-width: 855px) and (min-width: 200px) {
-    .need-more-help-div{
-        width: 100%;
-    }
-
-    .faq-page-content-section .layout-container .col-sm-8{
-        margin-bottom: 20px;
-    }
-
-    .faq-page-content-section .col-sm-8 .form-group {
-        width: 100% !important;
-    }
-}
-
-@media screen and (max-width: 1024px) and (min-width: 681px) {
-
-}
-
-
-@media screen and (max-width: 680px) and (min-width: 400px) {
-
-}
 .footer-bg{
     clear: both;
 }
@@ -186,10 +164,50 @@ section.scallop-top:before{
 .faq-help-tabs>li>a:hover{
     color: #ffffff;
 }
-/*h4[aria-expanded=false],.panel-heading .panel-title{*/
-    /*background: url("down-arrow-faq.png") no-repeat right;*/
-/*}*/
-/*h4[aria-expanded=true] {*/
-    /*background: url("up-arrow-faq.png") no-repeat right;*/
+h4[aria-expanded=false]{
+    background: url("down-arrow-faq.png") no-repeat right !important;
+}
+h4[aria-expanded=true] {
+    background: url("up-arrow-faq.png") no-repeat right !important;
 
-/*}*/
+}
+
+.panel-title{
+    background: url("down-arrow-faq.png") no-repeat right;
+}
+@media screen and (max-width: 855px) and (min-width: 200px) {
+    .need-more-help-div{
+        width: 100%;
+    }
+
+    .faq-help-tabs{
+        width: 76%;
+    }
+
+    .faq-page-content-section .layout-container .col-sm-8{
+        margin-bottom: 20px;
+    }
+
+    .faq-page-content-section .col-sm-8 .form-group {
+        width: 100% !important;
+    }
+    .site-header.faq_page_content .property-search form fieldset {
+        width: 63% !important;
+        float: left;
+    }
+    .faq_page_content .search-btn{
+        float: left;
+    }
+    .faq-search-help-main{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 681px) {
+
+}
+
+
+@media screen and (max-width: 680px) and (min-width: 400px) {
+
+}

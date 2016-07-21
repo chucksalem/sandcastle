@@ -1,0 +1,226 @@
+.thankyou_page_content{
+    font-family: Montserrat;
+}
+
+.thankyou_page_content:before{
+    background: url("thank_you_header.png");
+}
+.site-header.thankyou_page_content{
+    height: 50% !important;
+}
+.vacation-summary-div{
+    background-color: #39BDFB;
+    margin-left: auto;
+    margin-right: auto;
+    width: 72%;
+    font-size: 18px;
+    font-family: Montserrat;
+    text-align: center;
+    color: #ffffff;
+}
+.thank-you-page-content-devider{
+    line-height: 70px;
+    background: #EDEBE1;
+}
+.rent-details-span,.thank-you-span{
+    font-size: 9px;
+    color: #bababa;
+}
+.thank-you-span{
+    color: #000;
+}
+.rent-thankyou-divider{
+    text-align: center;
+    line-height: 70px;
+    background: #EDEBE1;
+}
+.thank-you-greeting-receipt,.booking-receipt-details{
+    width: 78%;
+    float: left;
+    background: #39BDFB;
+    padding: 20px;
+    border-radius: 2px;
+}
+.thank-you-greeting-receipt div{
+    text-align: center;
+    color: #fff;
+}
+.booking-receipt-details{
+    width: 78%;
+    float: left;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 2px;
+    margin-top: 20px;
+    font-family: Montserrat;
+    font-weight: normal;
+}
+.booking-receipt-headings{
+    text-align: left;
+    font-family: Montserrat;
+    color: #000;
+    margin: 15px auto;
+}
+.thankyou-page-user-rating{
+    color: #fbd839;
+    font-size: 11px;
+}
+.thankyou-common-div{
+    margin: 10px auto;
+}
+.hotel-stay-duration{
+    height: 70px;
+    line-height: 70px;
+}
+.stay-duration-span,.thankyou-view-map-link{
+    color: #39BDFB;
+}
+.sandcastle-text-color{
+    color: #39BDFB;
+}
+.sandcastle-text-capitalization{
+    text-transform: uppercase;
+}
+.thankyou-page-hotel-photo{
+    width: 40%;
+    margin: 0;
+}
+.thankyou-credit-card-receipt-text{
+    background: #ededed;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    cursor: pointer;
+}
+.print-booking-details-button{
+    border: none;
+    background: #ffffff;
+    border-radius: 5px;
+    height: 30px;
+    width: 115px;
+    text-indent: 17px;
+    font-size: 10px;
+}
+.thankyou-print-fa{
+    position: absolute;
+    padding: 10px 0px 10px 11px;
+    font-size: 11.45px;
+}
+.line-separator{
+    height: 1px;
+    border-bottom: 1px solid #ededed;
+}
+.sandcastle-bold{
+    font-weight: bold;
+}
+.thanks-to-user{
+    font-size: 22px;
+}
+.booking-formatiom-alert-text{
+    font-size: 14px;
+}
+.confirmation-email-text{
+    font-size: 12px;
+}
+.common-font-20{
+    font-size: 20px;
+}
+.common-font-16{
+    font-size: 16px;
+}
+.common-font-10{
+    font-size: 10px;
+}
+.common-font-14{
+    font-size: 14px;
+}
+.common-font-9{
+    font-size: 9px;
+}
+.common-font-12{
+    font-size: 12px;
+}
+.common-font-24{
+    font-size: 24px
+}
+.common-font-11{
+    font-size: 11px;
+}
+.total-price-number:before {
+    content: '$';
+    font-size: 12px;
+    vertical-align: top;
+}
+.thankyou-page-content-section .fa-envelope-o:before,.thankyou-page-content-section .fa-phone:before {
+    color: #000;
+    font-size: 23.33px;
+}
+.want-to-chat-container .checkbox label {
+    font-size: 13.13px;
+}
+.booking-receipt-details table tbody tr.even{
+    background: #efefef;
+}
+.first-section-divider{
+    height: 22px;
+}
+.first-devider-div{
+    width: 35%;
+}
+.second-devider-div{
+    width: 30%;
+}
+.first-devider-div img{
+    margin: 0;
+    float: right;
+}
+.second-devider-div img{
+    margin: 0;
+}
+.total-price-common{
+    padding: 20px 0px 0px 5px !important;
+}
+.hotel-details-panel,.payment-schedule-panel{
+    box-shadow: none;
+}
+.payment-schedule-panel{
+    margin-bottom: 0;
+}
+.payment-schedule-panel .panel-body .table-responsive .table{
+    margin-bottom: 0;
+}
+.payment-schedule-panel .panel-body .table-responsive .table tbody tr:nth-child(2) {
+    border-bottom: 1px solid #DDDDDD;
+}
+@media screen and (max-width: 855px) and (min-width: 200px) {
+    .want-to-chat-container{
+        float: left;
+    }
+    .layout-container{
+        padding: 0;
+    }
+    .site-header.thankyou_page_content:before {
+        background-size: 81% 100%;
+    }
+    .site-header.thankyou_page_content{
+        height: 35% !important;
+    }
+    .vacation-summary-div {
+        width: 65%;
+    }
+    .thank-you-greeting-receipt, .booking-receipt-details{
+        width: 100%;
+    }
+    .thankyou-credit-card-receipt-text{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 681px) {
+
+}
+
+
+@media screen and (max-width: 680px) and (min-width: 400px) {
+
+}

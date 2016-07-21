@@ -3,6 +3,7 @@
 <% content_for :hero_size, 'hero-small' %> <!-- What's the hero size for the header? -->
 <% content_for :bottom_border, 'bottom-border' %> <!-- Does the header have a bottom border in the hero? -->
 <% content_for :search_help, 'true' %> <!-- Does the header have a bottom border in the hero? -->
+
 <ul class="nav nav-tabs faq-help-tabs">
   <li role="presentation" class="active"><a href="#">VISITOR HELP</a></li>
   <li role="presentation"><a href="#">OWNER HELP</a></li>
@@ -10,9 +11,9 @@
 <section id="visitors-help" class="top-padding-by-5 bottom-padding-by-4 scallop-top beige-bg faq-page-content-section" xmlns="http://www.w3.org/1999/html">
         <div class="layout-container">
             <div class="gw">
-              <div class="panel-group" id="accordion">
+              <div class="panel-group accordion" id="accordion">
                 <div class="panel panel-default">
-                  <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne">
+                  <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne" aria-expanded="true">
                     <h4 class="panel-title">
                       <a class="accordion-toggle">
                         Where do I pick up the keys?
@@ -688,4 +689,3 @@
     </div>
   </div>
 </section>
-

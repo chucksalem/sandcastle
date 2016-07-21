@@ -63,4 +63,7 @@ class PagesController < ApplicationController
     render
   end
 
+  def thankyou
+    render
+  end
 end
