@@ -31,11 +31,12 @@
 }
 .rent-thankyou-divider{
     text-align: center;
-    line-height: 70px;
+    line-height: 60px;
+    /*height: 80px;*/
     background: #EDEBE1;
 }
 .thank-you-greeting-receipt,.booking-receipt-details{
-    width: 78%;
+    width: 88%;
     float: left;
     background: #39BDFB;
     padding: 20px;
@@ -46,7 +47,7 @@
     color: #fff;
 }
 .booking-receipt-details{
-    width: 78%;
+    width: 88%;
     float: left;
     background: #ffffff;
     padding: 20px;
