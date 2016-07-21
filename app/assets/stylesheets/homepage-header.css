@@ -176,19 +176,19 @@
     background-position: center;
     position: relative;
     width: 100%;
-    height: 196px;
+    height: 222px;
 }
 
 .footer-main-div{
     float: left;
-    padding: 1% 8%;
     width: 100%;
+    height: 190px;
 }
 
 .menu-list-div{
     float: left;
-    padding: 3.5% 0%;
-    width: 77%;
+    padding: 6% 2%;
+    width: 72%;
     font-size: 16px;
     font-family: "Montserrat";
 }
@@ -196,8 +196,8 @@
 .list-div{
     float: left;
     padding: 0% 0%;
-    width: 80%;
-    padding-left: 20%;
+    width: 45%;
+    margin-left: 15.5%;
 }
 
 .footer-menu-icon-div{
@@ -211,11 +211,13 @@
 }
 
 .footer-menu-list{
-    float: left;
-    width: 100%;
+    width: 39%;
     font-size: 14px;
-    padding: 0 28%;
     font-family: "Montserrat";
+    margin: 0 auto;
+    padding-top: 5px;
+    display: table;
+
 }
 
 .text-divider{
@@ -227,7 +229,6 @@
 
 .list-div-text{
     padding: 2%;
-    padding-right: 5%;
 }
 
 .footer-menu-icon-div .fa{
@@ -908,4 +909,27 @@ a.accordion-toggle{
 
 .form__actions {
     margin-top: 5em;
+}
+
+.footer-menu-list span a{
+    color: white;
+}
+
+.padding-right-9{
+    padding-right: 9%;
+}
+
+.footer-img-logo{
+    float: left;
+    padding: 3% 5%;
+}
+
+.menu-list-div  .text-divider{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 0px;
+}
+
+.contact-us-main:before{
+        background: url('sunrise-rocky-point-also.jpg') no-repeat center center !important;
 }
