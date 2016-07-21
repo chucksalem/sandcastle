@@ -3,7 +3,7 @@
 }
 
 .thankyou_page_content:before{
-    background: url("thank_you_header.png");
+    background: url("thank_you_header.png") !important;
 }
 .site-header.thankyou_page_content{
     height: 50% !important;
