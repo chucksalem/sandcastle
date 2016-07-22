@@ -3,7 +3,8 @@
 }
 
 .thankyou_page_content:before{
-    background: url("thank_you_header.png") !important;
+    background: url("thank_you_header.png") no-repeat !important;
+    background-size: 100% 100% !important;
 }
 .site-header.thankyou_page_content{
     height: 50% !important;
@@ -201,7 +202,7 @@
         padding: 0;
     }
     .site-header.thankyou_page_content:before {
-        background-size: 81% 100%;
+        /*background-size: 81% 100%;*/
     }
     .site-header.thankyou_page_content{
         height: 35% !important;
