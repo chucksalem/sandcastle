@@ -534,6 +534,7 @@ section.main-content{
 }
 .site-header.full-background{
     height: 67%;
+    z-index: 1;
 }
 .hero .padded-top{
     padding-top: 60px !important;
@@ -670,6 +671,7 @@ section.main-content .property-search form .text-divider{
     background-color: transparent;
     margin: 2%;
     font-family: "Montserrat";
+    font-weight: 400;
 }
 
 .contact-header {
@@ -733,15 +735,15 @@ section.main-content .property-search form .text-divider{
 }
 
 .btn--blue {
-    background-color: #1E90FF;
+    height: 55px;
     margin: auto;
     display: inherit;
     margin-top: 4em;
-    font-size: 11.6px;
+    font-family: Montserrat;
+    font-size: 13px;
 }
 
 .bg-image {
-    z-index: -1;
     background: url('contact_us_bg_image.png') no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
@@ -962,4 +964,10 @@ section.main-content.email-thank-you-section{
 .need-help-text-section{
     text-align: center;
     padding-top: 1%;
+}
+
+.contact-form .input-appear{
+    padding: 0px;
+    padding-left: .75em;
+    color: white;
 }
