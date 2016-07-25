@@ -19,6 +19,8 @@ gem 'savon', '2.10.1'
 gem 'virtus', '1.0.5'
 gem 'whenever', '0.9.4', require: false
 gem 'will_paginate', '3.0.6'
+gem 'mailgun-ruby', require: 'mailgun'
+gem 'rest-client'
 
 gem 'jbuilder', '2.3.1'
 gem 'jquery-rails', '4.0.4'
