@@ -126,7 +126,7 @@ a.accordion-toggle{
 .faq-help-tabs{
     margin-left: auto;
     margin-right: auto;
-    width: 24%;
+    width: 25%;
     background: none;
     font-size: 12px;
     font-weight: normal;
@@ -211,9 +211,6 @@ h4[aria-expanded=true] {
 @media screen and (max-width: 680px) and (min-width: 400px) {
 
 }
-
-.faq-page-content-section .btn-primary.active:hover, .faq-page-content-section .btn-primary:active.focus,.faq-page-content-section .btn-primary:active:focus,.faq-page-content-section .btn-primary:active:hover{
-    background: url("submit-btn.png") no-repeat;
-    height: 49px;
-    border: none;
-}
+/*.panel-default:nth-child(1){*/
+    /*background: url("up-arrow-faq.png") no-repeat right !important;*/
+/*}*/
