@@ -255,9 +255,13 @@
 
 <section class="get-some-deal" >
     <div class="subscribe-email-div">
-      <input type="text" class="email-address-text-box" placeholder="YOUR EMAIL ADDRESS" />
-      <div class="subscriber-button-main"><img src="assets/subscribe-email-btn.png" /></div>
-
+      <form action="/subscribe/newsletter" method="post" class="newsletter-subscribe-form">
+        <%= tag(:input, type: "hidden", name: request_forgery_protection_token.to_s, value: form_authenticity_token) %>
+        <input type="hidden" value="You are subscribed to our Newsletter" name="message">
+        <input type="text" name="emailId" class="email email-address-text-box" placeholder="YOUR EMAIL ADDRESS"  autocomplete="off"/>
+        <div class="subscriber-button-main"><input type="submit" class="newsletter-subscribe-button"></div>
+        <p class="error invalid-email">Please enter a valid email address.</p>
+      </form>
     </div>
 </section>
 

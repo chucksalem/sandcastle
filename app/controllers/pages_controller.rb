@@ -66,4 +66,20 @@ class PagesController < ApplicationController
   def thankyou
     render
   end
+
+  def newsletter
+    ContactMailer.subscriber(
+        email:      params[:emailId],
+        message:    params[:message]
+    ).deliver_now
+  end
+
+  def faqreview
+    ContactMailer.faq_review(
+        name:  params[:name],
+        email:      params[:email],
+        phonenumber:      params[:phonenumber],
+        message:    params[:message]
+    ).deliver_now
+  end
 end

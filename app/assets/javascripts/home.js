@@ -61,11 +61,13 @@ $(document).ready(function(){
             $('.site-header .hero.no-bg').show();
         }
     });
-    toggleChevron();
-});
-
-function toggleChevron() {
-    $(".panel-heading").on("click",function(){
-       alert("Hello");
+    $('.newsletter-subscribe-form').validate({ // initialize the plugin
+        ignore: " ",
+        rules:
+        {
+            emailId: {
+                required: true
+            }
+        }
     });
-}
+});

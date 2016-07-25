@@ -76,6 +76,24 @@ $(function(){
             }
         }
     });
+    $('.faq-review-feedback').validate({ // initialize the plugin
+        ignore: " ",
+        rules:
+        {
+            name: {
+                required: true
+            },
+            phonenumber: {
+                required: true
+            },
+            emailId: {
+                required: true
+            },
+            message: {
+                required: true
+            }
+        }
+    });
 });
 
 function isCharacter(evt) {

@@ -358,7 +358,8 @@
 .subscribe-email-div{
     float: left;
     width: 100%;
-    padding: 7% 0% 7% 47%;
+    padding: 7% 0% 0% 47%;
+    /*padding: 7% 0% 7% 47%;*/
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -932,4 +933,20 @@ a.accordion-toggle{
 
 .contact-us-main:before{
         background: url('sunrise-rocky-point-also.jpg') no-repeat center center !important;
+}
+.newsletter-subscribe-button{
+    background: url("subscribe-email-btn.png") no-repeat;
+    float: left;
+    width: 23%;
+    text-indent: 267px;
+    border: none;
+}
+.newsletter-subscribe-form p.error{
+    float: left;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+}
+section.main-content.email-thank-you-section{
+    height: auto;
 }

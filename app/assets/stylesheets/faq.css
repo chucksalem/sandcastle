@@ -211,3 +211,9 @@ h4[aria-expanded=true] {
 @media screen and (max-width: 680px) and (min-width: 400px) {
 
 }
+
+.faq-page-content-section .btn-primary.active:hover, .faq-page-content-section .btn-primary:active.focus,.faq-page-content-section .btn-primary:active:focus,.faq-page-content-section .btn-primary:active:hover{
+    background: url("submit-btn.png") no-repeat;
+    height: 49px;
+    border: none;
+}

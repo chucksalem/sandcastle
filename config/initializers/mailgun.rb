@@ -1,9 +1,9 @@
 ActionMailer::Base.smtp_settings = { 
   port: '587',
   address: 'smtp.mailgun.org',
-  user_name: 'postmaster@sandboxf2eeb8336db646d9adbd76440f585543.mailgun.org',
-  password: '65a98e512276993f01297efdf898faf5',
-  domain: 'sandboxf2eeb8336db646d9adbd76440f585543.mailgun.org',
+  user_name: 'postmaster@sandbox8120f6a879d1457a99765c0d2aeb2392.mailgun.org',
+  password: '6e9cb27d3ada515b8f9f825e607d5a4c',
+  domain: 'sandbox8120f6a879d1457a99765c0d2aeb2392.mailgun.org',
   authentication: :plain,
   enable_starttls_auto: true
 } 

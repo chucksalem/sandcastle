@@ -68,6 +68,14 @@
     }
     .menu-list-div{
       width: 100%;
+      padding: 0;
+    }
+    select#guests{
+      padding-top: 0.6em;
+    }
+    .footer-bg .footer-menu-list {
+      padding: 2% 0% 0% 4%;
+      width: 100%;
     }
     .footer-menu-icon-div .fa {
       padding: 0% 5%;
@@ -83,7 +91,11 @@
       padding-bottom: 0%;
     }
     .footer-menu-list{
-      padding:0%;
+      padding: 2% 0% 0% 4%;
+      width: 100%;
+    }
+    .footer-menu-list .padding-right-9{
+      padding-right: 4%;
     }
     .list-div {
       float: left;

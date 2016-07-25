@@ -80,9 +80,9 @@
                   <div id="collapse5" class="panel-collapse collapse">
                     <div class="panel-body">
                       If a homeowner has specifically requested that renters cannot bring pets, we are obligated to respect that stipulation. Please do not request any alteration to this policy or ignore it in such a way as to risk eviction and no refund of rent or security deposit monies.
-                      <ol>
-                        <li>If a pet is found on a property which does not allow pets, the occupants will be evicted immediately with loss of all rental monies, cleaning fee, taxes and security deposit.</li>
-                        <li>If a pet is found on a property which does allow pets, and prior arrangements have not been made with Oc&eacute;ano Rentals, the occupants will be evicted immediately with loss of all rental monies, cleaning fee, taxes and security deposit.</li>
+
+                      1.If a pet is found on a property which does not allow pets, the occupants will be evicted immediately with loss of all rental monies, cleaning fee, taxes and security deposit.
+                      2.If a pet is found on a property which does allow pets, and prior arrangements have not been made with Oc&eacute;ano Rentals, the occupants will be evicted immediately with loss of all rental monies, cleaning fee, taxes and security deposit.
                       </ol>
                     </div>
                   </div>
@@ -114,9 +114,9 @@
                   <div id="collapse7" class="panel-collapse collapse">
                     <div class="panel-body">
                       Yes, Oc&eacute;ano accepts Checks by Phone or you can send a personal checks provided that the following criteria are met:
-                      <ol>
-                        <li>The check is drawn from a bank in the State of Arizona.</li>
-                        <li>The check is received by the due date or 30 days prior to arrival, whichever is more.</li>
+
+                        1.The check is drawn from a bank in the State of Arizona.
+                        2.The check is received by the due date or 30 days prior to arrival, whichever is more.
                       </ol>
                     </div>
                   </div>
@@ -317,18 +317,19 @@
     <img src="assets/divider.png" />
   </div>
   <div class="layout-container">
-    <div class="col-sm-8"><form>
+    <div class="col-sm-8"><form method="post" action="/faq/review" class="faq-review-feedback">
+      <%= tag(:input, type: "hidden", name: request_forgery_protection_token.to_s, value: form_authenticity_token) %>
       <div class="form-group">
-        <input type="text" class="form-control" id="name" placeholder="NAME">
+        <input type="text" class="form-control" id="name" placeholder="NAME" name="name">
       </div>
       <div class="form-group">
-        <input type="number" class="form-control" id="phonenumber" placeholder="PHONE NUMBER">
+        <input type="number" class="form-control" id="phonenumber" name="phonenumber" placeholder="PHONE NUMBER">
       </div>
       <div class="form-group">
-        <input type="email" class="form-control" id="email" placeholder="E-MAIL-ADDRESS">
+        <input type="email" class="form-control" id="email" name="email" placeholder="E-MAIL-ADDRESS">
       </div>
       <div class="form-group">
-        <textarea rows="4" class="form-control" id="review" placeholder="REVIEW"></textarea>
+        <textarea rows="4" class="form-control" id="review" name="message" placeholder="REVIEW"></textarea>
       </div>
       <br>
       <button type="submit" class="btn btn-primary review-submit"></button>
@@ -421,10 +422,10 @@
           <div id="collapse5" class="panel-collapse collapse">
             <div class="panel-body">
               If a homeowner has specifically requested that renters cannot bring pets, we are obligated to respect that stipulation. Please do not request any alteration to this policy or ignore it in such a way as to risk eviction and no refund of rent or security deposit monies.
-              <ol>
-                <li>If a pet is found on a property which does not allow pets, the occupants will be evicted immediately with loss of all rental monies, cleaning fee, taxes and security deposit.</li>
-                <li>If a pet is found on a property which does allow pets, and prior arrangements have not been made with Oc&eacute;ano Rentals, the occupants will be evicted immediately with loss of all rental monies, cleaning fee, taxes and security deposit.</li>
-              </ol>
+
+                1.If a pet is found on a property which does not allow pets, the occupants will be evicted immediately with loss of all rental monies, cleaning fee, taxes and security deposit.
+                2.If a pet is found on a property which does allow pets, and prior arrangements have not been made with Oc&eacute;ano Rentals, the occupants will be evicted immediately with loss of all rental monies, cleaning fee, taxes and security deposit.
+
             </div>
           </div>
         </div>
@@ -455,10 +456,10 @@
           <div id="collapse7" class="panel-collapse collapse">
             <div class="panel-body">
               Yes, Oc&eacute;ano accepts Checks by Phone or you can send a personal checks provided that the following criteria are met:
-              <ol>
-                <li>The check is drawn from a bank in the State of Arizona.</li>
-                <li>The check is received by the due date or 30 days prior to arrival, whichever is more.</li>
-              </ol>
+
+                1.The check is drawn from a bank in the State of Arizona.
+                2.The check is received by the due date or 30 days prior to arrival, whichever is more.
+
             </div>
           </div>
         </div>
