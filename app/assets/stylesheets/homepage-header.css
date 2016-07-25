@@ -669,6 +669,7 @@ section.main-content .property-search form .text-divider{
     border-color: white;
     background-color: transparent;
     margin: 2%;
+    font-family: "Montserrat";
 }
 
 .contact-header {
@@ -741,7 +742,9 @@ section.main-content .property-search form .text-divider{
 
 .bg-image {
     z-index: -1;
-    background: url('sunrise-rocky-point-also.jpg') no-repeat center center;
+    background: url('contact_us_bg_image.png') no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 input.input-appear::-webkit-input-placeholder {
@@ -931,9 +934,6 @@ a.accordion-toggle{
     padding-right: 0px;
 }
 
-.contact-us-main:before{
-        background: url('sunrise-rocky-point-also.jpg') no-repeat center center !important;
-}
 .newsletter-subscribe-button{
     background: url("subscribe-email-btn.png") no-repeat;
     float: left;
@@ -953,4 +953,13 @@ section.main-content.email-thank-you-section{
 
 .property-search #guests{
     padding-top: .75em;
+}
+
+.height-0{
+    height: 0px !important;
+}
+
+.need-help-text-section{
+    text-align: center;
+    padding-top: 1%;
 }
