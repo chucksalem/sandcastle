@@ -950,3 +950,7 @@ a.accordion-toggle{
 section.main-content.email-thank-you-section{
     height: auto;
 }
+
+.property-search #guests{
+    padding-top: .75em;
+}
