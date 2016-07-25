@@ -94,6 +94,10 @@ $(function(){
             }
         }
     });
+
+    if($('.site-header').hasClass('contact-us-main')){
+        $('.site-header').addClass('height-0');
+    }
 });
 
 function isCharacter(evt) {
