@@ -1,5 +1,16 @@
 $(function(){
 
+    $('.testimonial-slider').bxSlider({
+        slideWidth: 1100,
+        minSlides: 1,
+        maxSlides: 1,
+        slideMargin: 0,
+        controls: true,
+        pager: false,
+        nextText: '<img src="assets/forword-icon.png" height="21" width="40"/>',
+        prevText: '<img src="assets/backword-icon.png" height="21" width="40"/>'
+    });
+
   var startPicker = new Pikaday({
       field: document.getElementById('start_date'),
       firstDay: 1,

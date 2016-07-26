@@ -82,4 +82,15 @@ class PagesController < ApplicationController
         message:    params[:message]
     ).deliver_now
   end
+
+
+  def room_details
+    render
+  end
+
+
+  def privacy_policy
+    render
+  end
+
 end

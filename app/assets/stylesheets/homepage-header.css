@@ -20,6 +20,8 @@
     width: 100%;
 }
 
+
+
 .testimonial-bg-image .bx-viewport{
     width: 100%;
     overflow: hidden;
@@ -55,10 +57,6 @@
     font-family: "Montserrat";
     font-size: 21px;
     font-weight: 600;
-}
-
-.testimonial-bg-image .bx-prev{
-
 }
 
 .call-now-bg{
@@ -982,4 +980,156 @@ section.main-content.email-thank-you-section{
 
 .z-index-1{
     z-index: 1;
+}
+
+/*about us page css*/
+
+.about-us-slider .testimonial-comment{
+    padding: 0 15%;
+}
+
+.about-us-main .want-to-chat-container{
+    padding: 18px;
+}
+
+.about-us-main .btn--blue{
+    margin: 2em 0 0 0;
+}
+
+.font-family{
+    font-family: "Montserrat" !important;
+}
+
+.margin-bottom-6em{
+    margin-bottom: 6em;
+}
+
+.about-us-content{
+    padding: 0 60px;
+    color: #777777;
+}
+
+.about-us-content p{
+    font-size: 14px;
+}
+
+/*privacy policy css*/
+
+.privacy-policy-page-content .want-to-chat-container .fa-envelope-o:before, .privacy-policy-page-content .want-to-chat-container  .fa-phone:before{
+    color: #000;
+    font-size: 23.33px;
+}
+
+.about-our-facility{
+    float: left;
+    color:#bababa;
+    font-size: 11px;
+}
+
+.width-70{
+    width: 70%;
+}
+
+.font-bold{
+    font-weight: 600;
+}
+
+.about-us-content .about-our-facility p{
+    font-size: 11px;
+}
+
+/*maps page css*/
+
+.maps-main-section .need-help{
+    margin-top: 0;
+    float: left;
+    width: 100%
+}
+
+.site-header.maps_page_content:before{
+    background: url("map_bg_imgae.png") no-repeat;
+    background-size: cover;
+}
+
+.map-image{
+    float: left;
+    width: 100%;
+    background: #edebe1;
+}
+
+.map-image img{
+    width: 100%;
+}
+
+.center-div{
+    text-align: center;
+}
+
+.padding-top-10{
+    padding-top: 10%;
+}
+
+.padding-top-4{
+    padding-top: 4%;
+}
+
+.site-header.privacy_policy_content:before{
+    background: url("privacy_policy_bg_image.png") no-repeat;
+    background-size: cover;
+}
+
+.site-header.about_us_content:before{
+    background: url("about_us_bg_image.png") no-repeat;
+    background-size: cover;
+}
+
+.site-header.privacy_policy_content,.site-header.maps_page_content, .site-header.about_us_content {
+    height: 50%;
+}
+
+
+.about-us-slider-bg-image{
+    background: url("about_us_slider_bg_img.png") bottom center no-repeat;
+    background-size: cover;
+    padding: 0px;
+    color: white;
+    content: '';
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    width: 100%;
+}
+
+.about-us-slider-bg-image .bx-viewport{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: transparent;
+    margin: 0px;
+    border: none;
+    box-shadow: none;
+}
+
+.about-us-slider-bg-image .bx-wrapper{
+    margin: 0 auto;
+}
+
+.about-us-main section{
+    background-color: #f8f8f8;
+}
+
+.privacy-policy-page-content{
+    background-color: #f2f2f2
+}
+
+.about-our-facility h4{
+    color: black;
+}
+
+.width-95{
+    width: 95%;
+}
+
+.margin-left-3{
+    margin-left: 3%;
 }

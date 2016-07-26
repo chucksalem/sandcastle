@@ -1,29 +1,39 @@
-<% content_for :hero_title, "Maps".html_safe %> <!-- Hero/Page Title -->
+<% content_for :header_class, 'maps_page_content' %>
+<% content_for :hero_title, "HELPFUL MAPS".html_safe %> <!-- Hero/Page Title -->
 <% content_for :hero_size, 'hero-small' %> <!-- What's the hero size for the header? -->
 <% content_for :bottom_border, 'bottom-border' %> <!-- Does the header have a bottom border in the hero? -->
 
-<section class="top-padding-by-5 padded-bottom scallop-top beige-bg">
-    <div class="layout-container">
-        <div class="gw">
-            <nav class="subnav g md-one-third">
-                <ul>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a class="current" href="maps.html">Maps</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-            <div class="subpage-content g md-two-thirds contact-high">
-                <h1 class="heading-small">Maps</h1>
-                <p>For help getting to and around Rocky Point, here are some maps.</p>
-                <h2 class="heading-medium top-spacing">Overview</h2>
-                <a href="/files/maps/oceano_map_overview.jpg" alt="Standalone overview map">
-                    <%= image_tag "/files/maps/oceano_map_overview.jpg", :class => "map-image" %>
-                </a>
-                <h2 class="heading-medium top-spacing">Details</h2>
-                <a href="/files/maps/oceano_map_detail.jpg" alt="Standalone detail map">
-                    <%= image_tag "/files/maps/oceano_map_detail.jpg", :class => "map-image" %>
-                </a>
-            </div>
+<div id="my-tab-content" class="tab-content maps-main-section">
+  <div class="tab-pane active" id="visitors-help">
+    <section class=" padding-top-4 scallop-top beige-bg privacy-policy-page-content" xmlns="http://www.w3.org/1999/html">
+      <div class="center-div"><img src="assets/help_getting_arround_text.png"/></div>
+      <div class="center-div top-padding-by-5"><img src="assets/map_details_image1.png"/></div>
+      <div class="center-div top-padding-by-5"><img src="assets/map_details_image2.png"/></div>
+      <div class="map-image padding-top-10">
+        <img src="assets/Map.png"/>
+      </div>
+      <div class = "need-help">
+        <div class="need-help-text-section">
+          <h1 class = "grand-hotel">Need Help?</h1>
+          <h2>WE ARE HERE</h2>
         </div>
-    </div>
-</section>
+        <div>
+          <div class = "call-now">
+            <i class = "fa fa-phone"></i>
+            <div>CALL NOW!</div>
+            <div>(888) 328-8491</div>
+          </div>
+          <div class = "email-now">
+            <i class = "fa fa-envelope-o"></i>
+            <div>EMAIL NOW!</div>
+            <div>
+              <a style= 'color: #404B50' href="mailto:INFO@SANDCASTLERENTALS.COM">
+                INFO@SANDCASTLERENTALS.COM
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

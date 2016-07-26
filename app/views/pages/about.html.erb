@@ -1,26 +1,89 @@
-<% content_for :hero_title, "About Us".html_safe %> <!-- Hero/Page Title -->
+<% content_for :header_class, 'about_us_content' %>
+<% content_for :hero_title, "ABOUT OUR TEAM".html_safe %> <!-- Hero/Page Title -->
 <% content_for :hero_size, 'hero-small' %> <!-- What's the hero size for the header? -->
 <% content_for :bottom_border, 'bottom-border' %> <!-- Does the header have a bottom border in the hero? -->
 
-<section class="top-padding-by-5 bottom-padding-by-4 beige-bg">
-  <div class="layout-container about-high">
-    <div class="gw">
-      <nav class="subnav g md-one-third">
-        <ul>
-          <li><a class="current" href="about.html">About Us</a></li>
-          <li><a href="facilities.html">Facilities</a></li>
-        </ul>
-      </nav>
-      <div class="subpage-content g md-two-thirds">
-        <h1 class="heading-small">About Us</h1>
 
-          <p><span>Hacienda del Mar</span> offers a quiet and private respite with easy access to the pristine beaches of the mainland side of the Sea of Cortez, only minutes away from the restaurants, shopping and nightlife of Puerto Peñasco, Mexico's newest emerging vacation destination. From the many porches are magnificent panoramic views of both the northern Sonoran desert and the sea.</p>
-          <p>Decor is that of a traditional Mexican hacienda, with shaded porches and walkways, patio and barbecue, and hand-carved stone fountain in the beautifully landscaped yard and garden.</p>
-          <p>A full breakfast featuring traditional Mexican cuisine or various specialty dishes are served each morning, and we do hope you'll join us. Breakfast is upstairs in the main house at 9 A.M.</p>
-          <p>Guest rooms are non-smoking, although we do keep a few ashtrays scattered about on the outdoor porches so you can puff away in the great outdoors.</p>
-          <p>Puerto Peñasco, also well known to Arizonans as "Rocky Point," is an easy four hour drive from either Phoenix or Tucson, or slightly more from Southern California by way of Interstate routes 8 or 10. There is a map and detailed driving instructions on our Map page.</p>
-          <p>Hacienda del Mar is situated inside the gated community of Las Conchas, the oldest government approved subdivision in Mexico and the premier development of its kind. It comprises several thousand acres, most of it undeveloped, and includes several miles of unspoiled beachfront.</p>
+<div id="my-tab-content" class="tab-content about-us-main">
+  <div class="tab-pane active" id="visitors-help">
+    <section class="top-padding-by-5 bottom-padding-by-4 scallop-top beige-bg faq-page-content-section" xmlns="http://www.w3.org/1999/html">
+      <div class="center-div bottom-padding-by-4">
+        <img src="assets/about_us_header_text.png"/>
       </div>
-    </div>
+      <div class="layout-container about-us-content margin-bottom-6em">
+        <p>
+          Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+          Ipsum Lorem IpsumLorem IpsumLorem Ipsum  IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+          Ipsum Lorem IpsumLorem IpsumLorem Ipsum  IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+        </p>
+        <p>
+          Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+          Ipsum Lorem IpsumLorem IpsumLorem Ipsum  IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+          Ipsum Lorem IpsumLorem IpsumLorem Ipsum  IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
+        </p>
+      </div>
+      <section class="about-us-slider-bg-image">
+        <div class="testimonial-main-div">
+          <div class="md-one-whole sm-one-whole lg-one-whole left-padding-by-5 about-us-slider testimonial-slider">
+            <div class="user-image">
+              <%= image_tag "/assets/about_us_slider_small_image.png", :class => "center-image-align" %>
+              <div>
+                <p class="text-align-center margin-top-0 testimonial-comment">Escape with your family to the beach and enjoy one of our beautiful beach rentals http://fb.me/6vPy3rQUs</p>
+                <p class="text-align-center testimonial-user-name">Sandcastle Rentals</p>
+              </div>
+            </div>
+            <div class="">
+              <div class="user-image">
+                <%= image_tag "/assets/about_us_slider_small_image.png", :class => "center-image-align" %>
+              </div>
+              <div>
+                <p class="text-align-center margin-top-0 testimonial-comment">Escape with your family to the beach and enjoy one of our beautiful beach rentals http://fb.me/6vPy3rQUs</p>
+                <p class="text-align-center testimonial-user-name">Sandcastle Rentals</p>
+              </div>
+            </div>
+            <div class="">
+              <%= image_tag "/assets/about_us_slider_small_image.png", :class => "center-image-align" %>
+              <div>
+                <p class="text-align-center margin-top-0 testimonial-comment">Escape with your family to the beach and enjoy one of our beautiful beach rentals http://fb.me/6vPy3rQUs</p>
+                <p class="text-align-center testimonial-user-name">Sandcastle Rentals</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="center-div top-padding-by-5 bottom-padding-by-4">
+        <img src="assets/contact_us_text_img.png"/>
+      </div>
+      <div class="layout-container">
+        <div class="col-sm-8"><form method="post" action="/faq/review" class="faq-review-feedback">
+          <%= tag(:input, type: "hidden", name: request_forgery_protection_token.to_s, value: form_authenticity_token) %>
+          <div class="form-group">
+            <input type="text" class="form-control font-family" id="name" placeholder="NAME" name="name">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control font-family" id="email" name="email" placeholder="EMAIL ADDRESS">
+          </div>
+          <div class="form-group">
+            <textarea rows="4" class="form-control font-family" id="review" name="message" placeholder="MESSAGE"></textarea>
+          </div>
+          <br>
+          <button type = "submit" class="btn btn-info btn-lg btn--blue">SEND MESSAGE &nbsp<i class = "fa fa-arrow-right"></i></button>
+        </form></div>
+        <div class="col-md-3 want-to-chat-container">
+          <div class="">
+            <label class="want-to-chat-header">NEED HELP?</label>
+          </div>
+          <div class="form-group">
+            <label class="want-to-chat-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</label>
+          </div>
+          <div class="checkbox">
+            <i class="fa fa-phone" aria-hidden="true"></i><label> (888) 328-841</label>
+          </div>
+          <div class="checkbox">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i><label> info@gooceano.com</label>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-</section>
+</div>

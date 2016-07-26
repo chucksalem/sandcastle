@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   post "/subscribe/newsletter".dasherize, to: "pages#newsletter", as: "post_newsletter"
   post "/faq/review".dasherize, to: "pages#faqreview", as: "post_faq_review"
   get '/offer', to: "home#offer"
+  get '/room_details', to: "pages#room_details"
+  get '/privacy_policy', to: "pages#privacy_policy"
 
   namespace :api do
     resources :units, only: [:index, :show] do
