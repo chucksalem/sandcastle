@@ -1,4 +1,5 @@
 <% content_for :header_class, 'about_us_content' %>
+<% content_for :mainBreadcrumbHeading, "ABOUT".html_safe %>
 <% content_for :hero_title, "ABOUT OUR TEAM".html_safe %> <!-- Hero/Page Title -->
 <% content_for :hero_size, 'hero-small' %> <!-- What's the hero size for the header? -->
 <% content_for :bottom_border, 'bottom-border' %> <!-- Does the header have a bottom border in the hero? -->
@@ -55,20 +56,22 @@
         <img src="assets/contact_us_text_img.png"/>
       </div>
       <div class="layout-container">
-        <div class="col-sm-8"><form method="post" action="/faq/review" class="faq-review-feedback">
-          <%= tag(:input, type: "hidden", name: request_forgery_protection_token.to_s, value: form_authenticity_token) %>
-          <div class="form-group">
-            <input type="text" class="form-control font-family" id="name" placeholder="NAME" name="name">
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control font-family" id="email" name="email" placeholder="EMAIL ADDRESS">
-          </div>
-          <div class="form-group">
-            <textarea rows="4" class="form-control font-family" id="review" name="message" placeholder="MESSAGE"></textarea>
-          </div>
-          <br>
-          <button type = "submit" class="btn btn-info btn-lg btn--blue">SEND MESSAGE &nbsp<i class = "fa fa-arrow-right"></i></button>
-        </form></div>
+        <div class="col-sm-8">
+          <form method="post" action="/contact/thank-you" class="about-us-contact-form">
+            <%= tag(:input, type: "hidden", name: request_forgery_protection_token.to_s, value: form_authenticity_token) %>
+            <div class="form-group">
+              <input type="text" class="form-control font-family" id="name" placeholder="NAME" name="firstname">
+            </div>
+            <div class="form-group">
+              <input type="emailId" class="form-control font-family" id="email" name="email" placeholder="EMAIL ADDRESS">
+            </div>
+            <div class="form-group">
+              <textarea rows="7" class="form-control font-family" id="review" name="message" placeholder="MESSAGE"></textarea>
+            </div>
+            <br>
+            <button type = "submit" class="btn btn-info btn-lg btn--blue">SEND MESSAGE &nbsp<i class = "fa fa-arrow-right"></i></button>
+          </form>
+        </div>
         <div class="col-md-3 want-to-chat-container">
           <div class="">
             <label class="want-to-chat-header">NEED HELP?</label>

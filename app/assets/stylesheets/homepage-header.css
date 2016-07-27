@@ -1133,3 +1133,31 @@ section.main-content.email-thank-you-section{
 .margin-left-3{
     margin-left: 3%;
 }
+
+.site-header .home-text{
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Montserrat";
+}
+
+.site-header .page-breadcomb-text{
+    color: #fbd839;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Montserrat";
+}
+
+.about_us_content .heading-large, .maps_page_content .heading-large, .privacy_policy_content .heading-large{
+    margin-top: 0px;
+    font-size: 34px !important;
+    font-family: "Montserrat";
+}
+
+.about-us-contact-form input, .about-us-contact-form textarea{
+    color:#c7c7c7;
+}
+
+.contact-form .input-appear:focus{
+    outline: none;
+}
