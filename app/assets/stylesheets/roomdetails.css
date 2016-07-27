@@ -1,0 +1,282 @@
+.room_details_page_content{
+    font-family: Montserrat;
+}
+
+.room_details_page_content:before{
+    background: url("room_details_bg_image.png") no-repeat !important;
+    background-size: 100% 100% !important;
+}
+.site-header.room_details_page_content{
+    height: 50% !important;
+}
+.room-details-page-user-rating{
+    color: #fbd839;
+    font-size: 11px;
+}
+.thankyou-common-div{
+    margin: 10px auto;
+}
+.sandcastle-text-capitalization{
+    text-transform: uppercase;
+}
+
+.line-separator{
+    height: 1px;
+    border-bottom: 1px solid #ededed;
+}
+.sandcastle-bold{
+    font-weight: bold;
+}
+.common-font-20{
+    font-size: 20px;
+}
+.common-font-16{
+    font-size: 16px;
+}
+.common-font-10{
+    font-size: 10px;
+}
+.common-font-14{
+    font-size: 14px;
+}
+.common-font-9{
+    font-size: 9px;
+}
+.common-font-12{
+    font-size: 12px;
+}
+.common-font-24{
+    font-size: 24px
+}
+.common-font-11{
+    font-size: 11px;
+}
+.common-font-27{
+    font-size: 27px;
+}
+.common-font-18{
+    font-size: 27px;
+}
+.hotel-price-room-people-details:after {
+    content: '/night';
+    font-size: 10px;
+    vertical-align: bottom;
+}
+.hotel-price-room-people-details{
+    /*float: left;*/
+    /*width: 80%;*/
+    /*background: #000;*/
+    /*padding: 20px;*/
+    /*color: #ffffff;*/
+}
+.room_details_page_content .heading-large{
+    font-size: 31px;
+}
+.room-details-page-content-section .hotel-price-room-people-details-main{
+    background: #333333;
+    padding: 20px;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+.room-details-page-content-section .booking-button-main{
+    background-color: #39BDFB;
+    padding: 20px;
+    color: #FFFFFF;
+    height: 78px;
+    line-height: 38px;
+
+}
+.room-details-page-content-section .booking-button-main .fa-arrow-right:before {
+    content: "\f061";
+    font-size: 16.6px;
+    margin-left: 2px;
+}
+.room-details-fontawesome-common{
+    font-size: 13.79px;
+}
+.feature-section-column-small{
+    width: 15%;
+}
+.feature-section-column-large{
+    width: 75%;
+}
+.feature-section-column-main{
+    width: 23%;
+    margin-right: 10px;
+}
+.room-details-feature-section-main .row{
+    margin: 15px auto;
+}
+.feature-section-column-small .fa-question-circle{
+    color: #39BDFB;
+}
+.full-width{
+    width: 100%;
+}
+.gallary-first-image{
+    width: 36%;
+}
+.gallary-second-image{
+    width: 290px;
+}
+.gallary-third-image{
+    width: 290px;
+}
+.gallary-four-image{
+    width: 100%;
+}
+.gallary-five-image, .gallary-five-image img{
+    width: 570px;
+    height: 303px;
+}
+.gallary-six-image, .gallary-six-image img{
+    width: 347px;
+    height: 303px;
+}
+.second-gallary-section-images{
+    width: 585px;
+}
+.gallary-main-container .margin-right-by-2{
+    margin-right: 2px;
+}
+.gallary-first-image img{
+    width: 331px;
+}
+.gallary-second-image img, .gallary-third-image img{
+    width: 290px;
+    height: 274px;
+}
+.gallary-four-image img{
+    width: 585px;
+    height: 334px;
+}
+.room-details-map-section{
+    /*background: url("contact-map.jpg");*/
+}
+.room-details-map-section img{
+    width: 100%;
+}
+.room-details-section-divider{
+    background: none;
+}
+
+.customer-review-section-main{
+    background: #ffffff;
+    padding: 20px;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+    min-height: 170px;
+    margin-bottom: 20px;
+}
+.customer-review-section-upper{
+    width: 100%;
+}
+.room-details-reviewer-avatar img{
+    position: relative;
+    top: -46px;
+}
+.room-details-reviewer-avatar{
+    width: 17%;
+}
+.room-details-reviewer-name{
+    width: 35%;
+    word-break: break-word;
+    border-bottom: 1px solid #ededed;
+    height: 35px;
+}
+.room-details-reviewer-date{
+    width: 31%;
+    word-break: break-word;
+    border-bottom: 1px solid #ededed;
+    height: 35px;
+}
+.room-details-reviewer-comments{
+    word-break: break-word;
+    width: 100%;
+    padding-left: 22px;
+}
+.roomdetails-page-user-rating{
+    color: #dfc338;
+}
+.hotel-rating-beds-people-main{
+    height: 38px;
+    line-height: 38px;
+}
+.room-number{
+    font-size: 6.9px;
+    margin-top: 2em;
+}
+.room-details-page-content-section .fa-envelope-o:before,.room-details-page-content-section .fa-phone:before {
+    color: #000;
+    font-size: 23.33px;
+}
+.hotel-total-rating-count{
+    width: 21%;
+    background: #7C7865;
+    text-align: center;
+    position: relative;
+    margin-right: 63px;
+    height: 22px;
+    margin-top: 10px;
+    line-height: 22px;
+}
+.triangle4 {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid #7C7865;
+    margin-top: 15px;
+}
+.room-details-reviewer-rating{
+    height: 35px;
+    word-break: break-word;
+    border-bottom: 1px solid #ededed;
+}
+.customer-review-divider{
+    border: 1px #ededed;
+    background: none;
+    height: 50px;
+}
+.customer-review-divider span{
+    border-bottom: 1px solid #7c7865;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 5%;
+    height: 17px;
+}
+/*form.room-details-post-review input.input-appear::-webkit-input-placeholder {*/
+    /*color: white;*/
+    /*font-size: 14px;*/
+/*}*/
+/*form.room-details-post-review input.input-appear::-webkit-input-placeholder { !* WebKit, Blink, Edge *!*/
+    /*color:    #ededed;*/
+/*}*/
+/*form.room-details-post-review input.input-appear:-moz-placeholder { !* Mozilla Firefox 4 to 18 *!*/
+    /*color:    #ededed;*/
+/*}*/
+/*form.room-details-post-review input.input-appear::-moz-placeholder { !* Mozilla Firefox 19+ *!*/
+    /*color:    #ededed;*/
+/*}*/
+/*form.room-details-post-review input.input-appear:-ms-input-placeholder { !* Internet Explorer 10-11 *!*/
+    /*color:    #ededed;*/
+/*}*/
+@media screen and (max-width: 855px) and (min-width: 200px) {
+    .want-to-chat-container{
+        float: left;
+    }
+    .layout-container{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 681px) {
+
+}
+
+
+@media screen and (max-width: 680px) and (min-width: 400px) {
+
+}
