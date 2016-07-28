@@ -131,6 +131,15 @@ $(function(){
     if($('.site-header').hasClass('contact-us-main')){
         $('.site-header').addClass('height-0');
     }
+    $('.hotel-list-slider-main').bxSlider({
+        slideWidth: 237.5,
+        minSlides   : 1,
+        maxSlides: 4,
+        controls: true,
+        pager: false,
+        nextText: '<img src="assets/other_room_right_arrow.png" height="35" width="20"/>',
+        prevText: '<img src="assets/other_room_left_arrow.png" height="35" width="20"/>'
+    });
 });
 
 function isCharacter(evt) {
