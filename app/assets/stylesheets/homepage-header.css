@@ -1148,7 +1148,7 @@ section.main-content.email-thank-you-section{
     font-family: "Montserrat";
 }
 
-.about_us_content .heading-large, .maps_page_content .heading-large, .privacy_policy_content .heading-large{
+.facility_content .heading-large, .about_us_content .heading-large, .maps_page_content .heading-large, .privacy_policy_content .heading-large{
     margin-top: 0px;
     font-size: 34px !important;
     font-family: "Montserrat";
@@ -1160,4 +1160,75 @@ section.main-content.email-thank-you-section{
 
 .contact-form .input-appear:focus{
     outline: none;
+}
+
+
+/*facilities css*/
+
+.site-header.facility_content:before{
+    background: url("facility_image_bg.png") no-repeat;
+    background-size: cover;
+}
+
+.site-header.facility_content{
+    height: 50%;
+}
+
+.width-100{
+    width: 100%;
+}
+
+.white-background{
+    background-color: white;
+}
+
+.padding-left-bottom-2-px{
+    padding-right: 2px;
+    padding-bottom: 2px;
+}
+
+.our-facility-room-section{
+    margin: 0 17%;
+}
+
+.facilities-testimonial-text-color{
+    color: #777777;
+}
+
+.facilities-testimonial-bg-color{
+    background-color: white;
+}
+
+.facilities-testimonial-main-section .bx-wrapper .bx-viewport{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.facilities-testimonial-main-section .testimonial-main-div{
+    background-color: white;
+}
+
+.about-our-facility-container .about-our-facility-desc{
+    color: #cacaca;
+    font-size: 12px;
+    padding-top: 3%;
+    font-weight: 600;
+}
+
+.facilities-page-content-section{
+    font-family: "Montserrat" !important;
+}
+
+.facilities-page-content-section .feature-section-column-main{
+    color: #cacaca;
+}
+
+.padding-left-0-px{
+    padding-left: 0px;
+}
+
+.facilities-page-content-section .fa-envelope-o:before, .facilities-page-content-section .fa-phone:before{
+    color: #000;
+    font-size: 23.33px;
 }
