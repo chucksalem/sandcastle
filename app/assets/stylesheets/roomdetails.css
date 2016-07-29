@@ -7,7 +7,7 @@
     background-size: 100% 100% !important;
 }
 .site-header.room_details_page_content{
-    height: 60% !important;
+    height: 50% !important;
 }
 .room-details-page-user-rating{
     color: #FAD939;
@@ -389,6 +389,10 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 .star-color-white{
     color: #FFFFFF;
 }
+.below-hero-title-text{
+    color: #ffffff;
+    font-size: 12px;
+}
 @media screen and (max-width: 855px) and (min-width: 200px) {
     .want-to-chat-container{
         float: left;
@@ -419,8 +423,51 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
     .layout-container{
         padding: 0;
     }
+    .room-details-page-content-section .hotel-price-room-people-details-main{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .hotel-rating-beds-people-main .roomdetails-page-user-rating{
+        width: 127%;
+        float: left;
+    }
+    .hotel-price-room-people-details-main .hotel-rating-beds-people-main .col-sm-2{
+        width: 10%;
+        float: left;
+    }
+    .hotel-rating-beds-people-main .col-sm-6{
+        width: 50%;
+        float: left;
+    }
+    .layout-container .col-sm-12:first-child{
+        padding: 0;
+    }
+    .room-details-page-content-section .booking-button-main{
+        margin: 0 auto;
+        width: 32%;
+        margin-bottom: 20px;
+    }
+    .room-details-feature-section-main .row {
+        margin: 15px 10px;
+    }
+    .feature-list-headings{
+        text-align: center;
+        margin: 10px auto;
+    }
+    .feature-section-column-main{
+        width: 47%;
+    }
+    .feature-section-column-large {
+        width: 80%;
+    }
+    .room-details-post-review-main .room-details-post-review {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
-
+.room-details-page-content-section .our-facility-room-section {
+    margin: 20px 0%;
+}
 @media screen and (max-width: 1024px) and (min-width: 681px) {
 
 }
