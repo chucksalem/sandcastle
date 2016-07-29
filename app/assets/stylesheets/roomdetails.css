@@ -7,7 +7,7 @@
     background-size: 100% 100% !important;
 }
 .site-header.room_details_page_content{
-    height: 50% !important;
+    height: 60% !important;
 }
 .room-details-page-user-rating{
     color: #FAD939;
@@ -312,7 +312,7 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 .hotel-list-slider-main .col-sm-3{
     width: 237.5px !important;
 }
-.bx-wrapper .bx-viewport{
+#room_details_main_section .bx-wrapper .bx-viewport{
     background: none;
     box-shadow: none;
 }
@@ -347,10 +347,10 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 .hotel-price-value{
     color: #000;
 }
-.bx-wrapper .bx-controls .bx-prev,.bx-wrapper .bx-controls .bx-next{
+#room_details_main_section .bx-wrapper .bx-controls .bx-prev,.bx-wrapper .bx-controls .bx-next{
     background: none !important;
 }
-.bx-wrapper .hotel-details-except-image .hotel-book-view-map .view-on-map-link a img{
+#room_details_main_section .bx-wrapper .hotel-details-except-image .hotel-book-view-map .view-on-map-link a img{
     display: inline-block;
 }
 .room-details-post-review-main .room-details-post-review .all-rating-content{
@@ -364,10 +364,10 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 /*.customer-review-section-upper .roomdetails-page-reviewer-rating .fa{*/
     /*color: #FAD939;*/
 /*}*/
-.bx-wrapper .bx-controls-direction a.bx-prev{
+#room_details_main_section .bx-wrapper .bx-controls-direction a.bx-prev{
     margin-left: -35px;
 }
-.bx-wrapper .bx-controls-direction a.bx-next{
+#room_details_main_section .bx-wrapper .bx-controls-direction a.bx-next{
     margin-right: -50px;
 }
 .hotel-image{
@@ -392,6 +392,29 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 @media screen and (max-width: 855px) and (min-width: 200px) {
     .want-to-chat-container{
         float: left;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .hotel-price-room-people-details{
+        width: 30%;
+        float: left;
+    }
+    .customer-review-section-main{
+        width: 95%;
+    }
+    .hotel-rate{
+        width: 100%;
+    }
+    .hotel-rating-review .col-sm-6{
+        width: 50%;
+        float: left;
+    }
+    .hotel-rating-review{
+        width: 100%;
+    }
+    .hotel-book-view-map .col-sm-6{
+        float: left;
+        width: 50%;
     }
     .layout-container{
         padding: 0;
