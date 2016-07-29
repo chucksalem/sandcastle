@@ -507,7 +507,7 @@
     width: 69%;
 }
 section.main-content .layout-container{
-    top: -200px;
+    top: -175px;
 }
 section.main-content .layout-container{
     width: 100%;
@@ -1249,4 +1249,11 @@ section.main-content.email-thank-you-section{
 
 .font-color-white{
     color:#fff;
+}
+.search-btn:hover{
+    color: #ffffff;
+    opacity: 1;
+}
+.homepage-header-content .hero .padded-top{
+    padding-top: 70px !important;
 }
