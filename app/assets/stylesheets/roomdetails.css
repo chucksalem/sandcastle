@@ -60,6 +60,9 @@
 .common-font-15{
     font-size: 15px;
 }
+.common-font-14{
+    font-size: 14px;
+}
 .hotel-price-room-people-details:after {
     content: '/night';
     font-size: 10px;
