@@ -393,6 +393,9 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
     color: #ffffff;
     font-size: 12px;
 }
+.room-details-about-main{
+    padding-left: 0;
+}
 @media screen and (max-width: 855px) and (min-width: 200px) {
     .want-to-chat-container{
         float: left;
