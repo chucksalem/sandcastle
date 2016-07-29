@@ -103,9 +103,6 @@ $(function(){
             },
             emailId: {
                 required: true
-            },
-            message: {
-                required: true
             }
         }
     });
@@ -121,13 +118,10 @@ $(function(){
             },
             emailId: {
                 required: true
-            },
-            message: {
-                required: true
             }
         }
     });
-
+    
     if($('.site-header').hasClass('contact-us-main')){
         $('.site-header').addClass('height-0');
     }

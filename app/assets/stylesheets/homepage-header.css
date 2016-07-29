@@ -688,7 +688,7 @@ section.main-content .property-search form .text-divider{
 }
 
 .need-help {
-    background-color: yellow;
+    background-color: #fad939;
     margin-top: 5%;
     text-align: center;
 }
@@ -713,8 +713,8 @@ section.main-content .property-search form .text-divider{
     margin-top: 1em;
 }
 
-.call-now a {
-    color: black !important;
+.call-now a, .email-now a, .we-are-here-text-color{
+    color: #404B50 !important;
 }
 
 .call-now div:last-child,
@@ -971,8 +971,13 @@ section.main-content.email-thank-you-section{
 }
 
 .contact-form .error{
+    padding-left: 12px;
     font-family: "Montserrat";
     color: white;
+}
+
+.contact-form  #emailId-error{
+    display: block !important;
 }
 
 .padding-top-15-px{
@@ -1232,4 +1237,12 @@ section.main-content.email-thank-you-section{
 .facilities-page-content-section .fa-envelope-o:before, .facilities-page-content-section .fa-phone:before{
     color: #000;
     font-size: 23.33px;
+}
+
+.brand-container a:hover, .footer-img-logo a:hover{
+    opacity: 1;
+}
+
+.font-color-black{
+    color:#000;
 }
