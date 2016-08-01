@@ -1,0 +1,106 @@
+.new-client-header-content:before{
+    background: url("new_client_header_bg.jpg") no-repeat !important;
+    background-size: cover !important;
+}
+.site-header.new-client-header-content{
+    width: 100%;
+}
+.new-client-header-content{
+    float: left;
+    height: auto !important;
+}
+.newclient-content-sectio-devider-feature{
+    width: 100%;
+}
+section.property-listing-form-section .layout-container form.property-listing-form .row{
+    width: 60%;
+    margin: 0 auto;
+}
+section.property-listing-form-section .layout-container form.property-listing-form .start-hosting-button-main{
+    width: 21.4%;
+}
+section.property-listing-form-section .layout-container form.property-listing-form .form-control{
+    border-radius: 0px;
+}
+.sandcastle-text-font-grant-hotel{
+    font-family: "GRAND HOTEL";
+}
+.why-sandcastle-departmental-text{
+    padding: 20px 20px 20px 60px;
+}
+.why-sandcastle-departmental-text-third, .why-sandcastle-departmental-text-third{
+    padding-right: 60px;
+}
+.why-sandcastle-rental-header,.join-happy-customer-header{
+    color: #39BDFB;
+}
+.happy-customer-image-first, .happy-customer-image-third{
+    padding-right: 0;
+}
+.happy-customer-image-second{
+    padding-left: 0;
+}
+.join-happy-customers-container{
+    width: 100%;
+    float: left;
+    background-color: #fff;
+}
+.new-client-inner-main-content .row{
+    margin: 0;
+}
+.happy-customer-text{
+    height: 441px;
+    line-height: 441px;
+}
+.happy-customer-text span{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+.property-list-footer-content{
+    background: url("sandcastle_beach_sunset.jpg");
+    background-position: 0px 405px;
+    background-size: cover;
+    height: 248px;
+}
+
+.start-hosting-footer-button-main{
+    height: 248px;
+    line-height: 248px;
+    background: rgba(0, 0, 0, 0.6);
+}
+.start-hosting-button{
+    text-decoration: none;
+    background: #39BDFB;
+    color: #ffffff;
+    padding: 18px;
+}
+.start-hosting-button:hover{
+    text-decoration: none;
+    background: #39BDFB;
+    color: #ffffff;
+    opacity: 1;
+}
+.new-client-header-content .hero .layout-centered .heading-large{
+    text-align: right;
+    padding-right: 8%;
+    line-height: 58%;
+}
+.header-start-hosting-button{
+    border: none;
+    background: #39BDFB;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 22px;
+    border-radius: 6px;
+}
+.dont-wait-list-property-label{
+    color: #ffffff;
+    font-size: 60px;
+    text-align: center;
+    line-height: 238px;
+    text-indent: 87px;
+}
+.start-earning-cash-label{
+    color: #ffffff;
+}
