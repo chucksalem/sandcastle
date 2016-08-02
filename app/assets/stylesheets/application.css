@@ -12,6 +12,7 @@
  *
 
  *= require font-awesome
+ *= require jquery-ui
  *= require imports
  *= require jquery.bxslider
  *= require bootstrap.min
@@ -21,6 +22,8 @@
  *= require thankyoupage
  *= require roomdetails
  *= require newclient
+ *= require hotellisting
+
 
 
 

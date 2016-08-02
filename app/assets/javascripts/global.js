@@ -155,6 +155,21 @@ $(function(){
         nextText: '<img src="assets/other_room_right_arrow.png" height="35" width="20"/>',
         prevText: '<img src="assets/other_room_left_arrow.png" height="35" width="20"/>'
     });
+    $( "#slider-range" ).slider({
+        range: true,
+        min: 1,
+        max: 1500,
+        values: [ 1, 1500 ],
+        slide: function( event, ui ) {
+            // $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            $( "#min-range" ).text( "$" + ui.values[ 0 ]);
+            $( "#max-range" ).text( "$" + ui.values[ 1 ] );
+        }
+    });
+    // $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+    //     " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+    $( "#min-range" ).text( "$" + $( "#slider-range" ).slider( "values", 0 ));
+    $( "#max-range" ).text( "$" + $( "#slider-range" ).slider( "values", 1 ) );
 });
 
 function isCharacter(evt) {

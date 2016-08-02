@@ -1,0 +1,417 @@
+<% content_for :header_class, 'hotel_grid_view_header_content' %>
+<% content_for :hero_title, "FIND YOUR PERFECT GATEWAY".html_safe %> <!-- Hero/Page Title -->
+<% content_for :hero_size, 'hero-small' %> <!-- What's the hero size for the header? -->
+<% content_for :bottom_border, 'bottom-border' %> <!-- Does the header have a bottom border in the hero? -->
+<% content_for :below_hero_title, "WE FOUND: 140 RESULTS ".html_safe %>
+<% content_for :mainBreadcrumbHeading, "HOTELS".html_safe %>
+<div class="section-divider float-left hotel-listing-divider"></div>
+<section id="hotel_listing_main_section_grid" class="hotel-listing-page-content-section float-left full-width" xmlns="http://www.w3.org/1999/html">
+  <div class="hotel-listing-layout-container">
+  <div class="col-xs-6 col-md-4">
+    <div class="col-xs-12 col-md-8 sandcastle-text-capitalization sandcastle-bold padding-20px">Search</div>
+    <form class="hotel-room-date-search-form">
+    <div class="col-xs-12 col-md-8 form-group inner-addon left-addon"><input type="text" class="form-control" name="rooms" placeholder="Which room?"><i class="fa fa-bed" aria-hidden="true"></i></div>
+    <div class="col-xs-12 col-md-8 form-group inner-addon left-addon"><input type="text" id="start_date" class="form-control datepicker" name="rooms" placeholder="Check In"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+    <div class="col-xs-12 col-md-8 form-group inner-addon left-addon"><input type="text" id="end_date" class="form-control datepicker" name="rooms" placeholder="Check Out"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization"><button type="submit" class="hotel-list-search-buttons sandcastle-text-capitalization">Search</button></div>
+    </form>
+    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px">Price range</div>
+    <form class="price-range-filter-form">
+      <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization">
+        <div id="slider-range"></div>
+        <!--<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">-->
+        <div class="full-width float-left main-price-range">
+          <div class="min-range-value" id="min-range"></div>
+          <div class="max-range-value" id="max-range"></div>
+          </div>
+      </div>
+      <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization"><button type="submit" class="hotel-list-search-buttons sandcastle-text-capitalization">Search</button></div>
+    </form>
+    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px">Star rating</div>
+    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization">
+      <div class="col-xs-12 col-md-8 form-group">
+        <input type="checkbox" id="rating_5" class="float-left hotel-list-common-checkbox-space" name="rate5">
+        <i class="fa fa-star star-color-yello"></i>
+        <i class="fa fa-star star-color-yello"></i>
+        <i class="fa fa-star star-color-yello"></i>
+        <i class="fa fa-star star-color-yello"></i>
+        <i class="fa fa-star star-color-white"></i>
+      </div>
+      <div class="col-xs-12 col-md-8 form-group">
+        <input type="checkbox" id="rating_4" class="float-left hotel-list-common-checkbox-space" name="rate4">
+        <i class="fa fa-star star-color-yello"></i>
+        <i class="fa fa-star star-color-yello"></i>
+        <i class="fa fa-star star-color-yello"></i>
+        <i class="fa fa-star star-color-yello"></i>
+      </div>
+      <div class="col-xs-12 col-md-8 form-group">
+        <input type="checkbox" id="rating_3" class="float-left hotel-list-common-checkbox-space" name="rate3">
+        <i class="fa fa-star star-color-yello"></i>
+        <i class="fa fa-star star-color-yello"></i>
+        <i class="fa fa-star star-color-yello"></i>
+      </div>
+      <div class="col-xs-12 col-md-8 form-group">
+        <input type="checkbox" id="rating_2" class="float-left hotel-list-common-checkbox-space" name="rate2">
+        <i class="fa fa-star star-color-yello"></i>
+        <i class="fa fa-star star-color-yello"></i>
+      </div>
+      <div class="col-xs-12 col-md-8 form-group">
+        <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
+        <i class="fa fa-star star-color-yello"></i>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px">Amenities</div>
+    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization">
+      <div class="col-xs-12 col-md-8 form-group">
+        <input type="checkbox" id="rating_5" class="float-left hotel-list-common-checkbox-space" name="rate5">
+        <label>Swimming Pool</label>
+      </div>
+      <div class="col-xs-12 col-md-8 form-group">
+        <input type="checkbox" id="rating_4" class="float-left hotel-list-common-checkbox-space" name="rate4">
+        <label>Gym / Fitness</label>
+      </div>
+      <div class="col-xs-12 col-md-8 form-group">
+        <input type="checkbox" id="rating_3" class="float-left hotel-list-common-checkbox-space" name="rate3">
+        <label>Car Park</label>
+      </div>
+      <div class="col-xs-12 col-md-8 form-group">
+        <input type="checkbox" id="rating_2" class="float-left hotel-list-common-checkbox-space" name="rate2">
+        <label>Spa / Sauna</label>
+      </div>
+      <div class="col-xs-12 col-md-8 form-group">
+        <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
+        <label>Airport Transfer</label>
+      </div>
+      <div class="col-xs-12 col-md-8 form-group">
+        <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
+        <label>Smoking Area</label>
+      </div>
+      <div class="col-xs-12 col-md-8 form-group">
+        <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
+        <label>Pet Friendly</label>
+      </div>
+    </div>
+
+  </div>
+  <!-- Search result section starts -->
+  <div class="col-xs-12 col-md-8">
+    <div class="float-left full-width">
+      <div class="col-xs-6">
+        <div class="float-left"><button class="hotel-list-sort-buttons sandcastle-text-capitalization common-font-12">Sort by Price <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
+        <div class="float-left"><button class="hotel-list-sort-buttons sandcastle-text-capitalization common-font-12">Sort by Rank <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
+      </div>
+      <div class="col-xs-4 float-right right-side-list-grid-icons">
+        <div class="col-md-4 text-right sandcastle-text-capitalization">View:</div>
+        <div class="col-md-2 text-right"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div class="col-md-2 text-right"><i class="fa fa-th" aria-hidden="true"></i></div>
+      </div>
+    </div>
+    <div class="hotel-list-grid-main sandcastle-text-font-montserrat">
+      <div class="col-sm-3 hotel-grid-result-container">
+        <div class="sandcastle-text-capitalization sale-available-on-hotels"><img src="assets/room_sale.png"></div>
+        <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        <div class="hotel-details-except-image float-left full-width">
+          <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color sandcastle-text-font-montserrat">FROM <span class="sandcastle-bold hotel-price-value">$120</span></div>
+          <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating">
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+          </div></div><div class="col-sm-6 float-left sandcastle-text-color sandcastle-text-font-montserrat">485 Reviews</div></div>
+          <div class="hotel-about-section float-left room-details-common-div full-width">
+            <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div sandcastle-text-font-montserrat">Luxury Room</div>
+            <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details sandcastle-text-font-montserrat">Luxury Room Luxury RoomLuxury Room Luxury Room Luxury Room Luxury Room</div>
+          </div>
+          <div class="hotel-book-view-map room-details-common-div float-left full-width">
+            <div class="col-sm-6">
+              <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization sandcastle-text-font-montserrat" value="Book">
+            </div>
+            <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link  sandcastle-text-font-montserrat">
+              <a href="#"><img src="assets/map_fa_icon.png"> View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 hotel-grid-result-container">
+        <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        <div class="hotel-details-except-image float-left">
+          <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold hotel-price-value">$120</span></div>
+          <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating">
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+          </div></div><div class="col-sm-6 float-left sandcastle-text-color">485 Reviews</div></div>
+          <div class="hotel-about-section float-left room-details-common-div full-width">
+            <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div">Luxury Room</div>
+            <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details">Luxury Room Luxury RoomLuxury Room Luxury Room Luxury Room Luxury Room</div>
+          </div>
+          <div class="hotel-book-view-map room-details-common-div float-left full-width">
+            <div class="col-sm-6">
+              <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book">
+            </div>
+            <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link">
+              <a href="#"><img src="assets/map_fa_icon.png"> View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 hotel-grid-result-container">
+        <div class="sandcastle-text-capitalization sale-available-on-hotels"><img src="assets/room_sale.png"></div>
+        <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        <div class="hotel-details-except-image float-left full-width">
+          <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color sandcastle-text-font-montserrat">FROM <span class="sandcastle-bold hotel-price-value">$120</span></div>
+          <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating">
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+          </div></div><div class="col-sm-6 float-left sandcastle-text-color sandcastle-text-font-montserrat">485 Reviews</div></div>
+          <div class="hotel-about-section float-left room-details-common-div full-width">
+            <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div sandcastle-text-font-montserrat">Luxury Room</div>
+            <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details sandcastle-text-font-montserrat">Luxury Room Luxury RoomLuxury Room Luxury Room Luxury Room Luxury Room</div>
+          </div>
+          <div class="hotel-book-view-map room-details-common-div float-left full-width">
+            <div class="col-sm-6">
+              <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization sandcastle-text-font-montserrat" value="Book">
+            </div>
+            <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link  sandcastle-text-font-montserrat">
+              <a href="#"><img src="assets/map_fa_icon.png"> View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 hotel-grid-result-container">
+        <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        <div class="hotel-details-except-image float-left">
+          <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold hotel-price-value">$120</span></div>
+          <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating">
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+          </div></div><div class="col-sm-6 float-left sandcastle-text-color">485 Reviews</div></div>
+          <div class="hotel-about-section float-left room-details-common-div full-width">
+            <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div">Luxury Room</div>
+            <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details">Luxury Room Luxury RoomLuxury Room Luxury Room Luxury Room Luxury Room</div>
+          </div>
+          <div class="hotel-book-view-map room-details-common-div float-left full-width">
+            <div class="col-sm-6">
+              <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book">
+            </div>
+            <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link">
+              <a href="#"><img src="assets/map_fa_icon.png"> View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 hotel-grid-result-container">
+        <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        <div class="hotel-details-except-image float-left">
+          <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold hotel-price-value">$120</span></div>
+          <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating">
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+          </div></div><div class="col-sm-6 float-left sandcastle-text-color">485 Reviews</div></div>
+          <div class="hotel-about-section float-left room-details-common-div full-width">
+            <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div">Luxury Room</div>
+            <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details">Luxury Room Luxury RoomLuxury Room Luxury Room Luxury Room Luxury Room</div>
+          </div>
+          <div class="hotel-book-view-map room-details-common-div float-left full-width">
+            <div class="col-sm-6">
+              <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book">
+            </div>
+            <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link">
+              <a href="#"><img src="assets/map_fa_icon.png"> View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 hotel-grid-result-container">
+        <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        <div class="hotel-details-except-image float-left">
+          <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold hotel-price-value">$120</span></div>
+          <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating">
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+          </div></div><div class="col-sm-6 float-left sandcastle-text-color">485 Reviews</div></div>
+          <div class="hotel-about-section float-left room-details-common-div full-width">
+            <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div">Luxury Room</div>
+            <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details">Luxury Room Luxury RoomLuxury Room Luxury Room Luxury Room Luxury Room</div>
+          </div>
+          <div class="hotel-book-view-map room-details-common-div float-left full-width">
+            <div class="col-sm-6">
+              <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book">
+            </div>
+            <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link">
+              <a href="#"><img src="assets/map_fa_icon.png"> View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 hotel-grid-result-container">
+        <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        <div class="hotel-details-except-image float-left">
+          <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold hotel-price-value">$120</span></div>
+          <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating">
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+          </div></div><div class="col-sm-6 float-left sandcastle-text-color">485 Reviews</div></div>
+          <div class="hotel-about-section float-left room-details-common-div full-width">
+            <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div">Luxury Room</div>
+            <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details">Luxury Room Luxury RoomLuxury Room Luxury Room Luxury Room Luxury Room</div>
+          </div>
+          <div class="hotel-book-view-map room-details-common-div float-left full-width">
+            <div class="col-sm-6">
+              <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book">
+            </div>
+            <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link">
+              <a href="#"><img src="assets/map_fa_icon.png"> View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 hotel-grid-result-container">
+        <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        <div class="hotel-details-except-image float-left">
+          <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold hotel-price-value">$120</span></div>
+          <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating">
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+          </div></div><div class="col-sm-6 float-left sandcastle-text-color">485 Reviews</div></div>
+          <div class="hotel-about-section float-left room-details-common-div full-width">
+            <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div">Luxury Room</div>
+            <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details">Luxury Room Luxury RoomLuxury Room Luxury Room Luxury Room Luxury Room</div>
+          </div>
+          <div class="hotel-book-view-map room-details-common-div float-left full-width">
+            <div class="col-sm-6">
+              <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book">
+            </div>
+            <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link">
+              <a href="#"><img src="assets/map_fa_icon.png"> View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 hotel-grid-result-container">
+        <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        <div class="hotel-details-except-image float-left">
+          <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold hotel-price-value">$120</span></div>
+          <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating">
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+          </div></div><div class="col-sm-6 float-left sandcastle-text-color">485 Reviews</div></div>
+          <div class="hotel-about-section float-left room-details-common-div full-width">
+            <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div">Luxury Room</div>
+            <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details">Luxury Room Luxury RoomLuxury Room Luxury Room Luxury Room Luxury Room</div>
+          </div>
+          <div class="hotel-book-view-map room-details-common-div float-left full-width">
+            <div class="col-sm-6">
+              <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book">
+            </div>
+            <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link">
+              <a href="#"><img src="assets/map_fa_icon.png"> View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 hotel-grid-result-container">
+        <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        <div class="hotel-details-except-image float-left">
+          <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold hotel-price-value">$120</span></div>
+          <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating">
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+          </div></div><div class="col-sm-6 float-left sandcastle-text-color">485 Reviews</div></div>
+          <div class="hotel-about-section float-left room-details-common-div full-width">
+            <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div">Luxury Room</div>
+            <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details">Luxury Room Luxury RoomLuxury Room Luxury Room Luxury Room Luxury Room</div>
+          </div>
+          <div class="hotel-book-view-map room-details-common-div float-left full-width">
+            <div class="col-sm-6">
+              <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book">
+            </div>
+            <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link">
+              <a href="#"><img src="assets/map_fa_icon.png"> View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 hotel-grid-result-container">
+        <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        <div class="hotel-details-except-image float-left">
+          <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold hotel-price-value">$120</span></div>
+          <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating">
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+          </div></div><div class="col-sm-6 float-left sandcastle-text-color">485 Reviews</div></div>
+          <div class="hotel-about-section float-left room-details-common-div full-width">
+            <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div">Luxury Room</div>
+            <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details">Luxury Room Luxury RoomLuxury Room Luxury Room Luxury Room Luxury Room</div>
+          </div>
+          <div class="hotel-book-view-map room-details-common-div float-left full-width">
+            <div class="col-sm-6">
+              <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book">
+            </div>
+            <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link">
+              <a href="#"><img src="assets/map_fa_icon.png"> View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 hotel-grid-result-container">
+        <div class="sandcastle-text-capitalization sale-available-on-hotels"><img src="assets/room_sale.png"></div>
+        <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        <div class="hotel-details-except-image float-left full-width">
+          <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color sandcastle-text-font-montserrat">FROM <span class="sandcastle-bold hotel-price-value">$120</span></div>
+          <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating">
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+            <i class="fa fa-star star-color-yello"></i>
+          </div></div><div class="col-sm-6 float-left sandcastle-text-color sandcastle-text-font-montserrat">485 Reviews</div></div>
+          <div class="hotel-about-section float-left room-details-common-div full-width">
+            <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div sandcastle-text-font-montserrat">Luxury Room</div>
+            <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details sandcastle-text-font-montserrat">Luxury Room Luxury RoomLuxury Room Luxury Room Luxury Room Luxury Room</div>
+          </div>
+          <div class="hotel-book-view-map room-details-common-div float-left full-width">
+            <div class="col-sm-6">
+              <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization sandcastle-text-font-montserrat" value="Book">
+            </div>
+            <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link  sandcastle-text-font-montserrat">
+              <a href="#"><img src="assets/map_fa_icon.png"> View on Map</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Search result section end -->
+  </div>
+</section>
