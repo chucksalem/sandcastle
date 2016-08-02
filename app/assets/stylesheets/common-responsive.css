@@ -1,0 +1,89 @@
+/*responsive css for maps page*/
+
+@media screen and (max-width: 1024px) and (min-width: 681px) {
+    .call-now a, .email-now a{
+        font-size: 18px;
+    }
+
+    .call-now-text, .email-now-text{
+        font-size: 14px !important;
+    }
+
+    .call-now, .email-now{
+        width: 44%;
+    }
+
+    .about-us-content{
+        padding: 0 20px !important;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 765px) {
+    .about-us-main .want-to-chat-container {
+        margin-left: 30px;
+    }
+
+    .want-to-chat-container {
+        width: 28% !important;
+        float: right;
+    }
+
+    .width-for-first-about-content{
+        width: 67%;
+    }
+
+    .facilities-page-content-section .want-to-chat-container{
+        width: 30% !important;
+        float: right;
+        margin-left: 0;
+    }
+}
+
+
+@media screen and (max-width: 764px) and (min-width: 681px) {
+    .facilities-page-content-section .want-to-chat-container, .about-us-main .want-to-chat-container {
+        margin-left: 30px;
+    }
+
+    .privacy-policy-page-content  .want-to-chat-container {
+        width: 32% !important;
+        float: right;
+    }
+
+    .facilities-page-content-section .want-to-chat-container{
+        margin-left: 0;
+        width: 100% !important;
+    }
+
+    .width-for-first-about-content{
+        width: 65%;
+    }
+}
+
+
+@media screen and (max-width: 680px) and (min-width: 200px) {
+    .call-now a, .email-now a{
+        font-size: 16px;
+    }
+
+    .call-now-text, .email-now-text{
+        font-size: 12px !important;
+    }
+
+    .call-now, .email-now{
+        width: 100%;
+    }
+
+    .about-us-content{
+        padding: 0 20px !important;
+    }
+
+    .privacy-policy-page-content .about-our-facility{
+        width:100%;
+    }
+
+    .facilities-page-content-section .want-to-chat-container, .privacy-policy-page-content .want-to-chat-container{
+        margin-left: 0px;
+    }
+}
+

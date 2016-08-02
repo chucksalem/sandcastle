@@ -106,6 +106,23 @@ $(function(){
             }
         }
     });
+
+    $('.about-us-contact-form').validate({ // initialize the plugin
+        ignore: " ",
+        rules:
+        {
+            firstname: {
+                required: true
+            },
+            lastname: {
+                required: true
+            },
+            emailId: {
+                required: true
+            }
+        }
+    });
+
     $('.faq-review-feedback').validate({ // initialize the plugin
         ignore: " ",
         rules:
