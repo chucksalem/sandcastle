@@ -9,8 +9,9 @@
     float: left;
     height: auto !important;
 }
-.newclient-content-sectio-devider-feature{
+.newclient-content-section-divider-feature{
     width: 100%;
+    background: #ffffff;
 }
 section.property-listing-form-section .layout-container form.property-listing-form .row{
     width: 60%;
@@ -35,10 +36,10 @@ section.property-listing-form-section .layout-container form.property-listing-fo
     color: #39BDFB;
 }
 .happy-customer-image-first, .happy-customer-image-third{
-    padding-right: 0;
+    padding: 0;
 }
 .happy-customer-image-second{
-    padding-left: 0;
+    padding: 0;
 }
 .join-happy-customers-container{
     width: 100%;
@@ -66,7 +67,7 @@ section.property-listing-form-section .layout-container form.property-listing-fo
 
 .start-hosting-footer-button-main{
     height: 248px;
-    line-height: 248px;
+    /*line-height: 248px;*/
     background: rgba(0, 0, 0, 0.6);
 }
 .start-hosting-button{
@@ -98,9 +99,48 @@ section.property-listing-form-section .layout-container form.property-listing-fo
     color: #ffffff;
     font-size: 60px;
     text-align: center;
-    line-height: 238px;
+    /*line-height: 238px;*/
     text-indent: 87px;
 }
 .start-earning-cash-label{
     color: #ffffff;
+    font-family:"Montserrat";
 }
+.common-font-48{
+    font-size: 48px;
+}
+.property-listing-form label{
+    font-size: 10px;
+}
+.computer-screen-slider img{
+    width: 100%;
+}
+.sandcastle-color-blue{
+    color: #39BDFB;
+}
+.why-sandcastle-first-row .fa, .why-sandcastle-second-row .fa{
+    font-size: 80px;
+    color: #39BDFB;
+}
+/*.property-list-footer-content span{*/
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
+    /*line-height: normal;*/
+/*}*/
+.dont-wait-list-property-label{
+    margin: 5.5% auto;
+}
+.start-hosting-button-label-name{
+    margin: 8.5% auto;
+}
+.why-sandcastle-main-section{
+    background: #DFDEE4;
+}
+.why-sandcastle-main-section .section-divider{
+    background: #DFDEE4;
+}
+/*.start-earning-cash-label{*/
+    /*height: 20px;*/
+    /*line-height: 20px;*/
+    /*display: table;*/
+/*}*/
