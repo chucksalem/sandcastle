@@ -139,6 +139,27 @@ section.property-listing-form-section .layout-container form.property-listing-fo
 .why-sandcastle-main-section .section-divider{
     background: #DFDEE4;
 }
+.list-your-property-divider img{
+    padding: 0;
+}
+.list-your-property-tabs-main{
+    width: 30%;
+    margin: 11px 36%;
+}
+.list-your-property-tabs-main-info{
+    width: 24%;
+    border-right: 1px solid #bababa;
+    text-align: center;
+}
+.list-your-property-tabs-prop-info{
+    width: 45%;
+    text-align: center;
+    border-right: 1px solid #bababa;
+}
+.list-your-property-tabs-thank-you{
+    width: 26%;
+    text-align: center;
+}
 /*.start-earning-cash-label{*/
     /*height: 20px;*/
     /*line-height: 20px;*/

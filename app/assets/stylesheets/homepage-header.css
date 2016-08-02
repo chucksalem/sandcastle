@@ -1258,3 +1258,6 @@ section.main-content.email-thank-you-section{
 .homepage-header-content .hero .padded-top{
     padding-top: 62px !important;
 }
+.footer-menu-icon-div .fa,.site-header .homepage-main-bar .icons-div .fa{
+    color: #ffffff;
+}
