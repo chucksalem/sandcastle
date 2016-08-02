@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/room_details', to: "pages#room_details"
   get '/privacy_policy', to: "pages#privacy_policy"
   get '/new-client', to: "pages#new_client"
+  get '/hotelgrid', to: "pages#hotelgrid"
 
   namespace :api do
     resources :units, only: [:index, :show] do
