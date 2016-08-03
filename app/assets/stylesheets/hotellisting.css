@@ -166,6 +166,81 @@ form.price-range-filter-form .min-range-value{
 form.price-range-filter-form .main-price-range{
     margin-top: 15px;
 }
+#hotel_listing_main_section_grid #hotelgrid_view .col-sm-3{
+    width: 262.5px !important;
+}
+.padding-bottom-10px{
+    padding-bottom: 10px;
+}
+.padding-bottom-5px{
+    padding-bottom: 5px;
+}
+.hotel-list-column-3{
+    background-color: #39BDFB;
+    height: 189px;
+    line-height: 189px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.hotel-list-column-3 .room-details-book-button{
+    background: #ffffff;
+    color: #39BDFB;
+}
+.hotel-list-column-3 .hotel-rate{
+    color: #ffffff;
+}
+.hotel-list-column-3 .rate-book-main-span{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+#hotellist_view .hotel-image img{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.active-result-view{
+    background: #39BDFB;
+    color: white;
+    border-radius: 5px;
+}
+.right-addon .fa-search{ right: 0px;}
+.inner-addon .fa-search{
+    position: absolute;
+    padding: 10px 20px 10px 10px;
+    pointer-events: none;
+    top: 0%;
+    color: #bababa;
+    font-size: 14.85px;
+}
+#attractions_view .venues{
+    width: 240px !important;
+    margin-left: 0px;
+}
+#attractions_view .col-md-4{
+    width: 31%;
+}
+.sorting-buttons-main{
+    margin-left: -15px;
+}
+#attractions_view div.row{
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,20 +1,353 @@
-<% content_for :hero_title, "Attractions".html_safe %> <!-- Hero/Page Title -->
+<% content_for :header_class, 'hotel_grid_view_header_content' %>
+<% content_for :hero_title, "WONDERFUL THINGS TO DO".html_safe %> <!-- Hero/Page Title -->
 <% content_for :hero_size, 'hero-small' %> <!-- What's the hero size for the header? -->
 <% content_for :bottom_border, 'bottom-border' %> <!-- Does the header have a bottom border in the hero? -->
+<% content_for :below_hero_title, "WE FOUND: 208 RESULTS ".html_safe %>
+<% content_for :mainBreadcrumbHeading, "ATTRACTIONS".html_safe %>
+<div class="section-divider float-left hotel-listing-divider"></div>
+<section id="hotel_listing_main_section_grid" class="hotel-listing-page-content-section float-left full-width" xmlns="http://www.w3.org/1999/html">
+  <div class="hotel-listing-layout-container">
+    <div class="col-xs-6 col-md-4">
+      <div class="col-xs-12 col-md-8 sandcastle-text-capitalization sandcastle-bold padding-20px">Search</div>
+      <form class="what-attractions-search-form">
+        <div class="col-xs-12 col-md-8 form-group inner-addon right-addon"><input type="text" class="form-control" name="rooms" placeholder="WHAT ATTRACTIONS?"><i class="fa fa-search" aria-hidden="true"></i></div>
+        <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization"><button type="submit" class="hotel-list-search-buttons sandcastle-text-capitalization">Search</button></div>
+      </form>
+      <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px">Star rating</div>
+      <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization">
+        <div class="col-xs-12 col-md-8 form-group">
+          <input type="checkbox" id="rating_5" class="float-left hotel-list-common-checkbox-space" name="rate5">
+          <i class="fa fa-star star-color-yello"></i>
+          <i class="fa fa-star star-color-yello"></i>
+          <i class="fa fa-star star-color-yello"></i>
+          <i class="fa fa-star star-color-yello"></i>
+          <i class="fa fa-star star-color-yello"></i>
+        </div>
+        <div class="col-xs-12 col-md-8 form-group">
+          <input type="checkbox" id="rating_4" class="float-left hotel-list-common-checkbox-space" name="rate4">
+          <i class="fa fa-star star-color-yello"></i>
+          <i class="fa fa-star star-color-yello"></i>
+          <i class="fa fa-star star-color-yello"></i>
+          <i class="fa fa-star star-color-yello"></i>
+        </div>
+        <div class="col-xs-12 col-md-8 form-group">
+          <input type="checkbox" id="rating_3" class="float-left hotel-list-common-checkbox-space" name="rate3">
+          <i class="fa fa-star star-color-yello"></i>
+          <i class="fa fa-star star-color-yello"></i>
+          <i class="fa fa-star star-color-yello"></i>
+        </div>
+        <div class="col-xs-12 col-md-8 form-group">
+          <input type="checkbox" id="rating_2" class="float-left hotel-list-common-checkbox-space" name="rate2">
+          <i class="fa fa-star star-color-yello"></i>
+          <i class="fa fa-star star-color-yello"></i>
+        </div>
+        <div class="col-xs-12 col-md-8 form-group">
+          <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
+          <i class="fa fa-star star-color-yello"></i>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px">Amenities</div>
+      <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization">
+        <div class="col-xs-12 col-md-12 form-group">
+          <input type="checkbox" id="rating_5" class="float-left hotel-list-common-checkbox-space" name="rate5">
+          <label>Nature & Parks (5)</label>
+        </div>
+        <div class="col-xs-12 col-md-12 form-group">
+          <input type="checkbox" id="rating_4" class="float-left hotel-list-common-checkbox-space" name="rate4">
+          <label>Sights & Landmarks (1)</label>
+        </div>
+        <div class="col-xs-12 col-md-12 form-group">
+          <input type="checkbox" id="rating_3" class="float-left hotel-list-common-checkbox-space" name="rate3">
+          <label>Outdoor Activities (8)</label>
+        </div>
+        <div class="col-xs-12 col-md-12 form-group">
+          <input type="checkbox" id="rating_2" class="float-left hotel-list-common-checkbox-space" name="rate2">
+          <label>Tours (6)</label>
+        </div>
+        <div class="col-xs-12 col-md-12 form-group">
+          <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
+          <label>Boat Tours & Water Sports (5)</label>
+        </div>
+        <div class="col-xs-12 col-md-12 form-group">
+          <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
+          <label>Shopping (2)</label>
+        </div>
+        <div class="col-xs-12 col-md-12 form-group">
+          <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
+          <label>Food & Drinks (2)</label>
+        </div>
+        <div class="col-xs-12 col-md-12 form-group">
+          <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
+          <label>Spa & Wellness (1)</label>
+        </div>
+        <div class="col-xs-12 col-md-12 form-group">
+          <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
+          <label>Nightlife (1)</label>
+        </div>
+      </div>
 
-<section class="top-padding-by-5 bottom-padding-by-4 beige-bg">
-  <div class="layout-container about-high">
-    <div class="gw">
-      <div class="subpage-content g md-two-thirds">
-        <h1 class="heading-small">Attractions</h1>
-
-          <p><span>SandCastle</span> offers a quiet and private respite with easy access to the pristine beaches of the mainland side of the Sea of Cortez, only minutes away from the restaurants, shopping and nightlife of Puerto Peñasco, Mexico's newest emerging vacation destination. From the many porches are magnificent panoramic views of both the northern Sonoran desert and the sea.</p>
-          <p>Decor is that of a traditional Mexican hacienda, with shaded porches and walkways, patio and barbecue, and hand-carved stone fountain in the beautifully landscaped yard and garden.</p>
-          <p>A full breakfast featuring traditional Mexican cuisine or various specialty dishes are served each morning, and we do hope you'll join us. Breakfast is upstairs in the main house at 9 A.M.</p>
-          <p>Guest rooms are non-smoking, although we do keep a few ashtrays scattered about on the outdoor porches so you can puff away in the great outdoors.</p>
-          <p>Puerto Peñasco, also well known to Arizonans as "Rocky Point," is an easy four hour drive from either Phoenix or Tucson, or slightly more from Southern California by way of Interstate routes 8 or 10. There is a map and detailed driving instructions on our Map page.</p>
-          <p>Hacienda del Mar is situated inside the gated community of Las Conchas, the oldest government approved subdivision in Mexico and the premier development of its kind. It comprises several thousand acres, most of it undeveloped, and includes several miles of unspoiled beachfront.</p>
+    </div>
+    <!-- Search result section starts -->
+    <div class="col-xs-12 col-md-8">
+      <div class="float-left full-width">
+        <div class="col-xs-6 sorting-buttons-main">
+          <div class="float-left"><button class="hotel-list-sort-buttons sandcastle-text-capitalization common-font-12">Sort by Likes <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
+          <div class="float-left"><button class="hotel-list-sort-buttons sandcastle-text-capitalization common-font-12">Sort by Rank <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
+        </div>
+      </div>
+      <div class="sandcastle-text-font-montserrat" id="attractions_view">
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/cholla-bay.jpg"/>
+              <div class="image-caption">CHOLLA BAY</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">227</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">6</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/ecofun-rentals.jpg" />
+              <div class="image-caption">ECOFUN RENTALS</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">320</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/playa-bonita.gif" />
+              <div class="image-caption">PLAYA BONITA BEACH</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">101</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/cholla-bay.jpg"/>
+              <div class="image-caption">CHOLLA BAY</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">227</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">6</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/ecofun-rentals.jpg" />
+              <div class="image-caption">ECOFUN RENTALS</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">320</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/playa-bonita.gif" />
+              <div class="image-caption">PLAYA BONITA BEACH</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">101</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/cholla-bay.jpg"/>
+              <div class="image-caption">CHOLLA BAY</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">227</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">6</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/ecofun-rentals.jpg" />
+              <div class="image-caption">ECOFUN RENTALS</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">320</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/playa-bonita.gif" />
+              <div class="image-caption">PLAYA BONITA BEACH</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">101</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/cholla-bay.jpg"/>
+              <div class="image-caption">CHOLLA BAY</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">227</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">6</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/ecofun-rentals.jpg" />
+              <div class="image-caption">ECOFUN RENTALS</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">320</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/playa-bonita.gif" />
+              <div class="image-caption">PLAYA BONITA BEACH</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">101</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/cholla-bay.jpg"/>
+              <div class="image-caption">CHOLLA BAY</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">227</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">6</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/ecofun-rentals.jpg" />
+              <div class="image-caption">ECOFUN RENTALS</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">320</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="venues">
+              <img class="infocus-images" src="assets/playa-bonita.gif" />
+              <div class="image-caption">PLAYA BONITA BEACH</div>
+              <div class="feedback">
+                <div class="likes">
+                  <i class="fa fa-heart"></i>
+                  <span class="number">101</span>
+                </div>
+                <div class="comments">
+                  <i class="fa fa-comment"></i>
+                  <span class="number">2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- Search result section end -->
   </div>
 </section>
