@@ -1147,9 +1147,8 @@ section.main-content.email-thank-you-section{
     font-family: "Montserrat";
 }
 
-.site-header .page-breadcomb-text{
+.site-header .page-breadcomb-text, .booking-form-section .page-breadcomb-text{
     color: #fbd839;
-    cursor: pointer;
     font-size: 16px;
     font-family: "Montserrat";
 }

@@ -18,6 +18,7 @@
  *= require bootstrap.min
  *= require homepage-header
  *= require faq
+ *= require booking-form
  *= require common-responsive
  *= require thankyoupage
  *= require roomdetails

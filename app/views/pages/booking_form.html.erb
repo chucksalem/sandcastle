@@ -1,0 +1,236 @@
+<% content_for :header_class, 'thankyou_page_content' %>
+<% content_for :hero_title, "BOOKING".html_safe %> <!-- Hero/Page Title -->
+<% content_for :hero_size, 'hero-small' %> <!-- What's the hero size for the header? -->
+<% content_for :bottom_border, 'bottom-border' %> <!-- Does the header have a bottom border in the hero? -->
+<div class="section-divider rent-thankyou-divider">
+  <img src="assets/vacation-summary.png">
+</div>
+
+<!--<div class="section-divider thank-you-page-content-devider">-->
+<!--<div class="float-left first-devider-div"><img src="assets/divider.png" /></div>-->
+<!--<div class="float-left second-devider-div"><div class="vacation-summary-div">VACATION SUMMARY</div></div>-->
+<!--<div class="float-left second-devider-div"><img src="assets/divider.png" /></div>-->
+<!--</div>-->
+<div class="section-divider rent-thankyou-divider">
+  <span class="thank-you-span">RATE DETAILS </span><span>  |  </span><span class="rent-details-span"> THANK YOU</span>
+</div>
+<section id="visitors-help" class="scallop-top beige-bg thankyou-page-content-section booking-form-section" xmlns="http://www.w3.org/1999/html">
+  <div class="layout-container">
+    <div class="col-sm-8">
+      <div class="page-breadcomb-text">REVIEW BOOKING DETAILS, RATE DETAILS & RENTAL POLICIES</div>
+      <div class="booking-receipt-details table-responsive">
+        <div class="col-md-12 booking-receipt-headings common-font-20 sandcastle-bold">YOUR INFORMATION</div>
+        <div class="col-md-12">
+          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label>FIRST NAME</label></div>
+          <div class="text-box-main-div"><label>LAST NAME</label></div>
+        </div>
+        <div class="col-md-12 ">
+          <div class="text-box-main-div margin-right-4-and-half-per"><input class="booking-form-short-text-box-height" type="text" /></div>
+          <div class="text-box-main-div"><input class="booking-form-short-text-box-height" type="text" /></div>
+        </div>
+        <div class="col-md-12 margin-top-4">
+          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label>EMAIL</label></div>
+          <div class="text-box-main-div"><label>CONFIRM EMAIL</label></div>
+        </div>
+        <div class="col-md-12">
+          <div class="text-box-main-div margin-right-4-and-half-per"><input class="booking-form-short-text-box-height" type="text" /></div>
+          <div class="text-box-main-div"><input class="booking-form-short-text-box-height" type="text" /></div>
+        </div>
+        <div class="col-md-12 margin-top-4">
+          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label>CONTACT PHONE (FOR BOOKING)</label></div>
+          <div class="text-box-main-div"><label>MOBILE PHONE (FOR TRIP)</label></div>
+        </div>
+        <div class="col-md-12">
+          <div class="text-box-main-div margin-right-4-and-half-per"><input class="booking-form-short-text-box-height" type="text" /></div>
+          <div class="text-box-main-div"><input class="booking-form-short-text-box-height" type="text" /></div>
+        </div>
+
+        <div class="col-md-12 booking-receipt-headings common-font-20 sandcastle-bold">MAILING ADDRESS</div>
+        <div class="col-md-12">
+          <div class=""><label>ADDRESS 1</label></div>
+          <div class=""><input class="booking-form-short-text-box-height" type="text" /></div>
+        </div>
+        <div class="col-md-12 margin-top-4">
+          <div class=""><label>ADDRESS 2</label></div>
+          <div class=""><input class="booking-form-short-text-box-height" type="text" /></div>
+        </div>
+        <div class="col-md-12 margin-top-4">
+          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label>COUNTRY</label></div>
+          <div class="text-box-main-div"><label>STATE/PROVIDENCE</label></div>
+        </div>
+        <div class="col-md-12">
+          <div class="text-box-main-div margin-right-4-and-half-per"><input class="booking-form-short-text-box-height" type="text" /></div>
+          <div class="text-box-main-div"><input class="booking-form-short-text-box-height" type="text" /></div>
+        </div>
+        <div class="col-md-12 margin-top-4">
+          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label>ZIP</label></div>
+          <div class="text-box-main-div"><label>CITY</label></div>
+        </div>
+        <div class="col-md-12">
+          <div class="text-box-main-div margin-right-4-and-half-per"><input class="booking-form-short-text-box-height" type="text" /></div>
+          <div class="text-box-main-div"><input class="booking-form-short-text-box-height" type="text" /></div>
+        </div>
+        <div class="col-md-12 margin-top-4"><input class="float-left" type="checkbox"/><p class="rental-polciy-text">USE MAILING ADDRESS FOR BILING ADDRESS</p></div>
+
+        <div class="col-md-12 booking-receipt-headings common-font-20 col-md-12 sandcastle-bold">PAYMENT METHOD</div>
+        <div class="col-md-12 margin-top-4">
+          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label>CARD TYPE</label></div>
+        </div>
+        <div class="col-md-12">
+          <div class="text-box-main-div margin-right-4-and-half-per">
+            <select name="id" id="" value="" class="booking-form-short-text-box-height">
+              <option selected="" class="drop-options"></option>
+              <option value="1" class="drop-options">MASTER</option>
+              <option value="2" class="drop-options">VISA</option>
+              <option value="2" class="drop-options">MASTERO</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-12 margin-top-4">
+          <div class=""><label>CARD NUMBER</label></div>
+          <div class=""><input class="booking-form-short-text-box-height" type="text" /></div>
+        </div>
+        <div class="col-md-12 margin-top-4">
+          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label>EXPIRATION DATE</label></div>
+          <div class="float-left text-box-main-div"><label>CVC (<i class="fa fa-question"></i>)</label></div>
+        </div>
+        <div class="col-md-12">
+          <select name="id" id="" value="" class="float-left expiration-selection-list">
+            <option selected="YEAR" class="drop-options">YEAR</option>
+            <option value="2016" class="drop-options">2016</option>
+            <option value="2015" class="drop-options">2015</option>
+            <option value="2014" class="drop-options">2014</option>
+          </select>
+          <select name="id" id="" value="" class="float-left expiration-selection-list">
+            <option selected="MONTH" class="drop-options">MONTH</option>
+            <option value="JAN" class="drop-options">JAN</option>
+            <option value="FEB" class="drop-options">FEB</option>
+            <option value="MAR" class="drop-options">MAR</option>
+            <option value="MAR" class="drop-options">MAR</option>
+            <option value="APR" class="drop-options">APR</option>
+            <option value="JUNE" class="drop-options">JUNE</option>
+            <option value="JUL" class="drop-options">JUL</option>
+            <option value="AUG" class="drop-options">AUG</option>
+            <option value="SEPT" class="drop-options">SEPT</option>
+            <option value="OCT" class="drop-options">OCT</option>
+            <option value="NOV" class="drop-options">NOV</option>
+            <option value="DEC" class="drop-options">DEC</option>
+          </select>
+          <div class="float-left width-26"><input class="booking-form-short-text-box-height" type="text" /></div>
+        </div>
+        <div class="col-md-12 margin-top-4"><label>READ AND ACCEPT RENTAL POLICIES AGREEMENT</label></div>
+        <div class="col-md-12">
+          <textarea row="50" class="col-md-12 col-sm-12"></textarea>
+        </div>
+        <div class="col-md-12 margin-top-4"><input class="float-left" type="checkbox"/><p class="rental-polciy-text">I HAVE READ AND ACCEPT THE ABOVE RENTAL POLICIES AGREEMENT</p></div>
+        <div class="col-md-12 booking-receipt-headings common-font-20 sandcastle-bold">REVIEW AND BOOK YOUR TRIP</div>
+        <div class="col-md-12"><p>lorem ispm lorem ispm lorem ispm lorem ispm lorem ispm lorem ispm lorem ispm lorem ispm lorem ispm lorem ispm</p></div>
+        <button type = "submit" class="margin-top-4 btn btn-info btn-lg btn--blue">COMPLETE BOOKING</button>
+      </div>
+    </div>
+
+    <div class="col-md-4 want-to-chat-container">
+      <div class="receipt-payment-section">
+      </div>
+      <div class="receipt-booking-details-section">
+        <div class="booking-receipt-headings sandcastle-text-capitalization sandcastle-bold common-font-20">Booking Details</div>
+        <div class="thankyou-common-div common-font-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+        <div class="thankyou-page-hotel-photo thankyou-common-div"><img src="assets/thank-you-page-hotel.png"></div>
+        <div class="thankyou-common-div sandcastle-text-capitalization sandcastle-bold common-font-14">LUNA Y SOL</div>
+        <div class="common-font-9">Puerto Penasco, Maxico</div>
+        <div class=""><a class="thankyou-view-map-link sandcastle-text-color common-font-9" href="/maps">View Map</a></div>
+        <div class=""><div class="thankyou-page-user-rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div></div>
+      </div>
+      <div class="line-separator"></div>
+      <div class="thankyou-common-div hotel-stay-duration common-font-11"><span class="stay-duration-span"><i class="fa fa-clock-o common-font-12" aria-hidden="true"></i> 3 NIGHTS</span> &nbsp;&nbsp;AUG 05, 2016/AUG 08 2016</div>
+      <div class="line-separator"></div>
+      <div class="thankyou-common-div hotel-tenant-details">
+        <div class="sandcastle-text-capitalization">1 townhouse for:</div>
+        <div class="sandcastle-text-capitalization">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 Adult</div>
+        <div class="sandcastle-text-capitalization">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 Children</div>
+        <div class="sandcastle-text-capitalization">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 Pet</div>
+      </div>
+      <div class="line-separator"></div>
+      <div class="panel panel-default hotel-details-panel">
+        <div class="panel-heading sandcastle-text-capitalization">
+          <div class="sandcastle-bold thankyou-common-div common-font-16">Details</div>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-condensed">
+              <tbody>
+              <tr>
+                <td class="sandcastle-text-color sandcastle-text-capitalization common-font-12">Type</td>
+                <td class="text-right common-font-12">TOWNHOUSE</td>
+              </tr>
+              <tr>
+                <td class="sandcastle-text-color sandcastle-text-capitalization common-font-12">Rent</td>
+                <td class="text-right common-font-12">$280</td>
+              </tr>
+              <tr>
+                <td class="sandcastle-text-color sandcastle-text-capitalization common-font-12">Damage Waiver</td>
+                <td class="text-right common-font-12">$25</td>
+              </tr>
+              <tr>
+                <td class="sandcastle-text-color sandcastle-text-capitalization common-font-12">Cleaning fee</td>
+                <td class="text-right common-font-12">$65</td>
+              </tr>
+              <tr>
+                <td class="sandcastle-text-color sandcastle-text-capitalization common-font-12">TAX</td>
+                <td class="text-right common-font-12">$44.80</td>
+              </tr>
+              <tr>
+                <td class="sandcastle-text-capitalization sandcastle-bold common-font-16 total-price-common">Total Price</td>
+                <td class="text-right sandcastle-bold total-price-number total-price-common"><span class="common-font-24">414.80</span></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default payment-schedule-panel">
+        <div class="panel-heading sandcastle-text-capitalization">
+          <div class="thankyou-common-div sandcastle-bold common-font-16">Payment Schedule</div>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table table-condensed">
+              <tbody>
+              <tr>
+                <td class="sandcastle-text-color common-font-12">17/10/2016</td>
+                <td class="text-right common-font-12">$140</td>
+              </tr>
+              <tr>
+                <td class="sandcastle-text-color common-font-12">11/11/2016</td>
+                <td class="text-right common-font-12">$274</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <label class="want-to-chat-header">WANT TO CHAT?</label>
+      </div>
+      <div class="form-group">
+        <label class="want-to-chat-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</label>
+      </div>
+      <div class="checkbox">
+        <i class="fa fa-phone" aria-hidden="true"></i><label> (888) 328-841</label>
+      </div>
+      <div class="checkbox">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i><label> info@gooceano.com</label>
+      </div>
+    </div>
+  </div>
+  <div class="first-section-divider"></div>
+</section>

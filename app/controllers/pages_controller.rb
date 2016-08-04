@@ -89,6 +89,11 @@ class PagesController < ApplicationController
   end
 
 
+  def booking_form
+    render
+  end
+
+
   def privacy_policy
     render
   end

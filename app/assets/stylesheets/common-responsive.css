@@ -87,3 +87,26 @@
     }
 }
 
+
+/*header responsive css*/
+
+@media screen and (max-width: 1184px) and (min-width: 1045px) {
+    .site-header.full-background .hero{
+        margin-top: -40px;
+    }
+}
+
+@media screen and (max-width: 1045px) and (min-width: 960px) {
+    .site-header.full-background .hero{
+        margin-top: -64px;
+    }
+
+    .welcome-text-align-for-smaller{
+        padding-top: 114px;
+    }
+
+    .site-header .container > .navbar-collapse{
+        width: 60%;
+        margin-left: 24% !important;
+    }
+}
