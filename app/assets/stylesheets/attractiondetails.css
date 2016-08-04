@@ -1,0 +1,270 @@
+.attraction_details_page_content,.attraction-details-page-content-section{
+    font-family: Montserrat;
+    /*background: rgba(0, 0, 0, 0.6);*/
+}
+.attraction-details-page-content-section{
+    background: #EDEBE1;
+}
+.attraction_details_page_content:before{
+    background: url("old_port_header_bg.jpg") no-repeat center center !important;
+    background-size: cover !important;
+}
+.site-header.attraction_details_page_content{
+    float: left;
+    width: 100%;
+}
+.room-details-page-user-rating{
+    color: #FAD939;
+    font-size: 11px;
+}
+.thankyou-common-div{
+    margin: 10px auto;
+}
+.sandcastle-text-capitalization{
+    text-transform: uppercase;
+}
+
+.line-separator{
+    height: 1px;
+    border-bottom: 1px solid #ededed;
+}
+.sandcastle-bold{
+    font-weight: bold;
+}
+.common-font-20{
+    font-size: 20px;
+}
+.common-font-16{
+    font-size: 16px;
+}
+.common-font-10{
+    font-size: 10px;
+}
+.common-font-14{
+    font-size: 14px;
+}
+.common-font-9{
+    font-size: 9px;
+}
+.common-font-12{
+    font-size: 12px;
+}
+.common-font-24{
+    font-size: 24px
+}
+.common-font-11{
+    font-size: 11px;
+}
+.common-font-27{
+    font-size: 27px;
+}
+.common-font-18{
+    font-size: 18px;
+}
+.common-font-15{
+    font-size: 15px;
+}
+.common-font-14{
+    font-size: 14px;
+}
+.attraction-details-page-content-section .hotel-price-room-people-details:after {
+    content: '';
+}
+.attraction_details_page_content .heading-large{
+    font-size: 31px;
+}
+.attraction-details-page-content-section .hotel-price-room-people-details-main{
+    background: #333333;
+    padding: 10px;
+    color: #ffffff;
+    margin-bottom: 50px;
+    height: 70px;
+    line-height: 50px;
+}
+.attraction-details-page-content-section .booking-button-main{
+    background-color: #39BDFB;
+    padding: 10px;
+    color: #FFFFFF;
+    height: 58px;
+    line-height: 38px;
+    font-size: 15px;
+    width: 19%;
+}
+.attraction-details-page-content-section .booking-button-main .fa-arrow-right:before {
+    content: "\f061";
+    font-size: 16.6px;
+    margin-left: 2px;
+}
+
+section.attraction-details-page-content-section .room-details-fontawesome-common .fa{
+    padding-top: 0px;
+}
+section.attraction-details-page-content-section .roomdetails-page-user-rating{
+    width: 40%;
+}
+
+.attraction-details-visitor-review-main,.attraction-details-visitor-review-main .layout-container{
+    padding: 0 !important;
+}
+.attraction-details-visitor-review-main .customer-review-section-main{
+    width: 100%;
+    margin: 0 auto;
+}
+.margin-by-30{
+    margin-top: 30px;
+}
+.attractions-details-common-div{
+    margin: 10px auto;
+}
+.clear-floats{
+    clear: both;
+}
+
+.reviewer-highlight-divider{
+    width: 80%;
+    margin: 10px auto;
+    border-bottom: 1px solid #ededed;
+    height: 1px;
+}
+.attraction-details-visitor-review-main .room-details-reviewer-comments{
+    padding: 5px 0px 20px 22px;
+}
+.customer-review-section-main .see-remaining-reviews{
+    margin: 25px 0px 0px 20px;
+}
+.customer-review-layout-container{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.customer-review-layout-container .customer-review-section-main{
+    width: 49%;
+    float: left;
+}
+.customer-review-layout-container .customer-review-section-main:nth-child(2n+1){
+    margin-right: 20px;
+}
+
+.customer-review-divider-main{
+    width: 45%;
+}
+.customer-review-divider-main .customer-review-divider span{
+    width: 15%;
+}
+.reviewer-highlight-heading{
+    margin-bottom: 20px;
+}
+.room-details-reviewer-comments .show-more-details,.customer-review-section-main .see-remaining-reviews a{
+    color: #39BDFB;
+    cursor: pointer;
+}
+.customer-review-divider span {
+    border-bottom: 1px solid #bababa;
+}
+.hotel-total-rating-count-label{
+    width: 15%;
+    background: #bababa;
+    margin-top: 15px;
+    line-height: 22px;
+    text-align: center;
+}
+.triangle4 {
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid #bababa;
+    margin-top: 20px;
+}
+.room-details-reviewer-rating{
+    height: 35px;
+    word-break: break-word;
+    border-bottom: 1px solid #ededed;
+}
+@media screen and (max-width: 855px) and (min-width: 200px) {
+    /*.customer-review-layout-container .customer-review-section-main*/
+    /*.hotel-price-room-people-details{*/
+        /*width: 30% !important;*/
+    /*}*/
+    .customer-review-layout-container .customer-review-section-main{
+        width: 100%;
+    }
+    .customer-review-layout-container{
+        width: 96%;
+    }
+    .customer-review-layout-container .customer-review-divider-main{
+        display: none;
+    }
+
+
+
+    .hotel-rate{
+        width: 100%;
+    }
+    .hotel-rating-review .col-sm-6{
+        width: 50%;
+        float: left;
+    }
+    .hotel-rating-review{
+        width: 100%;
+    }
+    .hotel-book-view-map .col-sm-6{
+        float: left;
+        width: 50%;
+    }
+    .layout-container{
+        padding: 0;
+    }
+    .attraction-details-page-content-section .hotel-price-room-people-details-main{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .hotel-rating-beds-people-main .roomdetails-page-user-rating{
+        width: 127%;
+        float: left;
+    }
+    .hotel-price-room-people-details-main .hotel-rating-beds-people-main .col-sm-2{
+        width: 10%;
+        float: left;
+    }
+    .hotel-rating-beds-people-main .col-sm-6{
+        width: 50%;
+        float: left;
+    }
+    .layout-container .col-sm-12:first-child{
+        padding: 0;
+    }
+    .attraction-details-page-content-section .booking-button-main{
+        margin: 0 auto;
+        width: 32%;
+        margin-bottom: 20px;
+    }
+    .room-details-feature-section-main .row {
+        margin: 15px 10px;
+    }
+    .feature-list-headings{
+        text-align: center;
+        margin: 10px auto;
+    }
+    .feature-section-column-main{
+        width: 47%;
+    }
+    .feature-section-column-large {
+        width: 80%;
+    }
+    .room-details-post-review-main .room-details-post-review {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+.attraction-details-page-content-section .our-facility-room-section {
+    margin: 20px 0%;
+}
+@media screen and (max-width: 1024px) and (min-width: 681px) {
+
+}
+
+
+@media screen and (max-width: 680px) and (min-width: 400px) {
+
+}

@@ -170,6 +170,16 @@ $(function(){
     //     " - $" + $( "#slider-range" ).slider( "values", 1 ) );
     $( "#min-range" ).text( "$" + $( "#slider-range" ).slider( "values", 0 ));
     $( "#max-range" ).text( "$" + $( "#slider-range" ).slider( "values", 1 ) );
+    $('.featured-attraction-slider').bxSlider({
+        // slideWidth: 1100,
+        minSlides: 3,
+        maxSlides: 3,
+        slideMargin: 0,
+        controls: true,
+        pager: false,
+        nextText: '<img src="assets/right-arrow.png" height="12" width="24"/>',
+        prevText: '<img src="assets/Left-arrow.png" height="12" width="24"/>'
+    });
 });
 
 function isCharacter(evt) {

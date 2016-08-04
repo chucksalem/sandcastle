@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/hotelgrid', to: "pages#hotelgrid"
   get '/hotellist', to: "pages#hotellist"
   get '/booking-form', to: "pages#booking_form"
+  get '/attraction-details', to: "pages#attraction_details"
 
   namespace :api do
     resources :units, only: [:index, :show] do
