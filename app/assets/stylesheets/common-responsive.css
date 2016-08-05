@@ -110,3 +110,79 @@
         margin-left: 24% !important;
     }
 }
+
+/*footer responsive css*/
+
+@media screen and (max-width: 1025px) and (min-width: 960px) {
+    .footer-img-logo{
+        padding: 4% 3%;
+    }
+
+    .menu-list-div{
+        padding: 8% 0 0 0;
+        width: 77%;
+    }
+
+    .list-div{
+        padding: 0 0 0 12%;
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 960px) and (min-width: 200px) {
+    .subscribe-email-div{
+        padding: 7% 0 0 2% !important;
+    }
+
+    .footer-bg .list-div{
+        margin : 0;
+    }
+
+    .footer-bg .footer-menu-list{
+        padding: 1% 0 0 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-bg{
+        background-size: cover !important;
+        height: 290px !important;
+    }
+
+    .footer-main-div{
+        height: 245px;
+    }
+
+    .footer-img-logo{
+        padding: 2% 0;
+    }
+
+    .footer-bg .footer-main-div{
+        padding: 0 4%;
+    }
+
+    .footer-bg .menu-list-div{
+        text-align: center;
+    }
+
+    .footer-bg .list-div-text{
+        padding: 0;
+    }
+
+    .footer-bg .menu-list-div .text-divider{
+         padding-right: 0;
+         border-left: 0;
+         margin-left: 0;
+        height: 32px;
+         margin-right: 0;
+    }
+
+    .padding-in-footer{
+        padding-right: 4% !important;
+    }
+
+    .footer-bg .menu-list-div .list-div .float-left, .footer-bg  .footer-menu-list .float-left{
+        float: none;
+    }
+}

@@ -355,8 +355,7 @@
 .subscribe-email-div{
     float: left;
     width: 100%;
-    padding: 7% 0% 0% 47%;
-    /*padding: 7% 0% 7% 47%;*/
+    padding: 7% 0 0 47%; /*padding: 7% 0% 7% 47%;*/
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -691,11 +690,6 @@ section.main-content .property-search form .text-divider{
     background-color: #fad939;
     margin-top: 5%;
     text-align: center;
-}
-
-
-.footer-bg {
-    /*margin-top: -4%;*/
 }
 
 .call-now,
