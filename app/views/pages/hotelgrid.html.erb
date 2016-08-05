@@ -8,26 +8,26 @@
 <section id="hotel_listing_main_section_grid" class="hotel-listing-page-content-section float-left full-width" xmlns="http://www.w3.org/1999/html">
   <div class="hotel-listing-layout-container">
   <div class="col-xs-6 col-md-4">
-    <div class="col-xs-12 col-md-8 sandcastle-text-capitalization sandcastle-bold padding-20px">Search</div>
+    <div class="col-xs-12 col-md-8 sandcastle-text-capitalization sandcastle-bold padding-20px common-font-21">Search</div>
     <form class="hotel-room-date-search-form">
     <div class="col-xs-12 col-md-8 form-group inner-addon left-addon"><input type="text" class="form-control" name="rooms" placeholder="Which room?"><i class="fa fa-bed" aria-hidden="true"></i></div>
     <div class="col-xs-12 col-md-8 form-group inner-addon left-addon"><input type="text" id="start_date" class="form-control datepicker" name="rooms" placeholder="Check In"><i class="fa fa-calendar" aria-hidden="true"></i></div>
     <div class="col-xs-12 col-md-8 form-group inner-addon left-addon"><input type="text" id="end_date" class="form-control datepicker" name="rooms" placeholder="Check Out"><i class="fa fa-calendar" aria-hidden="true"></i></div>
     <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization"><button type="submit" class="hotel-list-search-buttons sandcastle-text-capitalization">Search</button></div>
     </form>
-    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px">Price range</div>
+    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px common-font-21">Price range</div>
     <form class="price-range-filter-form">
       <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization">
         <div id="slider-range"></div>
         <!--<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">-->
         <div class="full-width float-left main-price-range">
-          <div class="min-range-value" id="min-range"></div>
-          <div class="max-range-value" id="max-range"></div>
+          <div class="min-range-value common-font-10 sandcastle-text-color" id="min-range"></div>
+          <div class="max-range-value common-font-10 sandcastle-text-color" id="max-range"></div>
           </div>
       </div>
       <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization"><button type="submit" class="hotel-list-search-buttons sandcastle-text-capitalization">Search</button></div>
     </form>
-    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px">Star rating</div>
+    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px common-font-21">Star rating</div>
     <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization">
       <div class="col-xs-12 col-md-8 form-group">
         <input type="checkbox" id="rating_5" class="float-left hotel-list-common-checkbox-space" name="rate5">
@@ -60,45 +60,45 @@
         <i class="fa fa-star star-color-yello"></i>
       </div>
     </div>
-    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px">Amenities</div>
+    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px common-font-21">Amenities</div>
     <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization">
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_5" class="float-left hotel-list-common-checkbox-space" name="rate5">
-        <label>Swimming Pool</label>
+        <label class="common-font-13 sandcastle-text-color">Swimming Pool</label>
       </div>
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_4" class="float-left hotel-list-common-checkbox-space" name="rate4">
-        <label>Gym / Fitness</label>
+        <label class="common-font-13 sandcastle-text-color">Gym / Fitness</label>
       </div>
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_3" class="float-left hotel-list-common-checkbox-space" name="rate3">
-        <label>Car Park</label>
+        <label class="common-font-13 sandcastle-text-color">Car Park</label>
       </div>
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_2" class="float-left hotel-list-common-checkbox-space" name="rate2">
-        <label>Spa / Sauna</label>
+        <label class="common-font-13 sandcastle-text-color">Spa / Sauna</label>
       </div>
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
-        <label>Airport Transfer</label>
+        <label class="common-font-13 sandcastle-text-color">Airport Transfer</label>
       </div>
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
-        <label>Smoking Area</label>
+        <label class="common-font-13 sandcastle-text-color">Smoking Area</label>
       </div>
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
-        <label>Pet Friendly</label>
+        <label class="common-font-13 sandcastle-text-color">Pet Friendly</label>
       </div>
     </div>
 
   </div>
   <!-- Search result section starts -->
   <div class="col-xs-12 col-md-8">
-    <div class="float-left full-width">
+    <div class="float-left full-width sorting-button-top-container">
       <div class="col-xs-6">
-        <div class="float-left"><button class="hotel-list-sort-buttons sandcastle-text-capitalization common-font-12">Sort by Price <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
-        <div class="float-left"><button class="hotel-list-sort-buttons sandcastle-text-capitalization common-font-12">Sort by Rank <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
+        <div class="float-left"><button class="hotel-list-sort-buttons sandcastle-text-capitalization common-font-10">Sort by Price <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
+        <div class="float-left"><button class="hotel-list-sort-buttons sandcastle-text-capitalization common-font-10">Sort by Rank <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
       </div>
       <div class="col-xs-4 float-right right-side-list-grid-icons">
         <div class="col-md-4 text-right sandcastle-text-capitalization">View:</div>

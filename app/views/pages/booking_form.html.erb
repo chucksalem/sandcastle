@@ -5,12 +5,6 @@
 <div class="section-divider rent-thankyou-divider">
   <img src="assets/vacation-summary.png">
 </div>
-
-<!--<div class="section-divider thank-you-page-content-devider">-->
-<!--<div class="float-left first-devider-div"><img src="assets/divider.png" /></div>-->
-<!--<div class="float-left second-devider-div"><div class="vacation-summary-div">VACATION SUMMARY</div></div>-->
-<!--<div class="float-left second-devider-div"><img src="assets/divider.png" /></div>-->
-<!--</div>-->
 <div class="section-divider rent-thankyou-divider">
   <span class="thank-you-span">RATE DETAILS </span><span>  |  </span><span class="rent-details-span"> THANK YOU</span>
 </div>
@@ -70,7 +64,7 @@
           <div class="text-box-main-div margin-right-4-and-half-per"><input class="booking-form-short-text-box-height" type="text" /></div>
           <div class="text-box-main-div"><input class="booking-form-short-text-box-height" type="text" /></div>
         </div>
-        <div class="col-md-12 margin-top-4"><input class="float-left" type="checkbox"/><p class="rental-polciy-text">USE MAILING ADDRESS FOR BILING ADDRESS</p></div>
+        <div class="col-md-12 margin-top-4 checkbox"><input class="float-left input-assumpte" id="input-confidencial" type="checkbox"/><label for="input-confidencial"></label><p class="rental-polciy-text">USE MAILING ADDRESS FOR BILING ADDRESS</p></div>
 
         <div class="col-md-12 booking-receipt-headings common-font-20 col-md-12 sandcastle-bold">PAYMENT METHOD</div>
         <div class="col-md-12 margin-top-4">
@@ -80,10 +74,15 @@
           <div class="text-box-main-div margin-right-4-and-half-per">
             <select name="id" id="" value="" class="booking-form-short-text-box-height">
               <option selected="" class="drop-options"></option>
-              <option value="1" class="drop-options">MASTER</option>
-              <option value="2" class="drop-options">VISA</option>
-              <option value="2" class="drop-options">MASTERO</option>
+              <option value="1" class="drop-options">VISA</option>
+              <option value="2" class="drop-options">MASTER</option>
+              <option value="2" class="drop-options">DISCOVER</option>
             </select>
+          </div>
+          <div class="float-left text-box-main-div margin-right-4-and-half-per">
+            <span class="visa-card-img common-payment-images"></span>
+            <span class="master-card-img common-payment-images"></span>
+            <span class="discover-card-img common-payment-images"></span>
           </div>
         </div>
         <div class="col-md-12 margin-top-4">
@@ -129,7 +128,7 @@
       </div>
     </div>
 
-    <div class="col-md-4 want-to-chat-container">
+    <div class="col-md-4 float-left white-background">
       <div class="receipt-payment-section">
       </div>
       <div class="receipt-booking-details-section">
@@ -215,9 +214,8 @@
           </div>
         </div>
       </div>
-
-
-
+    </div>
+    <div class="col-md-4 want-to-chat-container margin-top-4">
       <div class="form-group">
         <label class="want-to-chat-header">WANT TO CHAT?</label>
       </div>

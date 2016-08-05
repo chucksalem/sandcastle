@@ -59,6 +59,33 @@
 .common-font-14{
     font-size: 14px;
 }
+.common-font-13{
+    font-size: 13px;
+}
+.common-font-21{
+    font-size: 21px;
+}
+.common-font-8{
+    font-size: 8px;
+}
+.sorting-button-top-container{
+    margin-top: 2%;
+}
+#min_range,#max_range{
+    position: relative;
+    top: -20px;
+}
+#slider-range .ui-slider-handle #min_range:focus{
+    border: none !important;
+}
+#slider-range .ui-slider-handle #min_range:focus,#slider-range .ui-slider-handle #max_range:focus,#slider-range .ui-slider-handle:focus{
+    border: none !important;
+    outline: none !important;
+    color: #000 !important;
+}
+#hotel-room-date-search-form #start_date,#hotel-room-date-search-form #end_date{
+    padding-top: 7px;
+}
 .hotel-price-room-people-details:after {
     content: '/night';
     font-size: 10px;
@@ -216,6 +243,7 @@ form.price-range-filter-form .main-price-range{
 #attractions_view .venues{
     width: 240px !important;
     margin-left: 0px;
+    margin-bottom: 10px;
 }
 #attractions_view .col-md-4{
     width: 31%;
@@ -226,7 +254,13 @@ form.price-range-filter-form .main-price-range{
 #attractions_view div.row{
     margin-bottom: 10px;
 }
-
+span.hotel-amenities-icons{
+    display: block;
+    float: left;
+    width: 10%;
+    border-right: 1px solid #bababa;
+    margin: -8px 5px 0px 15px;
+}
 
 
 

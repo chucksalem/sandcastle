@@ -155,17 +155,48 @@ $(function(){
         nextText: '<img src="assets/other_room_right_arrow.png" height="35" width="20"/>',
         prevText: '<img src="assets/other_room_left_arrow.png" height="35" width="20"/>'
     });
+    var tooltip = function(sliderObj, ui){
+        val1            = '<div id="min_range" class="common-font-12">$'+ sliderObj.slider("values", 0) +'</div>';
+        val2            = '<div id="max_range" class="common-font-12">$'+ sliderObj.slider("values", 1) +'</div>';
+        sliderObj.children('.ui-slider-handle').first().html(val1);
+        sliderObj.children('.ui-slider-handle').last().html(val2);
+    };
+
     $( "#slider-range" ).slider({
         range: true,
         min: 1,
         max: 1500,
         values: [ 1, 1500 ],
-        slide: function( event, ui ) {
-            // $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-            $( "#min-range" ).text( "$" + ui.values[ 0 ]);
-            $( "#max-range" ).text( "$" + ui.values[ 1 ] );
+        slide: function( e, ui ) {
+            tooltip($(this),ui);
+            // $( "#min-range" ).text( "$" + ui.values[ 0 ]);
+            // $( "#max-range" ).text( "$" + ui.values[ 1 ] );
+        },
+        create:function(e,ui){
+            tooltip($(this),ui);
         }
     });
+
+    // $( "#slider-range" ).slider({
+    //     range: true,
+    //     min: 1,
+    //     max: 1500,
+    //     values: [ 1, 1500 ],
+    //     slide: function( event, ui ) {
+    //         // $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+    //         var offset1 = $(this).children('.ui-slider-handle').first().offset();
+    //         var offset2 = $(this).children('.ui-slider-handle').last().offset();
+    //         $(".tooltip1").css('top',offset1.top).css('left',offset1.left).show();
+    //         $(".tooltip2").css('top',offset2.top).css('left',offset2.left).show();
+    //         $( "#min-range" ).text( "$" + ui.values[ 0 ]);
+    //         $( "#max-range" ).text( "$" + ui.values[ 1 ] );
+    //         $('.tooltip1').text( "$" + ui.values[ 0 ]);
+    //         $('.tooltip2').text( "$" + ui.values[ 1 ] );
+    //     },
+    //     stop:function(event,ui){
+    //         $(".tooltip").hide();
+    //     }
+    // });
     // $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
     //     " - $" + $( "#slider-range" ).slider( "values", 1 ) );
     $( "#min-range" ).text( "$" + $( "#slider-range" ).slider( "values", 0 ));

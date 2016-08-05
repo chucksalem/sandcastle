@@ -8,26 +8,28 @@
 <section id="hotel_listing_main_section_grid" class="hotel-listing-page-content-section float-left full-width" xmlns="http://www.w3.org/1999/html">
   <div class="hotel-listing-layout-container">
   <div class="col-xs-6 col-md-4">
-    <div class="col-xs-12 col-md-8 sandcastle-text-capitalization sandcastle-bold padding-20px">Search</div>
+    <div class="col-xs-12 col-md-8 sandcastle-text-capitalization sandcastle-bold padding-20px common-font-21">Search</div>
     <form class="hotel-room-date-search-form">
     <div class="col-xs-12 col-md-8 form-group inner-addon left-addon"><input type="text" class="form-control" name="rooms" placeholder="Which room?"><i class="fa fa-bed" aria-hidden="true"></i></div>
     <div class="col-xs-12 col-md-8 form-group inner-addon left-addon"><input type="text" id="start_date" class="form-control datepicker" name="rooms" placeholder="Check In"><i class="fa fa-calendar" aria-hidden="true"></i></div>
     <div class="col-xs-12 col-md-8 form-group inner-addon left-addon"><input type="text" id="end_date" class="form-control datepicker" name="rooms" placeholder="Check Out"><i class="fa fa-calendar" aria-hidden="true"></i></div>
     <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization"><button type="submit" class="hotel-list-search-buttons sandcastle-text-capitalization">Search</button></div>
     </form>
-    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px">Price range</div>
+    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px common-font-21">Price range</div>
     <form class="price-range-filter-form">
       <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization">
         <div id="slider-range"></div>
         <!--<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">-->
         <div class="full-width float-left main-price-range">
-          <div class="min-range-value" id="min-range"></div>
-          <div class="max-range-value" id="max-range"></div>
+          <div class="min-range-value common-font-10 sandcastle-text-color" id="min-range"></div>
+          <div class="max-range-value common-font-10 sandcastle-text-color" id="max-range"></div>
+          <div class="tooltip tooltip1"></div>
+          <div class="tooltip tooltip2"></div>
           </div>
       </div>
       <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization"><button type="submit" class="hotel-list-search-buttons sandcastle-text-capitalization">Search</button></div>
     </form>
-    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px">Star rating</div>
+    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px common-font-21">Star rating</div>
     <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization">
       <div class="col-xs-12 col-md-8 form-group">
         <input type="checkbox" id="rating_5" class="float-left hotel-list-common-checkbox-space" name="rate5">
@@ -60,45 +62,45 @@
         <i class="fa fa-star star-color-yello"></i>
       </div>
     </div>
-    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px">Amenities</div>
+    <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization sandcastle-bold padding-20px common-font-21">Amenities</div>
     <div class="col-xs-12 col-md-8 form-group sandcastle-text-capitalization">
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_5" class="float-left hotel-list-common-checkbox-space" name="rate5">
-        <label>Swimming Pool</label>
+        <label class="common-font-13 sandcastle-text-color">Swimming Pool</label>
       </div>
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_4" class="float-left hotel-list-common-checkbox-space" name="rate4">
-        <label>Gym / Fitness</label>
+        <label class="common-font-13 sandcastle-text-color">Gym / Fitness</label>
       </div>
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_3" class="float-left hotel-list-common-checkbox-space" name="rate3">
-        <label>Car Park</label>
+        <label class="common-font-13 sandcastle-text-color">Car Park</label>
       </div>
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_2" class="float-left hotel-list-common-checkbox-space" name="rate2">
-        <label>Spa / Sauna</label>
+        <label class="common-font-13 sandcastle-text-color">Spa / Sauna</label>
       </div>
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
-        <label>Airport Transfer</label>
+        <label class="common-font-13 sandcastle-text-color">Airport Transfer</label>
       </div>
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
-        <label>Smoking Area</label>
+        <label class="common-font-13 sandcastle-text-color">Smoking Area</label>
       </div>
       <div class="col-xs-12 col-md-12 form-group">
         <input type="checkbox" id="rating_1" class="float-left hotel-list-common-checkbox-space" name="rate1">
-        <label>Pet Friendly</label>
+        <label class="common-font-13 sandcastle-text-color">Pet Friendly</label>
       </div>
     </div>
 
   </div>
   <!-- Search result section starts -->
   <div class="col-xs-12 col-md-8">
-    <div class="float-left full-width">
+    <div class="float-left full-width sorting-button-top-container">
       <div class="col-xs-6 sorting-buttons-main">
-        <div class="float-left"><button class="hotel-list-sort-buttons sandcastle-text-capitalization common-font-12">Sort by Price <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
-        <div class="float-left"><button class="hotel-list-sort-buttons sandcastle-text-capitalization common-font-12">Sort by Rank <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
+        <div class="float-left"><button class="hotel-list-sort-buttons sandcastle-text-capitalization common-font-8">Sort by Price <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
+        <div class="float-left"><button class="hotel-list-sort-buttons sandcastle-text-capitalization common-font-8">Sort by Rank <i class="fa fa-angle-down" aria-hidden="true"></i></button></div>
       </div>
       <div class="col-xs-4 float-right right-side-list-grid-icons">
         <div class="col-md-4 text-right sandcastle-text-capitalization">View:</div>
@@ -129,7 +131,265 @@
           </div>
           <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
           <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">
-
+            <span class="hotel-amenities-icons"><img src="assets/spoon_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/misc_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/gym_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/swimming_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/tourism_icon.png"></span>
+          </div>
+        </div>
+        <div class="col-sm-2 hotel-list-column-3">
+          <span class="rate-book-main-span">
+          <div class="full-width hotel-rate float-left text-center room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold">$120</span></div>
+          <div class="full-width float-left text-center"><input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book"></div>
+          </span>
+        </div>
+      </div>
+      <div class="room-details-common-div"></div>
+      <div class="row">
+        <div class="col-sm-4 padding-bottom-10px white-background">
+          <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        </div>
+        <div class="col-sm-5 padding-bottom-10px white-background">
+          <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div sandcastle-text-font-montserrat">Luxury Hotel</div>
+          <div class="hotel-rating-review float-left full-width">
+            <div class="col-sm-6">
+              <div class="roomdetails-page-reviewer-rating common-font-10">
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+              </div>
+            </div>
+            <div class="col-sm-6 float-left sandcastle-text-color sandcastle-text-font-montserrat common-font-10">485 Reviews</div>
+            <div class="col-sm-12 float-left sandcastle-text-color sandcastle-text-font-montserrat room-details-common-div common-font-10">2 Places de la Sans Defense, Puteax</div>
+          </div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">
+            <span class="hotel-amenities-icons"><img src="assets/spoon_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/misc_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/gym_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/swimming_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/tourism_icon.png"></span>
+          </div>
+        </div>
+        <div class="col-sm-2 hotel-list-column-3">
+          <span class="rate-book-main-span">
+          <div class="full-width hotel-rate float-left text-center room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold">$120</span></div>
+          <div class="full-width float-left text-center"><input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book"></div>
+          </span>
+        </div>
+      </div>
+      <div class="room-details-common-div"></div>
+      <div class="row">
+        <div class="col-sm-4 padding-bottom-10px white-background">
+          <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        </div>
+        <div class="col-sm-5 padding-bottom-10px white-background">
+          <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div sandcastle-text-font-montserrat">Luxury Hotel</div>
+          <div class="hotel-rating-review float-left full-width">
+            <div class="col-sm-6">
+              <div class="roomdetails-page-reviewer-rating common-font-10">
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+              </div>
+            </div>
+            <div class="col-sm-6 float-left sandcastle-text-color sandcastle-text-font-montserrat common-font-10">485 Reviews</div>
+            <div class="col-sm-12 float-left sandcastle-text-color sandcastle-text-font-montserrat room-details-common-div common-font-10">2 Places de la Sans Defense, Puteax</div>
+          </div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">
+            <span class="hotel-amenities-icons"><img src="assets/spoon_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/misc_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/gym_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/swimming_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/tourism_icon.png"></span>
+          </div>
+        </div>
+        <div class="col-sm-2 hotel-list-column-3">
+          <span class="rate-book-main-span">
+          <div class="full-width hotel-rate float-left text-center room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold">$120</span></div>
+          <div class="full-width float-left text-center"><input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book"></div>
+          </span>
+        </div>
+      </div>
+      <div class="room-details-common-div"></div>
+      <div class="row">
+        <div class="col-sm-4 padding-bottom-10px white-background">
+          <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        </div>
+        <div class="col-sm-5 padding-bottom-10px white-background">
+          <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div sandcastle-text-font-montserrat">Luxury Hotel</div>
+          <div class="hotel-rating-review float-left full-width">
+            <div class="col-sm-6">
+              <div class="roomdetails-page-reviewer-rating common-font-10">
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+              </div>
+            </div>
+            <div class="col-sm-6 float-left sandcastle-text-color sandcastle-text-font-montserrat common-font-10">485 Reviews</div>
+            <div class="col-sm-12 float-left sandcastle-text-color sandcastle-text-font-montserrat room-details-common-div common-font-10">2 Places de la Sans Defense, Puteax</div>
+          </div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">
+            <span class="hotel-amenities-icons"><img src="assets/spoon_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/misc_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/gym_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/swimming_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/tourism_icon.png"></span>
+          </div>
+        </div>
+        <div class="col-sm-2 hotel-list-column-3">
+          <span class="rate-book-main-span">
+          <div class="full-width hotel-rate float-left text-center room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold">$120</span></div>
+          <div class="full-width float-left text-center"><input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book"></div>
+          </span>
+        </div>
+      </div>
+      <div class="room-details-common-div"></div>
+      <div class="row">
+        <div class="col-sm-4 padding-bottom-10px white-background">
+          <div class="sandcastle-text-capitalization sale-available-on-hotels"><img src="assets/room_sale.png"></div>
+          <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        </div>
+        <div class="col-sm-5 padding-bottom-10px white-background">
+          <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div sandcastle-text-font-montserrat">Luxury Hotel</div>
+          <div class="hotel-rating-review float-left full-width">
+            <div class="col-sm-6">
+              <div class="roomdetails-page-reviewer-rating common-font-10">
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+              </div>
+            </div>
+            <div class="col-sm-6 float-left sandcastle-text-color sandcastle-text-font-montserrat common-font-10">485 Reviews</div>
+            <div class="col-sm-12 float-left sandcastle-text-color sandcastle-text-font-montserrat room-details-common-div common-font-10">2 Places de la Sans Defense, Puteax</div>
+          </div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">
+            <span class="hotel-amenities-icons"><img src="assets/spoon_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/misc_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/gym_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/swimming_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/tourism_icon.png"></span>
+          </div>
+        </div>
+        <div class="col-sm-2 hotel-list-column-3">
+          <span class="rate-book-main-span">
+          <div class="full-width hotel-rate float-left text-center room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold">$120</span></div>
+          <div class="full-width float-left text-center"><input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book"></div>
+          </span>
+        </div>
+      </div>
+      <div class="room-details-common-div"></div>
+      <div class="row">
+        <div class="col-sm-4 padding-bottom-10px white-background">
+          <div class="sandcastle-text-capitalization sale-available-on-hotels"><img src="assets/room_sale.png"></div>
+          <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        </div>
+        <div class="col-sm-5 padding-bottom-10px white-background">
+          <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div sandcastle-text-font-montserrat">Luxury Hotel</div>
+          <div class="hotel-rating-review float-left full-width">
+            <div class="col-sm-6">
+              <div class="roomdetails-page-reviewer-rating common-font-10">
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+              </div>
+            </div>
+            <div class="col-sm-6 float-left sandcastle-text-color sandcastle-text-font-montserrat common-font-10">485 Reviews</div>
+            <div class="col-sm-12 float-left sandcastle-text-color sandcastle-text-font-montserrat room-details-common-div common-font-10">2 Places de la Sans Defense, Puteax</div>
+          </div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">
+            <span class="hotel-amenities-icons"><img src="assets/spoon_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/misc_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/gym_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/swimming_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/tourism_icon.png"></span>
+          </div>
+        </div>
+        <div class="col-sm-2 hotel-list-column-3">
+          <span class="rate-book-main-span">
+          <div class="full-width hotel-rate float-left text-center room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold">$120</span></div>
+          <div class="full-width float-left text-center"><input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book"></div>
+          </span>
+        </div>
+      </div>
+      <div class="room-details-common-div"></div>
+      <div class="row">
+        <div class="col-sm-4 padding-bottom-10px white-background">
+          <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        </div>
+        <div class="col-sm-5 padding-bottom-10px white-background">
+          <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div sandcastle-text-font-montserrat">Luxury Hotel</div>
+          <div class="hotel-rating-review float-left full-width">
+            <div class="col-sm-6">
+              <div class="roomdetails-page-reviewer-rating common-font-10">
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+              </div>
+            </div>
+            <div class="col-sm-6 float-left sandcastle-text-color sandcastle-text-font-montserrat common-font-10">485 Reviews</div>
+            <div class="col-sm-12 float-left sandcastle-text-color sandcastle-text-font-montserrat room-details-common-div common-font-10">2 Places de la Sans Defense, Puteax</div>
+          </div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">
+            <span class="hotel-amenities-icons"><img src="assets/spoon_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/misc_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/gym_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/swimming_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/tourism_icon.png"></span>
+          </div>
+        </div>
+        <div class="col-sm-2 hotel-list-column-3">
+          <span class="rate-book-main-span">
+          <div class="full-width hotel-rate float-left text-center room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold">$120</span></div>
+          <div class="full-width float-left text-center"><input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book"></div>
+          </span>
+        </div>
+      </div>
+      <div class="room-details-common-div"></div>
+      <div class="row">
+        <div class="col-sm-4 padding-bottom-10px white-background">
+          <div class="hotel-image"><img src="assets/about_us_slider_bg_img.png"></div>
+        </div>
+        <div class="col-sm-5 padding-bottom-10px white-background">
+          <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div sandcastle-text-font-montserrat">Luxury Hotel</div>
+          <div class="hotel-rating-review float-left full-width">
+            <div class="col-sm-6">
+              <div class="roomdetails-page-reviewer-rating common-font-10">
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+                <i class="fa fa-star star-color-yello"></i>
+              </div>
+            </div>
+            <div class="col-sm-6 float-left sandcastle-text-color sandcastle-text-font-montserrat common-font-10">485 Reviews</div>
+            <div class="col-sm-12 float-left sandcastle-text-color sandcastle-text-font-montserrat room-details-common-div common-font-10">2 Places de la Sans Defense, Puteax</div>
+          </div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+          <div class="col-sm-12 common-font-10 sandcastle-text-color room-details-common-div sandcastle-text-font-montserrat">
+            <span class="hotel-amenities-icons"><img src="assets/spoon_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/misc_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/gym_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/swimming_icon.png"></span>
+            <span class="hotel-amenities-icons"><img src="assets/tourism_icon.png"></span>
           </div>
         </div>
         <div class="col-sm-2 hotel-list-column-3">
@@ -144,3 +404,4 @@
   <!-- Search result section end -->
   </div>
 </section>
+<div class="section-divider float-left hotel-listing-divider"></div>

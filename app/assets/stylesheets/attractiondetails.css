@@ -256,6 +256,24 @@ section.attraction-details-page-content-section .roomdetails-page-user-rating{
         margin-left: 20px;
         margin-right: 20px;
     }
+    .find-location-mobile{
+        width: 37%;
+    }
+    .rating-below-header-main{
+        width: 40%;
+    }
+    .below-header-likes-comments{
+        width: 20%;
+    }
+    .rating-below-header-main .roomdetails-page-user-rating{
+        width: 60% !important;
+    }
+    .rating-below-header-main .hotel-total-rating-count-label{
+        width: 30%;
+    }
+    .below-header-likes-comments .below-header-likes{
+        width: 51%;
+    }
 }
 .attraction-details-page-content-section .our-facility-room-section {
     margin: 20px 0%;
