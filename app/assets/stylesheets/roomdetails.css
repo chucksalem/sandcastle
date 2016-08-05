@@ -219,22 +219,23 @@
     color: #000;
     font-size: 23.33px;
 }
-.hotel-total-rating-count{
+.room-details-page-content-section .hotel-total-rating-count{
     width: 21%;
-    background: #7C7865;
+    background: #bababa;
     text-align: center;
     position: relative;
     margin-right: 63px;
     height: 22px;
     margin-top: 10px;
     line-height: 22px;
+    color: #ffffff;
 }
-.triangle4 {
+.room-details-page-content-section .triangle4 {
     width: 0;
     height: 0;
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
-    border-right: 6px solid #7C7865;
+    border-right: 6px solid #bababa;
     margin-top: 15px;
 }
 .room-details-reviewer-rating{
@@ -409,9 +410,6 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
         width: 30%;
         float: left;
     }
-    .customer-review-section-main{
-        width: 95%;
-    }
     .hotel-rate{
         width: 100%;
     }
@@ -434,8 +432,11 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
         margin-bottom: 20px;
     }
     .hotel-rating-beds-people-main .roomdetails-page-user-rating{
-        width: 127%;
+        width: 100%;
         float: left;
+    }
+    .room-details-page-content-section .hotel-total-rating-count {
+        margin-right: 12px;
     }
     .hotel-price-room-people-details-main .hotel-rating-beds-people-main .col-sm-2{
         width: 10%;
@@ -450,8 +451,9 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
     }
     .room-details-page-content-section .booking-button-main{
         margin: 0 auto;
-        width: 32%;
+        width: 40%;
         margin-bottom: 20px;
+        border-radius: 5px;
     }
     .room-details-feature-section-main .row {
         margin: 15px 10px;
@@ -470,6 +472,22 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
         margin-left: 20px;
         margin-right: 20px;
     }
+    #room_details_main_section .room-details-reviewer-avatar{
+        width: 100%;
+        text-align: center;
+        height: 36px;
+    }
+    #room_details_main_section .room-details-reviewer-name,#room_details_main_section .room-details-reviewer-date,#room_details_main_section .room-details-reviewer-rating,#room_details_main_section .room-details-reviewer-comments{
+        width: 100%;
+        text-align: center;
+        border-bottom: none;
+    }
+    #room_details_main_section .customer-review-section-main{
+        min-height: 100px;
+        float: left;
+        width: 100%;
+    }
+
 }
 .room-details-page-content-section .our-facility-room-section {
     margin: 20px 0%;

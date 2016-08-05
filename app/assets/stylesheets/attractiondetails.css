@@ -213,16 +213,13 @@ section.attraction-details-page-content-section .roomdetails-page-user-rating{
         width: 50%;
     }
     .layout-container{
-        padding: 0;
+        padding: 5px;
     }
     .attraction-details-page-content-section .hotel-price-room-people-details-main{
         width: 100%;
         margin-bottom: 20px;
     }
-    .hotel-rating-beds-people-main .roomdetails-page-user-rating{
-        width: 127%;
-        float: left;
-    }
+
     .hotel-price-room-people-details-main .hotel-rating-beds-people-main .col-sm-2{
         width: 10%;
         float: left;
