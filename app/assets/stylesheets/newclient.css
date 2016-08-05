@@ -76,6 +76,7 @@ section.property-listing-form-section .layout-container form.property-listing-fo
     background: #39BDFB;
     color: #ffffff;
     padding: 18px;
+    border-radius: 10px;
 }
 .start-hosting-button:hover{
     text-decoration: none;
@@ -195,4 +196,36 @@ section.property-listing-form-section .layout-container form.property-listing-fo
 }
 .happy-customer-text span{
     padding: 25px;
+}
+@media screen and (max-width: 855px) and (min-width: 200px) {
+    section.property-listing-form-section .layout-container form.property-listing-form .start-hosting-button-main {
+        width: 50%;
+    }
+    .list-your-property-tabs-main {
+        width: 100%;
+        margin: 11px 0%;
+    }
+    .list-your-property-tabs-main .list-your-property-tabs-main-info,.list-your-property-tabs-main .list-your-property-tabs-prop-info,.list-your-property-tabs-main .list-your-property-tabs-thank-you {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+    section.property-listing-form-section .layout-container form.property-listing-form .property-listing-form-row-mobile {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .why-sandcastle-departmental-text {
+        padding: 10px 10px 10px 10px;
+    }
+    .dont-wait-list-property-label {
+        color: #ffffff;
+        font-size: 60px;
+        text-align: center;
+        text-indent: 0px;
+    }
+    .start-hosting-button-label-name{
+        text-align: center;
+    }
+    .happy-customer-image-third{
+        margin-top: 10px;
+    }
 }
