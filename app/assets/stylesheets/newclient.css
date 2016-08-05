@@ -34,6 +34,7 @@ section.property-listing-form-section .layout-container form.property-listing-fo
 }
 .why-sandcastle-rental-header,.join-happy-customer-header{
     color: #39BDFB;
+    font-size: 52px;
 }
 .happy-customer-image-first, .happy-customer-image-third{
     padding: 0;
@@ -165,3 +166,15 @@ section.property-listing-form-section .layout-container form.property-listing-fo
     /*line-height: 20px;*/
     /*display: table;*/
 /*}*/
+.why-sandcastle-fontawesomes{
+    height: 70px;
+}
+.common-font-24{
+    font-size: 24px;
+}
+.common-font-52{
+    font-size: 52px;
+}
+.why-sandcastle-second-row{
+    margin-top: 4%!important;
+}
