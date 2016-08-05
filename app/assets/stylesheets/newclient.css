@@ -93,8 +93,9 @@ section.property-listing-form-section .layout-container form.property-listing-fo
     background: #39BDFB;
     color: #ffffff;
     font-size: 12px;
-    padding: 22px;
+    padding: 20px;
     border-radius: 6px;
+    margin: 20px auto !important;
 }
 .dont-wait-list-property-label{
     color: #ffffff;
@@ -175,6 +176,23 @@ section.property-listing-form-section .layout-container form.property-listing-fo
 .common-font-52{
     font-size: 52px;
 }
-.why-sandcastle-second-row{
+.why-sandcastle-second-row,.start-hosting-button-main{
     margin-top: 4%!important;
+}
+.new-header-client-text{
+    line-height: normal;
+}
+.join-happy-customers-container .col-md-6{
+    padding-right: 0;
+    padding-left: 0;
+}
+.start-hosting-button-main .btn-info{
+    padding: 20px;
+}
+.happy-customer-text{
+    padding-left: 0;
+    padding-right: 0;
+}
+.happy-customer-text span{
+    padding: 25px;
 }
