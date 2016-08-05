@@ -1,5 +1,5 @@
 .new-client-header-content:before{
-    background: url("new_client_header_bg.jpg") no-repeat !important;
+    background: url("new_client_header_bg.png") no-repeat !important;
     background-size: cover !important;
 }
 .site-header.new-client-header-content{
@@ -7,7 +7,7 @@
 }
 .new-client-header-content{
     float: left;
-    height: auto !important;
+    height: 89% !important;
 }
 .newclient-content-section-divider-feature{
     width: 100%;
@@ -87,7 +87,8 @@ section.property-listing-form-section .layout-container form.property-listing-fo
 .new-client-header-content .hero .layout-centered .heading-large{
     text-align: right;
     padding-right: 8%;
-    line-height: 58%;
+    line-height: 70%;
+    margin-top: 5%;
 }
 .header-start-hosting-button{
     border: none;
