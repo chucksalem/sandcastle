@@ -142,12 +142,13 @@
     .footer-bg .footer-menu-list{
         padding: 1% 0 0 0;
         width: 100%;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer-bg{
         background-size: cover !important;
-        height: 290px !important;
     }
 
     .footer-main-div{
