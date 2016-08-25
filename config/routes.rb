@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  resources :hotellists
+  get 'hotellist/index'
+
+  get 'hotellist/show'
+
+  get 'hotellist/new'
+
+  get 'hotellist/create'
+
+  get 'hotellist/update'
+
+  get 'hotellist/destroy'
+
   root 'home#index'
 
   resources :accommodations, controller: :properties, only: [:index, :show]
@@ -16,13 +29,16 @@ Rails.application.routes.draw do
   get '/privacy_policy', to: "pages#privacy_policy"
   get '/new-client', to: "pages#new_client"
   get '/hotelgrid', to: "pages#hotelgrid"
-  get '/hotellist', to: "pages#hotellist"
+  get '/hoteltest', to: "pages#hotellist"
   get '/booking-form', to: "pages#booking_form"
   get '/attraction-details', to: "pages#attraction_details"
+  get '/hotellist', to: 'hotellists#index', as: 'hotellist_path'
 
   namespace :api do
     resources :units, only: [:index, :show] do
       resources :stays, only: [:get]
     end
   end
+
+
 end

@@ -208,7 +208,7 @@
 }
 
 .footer-menu-list{
-    width: 500px;
+    /*width: 500px;*/
     font-size: 14px;
     font-family: "Montserrat";
     margin: 0 auto;
@@ -621,6 +621,7 @@ section.main-content footer.md-two-twelfths{
 form .select-style #select-drop{
     padding: 1.0em;
     padding-top: 2em;
+    padding-bottom: 1.75em;
 }
 form .select-style:before{
     display: none;
@@ -790,7 +791,7 @@ article.field a {
 /* style icon */
 .inner-addon .fa-calendar,.inner-addon .fa-bed, .inner-addon .fa-user {
     position: absolute;
-    padding: 10px 20px 10px 10px;
+    padding: 10px 15px 10px 10px;
     pointer-events: none;
     top: 24%;
     color: #bababa;
@@ -814,7 +815,7 @@ article.field a {
 }
 #guests{
     padding-top: 1.3em;
-    padding-left: 2.3em;
+    padding-left: 1.3em;
 }
 .footer-bg .footer-menu-list .list-div-text a, .menu-list-div .list-div span a{
     color: #ffffff;
@@ -945,6 +946,7 @@ section.main-content.email-thank-you-section{
 
 .property-search #guests{
     padding-top: .75em;
+    padding-bottom: .50em;
 }
 
 .height-0{
@@ -1254,3 +1256,14 @@ section.main-content.email-thank-you-section{
 .footer-menu-icon-div .fa,.site-header .homepage-main-bar .icons-div .fa{
     color: #ffffff;
 }
+
+.wr-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+
+

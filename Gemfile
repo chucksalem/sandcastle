@@ -29,12 +29,14 @@ gem 'turbolinks', '2.5.3'
 gem 'uglifier', '2.7.1'
 gem 'rails_serve_static_assets'
 gem 'rails_stdout_logging'
+gem 'haml-rails', '~> 0.9.0'
 
 group :development, :test do
  # gem 'byebug', '6.0.2'
   gem 'dotenv-rails', '0.7.0'
   gem 'pry-rails', '0.3.4'
   gem 'rubocop', '0.33.0'
+  gem 'byebug', '~> 9.0', '>= 9.0.5'
 end
 
 group :test do

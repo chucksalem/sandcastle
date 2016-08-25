@@ -10,6 +10,10 @@ class CacheProperties
   def perform!
     redis.del(all_units_key)
     units = fetch_all_units(fetch_all_codes)
+    target = File.join(Rails.root, '/spec/fixtures/units/hotellists.json')
+    File.open(target, "w+") do |f|
+      f.puts(units.to_json)
+    end
     group_by_area(units)
     prune_groups(units)
   end

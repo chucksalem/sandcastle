@@ -122,11 +122,15 @@
 }
 form.hotel-room-date-search-form .inner-addon .fa-calendar,form.hotel-room-date-search-form .inner-addon .fa-bed, .inner-addon .fa-user {
     position: absolute;
-    padding: 3px 20px 0px 18px;
+    padding: 2px 20px 0px 18px;
     pointer-events: none;
-    top: 24%;
+    /*top: 24%;*/
     color: #bababa;
     font-size: 14.85px;
+}
+
+.fa-user{
+    padding-top: 10px !important;
 }
 
 form.hotel-room-date-search-form .left-addon input {
@@ -204,10 +208,11 @@ form.price-range-filter-form .main-price-range{
 }
 .hotel-list-column-3{
     background-color: #39BDFB;
-    height: 189px;
-    line-height: 189px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    align-items: center;
+    position: relative;
+    display: flex;
 }
 .hotel-list-column-3 .room-details-book-button{
     background: #ffffff;
@@ -667,4 +672,24 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 .header-total-result-count{
     font-size: 20px;
     color: #39BDFB;
+}
+
+.description-height{
+    min-height: 7.5vh;
+    margin-top: 0;
+}
+
+.rw-unit{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.rw-unit .col-sm-4.padding-bottom-10px.white-background{
+    display: flex;
+    align-items: center;
+    position: relative;
 }
