@@ -1,0 +1,2 @@
+module HotellistsHelper
+end
