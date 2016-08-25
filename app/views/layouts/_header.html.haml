@@ -1,0 +1,54 @@
+%section{:class => "site-header full-background #{content_for :header_class}"}
+  %div
+    .homepage-main-bar
+      .icons-div
+        %a{:href => "https://facebook.com", :target => "_blank"}
+          %i.fa.fa-facebook.fa-lg.margin-right-10
+        %a{:href => "https://twitter.com", :target => "_blank"}
+          %i.fa.fa-twitter.fa-lg.margin-right-10
+        %a{:href => "https://instagram.com", :target => "_blank"}
+          %i.fa.fa-instagram.fa-lg
+      .login-register-div
+        %span Login
+        %span.text-divider
+        %span Register
+    %nav.navbar.navbar-inverse.navbar-static-top.test{:role => "navigation"}
+      .container.layout-container
+        .brand-container
+          %a.brand{:href => "/"}
+            %img.hacienda-logo{:src => "/assets/sandcastel-main-logo.png"}/
+        .navbar-header
+          %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+        / Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse.center-heading
+          %ul.nav.navbar-nav.main-navigation
+            %li
+              %a.homepage.hacienda-hover-color.padding-top-by-7{:href => "/"} HOME
+            %li
+              %a.reserve-highlight.hacienda-hover-color.padding-top-by-7{:href => "/accommodations"} FIND A RENTAL
+            %li
+              %a.about-highlight.hacienda-hover-color.padding-top-by-7{:href => "/attractions"} ATTRACTIONS
+            %li
+              %a.contact-highlight.hacienda-hover-color.padding-top-by-7{:href => "/contact"} CONTACT
+    %div{:class => "hero #{content_for :hero_class}"}
+      .layout-centered.padded-top
+        - if content_for?(:mainBreadcrumbHeading)
+          %a.home-text{:href => "index.php"} HOME /
+          %a.page-breadcomb-text{:href => ""}= yield :mainBreadcrumbHeading
+        %h1{:class => "#{content_for :bottom_border} heading-large margin-top-by-5"}= yield(:hero_title)
+        - if content_for?(:below_hero_title)
+          .below-hero-title-text.sandcastle-text-font-montserrat.sandcastle-text-capitalization= yield :below_hero_title
+        - if content_for?(:lede)
+          %p.lede= yield :lede
+  - if content_for?(:search_help)
+    .layout-container.layout-centered.faq-search-help-main
+      .property-search.welcome-text-align-for-smaller
+        %form.gw.no-gutter
+          %fieldset.g.sm-one-third.md-one-seventh
+            %input#search_help.no-borders{:name => "search_help", :placeholder => "SEARCH HELP", :type => "text"}/
+          %footer.g.md-two-twelfths
+            %input.search-btn{:type => "button", :value => "Search"}/
