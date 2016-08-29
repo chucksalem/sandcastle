@@ -1,23 +1,35 @@
 class AccommodationsController < ApplicationController
+  DATE_FORMAT = '%m/%d/%Y'.freeze
   # before_action :set_accommodation, only: [:show, :edit, :update, :destroy]
   skip_before_action :verify_authenticity_token
 
   # GET /accommodations
   # GET /accommodations.json
   def index
-    @rooms = params[:rooms].present? ? params[:rooms] : ''
-    @guests = params[:guests].present? ? params[:guests] : ''
-    @start_date = params[:start_date].present? ? params[:start_date] : ''
-    @end_date   = params[:end_date].present? ? params[:end_date] : ''
+    @rooms = params[:rooms].present? ? params[:rooms] : 0
+    @start_date = params[:start_date].present? ? params[:start_date] : Date.today.strftime(DATE_FORMAT)
+    @end_date   = params[:end_date].present? ? params[:end_date] : (Date.today + 7).strftime(DATE_FORMAT)
+    @guests = params[:guests].present? ? params[:guests] : 0
     @properties = Array.new
     file_path = File.join(Rails.root, '/spec/fixtures/units/hotellists.json')
     units_data = File.read(file_path)
     units = JSON.parse(units_data)
-    units.each do |unit|
-      @properties << unit if (unit['type'] == 'condominium' || unit['type'] == 'townhouse') &&
-                             unit['bedrooms'] == @rooms.to_i && unit['occupancy'] == @guests.to_i
+    @properties = if is_search_request
+      get_units(units)
+    else
+      get_all_units(units)
     end
-    @properties = @properties.blank? ? get_all_units(units) : @properties
+  end
+
+  def get_units(units)
+    units.each do |unit|
+      if unit['type'] == 'condominium' || unit['type'] == 'townhouse'
+        if unit['bedrooms'] == @rooms.to_i && unit['occupancy'] == @guests.to_i
+          @properties << unit
+        end
+      end
+    end
+    @properties.blank? ? [] : @properties
   end
 
   def get_all_units(units)
@@ -58,8 +70,8 @@ class AccommodationsController < ApplicationController
 
   private
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def accommodation_params
-      params[:accommodation]
-    end
+  def is_search_request
+    [:rooms, :start_date, :end_date, :guests].all?
+  end
+  
 end
