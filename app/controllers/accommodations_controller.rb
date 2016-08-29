@@ -14,7 +14,7 @@ class AccommodationsController < ApplicationController
     file_path = File.join(Rails.root, '/spec/fixtures/units/hotellists.json')
     units_data = File.read(file_path)
     units = JSON.parse(units_data)
-    @properties = if is_search_request
+    @properties = if !is_search_request
       get_units(units)
     else
       get_all_units(units)
@@ -71,7 +71,7 @@ class AccommodationsController < ApplicationController
   private
 
   def is_search_request
-    [:rooms, :start_date, :end_date, :guests].all?
+    (params[:rooms].to_s.blank? && params[:start_date].to_s.blank?) && (params[:end_date].to_s.blank? && params[:guests].to_s.blank?)
   end
-  
+
 end
