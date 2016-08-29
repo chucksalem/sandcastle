@@ -7,7 +7,7 @@
           .select-style.inner-addon.right-addon
             %i.fa.fa-bed{"aria-hidden" => "true"}
             %select#select-drop{:name => "rooms"}
-              = options_for_select([['Rooms', ''],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: @rooms, disabled: '')
+              = options_for_select([['Rooms', 0],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: @rooms, disabled: '')
           %span.text-divider
         %fieldset.g.sm-one-third.md-one-seventh.width-15.inner-addon.right-addon
           %input#start_date.no-borders.datepicker.arrival-date{:autocomplete => "off", :name => "start_date", :placeholder => "CHECK IN", :readonly => "readonly", :type => "text"}/
@@ -23,6 +23,6 @@
             %i.fa.fa-user{"aria-hidden" => "true"}
 
             %select#guests.drop-options{:name => "guests"}
-              = options_for_select([['Guests', ''],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: @guests, disabled: '')
+              = options_for_select([['Guests', 0],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: @guests, disabled: '')
         %footer.g.md-two-twelfths
           %input.btn.max-width.search-btn.sandcastle-text-capitalization{:type => "button", :value => "Search"}/
