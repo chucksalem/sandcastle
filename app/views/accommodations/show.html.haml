@@ -1,0 +1,130 @@
+%script{:src => "//maps.googleapis.com/maps/api/js?sensor=false", :type => "text/javascript"}
+- content_for :hero_title, @property_title.html_safe
+- content_for :lede, @property_subtitle.html_safe
+%section.scallop-top
+  .layout-container
+    .md-two-thirds
+      %ul.offerings
+        %li
+          %i.icon.icon-bath
+          %span.detail
+            = @unit.bathrooms
+            Bath
+        %li
+          %i.icon.icon-bed
+          %span.detail
+            = @unit.bedrooms
+            Beds
+        %li
+          %i.icon.icon-guests
+          %span.detail
+            = @unit.occupancy
+            Guests
+        %li
+          %i.icon.icon-apartment
+          %span.detail= @unit.type.capitalize
+%section.padded-top.padded-bottom.beige-bg
+  .layout-container
+    = render 'rate_panel'
+    .property-details.md-two-thirds
+      #image-lightbox.image-grouping
+        .row
+          - if @large_images.count > 0
+            %article.one-whole.md-two-thirds.tile
+              %a.fancybox.contain{:href => "#{@large_images[0][:url]}", :rel => "image-gallery", :style => "background-image: url('#{@standard_images[0][:url]}');", :title => "#{@large_images[0][:title]}"}
+          - if @large_images.count > 1
+            %article.one-whole.md-one-third.tile
+              %a.fancybox.contain{:href => "#{@large_images[1][:url]}", :rel => "image-gallery", :style => "background-image: url('#{@standard_images[1][:url]}');", :title => "#{@large_images[1][:title]}"}
+        .row
+          - if @large_images.count > 2
+            %article.one-whole.md-one-third.tile
+              %a.fancybox.contain{:href => "#{@large_images[2][:url]}", :rel => "image-gallery", :style => "background-image: url('#{@standard_images[2][:url]}');", :title => "#{@large_images[2][:title]}"}
+          - if @large_images.count > 3
+            %article.one-whole.md-one-third.tile
+              %a.fancybox.contain{:href => "#{@large_images[3][:url]}", :rel => "image-gallery", :style => "background-image: url('#{@standard_images[3][:url]}');", :title => "#{@large_images[3][:title]}"}
+          - for i in 5..@standard_images.count do
+            %a.fancybox.hidden{:href => "#{@large_images[i-1][:url]}", :rel => "image-gallery", :title => "#{@large_images[i-1][:title]}"}
+          %article.one-whole.md-one-third.tile
+            %a.contain.black.placehold-all-images.open-lightbox{:href => "#"}
+              .over
+                %h2
+                  See All #{@standard_images.count} Photos
+      .gw
+        .g
+          - unless @videos.empty? || @videos[0][:formats][:url].empty?
+          - url = @videos[0][:formats][:url]
+            %p
+              %a.fancybox-media.btn.video-tour-btn.hacienda-bg-color{:href => url, :target => "_blank", :title => "Video Tour"} View a video tour
+      .gw
+        .g.md-one-fourth
+          %h2.heading-two Description
+        .g.md-three-fourths
+          %p= @unit.descriptions[:text][0][:description]
+      %hr/
+      .gw
+        .g.md-one-fourth
+          %h2.heading-two Property Details
+        .g.md-three-fourths
+          %ul.gw.no-gutter.no-padding
+            %li.g.md-one-half.padded-right
+              %p
+                %b Property Type:
+                = @unit.type.capitalize
+            %li.g.md-one-half.padded-right
+              %p
+                %b Bedrooms:
+                = @unit.bedrooms
+            %li.g.md-one-half.padded-right
+              %p
+                %b Bathrooms:
+                = @unit.bathrooms
+            %li.g.md-one-half.padded-right
+              %p
+                %b Floors:
+                = @unit.num_floors
+            %li.g.md-one-half.padded-right
+              %p
+                %b Occupancy:
+                = @unit.occupancy
+      %hr/
+      .gw
+        .g.md-one-fourth
+          %h2.heading-two Amenities
+        .g.md-three-fourths
+          %ul.gw.no-gutter.no-padding
+            - @amenities.each do |amenity|
+              %li.g.md-one-half.padded-right
+                %p= amenity.to_s.titleize
+- @unit.reviews.sample(3).compact.tap do |reviews|
+  - break if reviews.empty?
+  %section.padded-top.padded-bottom
+    .layout-container
+      .md-two-thirds
+        %h2.heading-two.bottom-spacing-large Testimonies
+        %ul.testimonials.testimonials-paginated.normal.gw.large-gutter
+          - reviews.each do |review|
+            %li.g.sm-one-whole
+              %blockquote
+                %p.persons-words
+                  “#{review[:comment].html_safe}
+                - unless review[:city].empty? || review[:state].empty?
+                  %span.persons-name
+                    = review[:city]
+                    , #{review[:state]}
+%script{:src => "https://maps.googleapis.com/maps/api/js?v=3.exp"}
+%div{:style => "overflow:hidden;height:340px;width:100%;"}
+  #gmap_canvas{:style => "height:340px;width:100%;"}
+  %div
+    %small
+      %a{:href => "http://embedgooglemaps.com"} embed google maps
+  %div
+    %small
+      %a{:href => "https://privacypolicytemplate.net"} privacy policy template
+  :css
+    #gmap_canvas img{max-width:none!important;background:none!important}
+:javascript
+  function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(31.3268218,-113.5311843),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(31.3268218,-113.5311843)});infowindow = new google.maps.InfoWindow({content:'<strong>Hacienda del Mar</strong><br>Puerto Peñasco Sonora, Mexico<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+:css
+  .hacienda-bg-color{
+    background-color: #d0aa69 !important;
+  }

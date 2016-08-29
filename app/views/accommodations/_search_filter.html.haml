@@ -1,0 +1,28 @@
+- content_for :hero_title, "Find A Rental".html_safe
+%section.main-content.z-index-1
+  .layout-container.layout-centered{:style => "padding:0px;"}
+    .property-search.welcome-text-align-for-smaller
+      %form.gw.no-gutter
+        %fieldset.g.sm-one-whole.md-five-twelfths.width-30
+          .select-style.inner-addon.right-addon
+            %i.fa.fa-bed{"aria-hidden" => "true"}
+            %select#select-drop{:name => "rooms"}
+              = options_for_select([['Rooms', ''],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: @rooms, disabled: '')
+          %span.text-divider
+        %fieldset.g.sm-one-third.md-one-seventh.width-15.inner-addon.right-addon
+          %input#start_date.no-borders.datepicker.arrival-date{:autocomplete => "off", :name => "start_date", :placeholder => "CHECK IN", :readonly => "readonly", :type => "text"}/
+          %i.fa.fa-calendar{"aria-hidden" => "true"}
+          %span.text-divider
+        %fieldset.g.sm-one-third.md-one-seventh.width-15.inner-addon.right-addon
+          %input#end_date.no-borders.datepicker.depart-date{:autocomplete => "off", :name => "end_date", :placeholder => "CHECK OUT", :readonly => "readonly", :type => "text"}/
+          %i.fa.fa-calendar{"aria-hidden" => "true"}
+          %span.text-divider
+        %fieldset.g.sm-one-fourth.md-one-eighth.text-align-right.width-15
+          %label.is-visually-hidden{:for => "guests"} Guests
+          .select-style.inner-addon.left-addon
+            %i.fa.fa-user{"aria-hidden" => "true"}
+
+            %select#guests.drop-options{:name => "guests"}
+              = options_for_select([['Guests', ''],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: @guests, disabled: '')
+        %footer.g.md-two-twelfths
+          %input.btn.max-width.search-btn.sandcastle-text-capitalization{:type => "button", :value => "Search"}/

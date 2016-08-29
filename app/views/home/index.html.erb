@@ -7,23 +7,21 @@
     <div class="layout-container layout-centered" style="padding:0px;">
       <div class="property-search welcome-text-align-for-smaller">
         <form class='gw no-gutter'>
-          <fieldset class="g sm-one-whole md-five-twelfths width-25">
+          <fieldset class="g sm-one-whole md-five-twelfths width-15">
             <div class="select-style inner-addon right-addon">
               <i class="fa fa-bed" aria-hidden="true"></i>
-              <select name="id" id="select-drop" value="" >
-                <option disabled="" selected="" class="drop-options">ROOMS</option>
-                <option value="1" class="drop-options">1</option>
-                <option value="2" class="drop-options">2</option>
+              <select name="rooms" id="select-drop">
+                <%= options_for_select([['Rooms', ''],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: '', disabled: "")%>
               </select>
             </div>
             <span class="text-divider"></span>
           </fieldset>
-          <fieldset class="g sm-one-third md-one-seventh width-25 inner-addon right-addon">
+          <fieldset class="g sm-one-third md-one-seventh width-15 inner-addon right-addon">
             <input id="start_date" readonly="readonly" class="no-borders datepicker arrival-date" type="text" name="start_date" placeholder="CHECK IN" autocomplete="off">
             <i class="fa fa-calendar" aria-hidden="true"></i>
             <span class="text-divider"></span>
           </fieldset>
-          <fieldset class="g sm-one-third md-one-seventh width-30 inner-addon right-addon">
+          <fieldset class="g sm-one-third md-one-seventh width-15 inner-addon right-addon">
             <input id="end_date" readonly="readonly" class="no-borders datepicker depart-date" type="text" name="end_date" placeholder="CHECK OUT" autocomplete="off">
             <i class="fa fa-calendar" aria-hidden="true"></i>
             <span class="text-divider"></span>

@@ -1,0 +1,34 @@
+%section.padded-top.scallop-top.beige-bg
+  .layout-container
+    - @properties.each do |property|
+      %ul.properties-list.gw.small-gutter
+        %li.property.g.sm-one-half.md-one-whole
+          %a{:href => ''}
+            %img.property-thumb{:src => "#{property['descriptions']['images'][0]['formats'][2]['url']}"}/
+          .details
+            .gw.small-gutter
+              .g.md-three-eighths
+                %h2
+                  %a{:href => ""}
+                    = property['name']
+                %p.location
+                  = property['address']['street']
+                  = "#{property['address']['city']}, #{property['address']['country']}"
+              .g.md-three-eighths
+                %ul.offerings
+                  %li
+                    %i.icon.icon-bath
+                    %span.detail
+                      = property['bathrooms']
+                  %li
+                    %i.icon.icon-bed
+                    %span.detail
+                      = property['bedrooms']
+                  %li
+                    %i.icon.icon-guests
+                    %span.detail
+                      = property['occupancy']
+              .g.md-two-eighths
+                %span.price
+                %span.type
+                  = property['type']
