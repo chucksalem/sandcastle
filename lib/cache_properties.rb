@@ -87,6 +87,7 @@ class CacheProperties
   end
 
   def area_key_from_name(name)
-    area_key(name.tr(' ', '_').underscore)
+    area_key(name.tr(' ', '_').underscore) if name.is_a? String
+    area_key(name[0].tr(' ', '_').underscore) if name.is_a? Array
   end
 end
