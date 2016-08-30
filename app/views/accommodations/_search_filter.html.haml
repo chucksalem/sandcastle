@@ -10,11 +10,11 @@
               = options_for_select([['Rooms', 0],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: @rooms, disabled: '')
           %span.text-divider
         %fieldset.g.sm-one-third.md-one-seventh.width-15.inner-addon.right-addon
-          %input#start_date.no-borders.datepicker.arrival-date{:autocomplete => "off", :name => "start_date", :placeholder => "CHECK IN", :readonly => "readonly", :type => "text"}/
+          %input#start_date.no-borders.datepicker.arrival-date{:autocomplete => "off", :name => "start_date", :placeholder => "CHECK IN", :readonly => "readonly", :type => "text", :value => @date_start}/
           %i.fa.fa-calendar{"aria-hidden" => "true"}
           %span.text-divider
         %fieldset.g.sm-one-third.md-one-seventh.width-15.inner-addon.right-addon
-          %input#end_date.no-borders.datepicker.depart-date{:autocomplete => "off", :name => "end_date", :placeholder => "CHECK OUT", :readonly => "readonly", :type => "text"}/
+          %input#end_date.no-borders.datepicker.depart-date{:autocomplete => "off", :name => "end_date", :placeholder => "CHECK OUT", :readonly => "readonly", :type => "text", :value => @date_end}/
           %i.fa.fa-calendar{"aria-hidden" => "true"}
           %span.text-divider
         %fieldset.g.sm-one-fourth.md-one-eighth.text-align-right.width-15
