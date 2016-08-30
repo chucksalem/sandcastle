@@ -31,8 +31,8 @@ class AccommodationsController < ApplicationController
       end_array = unit['end_date'].split("/")
       u_end_date = "#{end_array[1]}/#{end_array[0]}/#{end_array[2]}"
       unit_end_date = (Time.parse(u_end_date).strftime("%d/%m/%Y").to_time+1.day).to_i
-      start_date = DateTime.parse(params[:start_date]).to_i
-      end_date = DateTime.parse(params[:end_date]).to_i
+      start_date = DateTime.parse(@start_date).to_i
+      end_date = DateTime.parse(@end_date).to_i
       if unit['type'] == 'condominium' || unit['type'] == 'townhouse'
         if (unit['bedrooms'] == @rooms.to_i && unit['occupancy'] == @guests.to_i)
           if (unit_start_date >= start_date && unit_end_date >= end_date) ||
