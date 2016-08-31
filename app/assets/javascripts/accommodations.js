@@ -8,9 +8,9 @@ $(document).ready(function() {
         var date_start = start_date == '' ? moment().format("DD-MM-YYYY") : moment(start_date).format("DD-MM-YYYY")
         var date_end = end_date == '' ? moment().add('days', 3).format("DD-MM-YYYY") : moment(end_date).format("DD-MM-YYYY");
         if (rooms != null) {
-            window.location = "/accommodations?rooms="+rooms+"&start_date=" + date_start + "&end_date=" + date_end + "&guests=" + guests;
+            window.location = "/hotellist?rooms="+rooms+"&start_date=" + date_start + "&end_date=" + date_end + "&guests=" + guests;
         } else {
-            window.location = "/accommodations";
+            window.location = "/hotellist";
         }
     });
 
