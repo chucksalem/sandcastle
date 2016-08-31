@@ -5,17 +5,8 @@ Rails.application.routes.draw do
   get '/accommodations/:id', to: "accommodations#show", as: "accommodation_property"
 
   resources :hotellists
-  get 'hotellist/index'
 
-  get 'hotellist/show'
-
-  get 'hotellist/new'
-
-  get 'hotellist/create'
-
-  get 'hotellist/update'
-
-  get 'hotellist/destroy'
+  get '/hotellist', to: 'hotellists#index', as: 'hotellist_index'
 
   root 'home#index'
 
@@ -37,7 +28,6 @@ Rails.application.routes.draw do
   get '/hoteltest', to: "pages#hotellist"
   get '/booking-form', to: "pages#booking_form"
   get '/attraction-details', to: "pages#attraction_details"
-  get '/hotellist', to: 'hotellists#index', as: 'hotellist_path'
 
   namespace :api do
     resources :units, only: [:index, :show] do
