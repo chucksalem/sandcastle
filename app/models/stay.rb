@@ -60,4 +60,25 @@ class Stay
       total_amount: unit_stay[:total][:@amount_before_tax].to_f + unit_stay[:total][:taxes][:@amount].to_f
     )
   end
+
+  def self.stay_lookup(ranges)
+    range_array = []
+    return range_array if ranges[:rate_range].nil?
+    ranges[:rate_range].each do |range|
+      if range.is_a?(Hash) && range[:@rate_type] == 'Nightly'
+        range_array << {
+            start:  stay_date_format(range[:@start]),
+            end:    stay_date_format(range[:@end]),
+            stay_type: range[:@rate_type]
+        }
+      end
+    end
+    range_array
+  end
+
+  def self.stay_date_format(date)
+    date_array = date.split("/")
+    date = "#{date_array[1]}/#{date_array[0]}/#{date_array[2]}"
+    date
+  end
 end
