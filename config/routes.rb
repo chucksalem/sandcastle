@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   get '/new-client', to: "pages#new_client"
   get '/hotelgrid', to: "pages#hotelgrid"
   get '/hoteltest', to: "pages#hotellist"
-  get '/booking-form', to: "pages#booking_form"
+  get '/booking-form', to: "pages#booking_form", as: 'booking_form'
   get '/attraction-details', to: "pages#attraction_details"
 
   namespace :api do
