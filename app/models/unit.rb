@@ -15,8 +15,7 @@ class Unit
   attribute :position,     UnitPosition
   attribute :type,         Symbol
   attribute :reviews,      Array
-  attribute :start_date,   String
-  attribute :end_date,     String
+  attribute :stay_ranges,   Array
 
   def self.from_hash(hash)
     new.tap do |unit|
@@ -31,6 +30,7 @@ class Unit
     response = search.execute(unit_id: id)
     content  = response[:unit_descriptive_contents][:unit_descriptive_content]
     info     = content[:unit_info]
+
     create_from_results(
       address:       info[:address],
       amenities:     info[:unit_amenity],
@@ -43,8 +43,7 @@ class Unit
       reviews:       content[:unit_reviews],
       rooms:         info[:category_codes][:room_info],
       type_code:     info[:category_codes][:unit_category][:@code],
-      start_date:    info[:rate_ranges][:rate_range][0][:@start],
-      end_date:      info[:rate_ranges][:rate_range][0][:@end]
+      stay_ranges:   info[:rate_ranges]
     )
   end
 
@@ -70,8 +69,7 @@ class Unit
                                reviews:,
                                rooms:,
                                type_code:,
-                               start_date:,
-                               end_date:)
+                               stay_ranges:)
     unit = new
     unit.type         = UnitType.from_code(type_code)
     unit.code         = code
@@ -83,8 +81,7 @@ class Unit
     unit.bedrooms     = UnitRooms.count_for_code(:bedrooms, rooms)
     unit.descriptions = UnitDescriptions.from_descriptions(descriptions)
     unit.reviews      = UnitReviews.from_response(reviews)
-    unit.start_date   = start_date
-    unit.end_date     = end_date
+    unit.stay_ranges  = Stay.stay_lookup(stay_ranges)
 
     unit.address = {
       street:      address[:address_line],
