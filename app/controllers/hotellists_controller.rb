@@ -11,6 +11,8 @@ class HotellistsController < ApplicationController
     @date_start = !params[:start_date].blank? ? Time.parse(@start_date).strftime("%m/%d/%y") : ''
     @date_end = !params[:end_date].blank? ? Time.parse(@end_date).strftime("%m/%d/%y") : ''
     @guests = params[:guests].present? ? params[:guests] : 0
+    @min_price = params[:min_price].present? ? params[:min_price] : 0
+    @max_price = params[:max_price].present? ? params[:max_price] : 0
     @properties = Array.new
     file_path = File.join(Rails.root, '/spec/fixtures/units/hotellists.json')
     units_data = File.read(file_path)
@@ -27,11 +29,16 @@ class HotellistsController < ApplicationController
       start_date = DateTime.parse(@start_date).to_i
       end_date = DateTime.parse(@end_date).to_i
       if unit['type'] == 'condominium' || unit['type'] == 'townhouse'
-        if (unit['bedrooms'] == @rooms.to_i) && !unit['stay_ranges'].blank?
+        if unit['bedrooms'] == @rooms.to_i && !unit['stay_ranges'].blank?
           unit['stay_ranges'].each do |range|
             u_start_date = (Time.parse(range['start']).strftime("%d/%m/%Y").to_time+1.day).to_i
             u_end_date = (Time.parse(range['end']).strftime("%d/%m/%Y").to_time+1.day).to_i
-            @properties << unit if (u_start_date <= start_date && u_end_date >= end_date) && (start_date <= end_date)
+            if (u_start_date <= start_date && u_end_date >= end_date) && (start_date <= end_date)
+              if @min_price.to_i <= range['price'].to_i && @max_price.to_i >= range['price'].to_i
+                unit.merge!(price: range['price'].to_i)
+                @properties << unit
+              end
+            end
           end
         end
       end
