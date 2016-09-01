@@ -162,13 +162,13 @@ form.hotel-room-date-search-form .left-addon input {
     float: left;
 }
 
-form.price-range-filter-form #slider-range{
+.price-range-filter-form #slider-range{
     height: 4px;
     border: none;
     background: #bababa;
     border-radius: 0px;
 }
-form.price-range-filter-form .ui-slider-horizontal .ui-slider-handle {
+.price-range-filter-form .ui-slider-horizontal .ui-slider-handle {
     top: -.38em;
     width: 2%;
     border-radius: 0px;
@@ -177,21 +177,22 @@ form.price-range-filter-form .ui-slider-horizontal .ui-slider-handle {
     border: none;
     margin-left: 0;
 }
-form.price-range-filter-form #slider-range .ui-slider-range{
+.price-range-filter-form #slider-range .ui-slider-range{
     background: #39BDFB;
 }
 
-form.price-range-filter-form .max-range-value{
+.price-range-filter-form .max-range-value{
     width: 50%;
     float: left;
     text-align: right;
+    padding-top: 5%;
 }
-form.price-range-filter-form .min-range-value{
+.price-range-filter-form .min-range-value{
     width: 50%;
     float: left;
     text-align: left;
 }
-form.price-range-filter-form .main-price-range{
+price-range-filter-form .main-price-range{
     margin-top: 15px;
 }
 #hotel_listing_main_section_grid #hotelgrid_view .col-sm-3{
