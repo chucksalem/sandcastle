@@ -1,16 +1,49 @@
 class HotellistsController < ApplicationController
-  before_action :set_hotellist, only: [:show, :edit, :update, :destroy]
+  DATE_FORMAT = '%d/%m/%Y'.freeze
+  # before_action :set_hotellist, only: [:show, :edit, :update, :destroy]
 
   # GET /hotellists
   # GET /hotellists.json
   def index
-    @hotellists = Array.new
+    @rooms = params[:rooms].present? ? params[:rooms] : 0
+    @start_date = params[:start_date].present? ? params[:start_date] : Date.today.strftime(DATE_FORMAT)
+    @end_date   = params[:end_date].present? ? params[:end_date] : (Date.today + 3).strftime(DATE_FORMAT)
+    @date_start = !params[:start_date].blank? ? Time.parse(@start_date).strftime("%m/%d/%y") : ''
+    @date_end = !params[:end_date].blank? ? Time.parse(@end_date).strftime("%m/%d/%y") : ''
+    @guests = params[:guests].present? ? params[:guests] : 0
+    @properties = Array.new
     file_path = File.join(Rails.root, '/spec/fixtures/units/hotellists.json')
     units_data = File.read(file_path)
     units = JSON.parse(units_data)
+    @properties = if !is_search_request
+                    get_units(units)
+                  else
+                    get_all_units(units)
+                  end
+  end
+
+  def get_units(units)
     units.each do |unit|
-      @hotellists << unit if unit['type'] == 'condominium' || unit['type'] == 'townhouse'
+      start_date = DateTime.parse(@start_date).to_i
+      end_date = DateTime.parse(@end_date).to_i
+      if unit['type'] == 'condominium' || unit['type'] == 'townhouse'
+        if (unit['bedrooms'] == @rooms.to_i) && !unit['stay_ranges'].blank?
+          unit['stay_ranges'].each do |range|
+            u_start_date = (Time.parse(range['start']).strftime("%d/%m/%Y").to_time+1.day).to_i
+            u_end_date = (Time.parse(range['end']).strftime("%d/%m/%Y").to_time+1.day).to_i
+            @properties << unit if (u_start_date <= start_date && u_end_date >= end_date) && (start_date <= end_date)
+          end
+        end
+      end
     end
+    @properties.blank? ? [] : @properties
+  end
+
+  def get_all_units(units)
+    units.each do |unit|
+      @properties << unit if unit['type'] == 'condominium' || unit['type'] == 'townhouse'
+    end
+    @properties
   end
 
   # GET /hotellists/1
@@ -42,11 +75,8 @@ class HotellistsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_hotellist
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def hotellist_params
-    end
+  def is_search_request
+    (params[:rooms].to_s.blank? && params[:start_date].to_s.blank?) && (params[:end_date].to_s.blank? && params[:guests].to_s.blank?)
+  end
 end

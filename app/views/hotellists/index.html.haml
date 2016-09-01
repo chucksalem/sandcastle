@@ -5,37 +5,37 @@
 / What's the hero size for the header?
 - content_for :bottom_border, 'bottom-border'
 / Does the header have a bottom border in the hero?
-- content_for :below_hero_title, "WE FOUND: <span class='header-total-result-count'>#{@hotellists.count}</span> RESULTS ".html_safe
+- content_for :below_hero_title, "WE FOUND: <span class='header-total-result-count'>#{@properties.count}</span> RESULTS ".html_safe
 - content_for :mainBreadcrumbHeading, "HOTELS".html_safe
 .section-divider.float-left.hotel-listing-divider
 %section#hotel_listing_main_section_grid.hotel-listing-page-content-section.float-left.full-width{:xmlns => "http://www.w3.org/1999/html"}
   .hotel-listing-layout-container
     .col-xs-12.col-md-4
       .col-xs-12.col-md-8.sandcastle-text-capitalization.sandcastle-bold.padding-20px.common-font-21 Search
-      %form.hotel-room-date-search-form
+      .hotel-room-date-search-form
         .col-xs-12.col-md-8.form-group.inner-addon.left-addon
-          %input.form-control{:name => "rooms", :placeholder => "Which room?", :type => "text"}/
-          %i.fa.fa-bed{"aria-hidden" => "true"}
+          %select#select-rooms.form-control.input-title{:placeholder => "Which room?", :type => "text"}
+            = options_for_select([['Which room?', 0],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: @rooms, disabled: '')
+          %i.fa.fa-bed.set-icon{"aria-hidden" => "true"}
         .col-xs-12.col-md-8.form-group.inner-addon.left-addon
-          %input#start_date.form-control.datepicker{:name => "rooms", :placeholder => "Check In", :type => "text"}/
-          %i.fa.fa-calendar{"aria-hidden" => "true"}
+          %input#start_date.form-control.datepicker.input-title{:name => "rooms", :placeholder => "Check In", :type => "text", :value => @date_start}/
+          %i.fa.fa-calendar.set-icon{"aria-hidden" => "true"}
         .col-xs-12.col-md-8.form-group.inner-addon.left-addon
-          %input#end_date.form-control.datepicker{:name => "rooms", :placeholder => "Check Out", :type => "text"}/
-          %i.fa.fa-calendar{"aria-hidden" => "true"}
+          %input#end_date.form-control.datepicker.input-title{:name => "rooms", :placeholder => "Check Out", :type => "text", :value => @date_end}/
+          %i.fa.fa-calendar.set-icon{"aria-hidden" => "true"}
         .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization
-          %button.hotel-list-search-buttons.sandcastle-text-capitalization{:type => "submit"} Search
+          %button.search-hotellist.hotellist-search-buttons.sandcastle-text-capitalization{:type => "submit"} Search
       .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization.sandcastle-bold.padding-20px.common-font-21 Price range
       %form.price-range-filter-form
         .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization
           #slider-range
-          / <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
           .full-width.float-left.main-price-range
             #min-range.min-range-value.common-font-10.sandcastle-text-color
             #max-range.max-range-value.common-font-10.sandcastle-text-color
             .tooltip.tooltip1
             .tooltip.tooltip2
         .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization
-          %button.hotel-list-search-buttons.sandcastle-text-capitalization{:type => "submit"} Search
+          %button.search-hotellist.hotellist-search-buttons{:type => "submit"} Search
       .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization.sandcastle-bold.padding-20px.common-font-21 Star rating
       .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization
         .col-xs-12.col-md-8.form-group
@@ -106,7 +106,7 @@
             %i.fa.fa-th{"aria-hidden" => "true"}
 
       #hotellist_view.sandcastle-text-font-montserrat
-        - @hotellists.each do |unit|
+        - @properties.each do |unit|
           .row.rw-unit
             .col-sm-4.padding-bottom-10px.white-background
               / <div class="sandcastle-text-capitalization sale-available-on-hotels"><img src="assets/room_sale.png"></div>
@@ -144,8 +144,8 @@
             .col-sm-3.hotel-list-column-3
               %span.rate-book-main-span
                 .full-width.hotel-rate.float-left.text-center.room-details-common-div.sandcastle-text-capitalization.sandcastle-text-color
-                  FROM
-                  %span.sandcastle-bold $120
+                  %span
+                    = "FROM $#{unit['stay_ranges'].first['price']}"
                 .full-width.float-left.text-center
                   %input.book-now.room-details-book-button.sandcastle-bold.sandcastle-text-capitalization{:type => "button", :value => "Book Now"}/
         .room-details-common-div
