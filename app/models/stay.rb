@@ -69,7 +69,8 @@ class Stay
         range_array << {
             start:  stay_date_format(range[:@start]),
             end:    stay_date_format(range[:@end]),
-            stay_type: range[:@rate_type]
+            stay_type: range[:@rate_type],
+            price: !range[:@min_rent].blank? ? range[:@min_rent].split('.').first.to_i : 0
         }
       end
     end
