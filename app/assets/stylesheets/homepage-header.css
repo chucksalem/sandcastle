@@ -626,9 +626,11 @@ section.main-content footer.md-two-twelfths{
     border: none;
 }
 form .select-style #select-drop{
-    padding: 1.0em;
-    padding-top: 2em;
+    padding-top: 1.90em;
     padding-bottom: 1.75em;
+    text-transform: uppercase;
+    font-size: 11.6px;
+    padding-left: 0;
 }
 form .select-style:before{
     display: none;
@@ -824,9 +826,10 @@ article.field a {
 
 #guests{
     font-family: "Montserrat";
-    font-size: 2.2vmin;
-    padding-top: 1.3em;
-    padding-left: 1.75em;
+    padding-top: 1.90em;
+    padding-bottom: 1.75em;
+    text-transform: uppercase;
+    font-size: 11.6px;
 }
 
 .footer-bg .footer-menu-list .list-div-text a, .menu-list-div .list-div span a{
@@ -965,11 +968,6 @@ a.accordion-toggle{
 }
 section.main-content.email-thank-you-section{
     height: auto;
-}
-
-.property-search #guests{
-    padding-top: 1.50em;
-    padding-bottom: 1.20em;
 }
 
 .height-0{
