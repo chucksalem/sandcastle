@@ -106,48 +106,55 @@
             %i.fa.fa-th{"aria-hidden" => "true"}
 
       #hotellist_view.sandcastle-text-font-montserrat
-        - @properties.each do |unit|
-          .row.rw-unit
-            .col-sm-4.padding-bottom-10px.white-background
-              / <div class="sandcastle-text-capitalization sale-available-on-hotels"><img src="assets/room_sale.png"></div>
-              .hotel-image
-                %img{:src => "#{unit['descriptions']['images'][0]['formats'][2]['url']}"}/
-            .col-sm-5.padding-bottom-10px.white-background
-              .col-sm-12.sandcastle-bold.sandcastle-text-capitalization.common-font-15.room-details-common-div.sandcastle-text-font-montserrat
-                = unit['name']
-              .hotel-rating-review.float-left.full-width
-                .col-sm-6
-                  .roomdetails-page-reviewer-rating.common-font-10
-                    %i.fa.fa-star.star-color-yello
-                    %i.fa.fa-star.star-color-yello
-                    %i.fa.fa-star.star-color-yello
-                    %i.fa.fa-star.star-color-yello
-                    %i.fa.fa-star.star-color-yello
-                .col-sm-6.float-left.sandcastle-text-color.sandcastle-text-font-montserrat.common-font-10
-                  = unit['reviews'].count
-                  Reviews
-                .col-sm-12.float-left.sandcastle-text-color.sandcastle-text-font-montserrat.room-details-common-div.common-font-10
-                  = "#{unit['address']['city']}, #{unit['address']['country']}"
-              .col-sm-12.common-font-10.sandcastle-text-color.room-details-common-div.sandcastle-text-font-montserrat.description-height.description-text
-                = unit['descriptions']['text'][2]['description']
-              .col-sm-12.common-font-10.sandcastle-text-color.room-details-common-div.sandcastle-text-font-montserrat
-                %span.hotel-amenities-icons
-                  %img{:src => "assets/spoon_icon.png"}/
-                %span.hotel-amenities-icons
-                  %img{:src => "assets/misc_icon.png"}/
-                %span.hotel-amenities-icons
-                  %img{:src => "assets/gym_icon.png"}/
-                %span.hotel-amenities-icons
-                  %img{:src => "assets/swimming_icon.png"}/
-                %span.hotel-amenities-icons
-                  %img{:src => "assets/tourism_icon.png"}/
-            .col-sm-3.hotel-list-column-3
-              %span.rate-book-main-span
-                .full-width.hotel-rate.float-left.text-center.room-details-common-div.sandcastle-text-capitalization.sandcastle-text-color
-                  %span
-                    = "FROM $#{unit['stay_ranges'].first['price']}"
-                .full-width.float-left.text-center
-                  %input.book-now.room-details-book-button.sandcastle-bold.sandcastle-text-capitalization{:type => "button", :value => "Book Now"}/
-        .room-details-common-div
+        - if !@properties.blank?
+          - @properties.each do |unit|
+            .row.rw-unit
+              .col-sm-4.padding-bottom-10px.white-background
+                / <div class="sandcastle-text-capitalization sale-available-on-hotels"><img src="assets/room_sale.png"></div>
+                .hotel-image
+                  %img{:src => "#{unit['descriptions']['images'][0]['formats'][2]['url']}"}/
+              .col-sm-5.padding-bottom-10px.white-background
+                .col-sm-12.sandcastle-bold.sandcastle-text-capitalization.common-font-15.room-details-common-div.sandcastle-text-font-montserrat
+                  = unit['name']
+                .hotel-rating-review.float-left.full-width
+                  .col-sm-6
+                    .roomdetails-page-reviewer-rating.common-font-10
+                      %i.fa.fa-star.star-color-yello
+                      %i.fa.fa-star.star-color-yello
+                      %i.fa.fa-star.star-color-yello
+                      %i.fa.fa-star.star-color-yello
+                      %i.fa.fa-star.star-color-yello
+                  .col-sm-6.float-left.sandcastle-text-color.sandcastle-text-font-montserrat.common-font-10
+                    = unit['reviews'].count
+                    Reviews
+                  .col-sm-12.float-left.sandcastle-text-color.sandcastle-text-font-montserrat.room-details-common-div.common-font-10
+                    = "#{unit['address']['city']}, #{unit['address']['country']}"
+                .col-sm-12.common-font-10.sandcastle-text-color.room-details-common-div.sandcastle-text-font-montserrat.description-height.description-text
+                  = unit['descriptions']['text'][2]['description']
+                .col-sm-12.common-font-10.sandcastle-text-color.room-details-common-div.sandcastle-text-font-montserrat
+                  %span.hotel-amenities-icons
+                    %img{:src => "assets/spoon_icon.png"}/
+                  %span.hotel-amenities-icons
+                    %img{:src => "assets/misc_icon.png"}/
+                  %span.hotel-amenities-icons
+                    %img{:src => "assets/gym_icon.png"}/
+                  %span.hotel-amenities-icons
+                    %img{:src => "assets/swimming_icon.png"}/
+                  %span.hotel-amenities-icons
+                    %img{:src => "assets/tourism_icon.png"}/
+              .col-sm-3.hotel-list-column-3
+                %span.rate-book-main-span
+                  .full-width.hotel-rate.float-left.text-center.room-details-common-div.sandcastle-text-capitalization.sandcastle-text-color
+                    %span
+                      = "FROM $#{unit['stay_ranges'].first['price']}"
+                  .full-width.float-left.text-center
+                    %input.book-now.room-details-book-button.sandcastle-bold.sandcastle-text-capitalization{:type => "button", :value => "Book Now"}/
+          .room-details-common-div
+        - else
+          .no-data
+            %p
+              No available rental properties found
+            %p
+              Please adjust your search and try again.
   / Search result section end
   .section-divider.float-left.hotel-listing-divider
