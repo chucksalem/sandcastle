@@ -31,16 +31,7 @@
             <div class="select-style inner-addon left-addon">
               <i class="fa fa-user" aria-hidden="true"></i>
               <select name="guests" id="guests" class="drop-options">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
+                <%= options_for_select([['Guests', ''],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: '', disabled: "")%>
               </select>
             </div>
           </fieldset>
