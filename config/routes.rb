@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   post '/accommodations', to: "accommodations#show", as: "accommodation_show"
   get '/accommodations/:id', to: "accommodations#show", as: "accommodation_property"
 
-  resources :hotellists
-
   get '/hotellist', to: 'hotellists#index', as: 'hotellist_index'
 
   root 'home#index'
