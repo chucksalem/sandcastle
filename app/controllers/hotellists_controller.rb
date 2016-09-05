@@ -17,8 +17,10 @@ class HotellistsController < ApplicationController
     file_path = File.join(Rails.root, '/spec/fixtures/units/hotellists.json')
     units_data = File.read(file_path)
     units = JSON.parse(units_data)
-    @properties = if !is_search_request
+    @properties = if !params.include? 'guests'
                     get_units(units)
+                  elsif !@guests.blank?
+                    get_occupacy_units(units)
                   else
                     get_all_units(units)
                   end
@@ -39,6 +41,23 @@ class HotellistsController < ApplicationController
                 @properties << unit
               end
             end
+          end
+        end
+      end
+    end
+    @properties.blank? ? [] : @properties
+  end
+
+  def get_occupacy_units(units)
+    units.each do |unit|
+      start_date = DateTime.parse(@start_date).to_i
+      end_date = DateTime.parse(@end_date).to_i
+      if unit['type'] == 'condominium' || unit['type'] == 'townhouse'
+        if (unit['bedrooms'] == @rooms.to_i && unit['occupancy'] == @guests.to_i) && !unit['stay_ranges'].blank?
+          unit['stay_ranges'].each do |range|
+            u_start_date = (Time.parse(range['start']).strftime("%d/%m/%Y").to_time+1.day).to_i
+            u_end_date = (Time.parse(range['end']).strftime("%d/%m/%Y").to_time+1.day).to_i
+            @properties << unit if (u_start_date <= start_date && u_end_date >= end_date) && (start_date <= end_date)
           end
         end
       end
@@ -81,9 +100,4 @@ class HotellistsController < ApplicationController
   def destroy
   end
 
-  private
-
-  def is_search_request
-    (params[:rooms].to_s.blank? && params[:start_date].to_s.blank?) && (params[:end_date].to_s.blank? && params[:guests].to_s.blank?)
-  end
 end
