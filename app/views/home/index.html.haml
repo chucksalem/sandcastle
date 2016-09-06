@@ -1,0 +1,167 @@
+- content_for :header_class, 'full-background homepage-header-content'
+- content_for :hero_class, 'no-bg'
+- content_for :hero_size, 'hero-medium'
+- content_for :hero_title, "FIND YOUR PERFECT GETAWAY".html_safe
+.section-divider.main-content-sectio-devider
+  %img{:src => "assets/divider.png"}/
+.main-heading-div.main-content-sectio-devider-feature
+  %img{:src => "assets/featured-rooms-text.png"}/
+%section.featured-rooms-slider-section
+  .layout-container.margin-0{:style => "padding:0px;"}
+    .md-one-whole.sm-one-whole.lg-one-whole.left-padding-by-5.slider5
+      .md-one-whole.sm-one-whole
+        .md-five-twelfths.sm-five-twelfths.lg-five-twelfths.float-left
+          .md-one-whole.sm-one-whole.call-now-bg
+            %span.call-now-text Call Now
+            .phone-number-text
+              %a.font-color-white{:href => "tel:(888) 328-8491"} (888) 328-8491
+          .room-details-main-div
+            .hot-offer HOT OFFER
+            .room-name-text Courtyard 1
+            .rating-icon-div
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star-half-o
+            .room-details
+              Courtyard 1 is a room located at Hacienda del Mar. Courtyard 1 sleeps 2 people. It has a queen size bed, private bath, heat, AC, ceiling fan, and access to a common sitting room. Hacienda del Mar is a seven-unit hacienda style home situated in the gated community of Las Conchas. Rooms can be rented individually or in any combination to accommodate groups up to 15 people.
+            %img.view-offer-btn{:src => "assets/view-offer.png"}/
+        .md-five-twelfths.sm-five-twelfths.lg-five-twelfths.float-left
+          %img{:alt => "", :height => "420", :src => "assets/1539620.jpg"}/
+          %img.offer-rate{:src => "assets/offer-notice.png"}/
+          %img.room-icon-div-img{:src => "assets/image-room-overlay.png"}/
+        / <div class="room-icon-div">
+        / <i class="fa fa-bed"></i>
+        / <i class="icon icon-bed"></i>
+        / <i class="icon icon-guests"></i>
+        / <i class="fa fa-star"></i>
+        / </div>
+        .md-two-twelfths.sm-two-twelfths.lg-two-twelfths.float-left.last-child-div
+          %img{:alt => "", :src => "assets/st-jude-on-the-little.jpg"}/
+      .md-one-whole.sm-one-whole
+        .md-five-twelfths.sm-five-twelfths.lg-five-twelfths.float-left
+          .md-one-whole.sm-one-whole.call-now-bg
+            %span.call-now-text Call Now
+            .phone-number-text
+              %a.font-color-white{:href => "tel:(888) 328-8491"} (888) 328-8491
+          .room-details-main-div
+            .hot-offer HOT OFFER
+            .room-name-text Courtyard 1
+            .rating-icon-div
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star
+              %i.fa.fa-star-half-o
+            .room-details
+              Courtyard 1 is a room located at Hacienda del Mar. Courtyard 1 sleeps 2 people. It has a queen size bed, private bath, heat, AC, ceiling fan, and access to a common sitting room. Hacienda del Mar is a seven-unit hacienda style home situated in the gated community of Las Conchas. Rooms can be rented individually or in any combination to accommodate groups up to 15 people.
+            %img.view-offer-btn{:src => "assets/view-offer.png"}/
+        .md-five-twelfths.sm-five-twelfths.lg-five-twelfths.float-left
+          %img{:alt => "", :height => "420", :src => "assets/1539620.jpg"}/
+          %img.offer-rate{:src => "assets/offer-notice.png"}/
+          %img.room-icon-div-img{:src => "assets/image-room-overlay.png"}/
+        / <div class="room-icon-div">
+        / <i class="icon icon-bath"></i>
+        / <i class="icon icon-bed"></i>
+        / <i class="icon icon-guests"></i>
+        / <i class="fa fa-star"></i>
+        / </div>
+        .md-two-twelfths.sm-two-twelfths.lg-two-twelfths.float-left.last-child-div
+          %img{:alt => "", :src => "assets/st-jude-on-the-little.jpg"}/
+/ testimonial section
+.section-divider
+  %img{:src => "assets/divider.png"}/
+%section.testimonial-bg-image
+  .testimonial-main-div
+    .md-one-whole.sm-one-whole.lg-one-whole.left-padding-by-5.testimonial-slider
+      .user-image
+        = image_tag "/assets/testimonial_user_image.png", :class => "center-image-align"
+        %div
+          %p.text-align-center.margin-top-0.testimonial-comment Rental was clean and well furnished.  We were just where we wanted to be...right on the beach.
+          %p.text-align-center.testimonial-user-name Janice Lucero
+          .testimonial-user-rating
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star-half-o
+          %p.text-align-center.testimonial-comment COURTYARD 1
+      %div
+        .user-image
+          = image_tag "/assets/testimonial_user_image.png", :class => "center-image-align"
+        %div
+          %p.text-align-center.margin-top-0.testimonial-comment I was very pleased with our stay at Hacienda Del Mar. It's very close to the beach. Less then a two minute walk. The AC units are very cold. Turn them on and is 15 mins the rooms are cool. The property is very private so you can relax outside and take in the sea breeze. I read other reviews and I'm glad I choose to experience it for myself. I would definitely stay here again in the future.
+          %p.text-align-center.testimonial-user-name Leo Madrid
+          .testimonial-user-rating
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star-half-o
+          %p.text-align-center.testimonial-comment COURTYARD 1
+      %div
+        = image_tag "/assets/testimonial_user_image.png", :class => "center-image-align"
+        %div
+          %p.text-align-center.margin-top-0.testimonial-comment Buena estancia, la casa estaba muy limpia y sin ningún problema de servicio, esta diseñada para grupos individuales, tiene múltiples cocinas y areas.
+          %p.text-align-center.testimonial-user-name Raul Villalva
+          .testimonial-user-rating
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star
+            %i.fa.fa-star-half-o
+          %p.text-align-center.testimonial-comment COURTYARD 1
+.section-divider
+  %img{:src => "assets/divider.png"}/
+.main-heading-div
+  %img{:src => "assets/featured-attraction-text.png"}/
+/ Featured Attractions
+%section.padding-bottom-2.padding-top-1
+  .feature-atrraction-sliders
+    .md-one-whole.sm-one-whole.lg-one-whole.left-padding-by-5.featured-attraction-slider
+      .venues
+        %img.outfocus-images{:src => "assets/IMG_1900.jpg"}/
+      .venues
+        %img.infocus-images{:src => "assets/cholla-bay.jpg"}/
+        .image-caption CHOLLA BAY
+        .feedback
+          .likes
+            %i.fa.fa-heart
+            %span.number 227
+          .comments
+            %i.fa.fa-comment
+            %span.number 6
+      .venues
+        %img.infocus-images{:src => "assets/ecofun-rentals.jpg"}/
+        .image-caption ECOFUN RENTALS
+        .feedback
+          .likes
+            %i.fa.fa-heart
+            %span.number 320
+          .comments
+            %i.fa.fa-comment
+            %span.number 7
+      .venues
+        %img.infocus-images{:src => "assets/playa-bonita.gif"}/
+        .image-caption PLAYA BONITA BEACH
+        .feedback
+          .likes
+            %i.fa.fa-heart
+            %span.number 101
+          .comments
+            %i.fa.fa-comment
+            %span.number 2
+      .venues
+        %img.outfocus-images{:src => "assets/street-view.jpg"}/
+.section-divider
+  %img{:src => "assets/divider.png"}/
+%section.get-some-deal
+  .subscribe-email-div
+    %form.newsletter-subscribe-form{:action => "/subscribe/newsletter", :method => "post"}
+      = tag(:input, type: "hidden", name: request_forgery_protection_token.to_s, value: form_authenticity_token)
+      %input{:name => "message", :type => "hidden", :value => "You are subscribed to our Newsletter"}/
+      %input.email.email-address-text-box{:autocomplete => "off", :name => "emailId", :placeholder => "YOUR EMAIL ADDRESS", :type => "text"}/
+      .subscriber-button-main
+        %input.newsletter-subscribe-button{:type => "submit"}/
+      %p.error.invalid-email Please enter a valid email address.

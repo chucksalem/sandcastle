@@ -18,15 +18,16 @@ class HotellistsController < ApplicationController
     units_data = File.read(file_path)
     units = JSON.parse(units_data)
     @properties = if (!params.include? 'guests') && (!params.include? 'rooms') && (!params.include? 'start_date') && (!params.include? 'end_date')
-                    byebug
                     get_all_units(units)
                   elsif !@guests.blank? && (params.include? 'guests')
-                    byebug
                     get_occupacy_units(units)
                   else
-                    byebug
                     get_units(units)
                   end
+    respond_to do |format|
+        format.js
+        format.html
+    end
   end
 
   def get_units(units)

@@ -1,0 +1,41 @@
+- if !@properties.blank?
+  - @properties.each do |unit|
+    .col-md-4.hotel-grid-result-container{:style => "margin-bottom: 0px;"}
+      .hotel-image
+        %img{:src => "#{unit['descriptions']['images'][0]['formats'][2]['url']}"}/
+      .hotel-details-except-image.float-left.full-width
+        .hotel-rate.float-left.room-details-common-div.sandcastle-text-capitalization.sandcastle-text-color.sandcastle-text-font-montserrat
+          %span
+            - if !unit[:price].blank?
+              = "FROM $#{unit[:price]}"
+            - else
+              = "FROM $#{unit['stay_ranges'].first['price']}"
+        .hotel-rating-review.float-left.full-width
+          .col-sm-6
+            .roomdetails-page-reviewer-rating
+              %i.fa.fa-star.star-color-yello
+              %i.fa.fa-star.star-color-yello
+              %i.fa.fa-star.star-color-yello
+              %i.fa.fa-star.star-color-yello
+              %i.fa.fa-star.star-color-yello
+          .col-sm-6.float-left.sandcastle-text-color.sandcastle-text-font-montserrat
+            = unit['reviews'].count
+            Reviews
+        .hotel-about-section.float-left.room-details-common-div.full-width
+          .col-sm-12.sandcastle-bold.sandcastle-text-capitalization.common-font-15.room-details-common-div.sandcastle-text-font-montserrat
+            = unit['name']
+          .col-sm-12.common-font-9.sandcastle-text-color.luxury-text-details.sandcastle-text-font-montserrat
+            = unit['descriptions']['text'][2]['description']
+        .hotel-book-view-map.room-details-common-div.float-left.full-width
+          .col-sm-6
+            %input.book-now.room-details-book-button.sandcastle-bold.sandcastle-text-capitalization.sandcastle-text-font-montserrat{:type => "button", :value => "Book"}/
+          .col-sm-6.sandcastle-bold.sandcastle-text-capitalization.view-on-map-link.sandcastle-text-font-montserrat
+            %a{:href => "#"}
+              %img{:src => "assets/map_fa_icon.png"}/
+              View on Map
+- else
+  .no-data
+    %p
+      No available rental properties found
+    %p
+      Please adjust your search and try again.

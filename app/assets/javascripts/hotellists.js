@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    hotelGridAlighnment();
+
     $('.book-now').on('click', function () {
       window.location = "/booking-form";
     });
@@ -13,10 +15,42 @@ $(document).ready(function() {
         var date_start = start_date == '' ? moment().format("DD-MM-YYYY") : moment(start_date).format("DD-MM-YYYY")
         var date_end = end_date == '' ? moment().add('days', 3).format("DD-MM-YYYY") : moment(end_date).format("DD-MM-YYYY");
         if (rooms != null) {
-            window.location = "/hotellist?rooms=" + rooms + "&start_date=" + date_start + "&end_date=" + date_end + "&min_price=" + min_price + "&max_price=" + max_price;
+            url = "/hotellist";
+            data = {rooms: rooms, start_date: date_start, end_date: date_end, min_price: min_price, max_price: max_price};
         } else {
-            window.location = "/hotellist";
+            url = "/hotellist";
+            data = {}
         }
+        $.ajax({
+            url: url,
+            data: data,
+            method: 'GET',
+            success: function(result){
+            },
+            complete: function(result){
+                hotelGridAlighnment();
+            }
+        })
+    });
+    $('#hotelgrid_view').hide()
+    $('#listview').on('click', function () {
+        $('#hotelgrid_view').hide()
+        $('#gridview').closest('div').removeClass('active-result-view');
+        $('#hotellist_view').show()
+        $('#listview').closest('div').addClass('active-result-view');
+    });
+    $('#gridview').on('click', function () {
+        $('#hotellist_view').hide()
+        $('#listview').closest('div').removeClass('active-result-view');
+        $('#hotelgrid_view').show()
+        $('#gridview').closest('div').addClass('active-result-view');
     });
 
 });
+
+function hotelGridAlighnment(){
+    $('#hotelgrid_view').isotope({
+        itemSelector: '.hotel-grid-result-container',
+        percentPosition: true
+    });
+}
