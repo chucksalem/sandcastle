@@ -722,6 +722,7 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 
 #hotellist_view .row.rw-unit{
     margin: 0;
+    margin-bottom: 10px;
     padding-left: 10px;
 }
 
