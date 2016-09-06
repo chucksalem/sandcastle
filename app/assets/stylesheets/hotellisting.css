@@ -719,3 +719,12 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
     text-indent: 3px;
 
 }
+
+#hotellist_view .row.rw-unit{
+    margin: 0;
+    padding-left: 10px;
+}
+
+.sorting-button-top-container .col-xs-6.sorting-buttons-main{
+    margin: 0;
+}
