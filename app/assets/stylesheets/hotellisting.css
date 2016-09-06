@@ -710,3 +710,12 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 .set-icon{
     padding: 0px 0px 0px 10px !important;
 }
+
+.hotel-room-date-search-form .form-control input-title{
+    text-indent: 25px;
+}
+
+.hotel-room-date-search-form #start_date, .hotel-room-date-search-form #end_date{
+    text-indent: 3px;
+
+}
