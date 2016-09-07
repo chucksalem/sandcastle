@@ -33,12 +33,16 @@ $(document).ready(function() {
         $('#gridview').closest('div').removeClass('active-result-view');
         $('#hotellist_view').show()
         $('#listview').closest('div').addClass('active-result-view');
+        $('.fa.fa-bars').addClass('active');
+        $('.fa.fa-th').removeClass('active');
     });
     $('#gridview').on('click', function () {
         $('#hotellist_view').hide()
         $('#listview').closest('div').removeClass('active-result-view');
         $('#hotelgrid_view').show()
         $('#gridview').closest('div').addClass('active-result-view');
+        $('.fa.fa-bars').removeClass('active');
+        $('.fa.fa-th').addClass('active');
     });
 
 });
