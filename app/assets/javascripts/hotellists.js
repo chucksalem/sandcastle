@@ -8,8 +8,8 @@ $(document).ready(function() {
         var rooms = $('#select-rooms').val();
         var start_date = $('#start_date').val();
         var end_date = $('#end_date').val();
-        var min_price = $('#min_range').text().replace('$', '');
-        var max_price = $('#max_range').text().replace('$', '');
+        var min_price = $('.price-range-min').text().replace('$', '');
+        var max_price = $('.price-range-max').text().replace('$', '');
         var date_start = start_date == '' ? moment().format("DD-MM-YYYY") : moment(start_date).format("DD-MM-YYYY")
         var date_end = end_date == '' ? moment().add('days', 3).format("DD-MM-YYYY") : moment(end_date).format("DD-MM-YYYY");
         if (rooms != null) {

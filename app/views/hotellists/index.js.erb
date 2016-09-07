@@ -1,10 +1,2 @@
 $('#hotellist_view').html("<%= escape_javascript(render :partial => 'hotellists/hotellist') %>")
 $('#hotelgrid_view').html("<%= escape_javascript(render :partial => 'hotellists/hotelgrid') %>")
-//$('.header-total-result-count').html("<%# escape_javascript(@properties.count)%>")
-
-$(document).ready(function() {
-  $('#hotelgrid_view').isotope({
-    itemSelector: '.hotel-grid-result-container',
-    percentPosition: true
-  });
-});
