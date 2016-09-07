@@ -729,3 +729,7 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 .sorting-button-top-container .col-xs-6.sorting-buttons-main{
     margin: 0;
 }
+
+.text-black{
+    color: #000000;
+}

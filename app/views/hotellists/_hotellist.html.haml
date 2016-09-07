@@ -7,7 +7,7 @@
           %img{:src => "#{unit['descriptions']['images'][0]['formats'][2]['url']}"}/
       .col-sm-5.padding-bottom-10px.white-background
         .col-sm-12.sandcastle-bold.sandcastle-text-capitalization.common-font-15.room-details-common-div.sandcastle-text-font-montserrat
-          = unit['name']
+          = truncate(unit['name'], :length => 25)
         .hotel-rating-review.float-left.full-width
           .col-sm-6
             .roomdetails-page-reviewer-rating.common-font-10
@@ -22,7 +22,7 @@
           .col-sm-12.float-left.sandcastle-text-color.sandcastle-text-font-montserrat.room-details-common-div.common-font-10
             = "#{unit['address']['city']}, #{unit['address']['country']}"
         .col-sm-12.common-font-10.sandcastle-text-color.room-details-common-div.sandcastle-text-font-montserrat.description-height.description-text
-          = unit['descriptions']['text'][2]['description']
+          = truncate(unit['descriptions']['text'][2]['description'], :length => 120)
         .col-sm-12.common-font-10.sandcastle-text-color.room-details-common-div.sandcastle-text-font-montserrat
           %span.hotel-amenities-icons
             %img{:src => "assets/spoon_icon.png"}/
@@ -46,7 +46,7 @@
             %input.book-now.room-details-book-button.sandcastle-bold.sandcastle-text-capitalization{:type => "button", :value => "Book Now"}/
   .room-details-common-div
 - else
-  .no-data
+  .no-data{:style => "clear: left;"}
     %p
       No available rental properties found
     %p

@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-    hotelGridAlighnment();
-
     $('.book-now').on('click', function () {
       window.location = "/booking-form";
     });
@@ -26,9 +24,6 @@ $(document).ready(function() {
             data: data,
             method: 'GET',
             success: function(result){
-            },
-            complete: function(result){
-                hotelGridAlighnment();
             }
         })
     });
@@ -47,10 +42,3 @@ $(document).ready(function() {
     });
 
 });
-
-function hotelGridAlighnment(){
-    $('#hotelgrid_view').isotope({
-        itemSelector: '.hotel-grid-result-container',
-        percentPosition: true
-    });
-}
