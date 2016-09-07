@@ -140,6 +140,7 @@ form.hotel-room-date-search-form .left-addon input {
     height: 40px;
     border-radius: 10px;
     width: 140px;
+    font-size: 1.5vmin;
 }
 .hotel-list-sort-buttons:first-child{
     margin-right: 30px;
@@ -700,24 +701,24 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
     position: relative;
 }
 
-.input-title{
-    padding-left: 25% !important;
+.hotel-listing-layout-container .form-control.input-title{
+    padding-left: 50px !important;
     font-size: 11.6px !important;
     font-family: "Montserrat" !important;
     color: #bababa !important;
+    -webkit-appearance:none;
+}
+
+.hotel-listing-layout-container .form-control.datepicker.input-title{
+    padding-left: 50px !important;
+    font-size: 11.6px !important;
+    font-family: "Montserrat" !important;
+    color: #bababa !important;
+    -webkit-appearance:none;
 }
 
 .set-icon{
     padding: 0px 0px 0px 10px !important;
-}
-
-.hotel-room-date-search-form .form-control input-title{
-    text-indent: 25px;
-}
-
-.hotel-room-date-search-form #start_date, .hotel-room-date-search-form #end_date{
-    text-indent: 3px;
-
 }
 
 #hotellist_view .row.rw-unit{
@@ -732,4 +733,15 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 
 .text-black{
     color: #000000;
+}
+
+.active{
+    color:#FFFFFF;
+}
+
+.hotel-listing-layout-container .col-xs-4.float-right.right-side-list-grid-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0 0 0;
+    margin: 0;
 }
