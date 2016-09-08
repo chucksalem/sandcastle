@@ -35,7 +35,7 @@
 %section.featured-rooms-slider-section
   .layout-container.margin-0{:style => "padding:0px;"}
     .md-one-whole.sm-one-whole.lg-one-whole.left-padding-by-5.slider5
-      - @random_units.last(4).each do |unit|
+      - @random_units.sample(4).each do |unit|
         .md-one-whole.sm-one-whole
           .md-five-twelfths.sm-five-twelfths.lg-five-twelfths.float-left
             .md-one-whole.sm-one-whole.call-now-bg
@@ -45,7 +45,7 @@
             .room-details-main-div
               .hot-offer HOT OFFER
               .room-name-text
-                = unit['name']
+                = truncate(unit['name'], :length => 25)
               .rating-icon-div
                 %i.fa.fa-star
                 %i.fa.fa-star
