@@ -10,12 +10,9 @@
           = truncate(unit['name'], :length => 25)
         .hotel-rating-review.float-left.full-width
           .col-sm-6
-            .roomdetails-page-reviewer-rating.common-font-10
-              %i.fa.fa-star.star-color-yello
-              %i.fa.fa-star.star-color-yello
-              %i.fa.fa-star.star-color-yello
-              %i.fa.fa-star.star-color-yello
-              %i.fa.fa-star.star-color-yello
+            .roomdetails-page-reviewer-rating.sandcastle-text-color.sandcastle-text-font-montserrat.common-font-10
+              = unit['occupancy']
+              Occupancy
           .col-sm-6.float-left.sandcastle-text-color.sandcastle-text-font-montserrat.common-font-10
             = unit['reviews'].count
             Reviews

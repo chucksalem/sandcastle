@@ -13,12 +13,9 @@
               = "$#{unit['stay_ranges'].first['price']}"
         .hotel-rating-review.float-left.full-width
           .col-sm-6
-            .roomdetails-page-reviewer-rating
-              %i.fa.fa-star.star-color-yello
-              %i.fa.fa-star.star-color-yello
-              %i.fa.fa-star.star-color-yello
-              %i.fa.fa-star.star-color-yello
-              %i.fa.fa-star.star-color-yello
+            .col-sm-6.float-left.sandcastle-text-color.sandcastle-text-font-montserrat{:style=>"padding: 0;width: 100%;margin: 0;"}
+              = unit['occupancy']
+              Occupancy
           .col-sm-6.float-left.sandcastle-text-color.sandcastle-text-font-montserrat
             = unit['reviews'].count
             Reviews
