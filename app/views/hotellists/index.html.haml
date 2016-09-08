@@ -5,7 +5,7 @@
 / What's the hero size for the header?
 - content_for :bottom_border, 'bottom-border'
 / Does the header have a bottom border in the hero?
-- content_for :below_hero_title, "WE FOUND: <span class='header-total-result-count'>#{@properties.count}</span> RESULTS ".html_safe
+- content_for :below_hero_title, "WE FOUND: <span class='header-total-result-count'>#{render partial: 'hotellists/hotel_count'}</span> RESULTS ".html_safe
 - content_for :mainBreadcrumbHeading, "HOTELS".html_safe
 .section-divider.float-left.hotel-listing-divider
 %section#hotel_listing_main_section_grid.hotel-listing-page-content-section.float-left.full-width{:xmlns => "http://www.w3.org/1999/html"}

@@ -1,2 +1,6 @@
 $('#hotellist_view').html("<%= escape_javascript(render :partial => 'hotellists/hotellist') %>")
 $('#hotelgrid_view').html("<%= escape_javascript(render :partial => 'hotellists/hotelgrid') %>")
+$('.header-total-result-count').html("<%= escape_javascript(render :partial => 'hotellists/hotel_count') %>")
+$('.book-now').on('click', function () {
+  window.location = "/booking-form";
+});
