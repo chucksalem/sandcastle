@@ -23,8 +23,6 @@
         .col-xs-12.col-md-8.form-group.inner-addon.left-addon
           %input#end_date.form-control.datepicker.input-title{:name => "rooms", :placeholder => "Check Out", :type => "text", :value => @date_end}/
           %i.fa.fa-calendar.set-icon{"aria-hidden" => "true"}
-        .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization
-          %button.search-hotellist.hotellist-search-buttons.sandcastle-text-capitalization{:type => "submit"} Search
       .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization.sandcastle-bold.padding-20px.common-font-21 Price range
       .price-range-filter-form
         .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization
@@ -32,35 +30,6 @@
           .full-width.float-left.main-price-range
             #min-range.min-range-value.common-font-10.sandcastle-text-color
             #max-range.max-range-value.common-font-10.sandcastle-text-color
-        .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization
-          %button.search-hotellist.hotellist-search-buttons{:type => "submit"} Search
-      .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization.sandcastle-bold.padding-20px.common-font-21 Star rating
-      .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization
-        .col-xs-12.col-md-8.form-group
-          %input#rating_5.float-left.hotel-list-common-checkbox-space{:name => "rate5", :type => "checkbox"}/
-          %i.fa.fa-star.star-color-yello
-          %i.fa.fa-star.star-color-yello
-          %i.fa.fa-star.star-color-yello
-          %i.fa.fa-star.star-color-yello
-          %i.fa.fa-star.star-color-yello
-        .col-xs-12.col-md-8.form-group
-          %input#rating_4.float-left.hotel-list-common-checkbox-space{:name => "rate4", :type => "checkbox"}/
-          %i.fa.fa-star.star-color-yello
-          %i.fa.fa-star.star-color-yello
-          %i.fa.fa-star.star-color-yello
-          %i.fa.fa-star.star-color-yello
-        .col-xs-12.col-md-8.form-group
-          %input#rating_3.float-left.hotel-list-common-checkbox-space{:name => "rate3", :type => "checkbox"}/
-          %i.fa.fa-star.star-color-yello
-          %i.fa.fa-star.star-color-yello
-          %i.fa.fa-star.star-color-yello
-        .col-xs-12.col-md-8.form-group
-          %input#rating_2.float-left.hotel-list-common-checkbox-space{:name => "rate2", :type => "checkbox"}/
-          %i.fa.fa-star.star-color-yello
-          %i.fa.fa-star.star-color-yello
-        .col-xs-12.col-md-8.form-group
-          %input#rating_1.float-left.hotel-list-common-checkbox-space{:name => "rate1", :type => "checkbox"}/
-          %i.fa.fa-star.star-color-yello
       .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization.sandcastle-bold.padding-20px.common-font-21 Amenities
       .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization
         .col-xs-12.col-md-12.form-group
@@ -84,6 +53,8 @@
         .col-xs-12.col-md-12.form-group
           %input#rating_1.float-left.hotel-list-common-checkbox-space{:name => "rate1", :type => "checkbox"}/
           %label.common-font-13.sandcastle-text-color Pet Friendly
+      .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization
+        %button.search-hotellist.hotellist-search-buttons{:type => "submit"} Search
     / Search result section starts
     .col-xs-12.col-md-8
       .float-left.full-width.sorting-button-top-container
@@ -94,7 +65,7 @@
               %i.fa.fa-angle-down{"aria-hidden" => "true"}
           .float-left
             %button.hotel-list-sort-buttons.sandcastle-text-capitalization.common-font-8
-              Sort by Rank
+              Sort by Reviews
               %i.fa.fa-angle-down{"aria-hidden" => "true"}
         .col-xs-4.float-right.right-side-list-grid-icons
           .col-md-4.text-right.sandcastle-text-capitalization View:
