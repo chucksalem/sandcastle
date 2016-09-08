@@ -442,10 +442,6 @@
     color: #a7a7a7;
 }
 
-.view-offer-btn{
-    padding-top: 15px;
-}
-
 .rating-icon-div{
     color: #ffcc33;
     font-size: 20px;
@@ -536,8 +532,9 @@ section.main-content{
     background: none;
 }
 .site-header.full-background{
-    height: 67%;
+    min-height: 67% !important;
     z-index: 1;
+    height: auto;
 }
 .hero .padded-top{
     padding-top: 60px !important;
@@ -1289,4 +1286,34 @@ section.main-content.email-thank-you-section{
 }
 
 
+/*----------------------homepage header--------------------------*/
 
+@media screen and (max-width: 855px) and (min-width: 200px) {
+    .site-header .navbar .center-heading{
+        border-color: transparent;
+        box-shadow: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .site-header .navbar .center-heading{
+        border-color: transparent;
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 855px) and (min-width: 768px) {
+    .site-header .navbar .brand-container{
+        position: relative;
+        float: left;
+    }
+
+    .site-header .navbar .center-heading{
+        width: calc(100% - 130px);
+        position: relative;
+        float: left;
+        margin: 0;
+        padding-left: 4%;
+    }
+
+}

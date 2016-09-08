@@ -2,6 +2,32 @@
 - content_for :hero_class, 'no-bg'
 - content_for :hero_size, 'hero-medium'
 - content_for :hero_title, "FIND YOUR PERFECT GETAWAY".html_safe
+%section.main-content.z-index-1.margin-17
+  .layout-container.layout-centered{:style => "padding:0px;"}
+    .property-search.welcome-text-align-for-smaller
+      %form.gw.no-gutter
+        %fieldset.g.sm-one-whole.md-five-twelfths.width-15
+          .select-style.inner-addon.right-addon
+            %i.fa.fa-bed{"aria-hidden" => "true"}
+            %select#select-drop{:name => "rooms"}
+              = options_for_select([['Rooms', 0],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: '')
+          %span.text-divider
+        %fieldset.g.sm-one-third.md-one-seventh.width-15.inner-addon.right-addon
+          %input#start_date.no-borders.datepicker.arrival-date{:autocomplete => "off", :name => "start_date", :placeholder => "CHECK IN", :readonly => "readonly", :type => "text"}/
+          %i.fa.fa-calendar{"aria-hidden" => "true"}
+          %span.text-divider
+        %fieldset.g.sm-one-third.md-one-seventh.width-15.inner-addon.right-addon
+          %input#end_date.no-borders.datepicker.depart-date{:autocomplete => "off", :name => "end_date", :placeholder => "CHECK OUT", :readonly => "readonly", :type => "text"}/
+          %i.fa.fa-calendar{"aria-hidden" => "true"}
+          %span.text-divider
+        %fieldset.g.sm-one-fourth.md-one-eighth.text-align-right.width-15
+          %label.is-visually-hidden{:for => "guests"} Guests
+          .select-style.inner-addon.left-addon
+            %i.fa.fa-user{"aria-hidden" => "true"}
+            %select#guests.drop-options{:name => "guests"}
+              = options_for_select([['Guests', 0],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: '')
+        %footer.g.md-two-twelfths
+          %input.btn.max-width.search-btn.sandcastle-text-capitalization{:type => "button", :value => "Search"}/
 .section-divider.main-content-sectio-devider
   %img{:src => "assets/divider.png"}/
 .main-heading-div.main-content-sectio-devider-feature
@@ -9,66 +35,56 @@
 %section.featured-rooms-slider-section
   .layout-container.margin-0{:style => "padding:0px;"}
     .md-one-whole.sm-one-whole.lg-one-whole.left-padding-by-5.slider5
-      .md-one-whole.sm-one-whole
-        .md-five-twelfths.sm-five-twelfths.lg-five-twelfths.float-left
-          .md-one-whole.sm-one-whole.call-now-bg
-            %span.call-now-text Call Now
-            .phone-number-text
-              %a.font-color-white{:href => "tel:(888) 328-8491"} (888) 328-8491
-          .room-details-main-div
-            .hot-offer HOT OFFER
-            .room-name-text Courtyard 1
-            .rating-icon-div
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star-half-o
-            .room-details
-              Courtyard 1 is a room located at Hacienda del Mar. Courtyard 1 sleeps 2 people. It has a queen size bed, private bath, heat, AC, ceiling fan, and access to a common sitting room. Hacienda del Mar is a seven-unit hacienda style home situated in the gated community of Las Conchas. Rooms can be rented individually or in any combination to accommodate groups up to 15 people.
-            %img.view-offer-btn{:src => "assets/view-offer.png"}/
-        .md-five-twelfths.sm-five-twelfths.lg-five-twelfths.float-left
-          %img{:alt => "", :height => "420", :src => "assets/1539620.jpg"}/
-          %img.offer-rate{:src => "assets/offer-notice.png"}/
-          %img.room-icon-div-img{:src => "assets/image-room-overlay.png"}/
-        / <div class="room-icon-div">
-        / <i class="fa fa-bed"></i>
-        / <i class="icon icon-bed"></i>
-        / <i class="icon icon-guests"></i>
-        / <i class="fa fa-star"></i>
-        / </div>
-        .md-two-twelfths.sm-two-twelfths.lg-two-twelfths.float-left.last-child-div
-          %img{:alt => "", :src => "assets/st-jude-on-the-little.jpg"}/
-      .md-one-whole.sm-one-whole
-        .md-five-twelfths.sm-five-twelfths.lg-five-twelfths.float-left
-          .md-one-whole.sm-one-whole.call-now-bg
-            %span.call-now-text Call Now
-            .phone-number-text
-              %a.font-color-white{:href => "tel:(888) 328-8491"} (888) 328-8491
-          .room-details-main-div
-            .hot-offer HOT OFFER
-            .room-name-text Courtyard 1
-            .rating-icon-div
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star
-              %i.fa.fa-star-half-o
-            .room-details
-              Courtyard 1 is a room located at Hacienda del Mar. Courtyard 1 sleeps 2 people. It has a queen size bed, private bath, heat, AC, ceiling fan, and access to a common sitting room. Hacienda del Mar is a seven-unit hacienda style home situated in the gated community of Las Conchas. Rooms can be rented individually or in any combination to accommodate groups up to 15 people.
-            %img.view-offer-btn{:src => "assets/view-offer.png"}/
-        .md-five-twelfths.sm-five-twelfths.lg-five-twelfths.float-left
-          %img{:alt => "", :height => "420", :src => "assets/1539620.jpg"}/
-          %img.offer-rate{:src => "assets/offer-notice.png"}/
-          %img.room-icon-div-img{:src => "assets/image-room-overlay.png"}/
-        / <div class="room-icon-div">
-        / <i class="icon icon-bath"></i>
-        / <i class="icon icon-bed"></i>
-        / <i class="icon icon-guests"></i>
-        / <i class="fa fa-star"></i>
-        / </div>
-        .md-two-twelfths.sm-two-twelfths.lg-two-twelfths.float-left.last-child-div
-          %img{:alt => "", :src => "assets/st-jude-on-the-little.jpg"}/
+      - @random_units.last(4).each do |unit|
+        .md-one-whole.sm-one-whole
+          .md-five-twelfths.sm-five-twelfths.lg-five-twelfths.float-left
+            .md-one-whole.sm-one-whole.call-now-bg
+              %span.call-now-text Call Now
+              .phone-number-text
+                %a.font-color-white{:href => "tel:(888) 328-8491"} (888) 328-8491
+            .room-details-main-div
+              .hot-offer HOT OFFER
+              .room-name-text
+                = unit['name']
+              .rating-icon-div
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star
+                %i.fa.fa-star-half-o
+              .room-details
+                = unit['descriptions']['text'][2]['description']
+              %button.view-offer-btn{:type => "submit", :value => unit['code']} View Offer
+              %i.fa.fa-arrow-right{ :style=> "position: absolute; margin-left: -30px; margin-top: 17px; color: white;"}
+          .md-five-twelfths.sm-five-twelfths.lg-five-twelfths.float-left
+            .md-one-whole.sm-one-whole.call-now-bg{ :style=> "border-radius: 0 0 30px 0;color:white;text-transform:lowercase;position: absolute;width: 125px;padding:30px 0 0 30px;background:#39bdfb;"}
+              %span{:style=>"font-size: 4vmin;font-weight: bold;"}
+                - if !unit[:price].blank?
+                  = unit[:price]
+                - else
+                  = unit['stay_ranges'].first['price']
+              %br
+                per night
+            %img{:alt => "", :height => "420", :src => "#{unit['descriptions']['images'][0]['formats'][2]['url']}"}/
+            -#%img.room-icon-div-img{:src => "assets/image-room-overlay.png"}/
+            .room-icon-div{:style=>"opacity: 0.7;"}
+              %i.icon.icon-bath{:style=>"font-size: 40px;"}
+              %span{:style=>"font-size: 2vmin;"}
+                = unit['bathrooms']
+              %i.fa.fa-bed{:style=>"font-size: 40px;"}
+              %span{:style=>"font-size: 2vmin;"}
+                = unit['bedrooms']
+              %i.fa.fa-users{:style=>"font-size: 40px;"}
+              %span{:style=>"font-size: 2vmin;"}
+                = unit['occupancy']
+              %i.fa.fa-building-o{:style=>"font-size: 40px;"}
+              %span{:style=>"font-size: 2vmin;"}
+                - if unit['type'] == 'condominium'
+                  Condo
+                - else
+                  Townhouse
+          .md-two-twelfths.sm-two-twelfths.lg-two-twelfths.float-left.last-child-div
+            %img{:alt => "", :src => "assets/st-jude-on-the-little.jpg"}/
 / testimonial section
 .section-divider
   %img{:src => "assets/divider.png"}/
@@ -123,35 +139,14 @@
       .venues
         %img.outfocus-images{:src => "assets/IMG_1900.jpg"}/
       .venues
-        %img.infocus-images{:src => "assets/cholla-bay.jpg"}/
-        .image-caption CHOLLA BAY
-        .feedback
-          .likes
-            %i.fa.fa-heart
-            %span.number 227
-          .comments
-            %i.fa.fa-comment
-            %span.number 6
+        %img.outfocus-images{:src => "assets/cholla-bay.jpg"}/
+      / <div class="image-caption">CHOLLA BAY</div>
       .venues
-        %img.infocus-images{:src => "assets/ecofun-rentals.jpg"}/
-        .image-caption ECOFUN RENTALS
-        .feedback
-          .likes
-            %i.fa.fa-heart
-            %span.number 320
-          .comments
-            %i.fa.fa-comment
-            %span.number 7
+        %img.outfocus-images{:src => "assets/ecofun-rentals.jpg"}/
+      / <div class="image-caption">ECOFUN RENTALS</div>
       .venues
-        %img.infocus-images{:src => "assets/playa-bonita.gif"}/
-        .image-caption PLAYA BONITA BEACH
-        .feedback
-          .likes
-            %i.fa.fa-heart
-            %span.number 101
-          .comments
-            %i.fa.fa-comment
-            %span.number 2
+        %img.outfocus-images{:src => "assets/playa-bonita.gif"}/
+      / <div class="image-caption">PLAYA BONITA BEACH</div>
       .venues
         %img.outfocus-images{:src => "assets/street-view.jpg"}/
 .section-divider

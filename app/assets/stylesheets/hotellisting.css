@@ -780,3 +780,15 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus{
 .price-range-filter-form .main-price-range{
     margin-top: 15px;
 }
+
+/*----------------------homepage---------------------*/
+
+.view-offer-btn{
+    background: #39BDFB;
+    border: none;
+    color: #ffffff;
+    height: 50px;
+    border-radius: 5px;
+    width: 163px;
+    text-transform: uppercase;
+}

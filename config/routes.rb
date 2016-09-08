@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   post "/subscribe/newsletter".dasherize, to: "pages#newsletter", as: "post_newsletter"
   post "/faq/review".dasherize, to: "pages#faqreview", as: "post_faq_review"
   get '/offer', to: "home#offer"
-  get '/room_details', to: "pages#room_details"
+  get '/room_details/:id', to: "pages#room_details"
   get '/privacy_policy', to: "pages#privacy_policy"
   get '/new-client', to: "pages#new_client"
   get '/hotelgrid', to: "pages#hotelgrid"
