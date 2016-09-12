@@ -1284,6 +1284,41 @@ section.main-content.email-thank-you-section{
 
 /*----------------------homepage header--------------------------*/
 
+.feature-atrraction-sliders .bx-viewport{
+    height: 283px !important;
+}
+
+@media screen and (max-width: 604px) and (min-width: 200px) {
+    .md-five-twelfths.sm-five-twelfths.lg-five-twelfths.float-left{
+        width: 100%;
+    }
+}
+
+
+.main-content.z-index-1{
+    float: left;
+    width: 100%;
+}
+
+@media screen and (max-width: 855px) and (min-width: 200px){
+    .section-divider{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-heading-div{
+        text-align: center;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .md-one-whole.sm-one-whole.call-now-bg{
+        padding: 2.5% 15%;
+    }
+}
+
 @media screen and (max-width: 855px) and (min-width: 200px) {
     .site-header .navbar .center-heading{
         border-color: transparent;
@@ -1291,6 +1326,9 @@ section.main-content.email-thank-you-section{
     }
     .main-content-sectio-devider-feature img{
         margin: 0 auto;
+    }
+    .phone-number-text{
+        font-size: 25px;
     }
 }
 
