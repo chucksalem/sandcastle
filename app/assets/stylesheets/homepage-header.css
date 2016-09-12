@@ -532,7 +532,7 @@ section.main-content{
     background: none;
 }
 .site-header.full-background{
-    min-height: 67% !important;
+    min-height: 450px !important;
     z-index: 1;
     height: auto;
 }
@@ -1339,6 +1339,21 @@ section.main-content.email-thank-you-section{
     }
     section.main-content .layout-container{
         padding-left: 15% !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .site-header.full-background{
+        min-height: 620px !important;
+    }
+    section.main-content .layout-container {
+        top: -404px !important;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    section.main-content .layout-container {
+        padding-left: 10% !important;
     }
 }
 
