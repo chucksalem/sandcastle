@@ -324,8 +324,8 @@
 
 /*home page css*/
 .center-heading{
-    margin-left: 32% !important;
-    margin-right: 20% !important;
+    /*margin-left: 32% !important;*/
+    /*margin-right: 20% !important;*/
 }
 
 /* Find Gateway header */
@@ -509,7 +509,7 @@
     width: 100%;
 }
 section.main-content .layout-container{
-    top: -175px;
+    top: -140px;
 }
 section.main-content .layout-container{
     width: 100%;
@@ -797,7 +797,7 @@ article.field a {
 /* style icon */
 .inner-addon .fa-calendar,.inner-addon .fa-bed, .inner-addon .fa-user {
     position: absolute;
-    padding: 10px 15px 10px 10px;
+    padding: 10px 8px 8px 0px;
     pointer-events: none;
     top: 24%;
     color: #bababa;
@@ -810,7 +810,7 @@ article.field a {
 
 /* add padding  */
 .left-addon input  { padding-left:  30px; }
-.right-addon input { padding-right: 30px;    padding-left: 20px; }
+.right-addon input { padding-right: 20px;    padding-left: 20px;}
 
 #start_date,#end_date,#select-drop{
     font-size: 11.6px;
@@ -1281,10 +1281,6 @@ section.main-content.email-thank-you-section{
     white-space: nowrap;
 }
 
-.margin-17{
-    padding-left: 15%;
-}
-
 
 /*----------------------homepage header--------------------------*/
 
@@ -1293,12 +1289,18 @@ section.main-content.email-thank-you-section{
         border-color: transparent;
         box-shadow: none;
     }
+    .main-content-sectio-devider-feature img{
+        margin: 0 auto;
+    }
 }
 
 @media screen and (min-width: 768px) {
     .site-header .navbar .center-heading{
         border-color: transparent;
         box-shadow: none;
+    }
+    section.main-content .layout-container{
+        padding-left: 15% !important;
     }
 }
 
@@ -1314,6 +1316,146 @@ section.main-content.email-thank-you-section{
         float: left;
         margin: 0;
         padding-left: 4%;
+    }
+    #start_date, #end_date, #select-drop{
+        font-size: 8.6px;
+        text-align: center;
+        padding-left: 8px;
+    }
+    .right-addon input{
+        padding-right: 20px;
+    }
+    .inner-addon .fa-calendar, .inner-addon .fa-bed, .inner-addon .fa-user{
+        padding: 10px 10px 10px 0px;
+        font-size: 10.85px;
+    }
+    form .select-style select{
+        text-indent: 25px;
+    }
+    form .select-style #select-drop{
+        padding-top: 2.7em;
+        padding-bottom: 2.6em;
+        font-size: 8.6px;
+    }
+    #guests{
+        padding-top: 2.8em;
+        padding-bottom: 2.5em;
+        font-size: 8.6px;
+    }
+
+}
+
+@media screen and (max-width: 959px) and (min-width: 850px) {
+    section.main-content .layout-container {
+        top: -80px;
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 1046px) {
+    section.main-content .layout-container {
+        top: -80px;
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 850px) {
+    #start_date, #end_date, #select-drop{
+        font-size: 8.6px;
+        text-align: center;
+    }
+    .right-addon input{
+        padding-right: 20px;
+    }
+    .inner-addon .fa-calendar, .inner-addon .fa-bed, .inner-addon .fa-user{
+        padding: 10px 10px 10px 0px;
+        font-size: 10.85px;
+    }
+    .property-search fieldset:nth-of-type(4) .select-style {
+        width: 100% !important;
+    }
+    form .select-style #select-drop{
+        padding-top: 2.7em;
+        padding-bottom: 2.8em;
+        font-size: 8.6px;
+    }
+    #guests{
+        padding-top: 2.8em;
+        padding-bottom: 2.5em;
+        font-size: 8.6px;
+    }
+    .main-content-sectio-devider-feature img{
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (max-width: 960px) and (min-width: 855px) {
+    .site-header .navbar .brand-container{
+        position: relative;
+        float: left;
+    }
+
+    .site-header .navbar .center-heading{
+        width: calc(100% - 130px);
+        position: relative;
+        float: left;
+        margin: 0;
+        padding-left: 4%;
+    }
+
+}
+
+@media screen and (max-width: 1045px) and (min-width: 960px) {
+    .site-header .navbar .brand-container{
+        position: relative;
+        float: left;
+    }
+
+    .site-header .navbar .center-heading{
+        width: calc(100% - 130px);
+        position: relative;
+        float: left;
+        margin: 0;
+        padding-left: 4%;
+    }
+
+}
+
+@media screen and (max-width: 1045px) and (min-width: 1014px) {
+    .site-header .navbar .brand-container{
+        position: relative;
+        float: left;
+    }
+
+    .site-header .navbar .center-heading{
+        width: calc(100% - 170px);
+        position: relative;
+        float: left;
+        margin: 0;
+        padding-left: 4%;
+    }
+
+}
+
+@media screen and (min-width: 1045px) {
+    .site-header .navbar .brand-container{
+        position: relative;
+        float: left;
+    }
+
+    .site-header .navbar .center-heading{
+        width: calc(100% - 170px);
+        position: relative;
+        float: left;
+        margin: 0;
+        padding-left: 15%;
+    }
+
+}
+
+
+@media screen and (max-width: 1024px) and (min-width: 681px) {
+    .property-search fieldset:nth-of-type(4) .select-style{
+        width: 100% !important;
     }
 
 }
