@@ -14,6 +14,10 @@ $(document).ready(function(){
         }
     });
 
+    $('.view-offer-btn').on('click' ,function(){
+        window.location = "/room_details/"+$(this).val();
+    });
+
     var documentWidth = $(window).width();
     if(documentWidth < 680){
         $('.slider5').bxSlider({
@@ -58,8 +62,10 @@ $(document).ready(function(){
     $('.navbar-toggle').on("click",function () {
         if($(this).hasClass("collapsed")){
             $('.site-header .hero.no-bg').hide();
+            $('.main-content').hide();
         }else{
             $('.site-header .hero.no-bg').show();
+            $('.main-content').show();
         }
     });
     $('.newsletter-subscribe-form').validate({ // initialize the plugin
@@ -71,4 +77,5 @@ $(document).ready(function(){
             }
         }
     });
+
 });
