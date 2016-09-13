@@ -1,16 +1,19 @@
 $(document).ready(function(){
 
+    $("#start_date").on("change",function (){
+        $('#end_date-error').css('display','none');
+    });
+
     $('.search-btn').on('click', function () {
+        $("#search_filter").valid();
         var rooms = $('#select-drop').val();
         var guests = $('#guests').val();
         var start_date = $('#start_date').val();
         var end_date = $('#end_date').val();
         var date_start = start_date == '' ? moment().format("DD-MM-YYYY") : moment(start_date).format("DD-MM-YYYY")
         var date_end = end_date == '' ? moment().add('days', 3).format("DD-MM-YYYY") : moment(end_date).format("DD-MM-YYYY");
-        if (rooms != null) {
+        if (start_date != '' && end_date != '') {
             window.location = "/rentals?rooms="+rooms+"&start_date=" + date_start + "&end_date=" + date_end + "&guests=" + guests;
-        } else {
-            window.location = "/rentals";
         }
     });
 
