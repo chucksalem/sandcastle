@@ -22,6 +22,6 @@ Rails.application.config.assets.precompile += %w( jquery.fancybox-media.js )
 Rails.application.config.assets.precompile += %w( jquery.bxslider.min.js )
 Rails.application.config.assets.precompile += %w( bootstrap.min.js )
 
-%w( home pages properties accommodations hotellists).each do |controller|
+%w( home pages properties accommodations hotellists rentals).each do |controller|
   Rails.application.config.assets.precompile += ["#{controller}.js"]
 end

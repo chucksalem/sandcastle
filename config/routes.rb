@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
+  resources :rentals
   get '/accommodations', to: "accommodations#index", as: "accommodations"
   post '/accommodations', to: "accommodations#show", as: "accommodation_show"
   get '/accommodations/:id', to: "accommodations#show", as: "accommodation_property"
 
   get '/hotellist', to: 'hotellists#index', as: 'hotellist_index'
+  get '/rentals', to: 'rentals#index', as: 'rental_index'
 
   root 'home#index'
 

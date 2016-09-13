@@ -1,0 +1,46 @@
+%div{:class => "hero #{content_for :hero_class}", :style => "margin-top: 24.5vh;"}
+  .layout-centered
+    - if content_for?(:mainBreadcrumbHeading)
+      %a.home-text{:href => "index.php"} HOME /
+      %a.page-breadcomb-text{:href => ""}= yield :mainBreadcrumbHeading
+    %h1{:class => "#{content_for :bottom_border} heading-large margin-top-by-5"}= yield(:hero_title)
+    - if content_for?(:below_hero_title)
+      .below-hero-title-text.sandcastle-text-font-montserrat.sandcastle-text-capitalization= yield :below_hero_title
+    - if content_for?(:lede)
+      %p.lede= yield :lede
+    - if content_for?(:search_help)
+      .layout-container.layout-centered.faq-search-help-main
+        .property-search.welcome-text-align-for-smaller
+          %form.gw.no-gutter
+            %fieldset.g.sm-one-third.md-one-seventh
+              %input#search_help.no-borders{:name => "search_help", :placeholder => "SEARCH HELP", :type => "text"}/
+            %footer.g.md-two-twelfths
+              %input.search-btn{:type => "button", :value => "Search"}/
+%div.main-content{:style => "margin-top: 6vh;"}
+  .layout-container
+    .property-search.welcome-text-align-for-smaller
+      %form.gw.no-gutter
+        %fieldset.g.sm-one-whole.md-one-seventh
+          .select-style.inner-addon.right-addon
+            %select#select-drop{:name => "rooms"}
+              = options_for_select([['Rooms', ''],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: '', disabled: "")
+            %i.fa.fa-bed{"aria-hidden" => "true"}
+            %span.text-divider
+        %fieldset.g.sm-one-third.md-one-seventh
+          .select-style.inner-addon.right-addon.no-border
+            %input#start_date.no-borders.datepicker.arrival-date{:autocomplete => "off", :name => "start_date", :placeholder => "CHECK IN", :readonly => "readonly", :type => "text"}/
+            %i.fa.fa-calendar{"aria-hidden" => "true"}
+            %span.text-divider
+        %fieldset.g.sm-one-third.md-one-twenty
+          .select-style.inner-addon.right-addon.no-border
+            %input#end_date.no-borders.datepicker.depart-date{:autocomplete => "off", :name => "end_date", :placeholder => "CHECK OUT", :readonly => "readonly", :type => "text"}/
+            %i.fa.fa-calendar{"aria-hidden" => "true"}
+            %span.text-divider
+        %fieldset.g.sm-one-fourth.md-one-seventh
+          %label.is-visually-hidden{:for => "guests"} Guests
+          .select-style.inner-addon.right-addon.no-border
+            %i.fa.fa-user{"aria-hidden" => "true"}
+            %select#guests.drop-options{:name => "guests"}
+              = options_for_select([['Guests', ''],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: '', disabled: "")
+        %footer.g.md-two-twelfths
+          %input.btn.max-width.search-btn.sandcastle-text-capitalization{:type => "button", :value => "Search"}/

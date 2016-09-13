@@ -1,0 +1,83 @@
+- content_for :header_class, 'hotel_grid_view_header_content'
+- content_for :hero_title, "FIND YOUR PERFECT GATEWAY".html_safe
+/ Hero/Page Title
+- content_for :hero_size, 'hero-small'
+/ What's the hero size for the header?
+- content_for :bottom_border, 'bottom-border'
+/ Does the header have a bottom border in the hero?
+- content_for :below_hero_title, "WE FOUND: <span class='header-total-result-count'>#{render partial: 'rentals/hotel_count'}</span> RESULTS ".html_safe
+- content_for :mainBreadcrumbHeading, "RENTALS".html_safe
+.section-divider.float-left.hotel-listing-divider
+%section#hotel_listing_main_section_grid.hotel-listing-page-content-section.float-left.full-width{:xmlns => "http://www.w3.org/1999/html"}
+  .hotel-listing-layout-container
+    .col-xs-12.col-md-4
+      .col-xs-12.col-md-8.sandcastle-text-capitalization.sandcastle-bold.padding-20px.common-font-21 Search
+      .hotel-room-date-search-form
+        .col-xs-12.col-md-8.form-group.inner-addon.left-addon
+          %select#select-rooms.form-control.input-title{:placeholder => "Which room?", :type => "text"}
+            = options_for_select([['Which room?', 0],['1', 1],['2', 2],['3', 3],['4', 4],['5', 5],['6', 6],['7', 7],['8', 8],['9', 9],['10', 10]], selected: @rooms, disabled: '')
+          %i.fa.fa-bed.set-icon{"aria-hidden" => "true"}
+        .col-xs-12.col-md-8.form-group.inner-addon.left-addon
+          %input#start_date.form-control.datepicker.input-title{:name => "rooms", :placeholder => "Check In", :type => "text", :value => @date_start}/
+          %i.fa.fa-calendar.set-icon{"aria-hidden" => "true"}
+        .col-xs-12.col-md-8.form-group.inner-addon.left-addon
+          %input#end_date.form-control.datepicker.input-title{:name => "rooms", :placeholder => "Check Out", :type => "text", :value => @date_end}/
+          %i.fa.fa-calendar.set-icon{"aria-hidden" => "true"}
+      .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization.sandcastle-bold.padding-20px.common-font-21 Price range
+      .price-range-filter-form
+        .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization
+          #slider
+          .full-width.float-left.main-price-range
+            #min-range.min-range-value.common-font-10.sandcastle-text-color
+            #max-range.max-range-value.common-font-10.sandcastle-text-color
+      .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization.sandcastle-bold.padding-20px.common-font-21 Amenities
+      .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization
+        .col-xs-12.col-md-12.form-group
+          %input#rating_5.float-left.hotel-list-common-checkbox-space{:name => "rate5", :type => "checkbox"}/
+          %label.common-font-13.sandcastle-text-color Swimming Pool
+        .col-xs-12.col-md-12.form-group
+          %input#rating_4.float-left.hotel-list-common-checkbox-space{:name => "rate4", :type => "checkbox"}/
+          %label.common-font-13.sandcastle-text-color Gym / Fitness
+        .col-xs-12.col-md-12.form-group
+          %input#rating_3.float-left.hotel-list-common-checkbox-space{:name => "rate3", :type => "checkbox"}/
+          %label.common-font-13.sandcastle-text-color Car Park
+        .col-xs-12.col-md-12.form-group
+          %input#rating_2.float-left.hotel-list-common-checkbox-space{:name => "rate2", :type => "checkbox"}/
+          %label.common-font-13.sandcastle-text-color Spa / Sauna
+        .col-xs-12.col-md-12.form-group
+          %input#rating_1.float-left.hotel-list-common-checkbox-space{:name => "rate1", :type => "checkbox"}/
+          %label.common-font-13.sandcastle-text-color Airport Transfer
+        .col-xs-12.col-md-12.form-group
+          %input#rating_1.float-left.hotel-list-common-checkbox-space{:name => "rate1", :type => "checkbox"}/
+          %label.common-font-13.sandcastle-text-color Smoking Area
+        .col-xs-12.col-md-12.form-group
+          %input#rating_1.float-left.hotel-list-common-checkbox-space{:name => "rate1", :type => "checkbox"}/
+          %label.common-font-13.sandcastle-text-color Pet Friendly
+      .col-xs-12.col-md-8.form-group.sandcastle-text-capitalization
+        %button.search-hotellist.hotellist-search-buttons{:type => "submit"} Search
+    / Search result section starts
+    .col-xs-12.col-md-8
+      .float-left.full-width.sorting-button-top-container
+        .col-xs-6.sorting-buttons-main{:style=>"margin: 0;"}
+          .float-left
+            %button.search-hotellist.hotel-list-sort-buttons.sandcastle-text-capitalization.common-font-8
+              Sort by Price
+              %i.fa.fa-angle-down{"aria-hidden" => "true"}
+          .float-left
+            %button.hotel-list-sort-buttons.sandcastle-text-capitalization.common-font-8
+              Sort by Reviews
+              %i.fa.fa-angle-down{"aria-hidden" => "true"}
+        .col-xs-4.float-right.right-side-list-grid-icons
+          .col-md-4.text-right.sandcastle-text-capitalization View:
+          .col-md-2.text-right.active-result-view
+            %a#listview{:href => "#"}
+              %i.fa.fa-bars.active
+          .col-md-2.text-right
+            %a#gridview{:href => "#"}
+              %i.fa.fa-th
+      #hotellist_view.sandcastle-text-font-montserrat
+        = render partial: 'rentals/hotellist'
+      #hotelgrid_view.sandcastle-text-font-montserrat{:style => "clear: both;"}
+        = render partial: 'rentals/hotelgrid'
+  / Search result section end
+  .section-divider.float-left.hotel-listing-divider
