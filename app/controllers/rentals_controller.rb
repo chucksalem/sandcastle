@@ -42,7 +42,9 @@ class RentalsController < ApplicationController
                   else
                     get_units_by_date_range(units)
                   end
-    @properties = properties.sort_by {|obj| obj['stay_ranges'].first['price']}
+    @properties = properties.sort_by {|obj|
+       obj[:price].blank? ? obj['stay_ranges'].first['price'] : obj[:price]
+    }
     respond_to do |format|
       format.js
       format.html

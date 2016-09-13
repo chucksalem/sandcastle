@@ -4,7 +4,12 @@ $(document).ready(function() {
         window.location = "/booking-form";
     });
 
+    $("#start_date").on("change",function (){
+        $('#end_date-error').css('display','none');
+    });
+
     $('.search-hotellist').on('click', function () {
+        $("#date_filter").valid();
         var rooms = $('#select-rooms').val();
         var start_date = $('#start_date').val();
         var end_date = $('#end_date').val();
@@ -27,6 +32,71 @@ $(document).ready(function() {
             }
         })
     });
+
+    $('#btn-price').on('click', function () {
+        $("#date_filter").valid();
+        if ($(this).children("i").hasClass('fa-angle-down') == true){
+            $(this).children("i").removeClass('fa-angle-down');
+            $(this).children("i").addClass("fa-angle-up");
+        }else{
+            $(this).children("i").removeClass('fa-angle-up');
+            $(this).children("i").addClass("fa-angle-down");
+        }
+        var rooms = $('#select-rooms').val();
+        var start_date = $('#start_date').val();
+        var end_date = $('#end_date').val();
+        var min_price = $('.price-range-min').text().replace('$', '');
+        var max_price = $('.price-range-max').text().replace('$', '');
+        var date_start = start_date == '' ? moment().format("DD-MM-YYYY") : moment(start_date).format("DD-MM-YYYY")
+        var date_end = end_date == '' ? moment().add('days', 3).format("DD-MM-YYYY") : moment(end_date).format("DD-MM-YYYY");
+        if (rooms != null) {
+            url = "/rentals";
+            data = {rooms: rooms, start_date: date_start, end_date: date_end, min_price: min_price, max_price: max_price};
+        } else {
+            url = "/rentals";
+            data = {}
+        }
+        $.ajax({
+            url: url,
+            data: data,
+            method: 'GET',
+            success: function(result){
+            }
+        })
+    });
+
+    $('#btn-reviews').on('click', function () {
+        $("#date_filter").valid();
+        if ($(this).children("i").hasClass('fa-angle-down') == true){
+            $(this).children("i").removeClass('fa-angle-down');
+            $(this).children("i").addClass("fa-angle-up");
+        }else{
+            $(this).children("i").removeClass('fa-angle-up');
+            $(this).children("i").addClass("fa-angle-down");
+        }
+        var rooms = $('#select-rooms').val();
+        var start_date = $('#start_date').val();
+        var end_date = $('#end_date').val();
+        var min_price = $('.price-range-min').text().replace('$', '');
+        var max_price = $('.price-range-max').text().replace('$', '');
+        var date_start = start_date == '' ? moment().format("DD-MM-YYYY") : moment(start_date).format("DD-MM-YYYY")
+        var date_end = end_date == '' ? moment().add('days', 3).format("DD-MM-YYYY") : moment(end_date).format("DD-MM-YYYY");
+        if (rooms != null) {
+            url = "/rentals";
+            data = {rooms: rooms, start_date: date_start, end_date: date_end, min_price: min_price, max_price: max_price};
+        } else {
+            url = "/rentals";
+            data = {}
+        }
+        $.ajax({
+            url: url,
+            data: data,
+            method: 'GET',
+            success: function(result){
+            }
+        })
+    });
+
     $('#hotelgrid_view').hide()
     $('#listview').on('click', function () {
         $('#hotelgrid_view').hide()
