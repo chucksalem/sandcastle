@@ -14,10 +14,11 @@ class RentalsController < ApplicationController
     @min_price = params[:min_price].present? ? params[:min_price] : 0
     @max_price = params[:max_price].present? ? params[:max_price] : 0
     @properties = Array.new
+    properties = Array.new
     file_path = File.join(Rails.root, '/spec/fixtures/units/hotellists.json')
     units_data = File.read(file_path)
     units = JSON.parse(units_data)
-    @properties = if (!params.include? 'start_date') && (!params.include? 'end_date')
+    properties = if (!params.include? 'start_date') && (!params.include? 'end_date')
                     get_all_units(units)
                   elsif (!params[:rooms].blank? && @rooms.to_i != 0) &&
                       (@min_price.to_i == 0 && @max_price.to_i == 0) && @guests.to_i == 0
@@ -41,6 +42,7 @@ class RentalsController < ApplicationController
                   else
                     get_units_by_date_range(units)
                   end
+    @properties = properties.sort_by {|obj| obj['stay_ranges'].first['price']}
     respond_to do |format|
       format.js
       format.html
