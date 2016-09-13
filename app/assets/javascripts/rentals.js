@@ -10,6 +10,8 @@ $(document).ready(function() {
 
     $('.search-hotellist').on('click', function () {
         $("#date_filter").valid();
+
+
         var rooms = $('#select-rooms').val();
         var start_date = $('#start_date').val();
         var end_date = $('#end_date').val();
@@ -17,12 +19,9 @@ $(document).ready(function() {
         var max_price = $('.price-range-max').text().replace('$', '');
         var date_start = start_date == '' ? moment().format("DD-MM-YYYY") : moment(start_date).format("DD-MM-YYYY")
         var date_end = end_date == '' ? moment().add('days', 3).format("DD-MM-YYYY") : moment(end_date).format("DD-MM-YYYY");
-        if (rooms != null) {
+        if (start_date != '' && end_date != '') {
             url = "/rentals";
-            data = {rooms: rooms, start_date: date_start, end_date: date_end, min_price: min_price, max_price: max_price};
-        } else {
-            url = "/rentals";
-            data = {}
+            data = { rooms: rooms, start_date: date_start, end_date: date_end, min_price: min_price, max_price: max_price };
         }
         $.ajax({
             url: url,
@@ -35,12 +34,15 @@ $(document).ready(function() {
 
     $('#btn-price').on('click', function () {
         $("#date_filter").valid();
+        var price_sort;
         if ($(this).children("i").hasClass('fa-angle-down') == true){
             $(this).children("i").removeClass('fa-angle-down');
             $(this).children("i").addClass("fa-angle-up");
+            price_sort = 'desc'
         }else{
             $(this).children("i").removeClass('fa-angle-up');
             $(this).children("i").addClass("fa-angle-down");
+            price_sort = 'asc'
         }
         var rooms = $('#select-rooms').val();
         var start_date = $('#start_date').val();
@@ -49,12 +51,10 @@ $(document).ready(function() {
         var max_price = $('.price-range-max').text().replace('$', '');
         var date_start = start_date == '' ? moment().format("DD-MM-YYYY") : moment(start_date).format("DD-MM-YYYY")
         var date_end = end_date == '' ? moment().add('days', 3).format("DD-MM-YYYY") : moment(end_date).format("DD-MM-YYYY");
-        if (rooms != null) {
+        if (start_date != '' && end_date != '') {
             url = "/rentals";
-            data = {rooms: rooms, start_date: date_start, end_date: date_end, min_price: min_price, max_price: max_price};
-        } else {
-            url = "/rentals";
-            data = {}
+            data = { rooms: rooms, start_date: date_start, end_date: date_end,
+                     min_price: min_price, max_price: max_price, price_sort: price_sort };
         }
         $.ajax({
             url: url,
@@ -67,12 +67,15 @@ $(document).ready(function() {
 
     $('#btn-reviews').on('click', function () {
         $("#date_filter").valid();
+        var reviews_sort;
         if ($(this).children("i").hasClass('fa-angle-down') == true){
             $(this).children("i").removeClass('fa-angle-down');
             $(this).children("i").addClass("fa-angle-up");
+            reviews_sort = 'desc'
         }else{
             $(this).children("i").removeClass('fa-angle-up');
             $(this).children("i").addClass("fa-angle-down");
+            reviews_sort = 'asc'
         }
         var rooms = $('#select-rooms').val();
         var start_date = $('#start_date').val();
@@ -81,12 +84,10 @@ $(document).ready(function() {
         var max_price = $('.price-range-max').text().replace('$', '');
         var date_start = start_date == '' ? moment().format("DD-MM-YYYY") : moment(start_date).format("DD-MM-YYYY")
         var date_end = end_date == '' ? moment().add('days', 3).format("DD-MM-YYYY") : moment(end_date).format("DD-MM-YYYY");
-        if (rooms != null) {
+        if (start_date != '' && end_date != '') {
             url = "/rentals";
-            data = {rooms: rooms, start_date: date_start, end_date: date_end, min_price: min_price, max_price: max_price};
-        } else {
-            url = "/rentals";
-            data = {}
+            data = { rooms: rooms, start_date: date_start, end_date: date_end,
+                     min_price: min_price, max_price: max_price, reviews_sort: reviews_sort };
         }
         $.ajax({
             url: url,

@@ -45,6 +45,27 @@ class RentalsController < ApplicationController
     @properties = properties.sort_by {|obj|
        obj[:price].blank? ? obj['stay_ranges'].first['price'] : obj[:price]
     }
+
+    if params.include? 'price_sort'
+      if params['price_sort'] == 'asc'
+        @properties = properties.sort_by {|obj|
+          obj[:price].blank? ? obj['stay_ranges'].first['price'] : obj[:price]
+        }
+      else
+        @properties = properties.sort_by {|obj|
+          obj[:price].blank? ? obj['stay_ranges'].first['price'] : obj[:price]
+        }.reverse
+      end
+    end
+
+    if params.include? 'reviews_sort'
+      if params['reviews_sort'] == 'asc'
+        @properties = @properties.sort_by {|obj| obj['reviews'].count}
+      else
+        @properties = @properties.sort_by {|obj| obj['reviews'].count}.reverse
+      end
+    end
+
     respond_to do |format|
       format.js
       format.html
