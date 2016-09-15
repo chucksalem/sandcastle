@@ -40,7 +40,7 @@
               - else
                 = "FROM $#{unit['stay_ranges'].first['price']}"
           .full-width.float-left.text-center
-            %input.book-now.room-details-book-button.sandcastle-bold.sandcastle-text-capitalization{:type => "button", :value => "Book Now"}/
+            %button.book-now.room-details-book-button.sandcastle-bold.sandcastle-text-capitalization{:type => "submit", :value => unit['code']} Book Now
   .room-details-common-div
 - else
   .no-data{:style => "clear: left;"}

@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-    $('.book-now').on('click', function () {
-        window.location = "/booking-form";
+    $('.book-now').on('click' ,function(){
+        window.location = "/room_details/"+$(this).val();
     });
 
     $("#start_date").on("change",function (){
