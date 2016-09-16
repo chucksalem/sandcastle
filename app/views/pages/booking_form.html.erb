@@ -132,95 +132,63 @@
       <div class="receipt-payment-section">
       </div>
       <div class="receipt-booking-details-section">
-        <div class="booking-receipt-headings sandcastle-text-capitalization sandcastle-bold common-font-20">Booking Details</div>
-        <div class="thankyou-common-div common-font-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-        <div class="thankyou-page-hotel-photo thankyou-common-div"><img src="assets/thank-you-page-hotel.png"></div>
-        <div class="thankyou-common-div sandcastle-text-capitalization sandcastle-bold common-font-14">LUNA Y SOL</div>
-        <div class="common-font-9">Puerto Penasco, Maxico</div>
+        <div class="thankyou-page-hotel-photo thankyou-common-div"><img src="<%= @booked_unit.first['descriptions']['images'][0]['formats'][2]['url'] %>"></div>
+        <div class="thankyou-common-div sandcastle-text-capitalization sandcastle-bold common-font-14"><%= truncate(@booked_unit.first['name'], :length => 25) %></div>
+        <div class="common-font-9"><%= @booked_unit.first['address']['city'] %>,<%= @booked_unit.first['address']['country']%></div>
         <div class=""><a class="thankyou-view-map-link sandcastle-text-color common-font-9" href="/maps">View Map</a></div>
-        <div class=""><div class="thankyou-page-user-rating">
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star"></i>
-          <i class="fa fa-star-half-o"></i>
-        </div></div>
       </div>
       <div class="line-separator"></div>
-      <div class="thankyou-common-div hotel-stay-duration common-font-11"><span class="stay-duration-span sandcastle-color-blue"><i class="fa fa-clock-o common-font-12" aria-hidden="true"></i> 3 NIGHTS</span> &nbsp;&nbsp;AUG 05, 2016/AUG 08 2016</div>
+      <div class="thankyou-common-div hotel-stay-duration common-font-11"><span class="stay-duration-span sandcastle-color-blue"><i class="fa fa-clock-o common-font-12" aria-hidden="true"></i> <%= @length_of_stay %> NIGHTS </span><%= @date_start%>/<%= @date_end%></div>
       <div class="line-separator"></div>
-      <div class="thankyou-common-div hotel-tenant-details">
-        <div class="sandcastle-text-capitalization">1 townhouse for:</div>
-        <div class="sandcastle-text-capitalization">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 Adult</div>
-        <div class="sandcastle-text-capitalization">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 Children</div>
-        <div class="sandcastle-text-capitalization">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 Pet</div>
-      </div>
-      <div class="line-separator"></div>
-      <div class="panel panel-default hotel-details-panel">
-        <div class="panel-heading sandcastle-text-capitalization">
-          <div class="sandcastle-bold thankyou-common-div common-font-16">Details</div>
-        </div>
-        <div class="panel-body">
-          <div class="table-responsive">
-            <table class="table table-condensed">
-              <tbody>
-              <tr>
-                <td class="sandcastle-text-capitalization common-font-12 sandcastle-color-blue">Type</td>
-                <td class="text-right common-font-12">TOWNHOUSE</td>
-              </tr>
-              <tr>
-                <td class="sandcastle-color-blue sandcastle-text-capitalization common-font-12">Rent</td>
-                <td class="text-right common-font-12">$280</td>
-              </tr>
-              <tr>
-                <td class="sandcastle-color-blue sandcastle-text-capitalization common-font-12">Damage Waiver</td>
-                <td class="text-right common-font-12">$25</td>
-              </tr>
-              <tr>
-                <td class="sandcastle-color-blue sandcastle-text-capitalization common-font-12">Cleaning fee</td>
-                <td class="text-right common-font-12">$65</td>
-              </tr>
-              <tr>
-                <td class="sandcastle-color-blue sandcastle-text-capitalization common-font-12">TAX</td>
-                <td class="text-right common-font-12">$44.80</td>
-              </tr>
-              <tr>
-                <td class="sandcastle-text-capitalization sandcastle-bold common-font-16 total-price-common">Total Price</td>
-                <td class="text-right sandcastle-bold total-price-number total-price-common"><span class="common-font-24">414.80</span></td>
-              </tr>
-              </tbody>
-            </table>
+      <% if @unit_availability != false %>
+        <div class="panel panel-default hotel-details-panel">
+          <div class="panel-heading sandcastle-text-capitalization">
+            <div class="sandcastle-bold thankyou-common-div common-font-16">Details</div>
+          </div>
+          <div class="panel-body">
+            <div class="table-responsive">
+              <table class="table table-condensed">
+                <tbody>
+                <tr>
+                  <td class="sandcastle-text-capitalization common-font-12 sandcastle-color-blue">Type</td>
+                  <td class="text-right common-font-12"><%= @booked_unit.first['type'] %></td>
+                </tr>
+                <tr>
+                  <td class="sandcastle-color-blue sandcastle-text-capitalization common-font-12">Rent</td>
+                  <td class="text-right common-font-12">$<%= @base_amount %></td>
+                </tr>
+                <tr>
+                  <td class="sandcastle-color-blue sandcastle-text-capitalization common-font-12"><%= @fees.first.name %></td>
+                  <td class="text-right common-font-12">$<%= @fees.first.amount %></td>
+                </tr>
+                <tr>
+                  <td class="sandcastle-color-blue sandcastle-text-capitalization common-font-12"><%= @fees.last.name %></td>
+                  <td class="text-right common-font-12">$<%= @fees.last.amount %></td>
+                </tr>
+                <tr>
+                  <td class="sandcastle-color-blue sandcastle-text-capitalization common-font-12">TAX</td>
+                  <td class="text-right common-font-12">$<%= @tax_amount %></td>
+                </tr>
+                <tr>
+                  <td class="sandcastle-text-capitalization sandcastle-bold common-font-16 total-price-common">Total Price</td>
+                  <td class="text-right sandcastle-bold total-price-number total-price-common"><span class="common-font-24"><%= @total_amount %></span></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="panel panel-default payment-schedule-panel">
-        <div class="panel-heading sandcastle-text-capitalization">
-          <div class="thankyou-common-div sandcastle-bold common-font-16">Payment Schedule</div>
-        </div>
-        <div class="panel-body">
-          <div class="table-responsive">
-            <table class="table table-condensed">
-              <tbody>
-              <tr>
-                <td class="sandcastle-color-blue common-font-12">17/10/2016</td>
-                <td class="text-right common-font-12">$140</td>
-              </tr>
-              <tr>
-                <td class="sandcastle-color-blue common-font-12">11/11/2016</td>
-                <td class="text-right common-font-12">$274</td>
-              </tr>
-              </tbody>
-            </table>
+      <% else %>
+        <div class="panel panel-default hotel-details-panel">
+          <div class="panel-heading sandcastle-text-capitalization">
+            <div class="sandcastle-bold thankyou-common-div common-font-12">This property is unavailable for the chosen dates.</div>
           </div>
         </div>
-      </div>
+      <% end %>
     </div>
     <div class="col-md-4 want-to-chat-container margin-top-4">
       <div class="form-group">
         <label class="want-to-chat-header">WANT TO CHAT?</label>
-      </div>
-      <div class="form-group">
-        <label class="want-to-chat-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</label>
       </div>
       <div class="checkbox">
         <i class="fa fa-phone" aria-hidden="true"></i><label> (888) 328-841</label>

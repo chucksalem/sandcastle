@@ -45,7 +45,7 @@ module Escapia
 
       start_date = criteria[:date_range][:start]
       end_date   = criteria[:date_range][:end]
-      xml.StayDateRange('Start' => start_date.strftime('%-m/%-d/%Y'), 'End' => end_date.strftime('%-m/%-d/%Y'))
+      xml.StayDateRange('Start' => start_date, 'End' => end_date)
     end
 
     def guests(xml, criteria)

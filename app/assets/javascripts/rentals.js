@@ -1,7 +1,16 @@
 $(document).ready(function() {
 
     $('.book-now').on('click' ,function(){
-        window.location = "/booking-form/"+$(this).val();
+        $("#date_filter").valid();
+        var id = $(this).val();
+        var price = $(this).closest( ".rate-book-main-span" ).find('.unit_price').text().replace(/\s+/g, " ").trim().substr(6,9);
+        var start_date = $('#start_date').val();
+        var end_date = $('#end_date').val();
+        if (start_date != '' && end_date != '') {
+            //start_date = moment(start_date).format("DD-MM-YYYY");
+            //end_date = moment(end_date).format("DD-MM-YYYY");
+            window.location = '/booking-form?id='+ id+'&price='+ price+'&start_date='+ start_date +'&end_date='+ end_date;
+        }
     });
 
     $("#start_date").on("change",function (){

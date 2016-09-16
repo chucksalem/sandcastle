@@ -34,7 +34,7 @@
       .col-sm-3.hotel-list-column-3
         %span.rate-book-main-span
           .full-width.hotel-rate.float-left.text-center.room-details-common-div.sandcastle-text-capitalization.sandcastle-text-color
-            %span
+            %span.unit_price
               - if !unit[:price].blank?
                 = "FROM $#{unit[:price]}"
               - else
