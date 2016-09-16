@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   get '/hoteltest', to: "pages#hotellist"
   post '/booking-form', to: "pages#booking_form", as: 'book_now'
   get '/attraction-details', to: "pages#attraction_details"
+  get "/thank-you", to: "pages#thankyou", as: "thank_you"
 
   namespace :api do
     resources :units, only: [:index, :show] do

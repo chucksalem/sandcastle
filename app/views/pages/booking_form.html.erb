@@ -124,7 +124,7 @@
         <div class="col-md-12 margin-top-4"><input class="float-left" type="checkbox"/><p class="rental-polciy-text common-font-10">I HAVE READ AND ACCEPT THE ABOVE RENTAL POLICIES AGREEMENT</p></div>
         <div class="col-md-12 booking-receipt-headings common-font-20 sandcastle-bold">REVIEW AND BOOK YOUR TRIP</div>
         <div class="col-md-12"><p class="common-font-10"></p></div>
-        <button type = "submit" class="margin-top-4 btn btn-info btn-lg btn--blue">COMPLETE BOOKING</button>
+        <%= button_to 'COMPLETE BOOKING', thank_you_path, {:class => 'margin-top-4 btn btn-info btn-lg btn--blue', :method => 'get'} %>
       </div>
     </div>
 
