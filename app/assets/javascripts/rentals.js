@@ -3,11 +3,10 @@ $(document).ready(function() {
     $('.book-now').on('click' ,function(){
         $("#date_filter").valid();
         var id = $(this).val();
-        var price = $(this).closest( ".rate-book-main-span" ).find('.unit_price').text().replace(/\s+/g, " ").trim().substr(6,9);
         var start_date = $('#start_date').val();
         var end_date = $('#end_date').val();
         if (start_date != '' && end_date != '') {
-            window.location = '/booking-form?id='+ id+'&price='+ price+'&start_date='+ start_date +'&end_date='+ end_date;
+            window.location = '/booking-form?id='+ id+'&start_date='+ start_date +'&end_date='+ end_date;
         }
     });
 
