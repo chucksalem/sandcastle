@@ -1555,3 +1555,67 @@ form input, form textarea{
 .booking_form .card_type_block{
     padding-top: 5px;
 }
+
+.receipt-payment-section{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 15px !important;
+
+}
+
+.receipt-booking-details-section{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.receipt-booking-details-section .room-details-block{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+}
+
+.receipt-booking-details-section .room-image{
+    width: 75px;
+    margin: 0 10px 0 0;
+    padding: 0;
+}
+
+.receipt-booking-details-section .room-image img{
+    width: 70px;
+    max-width: 70px;
+    height: 70px;
+}
+
+.receipt-booking-details-section .map-link a, a:focus, a:hover{
+    color: #39BDFB;
+}
+
+.hotel-stay-duration{
+    padding: 20px 0 20px 0;
+}
+
+.receipt-payment-section .panel-heading{
+    padding: 10px 0 10px 0;
+}
+
+.receipt-payment-section .panel-body{
+    padding: 0;
+}
+
+.table-condensed>tbody>tr>td, .table-condensed>tbody>tr>th, .table-condensed>tfoot>tr>td, .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td, .table-condensed>thead>tr>th{
+    padding: 7px 15px 7px 0;
+}
+
+.receipt-payment-section .th-price{
+    padding: 25px 0 0 0 !important;
+}
+
+.receipt-payment-section .td-price{
+    padding: 15px 15px 0 0 !important;
+}
+

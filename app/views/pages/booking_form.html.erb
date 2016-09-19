@@ -188,17 +188,21 @@
         <% end %>
       </div>
     </div>
-    <div class="col-md-4 float-left white-background">
-      <div class="receipt-payment-section">
-      </div>
+    <div class="col-md-4 float-left white-background receipt-payment-section">
       <div class="receipt-booking-details-section">
-        <div class="thankyou-page-hotel-photo thankyou-common-div"><img src="<%= @booked_unit.first['descriptions']['images'][0]['formats'][2]['url'] %>"></div>
-        <div class="thankyou-common-div sandcastle-text-capitalization sandcastle-bold common-font-14"><%= truncate(@booked_unit.first['name'], :length => 25) %></div>
-        <div class="common-font-9"><%= @booked_unit.first['address']['city'] %>,<%= @booked_unit.first['address']['country']%></div>
-        <div class=""><a class="thankyou-view-map-link sandcastle-text-color common-font-9" href="/maps">View Map</a></div>
+        <div class="room-image"><img src="<%= @booked_unit.first['descriptions']['images'][0]['formats'][2]['url'] %>"></div>
+        <div class="room-details-block">
+
+          <div class="sandcastle-text-capitalization sandcastle-bold common-font-14"><%= truncate(@booked_unit.first['name'], :length => 25) %></div>
+
+          <div class="common-font-11 sandcastle-text-color"><%= @booked_unit.first['address']['city'] %>, <%= @booked_unit.first['address']['country']%></div>
+
+          <div class="map-link"><a class="thankyou-view-map-link sandcastle-text-color common-font-11 text-uppercase" href="/maps">View Map</a></div>
+
+        </div>
       </div>
       <div class="line-separator"></div>
-      <div class="thankyou-common-div hotel-stay-duration common-font-11"><span class="stay-duration-span sandcastle-color-blue"><i class="fa fa-clock-o common-font-12" aria-hidden="true"></i> <%= @length_of_stay %> NIGHTS </span><%= @date_start%>/<%= @date_end%></div>
+      <div class="hotel-stay-duration common-font-14"><span class="stay-duration-span sandcastle-color-blue"><i class="fa fa-clock-o common-font-12" aria-hidden="true"></i> <%= @length_of_stay %> NIGHTS </span><%= @date_start%> / <%= @date_end%></div>
       <div class="line-separator"></div>
       <% if @unit_availability != false %>
         <div class="panel panel-default hotel-details-panel">
@@ -230,8 +234,8 @@
                   <td class="text-right common-font-12">$<%= @tax_amount %></td>
                 </tr>
                 <tr>
-                  <td class="sandcastle-text-capitalization sandcastle-bold common-font-16 total-price-common">Total Price</td>
-                  <td class="text-right sandcastle-bold total-price-number total-price-common"><span class="common-font-24"><%= @total_amount %></span></td>
+                  <td class="sandcastle-text-capitalization sandcastle-bold common-font-16 th-price">Total Price</td>
+                  <td class="text-right sandcastle-bold total-price-number total-price-common td-price"><span class="common-font-24"><%= @total_amount %></span></td>
                 </tr>
                 </tbody>
               </table>
@@ -248,7 +252,7 @@
     </div>
     <div class="col-md-4 want-to-chat-container margin-top-4">
       <div class="form-group">
-        <label class="want-to-chat-header">WANT TO CHAT?</label>
+        <label class="want-to-chat-header text-uppercase">Need Help?</label>
       </div>
       <div class="checkbox">
         <i class="fa fa-phone" aria-hidden="true"></i><label> (888) 328-841</label>
