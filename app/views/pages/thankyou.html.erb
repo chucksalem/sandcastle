@@ -13,7 +13,7 @@
   <div class="layout-container">
     <div class="col-sm-8">
       <div class="thank-you-greeting-receipt">
-        <div class="thankyou-common-div sandcastle-text-capitalization sandcastle-bold thanks-to-user">THANK YOU JOHN!</div>
+        <div class="thankyou-common-div sandcastle-text-capitalization sandcastle-bold thanks-to-user">THANK YOU <%= @booking_info[:first_name] %>!</div>
         <div class="thankyou-common-div sandcastle-text-capitalization sandcastle-bold booking-formatiom-alert-text">Your booking order is confirmed now.</div>
         <div class="thankyou-common-div confirmation-email-text">A confirmation email has been sent to your provided email address</div>
         <div class="thankyou-common-div"><i class="fa fa-print thankyou-print-fa sandcastle-text-color" aria-hidden="true"></i><input type="button" class="sandcastle-text-capitalization sandcastle-text-color print-booking-details-button" onclick="window.print();" value="Print Details"></div>
@@ -28,35 +28,35 @@
           </tr>
           <tr class="even">
             <td class="common-font-10">First Name</td>
-            <td class="sandcastle-bold common-font-10">Randell</td>
+            <td class="sandcastle-bold common-font-10"><%= @booking_info[:first_name] %></td>
           </tr>
           <tr class="odd">
             <td class="common-font-10">Last name</td>
-            <td class="sandcastle-bold common-font-10">Stillwell</td>
+            <td class="sandcastle-bold common-font-10"><%= @booking_info[:last_name] %></td>
           </tr>
           <tr class="even">
             <td class="common-font-10">Email Address</td>
-            <td class="sandcastle-bold common-font-10">me@randellstillwel.com</td>
+            <td class="sandcastle-bold common-font-10"><%= @booking_info[:email] %></td>
           </tr>
           <tr class="odd">
             <td class="common-font-10">Street Address</td>
-            <td class="sandcastle-bold common-font-10">123 Anywhere lane</td>
+            <td class="sandcastle-bold common-font-10"><%= @booking_info[:address_primary] %></td>
           </tr>
           <tr class="even">
             <td class="common-font-10">Country</td>
-            <td class="sandcastle-bold common-font-10">United State of America</td>
+            <td class="sandcastle-bold common-font-10"><%= @booking_info[:country] %></td>
           </tr>
           <tr class="odd">
             <td class="common-font-10">State/Providence</td>
-            <td class="sandcastle-bold common-font-10">Colorado</td>
+            <td class="sandcastle-bold common-font-10"><%= @booking_info[:state] %></td>
           </tr>
           <tr class="even">
             <td class="common-font-10">City</td>
-            <td class="sandcastle-bold common-font-10">Somewhere</td>
+            <td class="sandcastle-bold common-font-10"><%= @booking_info[:city] %></td>
           </tr>
           <tr class="odd">
             <td class="common-font-10">Zip code</td>
-            <td class="sandcastle-bold common-font-10">12345</td>
+            <td class="sandcastle-bold common-font-10"><%= @booking_info[:zip] %></td>
           </tr>
           </tbody>
         </table>
@@ -66,28 +66,13 @@
         </div>
         <div class="receipt-booking-details-section">
           <div class="booking-receipt-headings sandcastle-text-capitalization sandcastle-bold common-font-20">Booking Details</div>
-          <div class="thankyou-common-div common-font-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-          <div class="thankyou-page-hotel-photo thankyou-common-div"><img src="assets/thank-you-page-hotel.png"></div>
-          <div class="thankyou-common-div sandcastle-text-capitalization sandcastle-bold common-font-14">LUNA Y SOL</div>
-          <div class="common-font-9">Puerto Penasco, Maxico</div>
+          <div class="thankyou-page-hotel-photo thankyou-common-div"><img src= "<%= @booking_info[:unit_image] %>"></div>
+          <div class="thankyou-common-div sandcastle-text-capitalization sandcastle-bold common-font-14"><%= truncate(@booking_info[:unit_name], :length => 25) %></div>
+          <div class="common-font-9"><%= @booking_info[:unit_city] %>, <%= @booking_info[:unit_country] %></div>
           <div class=""><a class="thankyou-view-map-link sandcastle-text-color common-font-9" href="/maps">View Map</a></div>
-          <div class=""><div class="thankyou-page-user-rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div></div>
         </div>
         <div class="line-separator"></div>
-        <div class="thankyou-common-div hotel-stay-duration common-font-11"><span class="stay-duration-span"><i class="fa fa-clock-o common-font-12" aria-hidden="true"></i> 3 NIGHTS</span> &nbsp;&nbsp;AUG 05, 2016/AUG 08 2016</div>
-        <div class="line-separator"></div>
-        <div class="thankyou-common-div hotel-tenant-details">
-          <div class="sandcastle-text-capitalization">1 townhouse for:</div>
-          <div class="sandcastle-text-capitalization">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 Adult</div>
-          <div class="sandcastle-text-capitalization">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 Children</div>
-          <div class="sandcastle-text-capitalization">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 Pet</div>
-        </div>
+        <div class="thankyou-common-div hotel-stay-duration common-font-11"><span class="stay-duration-span"><i class="fa fa-clock-o common-font-12" aria-hidden="true"></i> <%= @booking_info[:unit_stay]%> NIGHTS</span> <%= @booking_info[:unit_start]%>/<%= @booking_info[:unit_end] %></div>
         <div class="line-separator"></div>
         <div class="panel panel-default hotel-details-panel">
           <div class="panel-heading sandcastle-text-capitalization">
@@ -99,48 +84,27 @@
                 <tbody>
                 <tr>
                   <td class="sandcastle-text-color sandcastle-text-capitalization common-font-12">Type</td>
-                  <td class="text-right common-font-12">TOWNHOUSE</td>
+                  <td class="text-right common-font-12 text-uppercase"><%= @booking_info[:unit_type] %></td>
                 </tr>
                 <tr>
                   <td class="sandcastle-text-color sandcastle-text-capitalization common-font-12">Rent</td>
-                  <td class="text-right common-font-12">$280</td>
+                  <td class="text-right common-font-12">$<%= @booking_info[:unit_amount] %></td>
                 </tr>
                 <tr>
-                  <td class="sandcastle-text-color sandcastle-text-capitalization common-font-12">Damage Waiver</td>
-                  <td class="text-right common-font-12">$25</td>
+                  <td class="sandcastle-text-color sandcastle-text-capitalization common-font-12"><%= @booking_info[:unit_fees_name1] %></td>
+                  <td class="text-right common-font-12">$<%= @booking_info[:unit_fees_fee1] %></td>
                 </tr>
                 <tr>
-                  <td class="sandcastle-text-color sandcastle-text-capitalization common-font-12">Cleaning fee</td>
-                  <td class="text-right common-font-12">$65</td>
+                  <td class="sandcastle-text-color sandcastle-text-capitalization common-font-12"><%= @booking_info[:unit_fees_name2] %></td>
+                  <td class="text-right common-font-12">$<%= @booking_info[:unit_fees_fee2] %></td>
                 </tr>
                 <tr>
                   <td class="sandcastle-text-color sandcastle-text-capitalization common-font-12">TAX</td>
-                  <td class="text-right common-font-12">$44.80</td>
+                  <td class="text-right common-font-12">$<%= @booking_info[:tax] %></td>
                 </tr>
                 <tr>
                   <td class="sandcastle-text-capitalization sandcastle-bold common-font-16 total-price-common">Total Price</td>
-                  <td class="text-right sandcastle-bold total-price-number total-price-common"><span class="common-font-24">414.80</span></td>
-                </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-default payment-schedule-panel">
-          <div class="panel-heading sandcastle-text-capitalization">
-            <div class="thankyou-common-div sandcastle-bold common-font-16">Payment Schedule</div>
-          </div>
-          <div class="panel-body">
-            <div class="table-responsive">
-              <table class="table table-condensed">
-                <tbody>
-                <tr>
-                  <td class="sandcastle-text-color common-font-12">17/10/2016</td>
-                  <td class="text-right common-font-12">$140</td>
-                </tr>
-                <tr>
-                  <td class="sandcastle-text-color common-font-12">11/11/2016</td>
-                  <td class="text-right common-font-12">$274</td>
+                  <td class="text-right sandcastle-bold total-price-number total-price-common"><span class="common-font-24">$<%= @booking_info[:total] %></span></td>
                 </tr>
                 </tbody>
               </table>
@@ -153,9 +117,6 @@
     <div class="col-md-4 want-to-chat-container">
       <div class="form-group">
         <label class="want-to-chat-header">WANT TO CHAT?</label>
-      </div>
-      <div class="form-group">
-        <label class="want-to-chat-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</label>
       </div>
       <div class="checkbox">
         <i class="fa fa-phone" aria-hidden="true"></i><label> (888) 328-841</label>

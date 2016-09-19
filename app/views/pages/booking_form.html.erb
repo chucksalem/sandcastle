@@ -13,121 +13,174 @@
     <div class="col-sm-8">
       <div class="page-breadcomb-text">REVIEW BOOKING DETAILS, RATE DETAILS & RENTAL POLICIES</div>
       <div class="booking-receipt-details table-responsive">
-        <div class="col-md-12 booking-receipt-headings common-font-20 sandcastle-bold">YOUR INFORMATION</div>
-        <div class="col-md-12">
-          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label class="common-font-10 sandcastle-text-color">FIRST NAME</label></div>
-          <div class="text-box-main-div"><label class="common-font-10 sandcastle-text-color">LAST NAME</label></div>
-        </div>
-        <div class="col-md-12 ">
-          <div class="text-box-main-div margin-right-4-and-half-per"><input class="booking-form-short-text-box-height" type="text" /></div>
-          <div class="text-box-main-div"><input class="booking-form-short-text-box-height" type="text" /></div>
-        </div>
-        <div class="col-md-12 margin-top-4">
-          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label class="common-font-10 sandcastle-text-color">EMAIL</label></div>
-          <div class="text-box-main-div"><label class="common-font-10 sandcastle-text-color">CONFIRM EMAIL</label></div>
-        </div>
-        <div class="col-md-12">
-          <div class="text-box-main-div margin-right-4-and-half-per"><input class="booking-form-short-text-box-height" type="text" /></div>
-          <div class="text-box-main-div"><input class="booking-form-short-text-box-height" type="text" /></div>
-        </div>
-        <div class="col-md-12 margin-top-4">
-          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label class="common-font-10 sandcastle-text-color">CONTACT PHONE (FOR BOOKING)</label></div>
-          <div class="text-box-main-div"><label class="common-font-10 sandcastle-text-color">MOBILE PHONE (FOR TRIP)</label></div>
-        </div>
-        <div class="col-md-12">
-          <div class="text-box-main-div margin-right-4-and-half-per"><input class="booking-form-short-text-box-height" type="text" /></div>
-          <div class="text-box-main-div"><input class="booking-form-short-text-box-height" type="text" /></div>
-        </div>
-
-        <div class="col-md-12 booking-receipt-headings common-font-20 sandcastle-bold">MAILING ADDRESS</div>
-        <div class="col-md-12">
-          <div class=""><label class="common-font-10 sandcastle-text-color">ADDRESS 1</label></div>
-          <div class=""><input class="booking-form-short-text-box-height" type="text" /></div>
-        </div>
-        <div class="col-md-12 margin-top-4">
-          <div class=""><label class="common-font-10 sandcastle-text-color">ADDRESS 2</label></div>
-          <div class=""><input class="booking-form-short-text-box-height" type="text" /></div>
-        </div>
-        <div class="col-md-12 margin-top-4">
-          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label class="common-font-10 sandcastle-text-color">COUNTRY</label></div>
-          <div class="text-box-main-div"><label class="common-font-10 sandcastle-text-color">STATE/PROVIDENCE</label></div>
-        </div>
-        <div class="col-md-12">
-          <div class="text-box-main-div margin-right-4-and-half-per"><input class="booking-form-short-text-box-height" type="text" /></div>
-          <div class="text-box-main-div"><input class="booking-form-short-text-box-height" type="text" /></div>
-        </div>
-        <div class="col-md-12 margin-top-4">
-          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label class="common-font-10 sandcastle-text-color">ZIP</label></div>
-          <div class="text-box-main-div"><label class="common-font-10 sandcastle-text-color">CITY</label></div>
-        </div>
-        <div class="col-md-12">
-          <div class="text-box-main-div margin-right-4-and-half-per"><input class="booking-form-short-text-box-height" type="text" /></div>
-          <div class="text-box-main-div"><input class="booking-form-short-text-box-height" type="text" /></div>
-        </div>
-        <div class="col-md-12 margin-top-4 checkbox"><input class="float-left input-assumpte" id="input-confidencial" type="checkbox"/><label for="input-confidencial"></label><p class="rental-polciy-text sandcastle-text-color">USE MAILING ADDRESS FOR BILING ADDRESS</p></div>
-
-        <div class="col-md-12 booking-receipt-headings common-font-20 col-md-12 sandcastle-bold">PAYMENT METHOD</div>
-        <div class="col-md-12 margin-top-4">
-          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label class="common-font-10 sandcastle-text-color">CARD TYPE</label></div>
-        </div>
-        <div class="col-md-12">
-          <div class="text-box-main-div margin-right-4-and-half-per">
-            <select name="id" id="" value="" class="booking-form-short-text-box-height common-font-10 sandcastle-text-color">
-              <option selected="" class="drop-options"></option>
-              <option value="1" class="drop-options">VISA</option>
-              <option value="2" class="drop-options">MASTER</option>
-              <option value="2" class="drop-options">DISCOVER</option>
-            </select>
+        <%= form_tag thank_you_path, class:'booking_form' do %>
+          <div class="col-md-12 booking-receipt-headings common-font-20 sandcastle-bold">YOUR INFORMATION</div>
+          <div class="col-md-12">
+            <div class="float-left text-box-main-div margin-right-4-and-half-per">
+              <label class="common-font-10 sandcastle-text-color">FIRST NAME</label>
+            </div>
+            <div class="text-box-main-div">
+              <label class="common-font-10 sandcastle-text-color">LAST NAME</label>
+            </div>
           </div>
-          <div class="float-left text-box-main-div margin-right-4-and-half-per">
-            <span class="visa-card-img common-payment-images"></span>
-            <span class="master-card-img common-payment-images"></span>
-            <span class="discover-card-img common-payment-images"></span>
+          <div class="col-md-12 ">
+            <div class="text-box-main-div margin-right-4-and-half-per">
+              <%= text_field_tag 'first_name', nil, class: 'booking-form-short-text-box-height', :required => true%>
+            </div>
+            <div class="text-box-main-div">
+              <%= text_field_tag 'last_name', nil, class: 'booking-form-short-text-box-height', :required => true%>
+            </div>
           </div>
-        </div>
-        <div class="col-md-12 margin-top-4">
-          <div class=""><label class="common-font-10 sandcastle-text-color">CARD NUMBER</label></div>
-          <div class=""><input class="booking-form-short-text-box-height" type="text" /></div>
-        </div>
-        <div class="col-md-12 margin-top-4">
-          <div class="float-left text-box-main-div margin-right-4-and-half-per"><label class="common-font-10 sandcastle-text-color">EXPIRATION DATE</label></div>
-          <div class="float-left text-box-main-div cvc-main-container"><label class="common-font-10 sandcastle-text-color">CVC <span class="sandcastle-color-blue">(<i class="fa fa-question"></i>)</span></label></div>
-        </div>
-        <div class="col-md-12">
-          <select name="id" id="" value="" class="float-left expiration-selection-list common-font-10 sandcastle-text-color">
-            <option selected="YEAR" class="drop-options">YEAR</option>
-            <option value="2016" class="drop-options">2016</option>
-            <option value="2015" class="drop-options">2015</option>
-            <option value="2014" class="drop-options">2014</option>
-          </select>
-          <select name="id" id="" value="" class="float-left expiration-selection-list common-font-10 sandcastle-text-color">
-            <option selected="MONTH" class="drop-options">MONTH</option>
-            <option value="JAN" class="drop-options">JAN</option>
-            <option value="FEB" class="drop-options">FEB</option>
-            <option value="MAR" class="drop-options">MAR</option>
-            <option value="MAR" class="drop-options">MAR</option>
-            <option value="APR" class="drop-options">APR</option>
-            <option value="JUNE" class="drop-options">JUNE</option>
-            <option value="JUL" class="drop-options">JUL</option>
-            <option value="AUG" class="drop-options">AUG</option>
-            <option value="SEPT" class="drop-options">SEPT</option>
-            <option value="OCT" class="drop-options">OCT</option>
-            <option value="NOV" class="drop-options">NOV</option>
-            <option value="DEC" class="drop-options">DEC</option>
-          </select>
-          <div class="float-left width-26"><input class="booking-form-short-text-box-height" type="text" /></div>
-        </div>
-        <div class="col-md-12 margin-top-4"><label class="sandcastle-text-color common-font-10">READ AND ACCEPT RENTAL POLICIES AGREEMENT</label></div>
-        <div class="col-md-12">
-          <textarea row="50" class="col-md-12 col-sm-12"></textarea>
-        </div>
-        <div class="col-md-12 margin-top-4"><input class="float-left" type="checkbox"/><p class="rental-polciy-text common-font-10">I HAVE READ AND ACCEPT THE ABOVE RENTAL POLICIES AGREEMENT</p></div>
-        <div class="col-md-12 booking-receipt-headings common-font-20 sandcastle-bold">REVIEW AND BOOK YOUR TRIP</div>
-        <div class="col-md-12"><p class="common-font-10"></p></div>
-        <%= button_to 'COMPLETE BOOKING', thank_you_path, {:class => 'margin-top-4 btn btn-info btn-lg btn--blue', :method => 'get'} %>
+          <div class="col-md-12 margin-top-4">
+            <div class="float-left text-box-main-div margin-right-4-and-half-per">
+              <label class="common-font-10 sandcastle-text-color">EMAIL</label>
+            </div>
+            <div class="text-box-main-div">
+              <label class="common-font-10 sandcastle-text-color">CONFIRM EMAIL</label>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="text-box-main-div margin-right-4-and-half-per">
+              <%= text_field_tag 'email', nil, class: 'booking-form-short-text-box-height', :required => true %>
+            </div>
+            <div class="text-box-main-div">
+              <%= text_field_tag 'confirm_email', nil, class: 'booking-form-short-text-box-height' %>
+            </div>
+          </div>
+          <div class="col-md-12 margin-top-4">
+            <div class="float-left text-box-main-div margin-right-4-and-half-per">
+              <label class="common-font-10 sandcastle-text-color">CONTACT PHONE (FOR BOOKING)</label>
+            </div>
+            <div class="text-box-main-div">
+              <label class="common-font-10 sandcastle-text-color">MOBILE PHONE (FOR TRIP)</label>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="text-box-main-div margin-right-4-and-half-per">
+              <%= text_field_tag 'phone_no', nil, class: 'booking-form-short-text-box-height', :required => true %>
+            </div>
+            <div class="text-box-main-div">
+              <%= text_field_tag 'mobile_no', nil, class: 'booking-form-short-text-box-height' %>
+            </div>
+          </div>
+
+          <div class="col-md-12 booking-receipt-headings common-font-20 sandcastle-bold">MAILING ADDRESS</div>
+          <div class="col-md-12">
+            <div class="">
+              <label class="common-font-10 sandcastle-text-color">ADDRESS 1</label>
+            </div>
+            <div class="">
+              <%= text_field_tag 'address_primary', nil, class: 'booking-form-short-text-box-height', :required => true %>
+            </div>
+          </div>
+          <div class="col-md-12 margin-top-4">
+            <div class="">
+              <label class="common-font-10 sandcastle-text-color">ADDRESS 2</label>
+            </div>
+            <div class="">
+              <%= text_field_tag 'address_secondary', nil, class: 'booking-form-short-text-box-height' %>
+            </div>
+          </div>
+          <div class="col-md-12 margin-top-4">
+            <div class="float-left text-box-main-div margin-right-4-and-half-per">
+              <label class="common-font-10 sandcastle-text-color">COUNTRY</label>
+            </div>
+            <div class="text-box-main-div">
+              <label class="common-font-10 sandcastle-text-color">STATE/PROVIDENCE</label>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="text-box-main-div margin-right-4-and-half-per">
+              <%= text_field_tag 'country', nil, class: 'booking-form-short-text-box-height', :required => true %>
+            </div>
+            <div class="text-box-main-div">
+              <%= text_field_tag 'state', nil, class: 'booking-form-short-text-box-height', :required => true %>
+            </div>
+          </div>
+          <div class="col-md-12 margin-top-4">
+            <div class="float-left text-box-main-div margin-right-4-and-half-per">
+              <label class="common-font-10 sandcastle-text-color">ZIP</label>
+            </div>
+            <div class="text-box-main-div">
+              <label class="common-font-10 sandcastle-text-color">CITY</label>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="text-box-main-div margin-right-4-and-half-per">
+              <%= text_field_tag 'zip', nil, class: 'booking-form-short-text-box-height', :required => true %>
+            </div>
+            <div class="text-box-main-div">
+              <%= text_field_tag 'city', nil, class: 'booking-form-short-text-box-height', :required => true %>
+            </div>
+          </div>
+          <div class="col-md-12 margin-top-4 checkbox">
+            <input class="float-left input-assumpte" id="input-confidencial" type="checkbox"/>
+            <label for="input-confidencial"></label>
+            <p class="rental-polciy-text sandcastle-text-color">USE MAILING ADDRESS FOR BILING ADDRESS</p>
+          </div>
+          <div class="col-md-12 booking-receipt-headings common-font-20 col-md-12 sandcastle-bold">PAYMENT METHOD</div>
+          <div class="col-md-12 margin-top-4">
+            <div class="float-left text-box-main-div margin-right-4-and-half-per">
+              <label class="common-font-10 sandcastle-text-color">CARD TYPE</label>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="text-box-main-div margin-right-4-and-half-per">
+              <%= select_tag "payment_type", options_for_select([ "","VISA", "MASTER","DISCOVER" ], ""),{:required => true, :class => "booking-form-short-text-box-height common-font-10 sandcastle-text-color"} %>
+            </div>
+            <div class="float-left text-box-main-div margin-right-4-and-half-per">
+              <span class="visa-card-img common-payment-images"></span>
+              <span class="master-card-img common-payment-images"></span>
+              <span class="discover-card-img common-payment-images"></span>
+            </div>
+          </div>
+          <div class="col-md-12 margin-top-4">
+            <div class=""><label class="common-font-10 sandcastle-text-color">CARD NUMBER</label></div>
+            <div class="">
+              <%= text_field_tag 'card_number', nil, class: 'booking-form-short-text-box-height', :required => true %>
+            </div>
+          </div>
+          <div class="col-md-12 margin-top-4">
+            <div class="float-left text-box-main-div margin-right-4-and-half-per">
+              <label class="common-font-10 sandcastle-text-color">EXPIRATION DATE</label>
+            </div>
+            <div class="float-left text-box-main-div cvc-main-container">
+              <label class="common-font-10 sandcastle-text-color">CVC <span class="sandcastle-color-blue">(<i class="fa fa-question"></i>)</span></label>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <%= select_tag "YEAR", options_for_select([ "YEAR","2016", "2015","2014" ], "YEAR"),{:required => true, :class => "float-left expiration-selection-list common-font-10 sandcastle-text-color"} %>
+            <%= select_tag "MONTH", options_for_select([ "MONTH","JAN", "FEB","MAR","APR","JUNE","JUL","AUG","SEPT","OCT","NOV","DEC" ], "MONTH"),{:required => true, :class => "float-left expiration-selection-list common-font-10 sandcastle-text-color"} %>
+            <div class="float-left width-26">
+              <%= text_field_tag 'cvc', nil, class: 'booking-form-short-text-box-height', :required => true %>
+            </div>
+          </div>
+          <div class="col-md-12 margin-top-4"><label class="sandcastle-text-color common-font-10">READ AND ACCEPT RENTAL POLICIES AGREEMENT</label></div>
+          <div class="col-md-12">
+            <%= text_area_tag 'description', "", disabled: false, :class=>"col-md-12 col-sm-12" %>
+          </div>
+          <div class="col-md-12 margin-top-4"><input class="float-left" type="checkbox"/><p class="rental-polciy-text common-font-10">I HAVE READ AND ACCEPT THE ABOVE RENTAL POLICIES AGREEMENT</p></div>
+          <div class="col-md-12 booking-receipt-headings common-font-20 sandcastle-bold">REVIEW AND BOOK YOUR TRIP</div>
+          <div class="col-md-12"><p class="common-font-10"></p></div>
+          <%= hidden_field_tag 'unit_image', @booked_unit.first['descriptions']['images'][0]['formats'][2]['url']  %>
+          <%= hidden_field_tag 'unit_name', @booked_unit.first['name']  %>
+          <%= hidden_field_tag 'unit_city', @booked_unit.first['address']['city'] %>
+          <%= hidden_field_tag 'unit_country', @booked_unit.first['address']['country'] %>
+          <%= hidden_field_tag 'unit_stay', @length_of_stay %>
+          <%= hidden_field_tag 'unit_start', @date_start %>
+          <%= hidden_field_tag 'unit_end', @date_end %>
+          <%= hidden_field_tag 'unit_type', @booked_unit.first['type']%>
+          <%= hidden_field_tag 'unit_amount', @base_amount if !@base_amount.blank? %>
+          <%= hidden_field_tag 'unit_fees_name1', @fees.first.name if !@fees.blank? %>
+          <%= hidden_field_tag 'unit_fees_fee1', @fees.first.amount if !@fees.blank? %>
+          <%= hidden_field_tag 'unit_fees_name2', @fees.last.name if !@fees.blank? %>
+          <%= hidden_field_tag 'unit_fees_fee2', @fees.last.amount if !@fees.blank? %>
+          <%= hidden_field_tag 'tax', @tax_amount if !@tax_amount.blank? %>
+          <%= hidden_field_tag 'total', @total_amount if !@total_amount.blank? %>
+          <%= submit_tag "COMPLETE BOOKING", :id => "btn-book-complete", :class => "margin-top-4 btn btn-info btn-lg btn--blue" %>
+        <% end %>
       </div>
     </div>
-
     <div class="col-md-4 float-left white-background">
       <div class="receipt-payment-section">
       </div>
@@ -181,7 +234,7 @@
       <% else %>
         <div class="panel panel-default hotel-details-panel">
           <div class="panel-heading sandcastle-text-capitalization">
-            <div class="sandcastle-bold thankyou-common-div common-font-12">This property is unavailable for the chosen dates.</div>
+            <div class="sandcastle-bold thankyou-common-div common-font-12 property_status">This property is unavailable for the chosen dates.</div>
           </div>
         </div>
       <% end %>

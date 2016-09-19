@@ -41,4 +41,11 @@ class ContactMailer < ActionMailer::Base
 
     mail(subject: 'FAQ Review',to:email)
   end
+
+  def booking(name:, email:)
+    @email      = email
+    @name       = name
+    mail(subject: 'Booking Confirmation', to:email)
+  end
+
 end

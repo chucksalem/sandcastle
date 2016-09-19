@@ -67,7 +67,11 @@ class PagesController < ApplicationController
   end
 
   def thankyou
-    render
+    @booking_info = params
+    ContactMailer.booking(
+        name:       params[:first_name],
+        email:      params[:email]
+    ).deliver_now
   end
 
   def newsletter

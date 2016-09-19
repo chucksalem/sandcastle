@@ -1512,3 +1512,11 @@ section.main-content.email-thank-you-section{
     }
 
 }
+
+#email-error, #emailId-error{
+    display: block !important;
+}
+
+form input, form textarea{
+    font-size: 12px;
+}
