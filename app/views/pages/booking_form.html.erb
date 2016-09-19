@@ -126,7 +126,7 @@
           </div>
           <div class="col-md-12">
             <div class="text-box-main-div margin-right-4-and-half-per">
-              <%= select_tag "payment_type", options_for_select([ "","VISA", "MASTER","DISCOVER" ], ""),{:required => true, :class => "booking-form-short-text-box-height common-font-10 sandcastle-text-color"} %>
+              <%= select_tag "payment_type", options_for_select([ "VISA", "MASTER","DISCOVER" ]), { :include_blank => 'SELECT CARD TYPE', :required => true, :class => "booking-form-short-text-box-height common-font-10 sandcastle-text-color"} %>
             </div>
             <div class="float-left text-box-main-div margin-right-4-and-half-per">
               <span class="visa-card-img common-payment-images"></span>
@@ -148,10 +148,14 @@
               <label class="common-font-10 sandcastle-text-color">CVC <span class="sandcastle-color-blue">(<i class="fa fa-question"></i>)</span></label>
             </div>
           </div>
-          <div class="col-md-12">
-            <%= select_tag "YEAR", options_for_select([ "YEAR","2016", "2015","2014" ], "YEAR"),{:required => true, :class => "float-left expiration-selection-list common-font-10 sandcastle-text-color"} %>
-            <%= select_tag "MONTH", options_for_select([ "MONTH","JAN", "FEB","MAR","APR","JUNE","JUL","AUG","SEPT","OCT","NOV","DEC" ], "MONTH"),{:required => true, :class => "float-left expiration-selection-list common-font-10 sandcastle-text-color"} %>
-            <div class="float-left width-26">
+          <div class="col-md-12 flex-block">
+            <div class="select-block">
+              <%= select_tag "YEAR", options_for_select([ "2016", "2015","2014" ]), { :include_blank => 'YEAR', :required => true, :class => "float-left expiration-selection-list common-font-10 sandcastle-text-color"} %>
+            </div>
+            <div class="select-block">
+              <%= select_tag "MONTH", options_for_select([ "JAN", "FEB","MAR","APR","JUNE","JUL","AUG","SEPT","OCT","NOV","DEC" ]), { :include_blank => 'MONTH',:required => true, :class => "float-left expiration-selection-list common-font-10 sandcastle-text-color"} %>
+            </div>
+            <div class="select-block float-left width-26">
               <%= text_field_tag 'cvc', nil, class: 'booking-form-short-text-box-height', :required => true %>
             </div>
           </div>
@@ -159,17 +163,20 @@
           <div class="col-md-12">
             <%= text_area_tag 'description', "", disabled: false, :class=>"col-md-12 col-sm-12" %>
           </div>
-          <div class="col-md-12 margin-top-4"><input class="float-left" type="checkbox"/><p class="rental-polciy-text common-font-10">I HAVE READ AND ACCEPT THE ABOVE RENTAL POLICIES AGREEMENT</p></div>
+          <div class="col-md-12 margin-top-4 check-policy">
+            <input id ="accept_policy" class="float-left" type="checkbox"/>
+            <p class="rental-polciy-text common-font-10">I HAVE READ AND ACCEPT THE ABOVE RENTAL POLICIES AGREEMENT</p>
+          </div>
           <div class="col-md-12 booking-receipt-headings common-font-20 sandcastle-bold">REVIEW AND BOOK YOUR TRIP</div>
           <div class="col-md-12"><p class="common-font-10"></p></div>
-          <%= hidden_field_tag 'unit_image', @booked_unit.first['descriptions']['images'][0]['formats'][2]['url']  %>
-          <%= hidden_field_tag 'unit_name', @booked_unit.first['name']  %>
-          <%= hidden_field_tag 'unit_city', @booked_unit.first['address']['city'] %>
-          <%= hidden_field_tag 'unit_country', @booked_unit.first['address']['country'] %>
-          <%= hidden_field_tag 'unit_stay', @length_of_stay %>
-          <%= hidden_field_tag 'unit_start', @date_start %>
+          <%= hidden_field_tag 'unit_image', @booked_unit.first['descriptions']['images'][0]['formats'][2]['url'] if !@booked_unit.blank? %>
+          <%= hidden_field_tag 'unit_name', @booked_unit.first['name'] if !@booked_unit.blank? %>
+          <%= hidden_field_tag 'unit_city', @booked_unit.first['address']['city'] if !@booked_unit.blank? %>
+          <%= hidden_field_tag 'unit_country', @booked_unit.first['address']['country'] if !@booked_unit.blank? %>
+          <%= hidden_field_tag 'unit_stay', @length_of_stay if !@booked_unit.blank? %>
+          <%= hidden_field_tag 'unit_start', @date_start if !@booked_unit.blank? %>
           <%= hidden_field_tag 'unit_end', @date_end %>
-          <%= hidden_field_tag 'unit_type', @booked_unit.first['type']%>
+          <%= hidden_field_tag 'unit_type', @booked_unit.first['type'] if !@booked_unit.blank? %>
           <%= hidden_field_tag 'unit_amount', @base_amount if !@base_amount.blank? %>
           <%= hidden_field_tag 'unit_fees_name1', @fees.first.name if !@fees.blank? %>
           <%= hidden_field_tag 'unit_fees_fee1', @fees.first.amount if !@fees.blank? %>

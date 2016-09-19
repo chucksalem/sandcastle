@@ -1520,3 +1520,27 @@ section.main-content.email-thank-you-section{
 form input, form textarea{
     font-size: 12px;
 }
+
+.flex-block{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-block .select-block{
+    display: flex;
+    flex-direction: column;
+}
+.flex-block #YEAR, .flex-block #MONTH{
+    width: 150px;
+    margin-right: 10px;
+}
+
+.check-policy{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.check-policy p, input#accept_policy{
+    margin: 0;
+}
