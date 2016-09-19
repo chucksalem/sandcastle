@@ -347,6 +347,7 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 /*}*/
 .sandcastle-text-color{
     color: #bababa;
+    font-weight: bold;
 }
 .hotel-price-value{
     color: #000;

@@ -1513,6 +1513,8 @@ section.main-content.email-thank-you-section{
 
 }
 
+/*------booking form-------*/
+
 #email-error, #emailId-error{
     display: block !important;
 }
@@ -1531,7 +1533,7 @@ form input, form textarea{
     flex-direction: column;
 }
 .flex-block #YEAR, .flex-block #MONTH{
-    width: 150px;
+    width: 167px;
     margin-right: 10px;
 }
 
@@ -1543,4 +1545,13 @@ form input, form textarea{
 
 .check-policy p, input#accept_policy{
     margin: 0;
+}
+
+.booking_form #payment_type, .booking_form #YEAR, .booking_form #MONTH{
+    background: #FFFFFF;
+    outline: none;
+}
+
+.booking_form .card_type_block{
+    padding-top: 5px;
 }
