@@ -126,9 +126,9 @@
           </div>
           <div class="col-md-12">
             <div class="text-box-main-div margin-right-4-and-half-per">
-              <%= select_tag "payment_type", options_for_select([ "VISA", "MASTER","DISCOVER" ]), { :include_blank => 'SELECT CARD TYPE', :required => true, :class => "booking-form-short-text-box-height common-font-10 sandcastle-text-color"} %>
+              <%= select_tag "payment_type", options_for_select([ "VISA", "MASTER","DISCOVER" ]), { :include_blank => '', :required => true, :class => "booking-form-short-text-box-height common-font-10 sandcastle-text-color"} %>
             </div>
-            <div class="float-left text-box-main-div margin-right-4-and-half-per">
+            <div class="float-left text-box-main-div margin-right-4-and-half-per card_type_block">
               <span class="visa-card-img common-payment-images"></span>
               <span class="master-card-img common-payment-images"></span>
               <span class="discover-card-img common-payment-images"></span>
