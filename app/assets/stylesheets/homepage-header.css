@@ -1398,6 +1398,34 @@ section.main-content.email-thank-you-section{
 
 }
 
+.icon-bath{
+    background: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDQ2MyA0NjMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ2MyA0NjMiIHdpZHRoPSIzMnB4IiBoZWlnaHQ9IjMycHgiPgogIDxnPgogICAgPHBhdGggZD0ibTQ2MywyNzEuNDk5YzAtMTIuOTU4LTEwLjU0Mi0yMy41LTIzLjUtMjMuNWgtMzkyLjV2LTIwMC41YzAtOS4wOTggNy40MDItMTYuNSAxNi41LTE2LjVzMTYuNSw3LjQwMiAxNi41LDE2LjV2MS43MzRjLTkuMjksMy4xMzgtMTYsMTEuOTMtMTYsMjIuMjY2djE2YzAsNC4xNDIgMy4zNTgsNy41IDcuNSw3LjVoMzJjNC4xNDIsMCA3LjUtMy4zNTggNy41LTcuNXYtMTZjMC0xMC4zMzYtNi43MS0xOS4xMjgtMTYtMjIuMjY2di0xLjczNGMwLTE3LjM2OS0xNC4xMzEtMzEuNS0zMS41LTMxLjVzLTMxLjUsMTQuMTMxLTMxLjUsMzEuNXYyMDAuNWgtOC41Yy0xMi45NTgsMC0yMy41LDEwLjU0Mi0yMy41LDIzLjUgMCwxMC45OCA3LjU3LDIwLjIyMiAxNy43NjQsMjIuNzg5bDI4LjA1Miw4OS43NjZjNS45MzEsMTguOTc5IDIxLjE2MiwzMi44ODEgMzkuOCwzNy4zODJsLTUuMjMxLDE1LjY5MmMtMS4zMSwzLjkzIDAuODE0LDguMTc3IDQuNzQ0LDkuNDg3IDAuNzg3LDAuMjYyIDEuNTg2LDAuMzg3IDIuMzczLDAuMzg3IDMuMTQsMCA2LjA2Ni0xLjk4OCA3LjExNC01LjEzbDYuMjkxLTE4Ljg3MmgyNjEuMTg4bDYuMjkxLDE4Ljg3MmMxLjA0OCwzLjE0MyAzLjk3NCw1LjEzIDcuMTE0LDUuMTMgMC43ODYsMCAxLjU4Ni0wLjEyNSAyLjM3My0wLjM4NyAzLjkzLTEuMzEgNi4wNTMtNS41NTcgNC43NDQtOS40ODdsLTUuMjMxLTE1LjY5MmMxOC42MzgtNC41MDEgMzMuODY5LTE4LjQwMyAzOS44LTM3LjM4MmwyOC4wNTItODkuNzY1YzEwLjE5Mi0yLjU2OCAxNy43NjItMTEuODEgMTcuNzYyLTIyLjc5em0tMzY3LTE5MS41aC0xN3YtOC41YzAtNC42ODcgMy44MTMtOC41IDguNS04LjVzOC41LDMuODEzIDguNSw4LjV2OC41em0zMDYuODY3LDI5OS41OGMtNS4zMTIsMTYuOTk5LTIwLjg0NywyOC40Mi0zOC42NTYsMjguNDJoLTI2NS40MjJjLTE3LjgxLDAtMzMuMzQ0LTExLjQyMS0zOC42NTYtMjguNDE5bC0yNi40MzEtODQuNTgxaDM5NS41OTdsLTI2LjQzMiw4NC41OHptMzYuNjQ1LTk5LjU4MWMtMC4wMDcsMC0wLjAxNSwwLjAwMS0wLjAyMiwwLjAwMWgtNDE1Ljk3NGMtMC4wMSwwLTAuMDIxLTAuMDAxLTAuMDMxLTAuMDAxLTQuNjgtMC4wMDktOC40ODQtMy44MTctOC40ODQtOC40OTkgMC00LjY4NyAzLjgxMy04LjUgOC41LTguNWg0MTZjNC42ODcsMCA4LjUsMy44MTMgOC41LDguNS0wLjAwMSw0LjY4My0zLjgwNyw4LjQ5My04LjQ4OSw4LjQ5OXoiIGZpbGw9IiNGRkZGRkYiLz4KICA8L2c+Cjwvc3ZnPgo=");
+    background-repeat: no-repeat !important;
+    height: 35px;
+    width: 35px;
+}
+
+.room-icon-div{
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.room-icon-div .room_amenity{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.room-icon-div .room_bath, .room-icon-div .room_bed, .room-icon-div .room_users, .room-icon-div .room_building{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 25px;
+}
+
 @media screen and (max-width: 959px) and (min-width: 850px) {
     section.main-content .layout-container {
         top: -80px;
@@ -1618,4 +1646,3 @@ form input, form textarea{
 .receipt-payment-section .td-price{
     padding: 15px 15px 0 0 !important;
 }
-

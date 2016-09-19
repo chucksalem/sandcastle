@@ -68,21 +68,26 @@
             %img{:alt => "", :height => "420", :src => "#{unit['descriptions']['images'][0]['formats'][2]['url']}"}/
             -#%img.room-icon-div-img{:src => "assets/image-room-overlay.png"}/
             .room-icon-div{:style=>"opacity: 0.7;"}
-              %i.icon.icon-bath{:style=>"font-size: 40px;"}
-              %span{:style=>"font-size: 2vmin;"}
-                = unit['bathrooms']
-              %i.fa.fa-bed{:style=>"font-size: 40px;"}
-              %span{:style=>"font-size: 2vmin;"}
-                = unit['bedrooms']
-              %i.fa.fa-users{:style=>"font-size: 40px;"}
-              %span{:style=>"font-size: 2vmin;"}
-                = unit['occupancy']
-              %i.fa.fa-building-o{:style=>"font-size: 40px;"}
-              %span{:style=>"font-size: 2vmin;"}
-                - if unit['type'] == 'condominium'
-                  Condo
-                - else
-                  Townhouse
+              .room_amenity
+                .room_bath
+                  %i.icon.icon-bath{:style=>"font-size: 40px;"}
+                  %span{:style=>"font-size: 2vmin;"}
+                    = unit['bathrooms']
+                .room_bed
+                  %i.fa.fa-bed{:style=>"font-size: 40px;"}
+                  %span{:style=>"font-size: 2vmin;"}
+                    = unit['bedrooms']
+                .room_users
+                  %i.fa.fa-users{:style=>"font-size: 40px;"}
+                  %span{:style=>"font-size: 2vmin;"}
+                    = unit['occupancy']
+                .room_building
+                  %i.fa.fa-building-o{:style=>"font-size: 40px;"}
+                  %span{:style=>"font-size: 2vmin;"}
+                    - if unit['type'] == 'condominium'
+                      Condo
+                    - else
+                      Townhouse
           .md-two-twelfths.sm-two-twelfths.lg-two-twelfths.float-left.last-child-div
             %img{:alt => "", :src => "assets/st-jude-on-the-little.jpg"}/
 / testimonial section
