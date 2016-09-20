@@ -652,6 +652,10 @@ section.main-content .property-search form .text-divider{
 
 /****************** contact-us page css **********************/
 
+.site-header.full-background.contact-us-main.height-0{
+    min-height: 0px !Important;
+}
+
 .contact-us {
     width: 57%;
     margin: 9% 20%;
