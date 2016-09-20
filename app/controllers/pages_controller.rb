@@ -95,8 +95,9 @@ class PagesController < ApplicationController
     @price = !params[:price].blank? ? params[:price] : 0
     file_path = File.join(Rails.root, '/spec/fixtures/units/hotellists.json')
     units_data = File.read(file_path)
-    @units = JSON.parse(units_data)
-    @unit_info = @units.select { |hash| hash['code'] == params[:id] }
+    units = JSON.parse(units_data)
+    @units = get_all_units(units)
+    @unit_info = units.select { |hash| hash['code'] == params[:id] }
     @unit_info = @unit_info.first
   end
 
@@ -139,4 +140,11 @@ class PagesController < ApplicationController
     render
   end
 
+  def get_all_units(units)
+    properties = []
+    units.each do |unit|
+      properties << unit if unit['type'] == 'condominium' || unit['type'] == 'townhouse'
+    end
+    properties
+  end
 end
