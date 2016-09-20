@@ -1607,18 +1607,6 @@ form input, form textarea{
     align-items: flex-start;
 }
 
-.receipt-booking-details-section .room-image{
-    width: 75px;
-    margin: 0 10px 0 0;
-    padding: 0;
-}
-
-.receipt-booking-details-section .room-image img{
-    width: 70px;
-    max-width: 70px;
-    height: 70px;
-}
-
 .receipt-booking-details-section .map-link a, a:focus, a:hover{
     color: #39BDFB;
 }
@@ -1645,4 +1633,41 @@ form input, form textarea{
 
 .receipt-payment-section .td-price{
     padding: 15px 15px 0 0 !important;
+}
+
+/*---------------------room details-------------------------*/
+
+
+.padd-zero{
+    padding: 0 !important;
+}
+
+.layout-container .feature-section-column-main{
+    width: 200px;
+    padding: 5px 0 5px 0;
+}
+
+.layout-container .room-details-feature-section-main{
+    padding-bottom: 20px;
+}
+
+.layout-container .fa-stack-1x.room-number{
+    font-size: 11.6px;
+    margin-top: 15px;
+}
+
+.layout-container .receipt-booking-details-section{
+    display: block;
+}
+
+.layout-container .receipt-booking-details-section .room-image img{
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+}
+
+.layout-container .receipt-booking-details-section .room-image{
+    width: 33.33%;
+    margin: 0 !important;
+    padding: 0 !important;
 }

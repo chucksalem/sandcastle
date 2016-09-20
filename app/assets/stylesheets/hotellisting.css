@@ -551,7 +551,7 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 }
 .room-details-page-content-section .want-to-chat-container{
     padding: 15px 20px;
-    min-height: 220px;
+    min-height: 120px;
 }
 .star-color-yello{
     color: #FAD939;

@@ -152,8 +152,8 @@ $(function(){
         maxSlides: nonMobileMaxSlides,
         controls: true,
         pager: false,
-        nextText: '<img src="assets/other_room_right_arrow.png" height="35" width="20"/>',
-        prevText: '<img src="assets/other_room_left_arrow.png" height="35" width="20"/>'
+        nextText: '<img src="../assets/other_room_right_arrow.png" height="35" width="20"/>',
+        prevText: '<img src="../assets/other_room_left_arrow.png" height="35" width="20"/>'
     });
     var tooltip = function(sliderObj, ui){
         val1            = '<div id="min_range" class="common-font-12">$'+ sliderObj.slider("values", 0) +'</div>';

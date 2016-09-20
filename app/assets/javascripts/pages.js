@@ -9,5 +9,10 @@ $(document).ready(function() {
     $('#btn-book-complete').on('click' ,function(){
         $(".booking_form").valid();
     });
+
+    $('.room-gallery').isotope({
+        itemSelector: '.room-image',
+        percentPosition: true
+    });
 });
 

@@ -92,7 +92,12 @@ class PagesController < ApplicationController
 
 
   def room_details
-    render
+    @price = !params[:price].blank? ? params[:price] : 0
+    file_path = File.join(Rails.root, '/spec/fixtures/units/hotellists.json')
+    units_data = File.read(file_path)
+    @units = JSON.parse(units_data)
+    @unit_info = @units.select { |hash| hash['code'] == params[:id] }
+    @unit_info = @unit_info.first
   end
 
 
