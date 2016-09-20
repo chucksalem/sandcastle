@@ -141,33 +141,35 @@
   </div>
   <div class="hotel-list-slider-main sandcastle-text-font-montserrat">
     <% @units.each do |unit| %>
-      <div class="col-sm-3 slide">
-        <div class="hotel-image"><img src="<%= unit['descriptions']['images'][0]['formats'][2]['url'] %>"></div>
-        <div class="hotel-details-except-image float-left">
-          <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold hotel-price-value">
-            <% if !unit[:price].blank? %>
-              <%= "$#{unit[:price]}" %>
-            <% else %>
-              <%= "$#{unit['stay_ranges'].first['price']}" %>
-            <% end %>
-          </span></div>
-          <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating common-font-12">
-            <%= unit['occupancy'] %> Occupancy
-          </div></div><div class="col-sm-6 float-left sandcastle-text-color"><%= unit['reviews'].count %> Reviews</div></div>
-          <div class="hotel-about-section float-left room-details-common-div full-width">
-            <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div"><%= truncate(unit['name'], :length => 20) %></div>
-            <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details"><%= truncate(unit['descriptions']['text'][2]['description'], :length => 120)%></div>
-          </div>
-          <div class="hotel-book-view-map room-details-common-div float-left full-width">
-            <div class="col-sm-6">
-              <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book">
+      <% if !unit['descriptions']['text'][2]['description'].blank? && unit['descriptions']['text'][2]['description'].length > 0 %>
+        <div class="col-sm-3 slide">
+          <div class="hotel-image"><img src="<%= unit['descriptions']['images'][0]['formats'][2]['url'] %>"></div>
+          <div class="hotel-details-except-image float-left">
+            <div class="hotel-rate float-left room-details-common-div sandcastle-text-capitalization sandcastle-text-color">FROM <span class="sandcastle-bold hotel-price-value">
+              <% if !unit[:price].blank? %>
+                <%= "$#{unit[:price]}" %>
+              <% else %>
+                <%= "$#{unit['stay_ranges'].first['price']}" %>
+              <% end %>
+            </span></div>
+            <div class="hotel-rating-review float-left full-width"><div class="col-sm-6"><div class="roomdetails-page-reviewer-rating common-font-12">
+              <%= unit['occupancy'] %> Occupancy
+            </div></div><div class="col-sm-6 float-left sandcastle-text-color"><%= unit['reviews'].count %> Reviews</div></div>
+            <div class="hotel-about-section float-left room-details-common-div full-width">
+              <div class="col-sm-12 sandcastle-bold sandcastle-text-capitalization common-font-15 room-details-common-div"><%= truncate(unit['name'], :length => 20) %></div>
+              <div class="col-sm-12 common-font-9 sandcastle-text-color luxury-text-details"><%= truncate(unit['descriptions']['text'][2]['description'], :length => 100)%></div>
             </div>
-            <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link">
-              <a href="#"><img src="../assets/map_fa_icon.png"> View on Map</a>
+            <div class="hotel-book-view-map room-details-common-div float-left full-width">
+              <div class="col-sm-6">
+                <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book">
+              </div>
+              <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link">
+                <a href="#"><img src="../assets/map_fa_icon.png"> View on Map</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
   <div class="section-divider room-details-section-divider">
