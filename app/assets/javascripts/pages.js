@@ -11,7 +11,7 @@ $(document).ready(function() {
     });
 
     $('.room-gallery').isotope({
-        itemSelector: '.room-image',
+        itemSelector: '.property-img',
         percentPosition: true
     });
 });

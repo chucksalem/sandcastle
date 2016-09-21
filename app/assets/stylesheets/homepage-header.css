@@ -1681,8 +1681,19 @@ form.booking_form .rental-polciy-text{
     margin-top: 15px;
 }
 
-.layout-container .receipt-booking-details-section{
-    /*display: block;*/
+.layout-container .room-image-gallery{
+    display: block;
+    width: 100%;
+}
+
+.layout-container .room-image-gallery .property-img{
+    width: 33.33%;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.layout-container .room-image-gallery img{
+    height: 300px !important;
 }
 
 .layout-container .receipt-booking-details-section .room-image img{
