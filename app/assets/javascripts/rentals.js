@@ -30,28 +30,19 @@ $(document).ready(function() {
         if (start_date != '' && end_date != '') {
             url = "/rentals";
             data = { rooms: rooms, start_date: date_start, end_date: date_end, min_price: min_price, max_price: max_price, amenities: amenities };
+            $.ajax({
+                url: url,
+                data: data,
+                method: 'GET',
+                success: function(result){
+                }
+            })
         }
-        $.ajax({
-            url: url,
-            data: data,
-            method: 'GET',
-            success: function(result){
-            }
-        })
     });
 
     $('#btn-price').on('click', function () {
         $("#date_filter").valid();
         var price_sort;
-        if ($(this).children("i").hasClass('fa-angle-down') == true){
-            $(this).children("i").removeClass('fa-angle-down');
-            $(this).children("i").addClass("fa-angle-up");
-            price_sort = 'desc'
-        }else{
-            $(this).children("i").removeClass('fa-angle-up');
-            $(this).children("i").addClass("fa-angle-down");
-            price_sort = 'asc'
-        }
         var rooms = $('#select-rooms').val();
         var start_date = $('#start_date').val();
         var end_date = $('#end_date').val();
@@ -64,31 +55,32 @@ $(document).ready(function() {
             return this.value;
         }).get();
         if (start_date != '' && end_date != '') {
+            if ($(this).children("i").hasClass('fa-angle-down') == true){
+                $(this).children("i").removeClass('fa-angle-down');
+                $(this).children("i").addClass("fa-angle-up");
+                price_sort = 'desc'
+            }else{
+                $(this).children("i").removeClass('fa-angle-up');
+                $(this).children("i").addClass("fa-angle-down");
+                price_sort = 'asc'
+            }
             url = "/rentals";
             data = { rooms: rooms, start_date: date_start, end_date: date_end,
                      min_price: min_price, max_price: max_price, price_sort: price_sort, amenities: amenities  };
+            $.ajax({
+                url: url,
+                data: data,
+                method: 'GET',
+                success: function(result){
+
+                }
+            })
         }
-        $.ajax({
-            url: url,
-            data: data,
-            method: 'GET',
-            success: function(result){
-            }
-        })
     });
 
     $('#btn-reviews').on('click', function () {
         $("#date_filter").valid();
         var reviews_sort;
-        if ($(this).children("i").hasClass('fa-angle-down') == true){
-            $(this).children("i").removeClass('fa-angle-down');
-            $(this).children("i").addClass("fa-angle-up");
-            reviews_sort = 'desc'
-        }else{
-            $(this).children("i").removeClass('fa-angle-up');
-            $(this).children("i").addClass("fa-angle-down");
-            reviews_sort = 'asc'
-        }
         var rooms = $('#select-rooms').val();
         var start_date = $('#start_date').val();
         var end_date = $('#end_date').val();
@@ -101,17 +93,27 @@ $(document).ready(function() {
             return this.value;
         }).get();
         if (start_date != '' && end_date != '') {
+            if ($(this).children("i").hasClass('fa-angle-down') == true){
+                $(this).children("i").removeClass('fa-angle-down');
+                $(this).children("i").addClass("fa-angle-up");
+                reviews_sort = 'desc'
+            }else{
+                $(this).children("i").removeClass('fa-angle-up');
+                $(this).children("i").addClass("fa-angle-down");
+                reviews_sort = 'asc'
+            }
             url = "/rentals";
             data = { rooms: rooms, start_date: date_start, end_date: date_end,
                      min_price: min_price, max_price: max_price, reviews_sort: reviews_sort, amenities: amenities  };
+            $.ajax({
+                url: url,
+                data: data,
+                method: 'GET',
+                success: function(result){
+
+                }
+            })
         }
-        $.ajax({
-            url: url,
-            data: data,
-            method: 'GET',
-            success: function(result){
-            }
-        })
     });
 
     $('#hotelgrid_view').hide()
