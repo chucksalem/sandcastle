@@ -14,5 +14,30 @@ $(document).ready(function() {
         itemSelector: '.property-img',
         percentPosition: true
     });
+
+    $('.room-book-now').on('click',function(){
+        var id = $(this).val();
+        var start_date = $('#start_date').val();
+        var end_date = $('#end_date').val();
+        if (start_date != '' && end_date != '') {
+            $('#datepicker-modal').modal('hide');
+            window.location = '/booking-form?id='+ id+'&start_date='+ start_date +'&end_date='+ end_date;
+        }else{
+            $('#datepicker-modal').modal('show');
+        }
+    });
+
+    $('.slider-book-now').on('click',function(){
+        var id = $(this).val();
+        var start_date = $('#start_date').val();
+        var end_date = $('#end_date').val();
+        if (start_date != '' && end_date != '') {
+            $('#datepicker-modal').modal('hide');
+            window.location = '/booking-form?id='+ id+'&start_date='+ start_date +'&end_date='+ end_date;
+        }else{
+            $('#datepicker-modal').modal('show');
+        }
+    });
+
 });
 

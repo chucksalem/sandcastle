@@ -1708,6 +1708,32 @@ form.booking_form .rental-polciy-text{
     padding: 0 10px 0 0 !important;
 }
 
+.room-details-page-content-section .btn-div{
+    padding: 0;
+    width: 19%;
+}
+.room-details-page-content-section .room-book-now{
+    background: #39BDFB;
+    border: none;
+    color: #ffffff;
+    height: 58px;
+    width: 100% !important;
+    text-transform: uppercase;
+}
+
+#datepicker-modal .modal-footer {
+    border: none;
+    padding-top: 0;
+}
+
+#datepicker-modal .modal-body, #datepicker-modal .modal-header{
+    padding-bottom: 0;
+}
+
+#datepicker-modal .modal-header{
+    border: none;
+}
+
 @media screen and (max-width: 1110px) and (min-width: 991px){
     #hotellist_view .book-now{
         font-size: 2vmin;

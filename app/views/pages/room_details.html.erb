@@ -31,7 +31,9 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-2 booking-button-main common-font-14 sandcastle-text-capitalization sandcastle-bold text-center">Book Now <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+      <div class="col-sm-2 common-font-14 sandcastle-text-capitalization sandcastle-bold text-center btn-div">
+        <button class="room-book-now" type="submit" value="<%= params[:id] %>">Book Now <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      </div>
       <div class="col-sm-12 padd-zero">
         <div class="col-sm-9 room-details-about-main"><div class="common-font-20 sandcastle-bold sandcastle-text-capitalization room-details-common-div">About <%= @unit_info['name'] %></div>
           <div class="sandcastle-text-color common-font-11">
@@ -161,7 +163,8 @@
             </div>
             <div class="hotel-book-view-map room-details-common-div float-left full-width">
               <div class="col-sm-6">
-                <input type="button" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book">
+                <button class="slider-book-now room-details-book-button sandcastle-bold sandcastle-text-capitalization" type="submit" value="<%= unit['code'] %>">Book</button>
+                <!--<input type="button" class="slider-book-now room-details-book-button sandcastle-bold sandcastle-text-capitalization" value="Book">-->
               </div>
               <div class="col-sm-6 sandcastle-bold sandcastle-text-capitalization view-on-map-link">
                 <a href="#"><img src="../assets/map_fa_icon.png"> View on Map</a>
@@ -175,3 +178,30 @@
   <div class="section-divider room-details-section-divider">
   </div>
 </section>
+<!-- Modal -->
+<div class="modal fade" id="datepicker-modal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Select Your Check in and Check out times</h4>
+      </div>
+      <div class="modal-body">
+        <div class='form-group inner-addon left-addon'>
+          <input class='form-control datepicker input-title' id='start_date'>
+          <i aria-hidden='true' class='fa fa-calendar set-icon'></i>
+        </div>
+        <div class='form-group inner-addon left-addon'>
+          <input class='form-control datepicker input-title' id='end_date'>
+          <i aria-hidden='true' class='fa fa-calendar set-icon'></i>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="mdl-book-btn" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
