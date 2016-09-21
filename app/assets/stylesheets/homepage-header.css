@@ -1693,3 +1693,23 @@ form.booking_form .rental-polciy-text{
     padding: 0 10px 0 0 !important;
 }
 
+/*--------------thank you---------------*/
+
+.thank-you{
+    flex-direction: column !important;
+}
+
+.thank-you .room-img{
+    width: 33.33%;
+    margin: 0 0 15px 0 !important;
+    padding: 0 10px 0 0 !important;
+}
+
+.receipt-thank-you .panel-heading, .receipt-thank-you .panel-body{
+    padding: 0;
+    margin: 0;
+}
+
+.receipt-thank-you .total-price-number{
+    padding-right: 15px !important;
+}

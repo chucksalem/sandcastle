@@ -64,17 +64,19 @@
           <div class="booking-receipt-headings sandcastle-text-capitalization sandcastle-bold common-font-20">Payment</div>
           <a class="thankyou-common-div sandcastle-text-color sandcastle-text-capitalization thankyou-credit-card-receipt-text">Payment was made by credit card. Click here to view your receipt.</a>
         </div>
-        <div class="receipt-booking-details-section">
-          <div class="booking-receipt-headings sandcastle-text-capitalization sandcastle-bold common-font-20">Booking Details</div>
-          <div class="thankyou-page-hotel-photo thankyou-common-div"><img src= "<%= @booking_info[:unit_image] %>"></div>
-          <div class="thankyou-common-div sandcastle-text-capitalization sandcastle-bold common-font-14"><%= truncate(@booking_info[:unit_name], :length => 25) %></div>
-          <div class="common-font-9"><%= @booking_info[:unit_city] %>, <%= @booking_info[:unit_country] %></div>
-          <div class=""><a class="thankyou-view-map-link sandcastle-text-color common-font-9" href="/maps">View Map</a></div>
+        <div class="booking-receipt-headings sandcastle-text-capitalization sandcastle-bold common-font-20">Booking Details</div>
+        <div class="receipt-booking-details-section thank-you">
+          <div class="room-img"><img src= "<%= @booking_info[:unit_image] %>"></div>
+          <div class="room-details-block">
+            <div class="sandcastle-text-capitalization sandcastle-bold common-font-14"><%= truncate(@booking_info[:unit_name], :length => 25) %></div>
+            <div class="common-font-11 sandcastle-text-color"><%= @booking_info[:unit_city] %>, <%= @booking_info[:unit_country] %></div>
+            <div class="map-link"><a class="thankyou-view-map-link sandcastle-text-color common-font-11 text-uppercase" href="/maps">View Map</a></div>
+          </div>
         </div>
         <div class="line-separator"></div>
         <div class="thankyou-common-div hotel-stay-duration common-font-11"><span class="stay-duration-span"><i class="fa fa-clock-o common-font-12" aria-hidden="true"></i> <%= @booking_info[:unit_stay]%> NIGHTS</span> <%= @booking_info[:unit_start]%>/<%= @booking_info[:unit_end] %></div>
         <div class="line-separator"></div>
-        <div class="panel panel-default hotel-details-panel">
+        <div class="panel panel-default hotel-details-panel receipt-thank-you">
           <div class="panel-heading sandcastle-text-capitalization">
             <div class="sandcastle-bold thankyou-common-div common-font-16">Details</div>
           </div>
