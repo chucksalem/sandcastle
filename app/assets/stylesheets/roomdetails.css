@@ -493,11 +493,7 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 .room-details-page-content-section .our-facility-room-section {
     margin: 20px 0%;
 }
-@media screen and (max-width: 1024px) and (min-width: 681px) {
 
-}
-
-
-@media screen and (max-width: 680px) and (min-width: 400px) {
-
+#room_details_main_section .bx-wrapper{
+    max-width: 70% !important;
 }
