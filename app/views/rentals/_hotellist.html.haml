@@ -20,8 +20,8 @@
             = "#{unit['address']['city']}, #{unit['address']['country']}"
         .col-sm-12.common-font-10.sandcastle-text-color.room-details-common-div.sandcastle-text-font-montserrat.description-height.description-text
           = truncate(unit['descriptions']['text'][2]['description'], :length => 120)
-        .col-sm-12.common-font-10.sandcastle-text-color.room-details-common-div.sandcastle-text-font-montserrat
-          %a.hotel_details{:href => "#"}
+        .col-sm-12.common-font-8.sandcastle-text-color.room-details-common-div.sandcastle-text-font-montserrat.view-on-map-link.sandcastle-bold.sandcastle-text-capitalization
+          %a.hotel_details{:href => "maps"}
             %img{:src => "assets/map_fa_icon.png"}/
             View on Map
       .col-sm-3.hotel-list-column-3
