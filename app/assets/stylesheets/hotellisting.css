@@ -792,3 +792,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default:focus{
     width: 163px;
     text-transform: uppercase;
 }
+
+.booking-receipt-details .row.col-md-12.margin-top-4{
+    margin: 0;
+}

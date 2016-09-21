@@ -1555,17 +1555,19 @@ form input, form textarea{
     font-size: 12px;
 }
 
-.flex-block{
+.booking-receipt-details .flex-block{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-.flex-block .select-block{
+.booking-receipt-details .select-block{
     display: flex;
     flex-direction: column;
+    width: 33%;
 }
 .flex-block #YEAR, .flex-block #MONTH{
-    width: 167px;
+    width: 100%;
     margin-right: 10px;
 }
 
@@ -1593,7 +1595,6 @@ form input, form textarea{
     flex-direction: column;
     position: relative;
     padding: 15px !important;
-
 }
 
 .receipt-booking-details-section{
@@ -1639,6 +1640,22 @@ form input, form textarea{
     padding: 15px 15px 0 0 !important;
 }
 
+.margin-top-10{
+    margin-top: 10px;
+}
+
+form.booking_form > div {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+form.booking_form .rental-polciy-text{
+    float: left;
+    position: relative;
+    width: 90%;
+}
+
 /*---------------------room details-------------------------*/
 
 
@@ -1661,17 +1678,18 @@ form input, form textarea{
 }
 
 .layout-container .receipt-booking-details-section{
-    display: block;
+    /*display: block;*/
 }
 
 .layout-container .receipt-booking-details-section .room-image img{
     width: 100%;
     max-width: 100%;
-    height: 300px;
+    height: 100px;
 }
 
 .layout-container .receipt-booking-details-section .room-image{
     width: 33.33%;
     margin: 0 !important;
-    padding: 0 !important;
+    padding: 0 10px 0 0 !important;
 }
+

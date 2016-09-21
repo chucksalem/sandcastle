@@ -23,7 +23,7 @@
               <label class="common-font-10 sandcastle-text-color">LAST NAME</label>
             </div>
           </div>
-          <div class="col-md-12 ">
+          <div class="col-md-12">
             <div class="text-box-main-div margin-right-4-and-half-per">
               <%= text_field_tag 'first_name', nil, class: 'booking-form-short-text-box-height', :required => true%>
             </div>
@@ -31,7 +31,7 @@
               <%= text_field_tag 'last_name', nil, class: 'booking-form-short-text-box-height', :required => true%>
             </div>
           </div>
-          <div class="col-md-12 margin-top-4">
+          <div class="col-md-12 margin-top-10">
             <div class="float-left text-box-main-div margin-right-4-and-half-per">
               <label class="common-font-10 sandcastle-text-color">EMAIL</label>
             </div>
@@ -47,7 +47,7 @@
               <%= text_field_tag 'confirm_email', nil, class: 'booking-form-short-text-box-height' %>
             </div>
           </div>
-          <div class="col-md-12 margin-top-4">
+          <div class="col-md-12 margin-top-10">
             <div class="float-left text-box-main-div margin-right-4-and-half-per">
               <label class="common-font-10 sandcastle-text-color">CONTACT PHONE (FOR BOOKING)</label>
             </div>
@@ -134,13 +134,13 @@
               <span class="discover-card-img common-payment-images"></span>
             </div>
           </div>
-          <div class="col-md-12 margin-top-4">
+          <div class="row col-md-12 margin-top-4">
             <div class=""><label class="common-font-10 sandcastle-text-color">CARD NUMBER</label></div>
             <div class="">
               <%= text_field_tag 'card_number', nil, class: 'booking-form-short-text-box-height', :required => true %>
             </div>
           </div>
-          <div class="col-md-12 margin-top-4">
+          <div class="col-md-12 margin-top-10">
             <div class="float-left text-box-main-div margin-right-4-and-half-per">
               <label class="common-font-10 sandcastle-text-color">EXPIRATION DATE</label>
             </div>
@@ -184,7 +184,9 @@
           <%= hidden_field_tag 'unit_fees_fee2', @fees.last.amount if !@fees.blank? %>
           <%= hidden_field_tag 'tax', @tax_amount if !@tax_amount.blank? %>
           <%= hidden_field_tag 'total', @total_amount if !@total_amount.blank? %>
-          <%= submit_tag "COMPLETE BOOKING", :id => "btn-book-complete", :class => "margin-top-4 btn btn-info btn-lg btn--blue" %>
+          <div class="col-md-12">
+            <%= submit_tag "COMPLETE BOOKING", :id => "btn-book-complete", :class => "btn btn-info btn-lg btn--blue" %>
+          </div>
         <% end %>
       </div>
     </div>
