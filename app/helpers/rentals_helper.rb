@@ -205,6 +205,29 @@ module RentalsHelper
     properties.blank? ? [] : properties.uniq
   end
 
+  def get_by_amenities_price_zero(units)
+    properties = Array.new
+    units.each do |unit|
+      start_date = DateTime.parse(@start_date).to_i
+      end_date = DateTime.parse(@end_date).to_i
+      if unit['type'] == 'condominium' || unit['type'] == 'townhouse'
+        unless unit['stay_ranges'].blank?
+          unit['stay_ranges'].each do |range|
+            u_start_date = (Time.parse(range['start']).strftime("%d/%m/%Y").to_time+1.day).to_i
+            u_end_date = (Time.parse(range['end']).strftime("%d/%m/%Y").to_time+1.day).to_i
+            unless unit['amenities'].blank?
+              unit['amenities'] = unit['amenities'].select {|k,v| @amenities.include?(k) }
+              unit.merge!(price: range['price'].to_i)
+              properties << unit if unit['amenities'].all? {|key, value| value == true} &&
+                  (@min_price.to_i <= range['price'].to_i && @max_price.to_i >= range['price'].to_i)
+            end
+          end
+        end
+      end
+    end
+    properties.blank? ? [] : properties.uniq
+  end
+
   def get_units_by_date_range(units)
     unless units.blank?
       properties = Array.new

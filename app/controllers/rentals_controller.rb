@@ -21,42 +21,46 @@ class RentalsController < ApplicationController
     units = JSON.parse(units_data)
     properties = if (!params.include? 'start_date') && (!params.include? 'end_date')
                     get_all_units(units)
-                  elsif (!params[:rooms].blank? && @rooms.to_i != 0) &&
-                      (params[:min_price].blank? && params[:max_price].blank?) && @guests.to_i == 0 && @amenities.blank?
-                    units_array = get_units_by_date_range(units)
-                    get_units_by_rooms(units_array) unless units_array.blank?
-                  elsif (!params[:guests].blank? && @guests.to_i != 0) &&
-                      (params[:min_price].blank? && params[:max_price].blank?) && @rooms.to_i == 0 && @amenities.blank?
-                    units_array = get_units_by_date_range(units)
-                    get_units_by_guests(units_array) unless units_array.blank?
-                  elsif (@min_price.to_i >= 0 && @max_price.to_i > 0) &&
-                      (@rooms.to_i == 0 && @guests.to_i == 0) && @amenities.blank?
-                    units_array = get_units_by_date_range(units)
-                    get_units_by_price(units_array) unless units_array.blank?
-                  elsif (!params[:rooms].blank? && @rooms.to_i != 0) &&
-                      (@min_price.to_i >= 0 && @max_price.to_i > 0) && @guests.to_i == 0 && @amenities.blank?
-                    units_array = get_units_by_date_range(units)
-                    get_units_by_rooms_price(units_array) unless units_array.blank?
-                  elsif (@rooms.to_i > 0 && @guests.to_i > 0) && (params[:min_price].blank? && params[:max_price].blank?) && @amenities.blank?
-                    units_array = get_units_by_date_range(units)
-                    get_units_by_rooms_guests(units_array) unless units_array.blank?
-                  elsif !@amenities.blank? && (@rooms.to_i == 0 && @guests.to_i == 0) &&
-                      (params[:min_price].blank? && params[:max_price].blank?)
-                    units_array = get_units_by_date_range(units)
-                    get_units_by_amenities(units_array) unless units_array.blank?
-                  elsif !@amenities.blank? && (@rooms.to_i == 0 && @guests.to_i == 0) &&
-                     (@min_price.to_i == 0 && @max_price.to_i >= 0)
-                    units_array = get_units_by_date_range(units)
-                    get_units_by_amenities_price(units_array) unless units_array.blank?
-                  elsif !@amenities.blank? && ((!params[:rooms].blank? && @rooms.to_i != 0) && @guests.to_i == 0) &&
-                      (params[:min_price].blank? && params[:max_price].blank?)
-                    units_array = get_units_by_date_range(units)
-                    get_units_by_amenities_rooms(units_array) unless units_array.blank?
-                  elsif !@amenities.blank? && ((!params[:rooms].blank? && @rooms.to_i != 0) && @guests.to_i == 0) &&
-                     (@min_price.to_i == 0 && @max_price.to_i >= 0)
-                    units_array = get_units_by_date_range(units)
-                    get_by_amenities_rooms_price(units_array) unless units_array.blank?
-                  else
+                 elsif (!params[:rooms].blank? && @rooms.to_i != 0) &&
+                     (@min_price.to_i != 0 && @max_price.to_i != 0) && @guests.to_i == 0 && @amenities.blank?
+                   units_array = get_units_by_date_range(units)
+                   get_units_by_rooms(units_array) unless units_array.blank?
+                 elsif (!params[:guests].blank? && @guests.to_i != 0) &&
+                     (@min_price.to_i != 0 && @max_price.to_i != 0) && @rooms.to_i == 0 && @amenities.blank?
+                   units_array = get_units_by_date_range(units)
+                   get_units_by_guests(units_array) unless units_array.blank?
+                 elsif (@min_price.to_i >= 0 && @max_price.to_i > 0) &&
+                     (@rooms.to_i == 0 && @guests.to_i == 0) && @amenities.blank?
+                   units_array = get_units_by_date_range(units)
+                   get_units_by_price(units_array) unless units_array.blank?
+                 elsif (!params[:rooms].blank? && @rooms.to_i != 0) &&
+                     (@min_price.to_i >= 0 && @max_price.to_i >= 0) && @guests.to_i == 0 && @amenities.blank?
+                   units_array = get_units_by_date_range(units)
+                   get_units_by_rooms_price(units_array) unless units_array.blank?
+                 elsif (@rooms.to_i > 0 && @guests.to_i > 0) && (@min_price.to_i != 0 && @max_price.to_i != 0) && @amenities.blank?
+                   units_array = get_units_by_date_range(units)
+                   get_units_by_rooms_guests(units_array) unless units_array.blank?
+                 elsif !@amenities.blank? && (@rooms.to_i == 0 && @guests.to_i == 0) &&
+                     (@min_price.to_i != 0 && @max_price.to_i != 0)
+                   units_array = get_units_by_date_range(units)
+                   get_units_by_amenities(units_array) unless units_array.blank?
+                 elsif !@amenities.blank? && (@rooms.to_i == 0 && @guests.to_i == 0) &&
+                    (@min_price.to_i == 0 && @max_price.to_i >= 0)
+                   units_array = get_units_by_date_range(units)
+                   get_units_by_amenities_price(units_array) unless units_array.blank?
+                 elsif !@amenities.blank? && ((!params[:rooms].blank? && @rooms.to_i != 0) && @guests.to_i == 0) &&
+                     (@min_price.to_i != 0 && @max_price.to_i != 0)
+                   units_array = get_units_by_date_range(units)
+                   get_units_by_amenities_rooms(units_array) unless units_array.blank?
+                 elsif !@amenities.blank? && ((!params[:rooms].blank? && @rooms.to_i != 0) && @guests.to_i == 0) &&
+                    (@min_price.to_i == 0 && @max_price.to_i >= 0)
+                   units_array = get_units_by_date_range(units)
+                   get_by_amenities_rooms_price(units_array) unless units_array.blank?
+                 elsif @amenities.blank? && ((!params[:rooms].blank? && @rooms.to_i == 0) && @guests.to_i == 0) &&
+                     (@min_price.to_i == 0 && @max_price.to_i == 0)
+                   units_array = get_units_by_date_range(units)
+                   get_by_amenities_price_zero(units_array) unless units_array.blank?
+                 else
                     get_units_by_date_range(units)
                   end
     @properties = properties.sort_by {|obj|
