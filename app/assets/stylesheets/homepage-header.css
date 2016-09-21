@@ -1708,6 +1708,22 @@ form.booking_form .rental-polciy-text{
     padding: 0 10px 0 0 !important;
 }
 
+
+@media screen and (max-width: 760px) {
+    #hotellist_view .book-now{
+        font-size: 1.5vmin;
+    }
+    #hotellist_view .hotel-rating-review > .common-font-10{
+        font-size: 2vmin;
+    }
+    #hotellist_view .hotel-rating-review .col-sm-6 > .common-font-10{
+        font-size: 2vmin;
+    }
+    #hotellist_view .description-text{
+        font-size: 2vmin;
+    }
+}
+
 /*--------------thank you---------------*/
 
 .thank-you{

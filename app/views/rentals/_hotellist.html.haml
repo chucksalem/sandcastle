@@ -1,11 +1,11 @@
 - if !@properties.blank?
   - @properties.each do |unit|
     .row.rw-unit
-      .col-sm-4.padding-bottom-10px.white-background
+      .col-xs-4.padding-bottom-10px.white-background
         / <div class="sandcastle-text-capitalization sale-available-on-hotels"><img src="assets/room_sale.png"></div>
         .hotel-image
           %img{:src => "#{unit['descriptions']['images'][0]['formats'][2]['url']}"}/
-      .col-sm-5.padding-bottom-10px.white-background
+      .col-xs-5.padding-bottom-10px.white-background
         .col-sm-12.sandcastle-bold.sandcastle-text-capitalization.common-font-15.room-details-common-div.sandcastle-text-font-montserrat
           = truncate(unit['name'], :length => 25)
         .hotel-rating-review.float-left.full-width
@@ -19,12 +19,13 @@
           .col-sm-12.float-left.sandcastle-text-color.sandcastle-text-font-montserrat.room-details-common-div.common-font-10
             = "#{unit['address']['city']}, #{unit['address']['country']}"
         .col-sm-12.common-font-10.sandcastle-text-color.room-details-common-div.sandcastle-text-font-montserrat.description-height.description-text
-          = truncate(unit['descriptions']['text'][2]['description'], :length => 120)
+          %span
+            = truncate(unit['descriptions']['text'][2]['description'], :length => 120)
         .col-sm-12.common-font-8.sandcastle-text-color.room-details-common-div.sandcastle-text-font-montserrat.view-on-map-link.sandcastle-bold.sandcastle-text-capitalization
           %a.hotel_details{:href => "maps"}
             %img{:src => "assets/map_fa_icon.png"}/
             View on Map
-      .col-sm-3.hotel-list-column-3
+      .col-xs-3.hotel-list-column-3
         %span.rate-book-main-span
           .full-width.hotel-rate.float-left.text-center.room-details-common-div.sandcastle-text-capitalization.sandcastle-text-color
             %span.unit_price

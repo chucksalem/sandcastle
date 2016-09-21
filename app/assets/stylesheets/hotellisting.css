@@ -634,14 +634,7 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
 .room-details-page-content-section .our-facility-room-section {
     margin: 20px 0%;
 }
-@media screen and (max-width: 1024px) and (min-width: 681px) {
 
-}
-
-
-@media screen and (max-width: 680px) and (min-width: 400px) {
-
-}
 .header-total-result-count{
     font-size: 20px;
     color: #39BDFB;
@@ -691,6 +684,12 @@ form.room-details-post-review input.input-appear,form.room-details-post-review t
     margin: 0;
     margin-bottom: 10px;
     padding-left: 10px;
+    flex-wrap: wrap;
+}
+
+#hotellist_view .col-xs-4.padding-bottom-10px.white-background{
+    display: flex;
+    align-items: center;
 }
 
 .sorting-button-top-container .col-xs-6.sorting-buttons-main{
