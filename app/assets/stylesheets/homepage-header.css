@@ -1708,8 +1708,11 @@ form.booking_form .rental-polciy-text{
     padding: 0 10px 0 0 !important;
 }
 
-
-
+@media screen and (max-width: 991px) {
+    #hotelgrid_view .col-md-4.hotel-grid-result-container {
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 760px) {
     #hotellist_view .book-now{
