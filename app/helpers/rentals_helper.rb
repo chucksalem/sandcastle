@@ -125,7 +125,8 @@ module RentalsHelper
             u_end_date = (Time.parse(range['end']).strftime("%d/%m/%Y").to_time+1.day).to_i
             unless unit['amenities'].blank?
               unit['amenities'] = unit['amenities'].select {|k,v| @amenities.include?(k) }
-              properties << unit if unit['amenities'].all? {|key, value| value == true}
+              properties << unit if unit['amenities'].all? {|key, value| value == true} &&
+                  (u_start_date <= start_date && u_end_date >= end_date) && (start_date <= end_date)
             end
           end
         end
@@ -171,7 +172,8 @@ module RentalsHelper
             unless unit['amenities'].blank?
               if unit['bedrooms'] == @rooms.to_i
                 unit['amenities'] = unit['amenities'].select {|k,v| @amenities.include?(k) }
-                properties << unit if unit['amenities'].all? {|key, value| value == true}
+                properties << unit if unit['amenities'].all? {|key, value| value == true} &&
+                    (u_start_date <= start_date && u_end_date >= end_date) && (start_date <= end_date)
               end
             end
           end
@@ -196,7 +198,8 @@ module RentalsHelper
                 unit['amenities'] = unit['amenities'].select {|k,v| @amenities.include?(k) }
                 unit.merge!(price: range['price'].to_i)
                 properties << unit if unit['amenities'].all? {|key, value| value == true} &&
-                    (@min_price.to_i <= range['price'].to_i && @max_price.to_i >= range['price'].to_i)
+                    (@min_price.to_i <= range['price'].to_i && @max_price.to_i >= range['price'].to_i) &&
+                    (u_start_date <= start_date && u_end_date >= end_date) && (start_date <= end_date)
               end
             end
           end
@@ -220,7 +223,8 @@ module RentalsHelper
               unit['amenities'] = unit['amenities'].select {|k,v| @amenities.include?(k) }
               unit.merge!(price: range['price'].to_i)
               properties << unit if unit['amenities'].all? {|key, value| value == true} &&
-                  (@min_price.to_i <= range['price'].to_i && @max_price.to_i >= range['price'].to_i)
+                  (@min_price.to_i <= range['price'].to_i && @max_price.to_i >= range['price'].to_i) &&
+                  (u_start_date <= start_date && u_end_date >= end_date) && (start_date <= end_date)
             end
           end
         end
