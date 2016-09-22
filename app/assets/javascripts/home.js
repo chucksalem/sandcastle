@@ -71,12 +71,18 @@ $(document).ready(function(){
             $('.main-content').show();
         }
     });
+
+    //Email validation
+    jQuery.validator.addMethod('custom_email', (function(value, element) {
+        return /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(value);
+    }), 'Invalid email');
+
     $('.newsletter-subscribe-form').validate({ // initialize the plugin
         ignore: " ",
-        rules:
-        {
+        rules: {
             emailId: {
-                required: true
+                required: true,
+                custom_email: true
             }
         }
     });

@@ -818,7 +818,15 @@ article.field a {
 
 /* add padding  */
 .left-addon input  { padding-left:  30px; }
-.right-addon input { padding-right: 20px;    padding-left: 20px;}
+
+.right-addon input {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.property-search #end_date{
+    padding-left: 10px;
+}
 
 #start_date,#end_date,#select-drop{
     font-size: 11.6px;
@@ -1550,10 +1558,6 @@ section.main-content.email-thank-you-section{
 }
 
 /*------booking form-------*/
-
-#email-error, #emailId-error{
-    display: block !important;
-}
 
 form input, form textarea{
     font-size: 12px;
