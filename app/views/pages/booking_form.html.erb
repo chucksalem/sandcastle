@@ -25,10 +25,10 @@
           </div>
           <div class="col-md-12">
             <div class="text-box-main-div margin-right-4-and-half-per">
-              <%= text_field_tag 'first_name', nil, class: 'booking-form-short-text-box-height', :required => true%>
+              <%= text_field_tag 'first_name', nil, class: 'booking-form-short-text-box-height form-group', :required => true%>
             </div>
             <div class="text-box-main-div">
-              <%= text_field_tag 'last_name', nil, class: 'booking-form-short-text-box-height', :required => true%>
+              <%= text_field_tag 'last_name', nil, class: 'booking-form-short-text-box-height form-group', :required => true%>
             </div>
           </div>
           <div class="col-md-12 margin-top-10">
@@ -41,10 +41,10 @@
           </div>
           <div class="col-md-12">
             <div class="text-box-main-div margin-right-4-and-half-per">
-              <%= text_field_tag 'email', nil, class: 'booking-form-short-text-box-height', :required => true %>
+              <%= text_field_tag 'email', nil, class: 'booking-form-short-text-box-height form-group', :required => true %>
             </div>
             <div class="text-box-main-div">
-              <%= text_field_tag 'confirm_email', nil, class: 'booking-form-short-text-box-height' %>
+              <%= text_field_tag 'confirm_email', nil, class: 'booking-form-short-text-box-height form-group' %>
             </div>
           </div>
           <div class="col-md-12 margin-top-10">
@@ -57,10 +57,10 @@
           </div>
           <div class="col-md-12">
             <div class="text-box-main-div margin-right-4-and-half-per">
-              <%= text_field_tag 'phone_no', nil, class: 'booking-form-short-text-box-height', :required => true %>
+              <%= text_field_tag 'phone_no', nil, class: 'booking-form-short-text-box-height form-group', :required => true %>
             </div>
             <div class="text-box-main-div">
-              <%= text_field_tag 'mobile_no', nil, class: 'booking-form-short-text-box-height' %>
+              <%= text_field_tag 'mobile_no', nil, class: 'booking-form-short-text-box-height form-group', :required => true %>
             </div>
           </div>
 
@@ -107,7 +107,7 @@
           </div>
           <div class="col-md-12">
             <div class="text-box-main-div margin-right-4-and-half-per">
-              <%= text_field_tag 'zip', nil, class: 'booking-form-short-text-box-height', :required => true %>
+              <%= text_field_tag 'zip', nil, class: 'booking-form-short-text-box-height form-group', :required => true %>
             </div>
             <div class="text-box-main-div">
               <%= text_field_tag 'city', nil, class: 'booking-form-short-text-box-height', :required => true %>
@@ -119,14 +119,14 @@
             <p class="rental-polciy-text sandcastle-text-color">USE MAILING ADDRESS FOR BILING ADDRESS</p>
           </div>
           <div class="col-md-12 booking-receipt-headings common-font-20 col-md-12 sandcastle-bold">PAYMENT METHOD</div>
-          <div class="col-md-12 margin-top-4">
+          <div class="col-md-12">
             <div class="float-left text-box-main-div margin-right-4-and-half-per">
               <label class="common-font-10 sandcastle-text-color">CARD TYPE</label>
             </div>
           </div>
           <div class="col-md-12">
             <div class="text-box-main-div margin-right-4-and-half-per">
-              <%= select_tag "payment_type", options_for_select([ "VISA", "MASTER","DISCOVER" ]), { :include_blank => '', :required => true, :class => "booking-form-short-text-box-height common-font-10 sandcastle-text-color"} %>
+              <%= select_tag "payment_type", options_for_select([ "VISA", "MASTER","DISCOVER" ]), { :include_blank => '', :required => true, :class => "booking-form-short-text-box-height common-font-10 sandcastle-text-color form-group"} %>
             </div>
             <div class="float-left text-box-main-div margin-right-4-and-half-per card_type_block">
               <span class="visa-card-img common-payment-images"></span>
@@ -137,7 +137,7 @@
           <div class="row col-md-12 margin-top-4">
             <div class=""><label class="common-font-10 sandcastle-text-color">CARD NUMBER</label></div>
             <div class="">
-              <%= text_field_tag 'card_number', nil, class: 'booking-form-short-text-box-height', :required => true %>
+              <%= text_field_tag 'card_number', nil, class: 'booking-form-short-text-box-height form-group', :required => true %>
             </div>
           </div>
           <div class="col-md-12 margin-top-10">
@@ -150,13 +150,13 @@
           </div>
           <div class="col-md-12 flex-block">
             <div class="select-block">
-              <%= select_tag "YEAR", options_for_select([ "2016", "2015","2014" ]), { :include_blank => 'YEAR', :required => true, :class => "float-left expiration-selection-list common-font-10 sandcastle-text-color"} %>
+              <%= select_tag "YEAR", options_for_select([ "2016", "2015","2014" ]), { :include_blank => 'YEAR', :required => true, :class => "float-left expiration-selection-list common-font-10 sandcastle-text-color form-group"} %>
             </div>
             <div class="select-block">
-              <%= select_tag "MONTH", options_for_select([ "JAN", "FEB","MAR","APR","JUNE","JUL","AUG","SEPT","OCT","NOV","DEC" ]), { :include_blank => 'MONTH',:required => true, :class => "float-left expiration-selection-list common-font-10 sandcastle-text-color"} %>
+              <%= select_tag "MONTH", options_for_select([ "JAN", "FEB","MAR","APR","JUNE","JUL","AUG","SEPT","OCT","NOV","DEC" ]), { :include_blank => 'MONTH',:required => true, :class => "float-left expiration-selection-list common-font-10 sandcastle-text-color form-group"} %>
             </div>
             <div class="select-block float-left width-26">
-              <%= text_field_tag 'cvc', nil, class: 'booking-form-short-text-box-height', :required => true %>
+              <%= text_field_tag 'cvc', nil, class: 'booking-form-short-text-box-height form-group', :required => true %>
             </div>
           </div>
           <div class="col-md-12 margin-top-4"><label class="sandcastle-text-color common-font-10">READ AND ACCEPT RENTAL POLICIES AGREEMENT</label></div>
@@ -164,7 +164,7 @@
             <%= text_area_tag 'description', "", disabled: false, :class=>"col-md-12 col-sm-12" %>
           </div>
           <div class="col-md-12 margin-top-4 check-policy">
-            <input id ="accept_policy" class="float-left" type="checkbox"/>
+            <input id ="accept_policy" name="accept_policy" class="float-left" type="checkbox"/>
             <p class="rental-polciy-text common-font-10">I HAVE READ AND ACCEPT THE ABOVE RENTAL POLICIES AGREEMENT</p>
           </div>
           <div class="col-md-12 booking-receipt-headings common-font-20 sandcastle-bold">REVIEW AND BOOK YOUR TRIP</div>

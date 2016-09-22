@@ -1660,6 +1660,16 @@ form.booking_form .rental-polciy-text{
     width: 90%;
 }
 
+form.booking_form .help-block {
+    color: red !important;
+    font-size: 1.5vmin;
+    margin: 0 !important;
+}
+
+form.booking_form .form-group{
+    margin: 0 !important;
+}
+
 /*---------------------room details-------------------------*/
 
 

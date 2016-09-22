@@ -12,3 +12,4 @@
 //
 //= require global
 //= require isotope.pkgd.min
+//= require jquery.maskedinput
