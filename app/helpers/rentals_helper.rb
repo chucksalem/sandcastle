@@ -148,7 +148,8 @@ module RentalsHelper
               unit['amenities'] = unit['amenities'].select {|k,v| @amenities.include?(k) }
               unit.merge!(price: range['price'].to_i)
               properties << unit if unit['amenities'].all? {|key, value| value == true} &&
-                  (@min_price.to_i <= range['price'].to_i && @max_price.to_i >= range['price'].to_i)
+                  (@min_price.to_i <= range['price'].to_i && @max_price.to_i >= range['price'].to_i) &&
+                  (u_start_date <= start_date && u_end_date >= end_date) && (start_date <= end_date)
             end
           end
         end
