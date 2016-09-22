@@ -37,7 +37,8 @@ class RentalsController < ApplicationController
                      (@min_price.to_i >= 0 && @max_price.to_i >= 0) && @guests.to_i == 0 && @amenities.blank?
                    units_array = get_units_by_date_range(units)
                    get_units_by_rooms_price(units_array) unless units_array.blank?
-                 elsif (@rooms.to_i > 0 && @guests.to_i > 0) && (@min_price.to_i != 0 && @max_price.to_i != 0) && @amenities.blank?
+                 elsif (@rooms.to_i > 0 && @guests.to_i > 0) &&
+                     (!params.include? 'min_price') && (!params.include? 'max_price') && @amenities.blank?
                    units_array = get_units_by_date_range(units)
                    get_units_by_rooms_guests(units_array) unless units_array.blank?
                  elsif !@amenities.blank? && (@rooms.to_i == 0 && @guests.to_i == 0) &&
@@ -61,8 +62,8 @@ class RentalsController < ApplicationController
                    units_array = get_units_by_date_range(units)
                    get_by_amenities_price_zero(units_array) unless units_array.blank?
                  else
-                    get_units_by_date_range(units)
-                  end
+                   get_units_by_date_range(units)
+                 end
     @properties = properties.sort_by {|obj|
        obj[:price].blank? ? obj['stay_ranges'].first['price'] : obj[:price]
     }
