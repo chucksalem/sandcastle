@@ -130,5 +130,15 @@ $(document).ready(function() {
         errorElement: 'span',
         errorClass: 'help-block'
     });
+
+    $('#btn-request-booking').on('click',function(){
+        var id = $(this).val().split('-');
+        var start_date = $('#start_date').val();
+        var end_date = $('#end_date').val();
+        if (start_date != '' && end_date != '') {
+            window.location = 'http://bookings.oceano-rentals.com/Booking/RateDetails/'+id[1]+'?arrive='+ start_date +'&depart='+ end_date+'&adults=1';
+        }
+    });
+
 });
 

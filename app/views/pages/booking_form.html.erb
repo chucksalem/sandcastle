@@ -241,6 +241,11 @@
                 </tr>
                 </tbody>
               </table>
+              <div class="div-request-booking">
+                <button id="btn-request-booking" class="room-details-book-button sandcastle-bold sandcastle-text-capitalization" type="submit" value="<%= params[:id]%>">Request Booking</button>
+                <input id="start_date" type="hidden" value="<%= params[:start_date]%>">
+                <input id="end_date" type="hidden" value="<%= params[:end_date]%>">
+              </div>
             </div>
           </div>
         </div>
