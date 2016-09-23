@@ -623,11 +623,9 @@ section.main-content footer.md-two-twelfths{
     border: none;
 }
 form .select-style #select-drop{
-    padding-top: 1.90em;
-    padding-bottom: 1.75em;
+    padding: 22px 22px 20px 22px;
     text-transform: uppercase;
-    font-size: 11.6px;
-    padding-left: 0;
+    font-size: 1.8vmin;
 }
 form .select-style:before{
     display: none;
@@ -820,29 +818,23 @@ article.field a {
 .left-addon input  { padding-left:  30px; }
 
 .right-addon input {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 20px;
 }
 
 .property-search #end_date{
-    padding-left: 10px;
+    padding: 22px 22px 22px 10px;
 }
 
 #start_date,#end_date,#select-drop{
-    font-size: 11.6px;
+    font-size: 1.8vmin;
     font-family: "Montserrat";
-}
-
-#start_date,#end_date{
-    padding-top: 1em;
 }
 
 #guests{
     font-family: "Montserrat";
-    padding-top: 1.90em;
-    padding-bottom: 1.75em;
     text-transform: uppercase;
-    font-size: 11.6px;
+    font-size: 1.8vmin;
+    padding: 22px 20px 20px 35px;
 }
 
 .footer-bg .footer-menu-list .list-div-text a, .menu-list-div .list-div span a{
@@ -852,10 +844,6 @@ article.field a {
 .inner-addon .fa-user {
     font-size: 20.42px;
     padding: 6px 20px 10px 30px;
-}
-
-form .select-style select{
-    text-indent: 30px;
 }
 
 .site-header .hacienda-logo{
