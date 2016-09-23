@@ -224,6 +224,10 @@
     align-items: center;
 }
 
+.footer-bg .footer-menu-list {
+    justify-content: center;
+}
+
 .text-divider{
     height: 38px;
     float: left;
