@@ -146,11 +146,12 @@ module RentalsHelper
             u_start_date = (Time.parse(range['start']).strftime("%d/%m/%Y").to_time+1.day).to_i
             u_end_date = (Time.parse(range['end']).strftime("%d/%m/%Y").to_time+1.day).to_i
             unless unit['amenities'].blank?
-              unit['amenities'] = unit['amenities'].select {|k,v| @amenities.include?(k) }
-              unit.merge!(price: range['price'].to_i)
-              properties << unit if unit['amenities'].all? {|key, value| value == true} &&
-                  (@min_price.to_i <= range['price'].to_i && @max_price.to_i >= range['price'].to_i) &&
-                  (u_start_date <= start_date && u_end_date >= end_date) && (start_date <= end_date)
+              if (u_start_date <= start_date && u_end_date >= end_date) && (start_date <= end_date)
+                unit['amenities'] = unit['amenities'].select {|k,v| @amenities.include?(k) }
+                unit.merge!(price: range['price'].to_i)
+                properties << unit if unit['amenities'].all? {|key, value| value == true} &&
+                    (@min_price.to_i <= range['price'].to_i && @max_price.to_i >= range['price'].to_i)
+              end
             end
           end
         end

@@ -19,6 +19,7 @@ class RentalsController < ApplicationController
     file_path = File.join(Rails.root, '/spec/fixtures/units/hotellists.json')
     units_data = File.read(file_path)
     units = JSON.parse(units_data)
+
     properties = if (!params.include? 'start_date') && (!params.include? 'end_date')
                     get_all_units(units)
                  elsif (!params[:rooms].blank? && @rooms.to_i != 0) &&
@@ -64,27 +65,30 @@ class RentalsController < ApplicationController
                  else
                    get_units_by_date_range(units)
                  end
-    @properties = properties.sort_by {|obj|
-       obj[:price].blank? ? obj['stay_ranges'].first['price'] : obj[:price]
-    }
 
-    if params.include? 'price_sort'
-      if params['price_sort'] == 'asc'
-        @properties = properties.sort_by {|obj|
-          obj[:price].blank? ? obj['stay_ranges'].first['price'] : obj[:price]
-        }
-      else
-        @properties = properties.sort_by {|obj|
-          obj[:price].blank? ? obj['stay_ranges'].first['price'] : obj[:price]
-        }.reverse
+    unless properties.blank?
+      @properties = properties.sort_by {|obj|
+        obj[:price].blank? ? obj['stay_ranges'].first['price'] : obj[:price]
+      }
+
+      if params.include? 'price_sort'
+        if params['price_sort'] == 'asc'
+          @properties = properties.sort_by {|obj|
+            obj[:price].blank? ? obj['stay_ranges'].first['price'] : obj[:price]
+          }
+        else
+          @properties = properties.sort_by {|obj|
+            obj[:price].blank? ? obj['stay_ranges'].first['price'] : obj[:price]
+          }.reverse
+        end
       end
-    end
 
-    if params.include? 'reviews_sort'
-      if params['reviews_sort'] == 'asc'
-        @properties = @properties.sort_by {|obj| obj['reviews'].count}
-      else
-        @properties = @properties.sort_by {|obj| obj['reviews'].count}.reverse
+      if params.include? 'reviews_sort'
+        if params['reviews_sort'] == 'asc'
+          @properties = @properties.sort_by {|obj| obj['reviews'].count}
+        else
+          @properties = @properties.sort_by {|obj| obj['reviews'].count}.reverse
+        end
       end
     end
 
