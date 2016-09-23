@@ -388,6 +388,7 @@
     width: 100%;
     height: 70px;
     background: white;
+    text-align: -moz-center;
 }
 
 .section-divider img{
@@ -399,6 +400,7 @@
 .main-heading-div{
     background: white;
     height: 100px;
+    text-align: -moz-center;
 }
 
 .main-heading-div img{
