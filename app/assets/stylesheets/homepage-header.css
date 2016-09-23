@@ -647,6 +647,9 @@ section.main-content .property-search form .text-divider{
     color: #bababa;
 }
 
+form#search_filter .search-btn{
+    font-family: "Montserrat";
+}
 
 /****************** contact-us page css **********************/
 
