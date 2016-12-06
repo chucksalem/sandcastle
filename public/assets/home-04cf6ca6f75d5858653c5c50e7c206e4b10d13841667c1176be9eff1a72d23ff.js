@@ -1,1 +1,0 @@
-$(document).ready(function(){$(".search-btn").on("click",function(){var a=$("#select-drop").val(),t=$("#guests").val(),n=$("#start_date").val(),o=$("#end_date").val();window.location=null!=a?"/accommodations/"+a+"?start_date="+n+"&end_date="+o+"&guests="+t:"/accommodations"})});
