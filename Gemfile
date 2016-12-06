@@ -30,6 +30,7 @@ gem 'uglifier', '2.7.1'
 gem 'rails_serve_static_assets'
 gem 'rails_stdout_logging'
 gem 'haml-rails', '~> 0.9.0'
+gem 'quiet_assets'
 
 group :development, :test do
  # gem 'byebug', '6.0.2'
